@@ -1,0 +1,28 @@
+GO:0000302	response to reactive oxygen species
+GO:0000303	response to superoxide
+GO:0000304	response to singlet oxygen
+GO:0000305	response to oxygen radical
+GO:0006979	response to oxidative stress
+GO:0006982	response to lipid hydroperoxide
+GO:0010193	response to ozone
+GO:0033194	response to hydroperoxide
+GO:0033195	response to alkyl hydroperoxide
+GO:0033661	effector-mediated defense to host-produced reactive oxygen species
+GO:0034599	cellular response to oxidative stress
+GO:0034614	cellular response to reactive oxygen species
+GO:0042542	response to hydrogen peroxide
+GO:0052164	symbiont defense to host-produced reactive oxygen species
+GO:0070301	cellular response to hydrogen peroxide
+GO:0070994	detection of oxidative stress
+GO:0071447	cellular response to hydroperoxide
+GO:0071448	cellular response to alkyl hydroperoxide
+GO:0071449	cellular response to lipid hydroperoxide
+GO:0071450	cellular response to oxygen radical
+GO:0071451	cellular response to superoxide
+GO:0071452	cellular response to singlet oxygen
+GO:0071457	cellular response to ozone
+GO:0072735	response to tert-butyl hydroperoxide
+GO:0072736	cellular response to tert-butyl hydroperoxide
+GO:0080183	response to photooxidative stress
+GO:0141082	symbiont-mediated detoxification of host-generated reactive oxygen species
+GO:1901530	response to hypochlorite

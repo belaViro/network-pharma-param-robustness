@@ -1,0 +1,131 @@
+2026-04-20 21:40:12 [INFO] root: 日志文件: D:\科研\网络药理学ppi筛选改进\code\src\outputs\reports\pipeline_20260420_214012.log
+2026-04-20 21:40:12 [INFO] root: ============================================================
+2026-04-20 21:40:12 [INFO] root: Hybrid 靶点筛选 - Degree + GNN 混合
+2026-04-20 21:40:12 [INFO] root: ============================================================
+2026-04-20 21:40:12 [INFO] scripts._gnn_common: Step 1: 构建节点特征 (Hybrid)
+2026-04-20 21:40:12 [INFO] src.gnn.data.feature_builder:   网络: 111 节点, 830 边
+2026-04-20 21:40:12 [INFO] src.gnn.data.feature_builder:   计算 Degree...
+2026-04-20 21:40:12 [INFO] src.gnn.data.feature_builder:   计算 Weighted Degree...
+2026-04-20 21:40:12 [INFO] src.gnn.data.feature_builder:   计算 Betweenness...
+2026-04-20 21:40:12 [INFO] src.gnn.data.feature_builder:   计算 PageRank...
+2026-04-20 21:40:12 [INFO] src.gnn.data.feature_builder:   计算 Closeness...
+2026-04-20 21:40:12 [INFO] src.gnn.data.feature_builder:   计算 Eigenvector...
+2026-04-20 21:40:12 [INFO] src.gnn.data.feature_builder:   计算 Clustering...
+2026-04-20 21:40:12 [INFO] src.gnn.data.feature_builder:   特征已保存: D:\科研\网络药理学ppi筛选改进\code\src\outputs\gnn\node_features.csv
+2026-04-20 21:40:12 [INFO] scripts._gnn_common: 特征维度: (111, 8)
+2026-04-20 21:40:12 [INFO] scripts._gnn_common: Step 2: 创建 PyG 数据集
+2026-04-20 21:40:13 [INFO] scripts._gnn_common: 节点数: 111, 特征维度: 7, 边数: 1660
+2026-04-20 21:40:13 [INFO] scripts._gnn_common: Step 3: GAT 评分
+2026-04-20 21:40:13 [INFO] scripts._gnn_common: 评分范围: [0.0000, 1.0000]
+2026-04-20 21:40:13 [INFO] scripts._gnn_common: Step 4: Hybrid Scoring (Degree + GNN, alpha=0.7)
+2026-04-20 21:40:13 [INFO] scripts._gnn_common: Hybrid score range: [0.0117, 0.7576]
+2026-04-20 21:40:13 [INFO] scripts._gnn_common: Top-30 基因 (前10): ['TNF', 'SRC', 'EGFR', 'BCL2', 'PTGS2', 'MMP9', 'STAT3', 'ESR1', 'HIF1A', 'APP']
+2026-04-20 21:40:13 [INFO] scripts._gnn_common: Step 5: 富集分析 (Hybrid)
+2026-04-20 21:40:13 [INFO] src.enrichment.enrichment_analysis: 
+==================================================
+2026-04-20 21:40:13 [INFO] src.enrichment.enrichment_analysis:   Stage 8: 富集分析
+2026-04-20 21:40:13 [INFO] src.enrichment.enrichment_analysis: ==================================================
+2026-04-20 21:40:13 [INFO] src.enrichment.enrichment_analysis:   基因数: 30
+2026-04-20 21:40:13 [INFO] src.enrichment.enrichment_analysis:   P-value阈值: 0.01
+2026-04-20 21:40:13 [INFO] src.enrichment.enrichment_analysis:   背景基因数: 20500
+2026-04-20 21:40:13 [INFO] src.enrichment.enrichment_analysis: 
+  运行GO富集分析...
+2026-04-20 21:40:23 [INFO] src.enrichment.enrichment_analysis:   运行KEGG富集分析...
+2026-04-20 21:40:27 [INFO] src.enrichment.enrichment_analysis:   GO_BP: 20 条显著结果
+2026-04-20 21:40:27 [INFO] src.enrichment.enrichment_analysis:   GO_MF: 20 条显著结果
+2026-04-20 21:40:27 [INFO] src.enrichment.enrichment_analysis:   GO_CC: 11 条显著结果
+2026-04-20 21:40:27 [INFO] src.enrichment.enrichment_analysis:   KEGG: 20 条显著结果
+2026-04-20 21:40:27 [INFO] src.enrichment.enrichment_analysis: 
+  富集结果已保存到: D:\科研\网络药理学ppi筛选改进\code\src\outputs\hybrid\enrichment
+2026-04-20 21:40:28 [INFO] src.visualization.enrichment_plotting:   保存: D:\科研\网络药理学ppi筛选改进\code\src\outputs\gnn\figures\go_biological_process.png
+2026-04-20 21:40:28 [INFO] src.visualization.enrichment_plotting:   保存: D:\科研\网络药理学ppi筛选改进\code\src\outputs\gnn\figures\go_molecular_function.png
+2026-04-20 21:40:29 [INFO] src.visualization.enrichment_plotting:   保存: D:\科研\网络药理学ppi筛选改进\code\src\outputs\gnn\figures\go_cellular_component.png
+2026-04-20 21:40:30 [INFO] src.visualization.enrichment_plotting:   保存: D:\科研\网络药理学ppi筛选改进\code\src\outputs\gnn\figures\go_grouped_barplot.png
+2026-04-20 21:40:31 [INFO] src.visualization.enrichment_plotting:   保存: D:\科研\网络药理学ppi筛选改进\code\src\outputs\gnn\figures\kegg_bubble_plot.png
+2026-04-20 21:40:31 [INFO] scripts._gnn_common: 图表已保存: D:\科研\网络药理学ppi筛选改进\code\src\outputs\gnn\figures
+2026-04-20 21:40:31 [INFO] scripts._gnn_common: Step 6: 方法对比 (Hybrid vs Degree)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: ============================================================
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 传统方法评估 (Degree Top-30)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: ============================================================
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 
+Top-30 Hub Genes:
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:    1. TNF             (Degree: 60)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:    2. SRC             (Degree: 56)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:    3. EGFR            (Degree: 50)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:    4. BCL2            (Degree: 47)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:    5. MMP9            (Degree: 45)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:    6. STAT3           (Degree: 45)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:    7. PTGS2           (Degree: 44)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:    8. ESR1            (Degree: 43)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:    9. HIF1A           (Degree: 40)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   10. ERBB2           (Degree: 36)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   11. KDR             (Degree: 36)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   12. HSP90AA1        (Degree: 35)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   13. APP             (Degree: 34)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   14. MMP2            (Degree: 32)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   15. FGF2            (Degree: 32)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   16. IL2             (Degree: 26)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   17. MET             (Degree: 25)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   18. KIT             (Degree: 25)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   19. MAPK14          (Degree: 24)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   20. FLT1            (Degree: 24)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   21. STAT1           (Degree: 23)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   22. MAOB            (Degree: 22)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   23. MMP7            (Degree: 22)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   24. MMP1            (Degree: 22)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   25. MAPT            (Degree: 21)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   26. ABCB1           (Degree: 21)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   27. DRD2            (Degree: 21)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   28. LGALS3          (Degree: 21)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   29. ESR2            (Degree: 20)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional:   30. FGFR1           (Degree: 20)
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 
+============================================================
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 评估结果
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: ============================================================
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 显著通路总数: 20
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 氧化应激相关通路数: 6
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 氧化应激通路占比: 30.0%
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 平均 Enrichment Factor: 36.20
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 最大 Enrichment Factor: 43.62
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 最小 Adjusted P-value: 3.47e-19
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 
+氧化应激相关通路详情:
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: --------------------------------------------------------------------------------
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: Rank  Term                                          k/N        EF       P-value
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: --------------------------------------------------------------------------------
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 1     MAPK signaling pathway                        11/294     25.57    1.36e-11
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 2     Fluid shear stress and atherosclerosis        8/139      39.33    5.45e-10
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 3     Lipid and atherosclerosis                     8/215      25.43    1.14e-08
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 4     IL-17 signaling pathway                       6/94       43.62    5.53e-08
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 5     Prostate cancer                               6/97       42.27    6.28e-08
+2026-04-20 21:40:31 [INFO] scripts.evaluate_traditional: 6     AGE-RAGE signaling pathway in diabetic comp.. 6/100      41.00    7.10e-08
+2026-04-20 21:40:31 [INFO] scripts._gnn_common: 重叠靶点数: 27/30 (90.0%)
+2026-04-20 21:40:31 [INFO] scripts._gnn_common: Hybrid 流程完成，总耗时: 0:00:18.520188
+2026-04-20 21:40:31 [INFO] root: [PASS] GNN Pipeline: Top-1=TNF, 重叠率=90.0%
+2026-04-20 21:40:31 [INFO] root: ============================================================
+2026-04-20 21:40:31 [INFO] root: TEST: PPI 网络可视化
+2026-04-20 21:40:38 [INFO] src.visualization.ppi_network: Hub nodes table saved: D:\科研\网络药理学ppi筛选改进\code\src\outputs\shared\ppi_network\hub_nodes.csv
+2026-04-20 21:40:38 [INFO] root: [PASS] PPI 可视化: C:\Users\liuzhen\AppData\Local\Temp\tmp44bgf05b\ppi.svg
+2026-04-20 21:40:38 [INFO] root: ============================================================
+2026-04-20 21:40:38 [INFO] root: TEST: 富集分析
+2026-04-20 21:40:38 [INFO] src.enrichment.enrichment_analysis: 
+==================================================
+2026-04-20 21:40:38 [INFO] src.enrichment.enrichment_analysis:   Stage 8: 富集分析
+2026-04-20 21:40:38 [INFO] src.enrichment.enrichment_analysis: ==================================================
+2026-04-20 21:40:38 [INFO] src.enrichment.enrichment_analysis:   基因数: 30
+2026-04-20 21:40:38 [INFO] src.enrichment.enrichment_analysis:   P-value阈值: 0.05
+2026-04-20 21:40:38 [INFO] src.enrichment.enrichment_analysis:   背景基因数: 20500
+2026-04-20 21:40:38 [INFO] src.enrichment.enrichment_analysis: 
+  运行GO富集分析...
+2026-04-20 21:40:47 [INFO] src.enrichment.enrichment_analysis:   运行KEGG富集分析...
+2026-04-20 21:40:50 [INFO] src.enrichment.enrichment_analysis:   GO_BP: 10 条显著结果
+2026-04-20 21:40:50 [INFO] src.enrichment.enrichment_analysis:   GO_MF: 10 条显著结果
+2026-04-20 21:40:50 [INFO] src.enrichment.enrichment_analysis:   GO_CC: 10 条显著结果
+2026-04-20 21:40:50 [INFO] src.enrichment.enrichment_analysis:   KEGG: 10 条显著结果
+2026-04-20 21:40:50 [INFO] src.enrichment.enrichment_analysis: 
+  富集结果已保存到: C:\Users\liuzhen\AppData\Local\Temp\tmpovwpsgbc
+2026-04-20 21:40:50 [INFO] root: [PASS] 富集分析: 30 个基因, 显著结果已生成
+2026-04-20 21:40:50 [INFO] root: ============================================================
+2026-04-20 21:40:50 [INFO] root: 测试结果: 7 通过, 0 失败
+2026-04-20 21:40:50 [INFO] root: 所有工作流测试通过!

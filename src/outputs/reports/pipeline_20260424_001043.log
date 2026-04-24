@@ -1,0 +1,173 @@
+2026-04-24 00:10:43 [INFO] __main__: 
+############################################################
+2026-04-24 00:10:43 [INFO] __main__: # 传统方法流程 - Stage 3-6 + 分支A
+2026-04-24 00:10:43 [INFO] __main__: ############################################################
+
+2026-04-24 00:10:43 [INFO] __main__: 
+==================================================
+2026-04-24 00:10:43 [INFO] __main__:   Stage 3: 合并靶点
+2026-04-24 00:10:43 [INFO] __main__: ==================================================
+2026-04-24 00:10:43 [INFO] src.pipeline.stage3_merge_targets: Stage 3: 合并靶点CSV (5 个文件)
+2026-04-24 00:10:43 [INFO] src.pipeline.stage3_merge_targets: [Stage3] Catechin: 100 条记录
+2026-04-24 00:10:43 [INFO] src.pipeline.stage3_merge_targets: [Stage3] Procyanidin_B1: 100 条记录
+2026-04-24 00:10:43 [INFO] src.pipeline.stage3_merge_targets: [Stage3] Scutellarin: 100 条记录
+2026-04-24 00:10:43 [INFO] src.pipeline.stage3_merge_targets: [Stage3] Sucrose: 100 条记录
+2026-04-24 00:10:43 [INFO] src.pipeline.stage3_merge_targets: [Stage3] Trehalose: 100 条记录
+2026-04-24 00:10:43 [INFO] src.pipeline.stage3_merge_targets: 合并后总记录数: 500
+2026-04-24 00:10:43 [INFO] src.pipeline.stage3_merge_targets: 发现 10 条多基因条目，将进行拆分...
+2026-04-24 00:10:43 [INFO] src.pipeline.stage3_merge_targets: 拆分后总记录数: 520
+2026-04-24 00:10:43 [INFO] src.pipeline.stage3_merge_targets: 过滤 Probability>0: 288 -> 116 (排除 172)
+2026-04-24 00:10:43 [INFO] src.pipeline.stage3_merge_targets: Stage 3 完成: 5 文件 -> 520 记录 -> 116 去重靶点
+2026-04-24 00:10:43 [INFO] __main__:   完成: 116 个去重靶点
+2026-04-24 00:10:43 [INFO] __main__: 
+==================================================
+2026-04-24 00:10:43 [INFO] __main__:   Stage 4: 合并疾病基因
+2026-04-24 00:10:43 [INFO] __main__: ==================================================
+2026-04-24 00:10:43 [INFO] src.pipeline.stage4_merge_disease_genes: Stage 4: 合并疾病相关基因数据库
+2026-04-24 00:10:43 [INFO] src.pipeline.stage4_merge_disease_genes: GeneCards: 14756 个基因
+2026-04-24 00:10:43 [INFO] src.pipeline.stage4_merge_disease_genes: OMIM: 171 个基因
+2026-04-24 00:10:44 [INFO] src.pipeline.stage4_merge_disease_genes: TTD: 3 个基因
+2026-04-24 00:10:44 [INFO] src.pipeline.stage4_merge_disease_genes: 合并后总记录: 14930
+2026-04-24 00:10:44 [INFO] src.pipeline.stage4_merge_disease_genes: Stage 4 完成: 14766 个去重基因
+2026-04-24 00:10:44 [INFO] __main__:   完成: 14766 个疾病基因
+2026-04-24 00:10:44 [INFO] __main__: 
+==================================================
+2026-04-24 00:10:44 [INFO] __main__:   Stage 5: 交集分析
+2026-04-24 00:10:44 [INFO] __main__: ==================================================
+2026-04-24 00:10:44 [INFO] src.pipeline.stage5_intersection_analysis: Stage 5: 靶点与疾病基因交集分析
+2026-04-24 00:10:44 [INFO] src.pipeline.stage5_intersection_analysis: 靶点数 (SwissTarget): 116
+2026-04-24 00:10:44 [INFO] src.pipeline.stage5_intersection_analysis: 疾病基因数 (GeneCards+OMIM+TTD): 14766
+2026-04-24 00:10:44 [INFO] src.pipeline.stage5_intersection_analysis: 交集靶点数: 112
+2026-04-24 00:10:45 [INFO] src.pipeline.stage5_intersection_analysis: Stage 5 完成: 112 个交集靶点
+2026-04-24 00:10:45 [INFO] __main__:   完成: 112 个交集靶点
+2026-04-24 00:10:45 [INFO] __main__: 
+==================================================
+2026-04-24 00:10:45 [INFO] __main__:   Stage 6: PPI网络构建
+2026-04-24 00:10:45 [INFO] __main__: ==================================================
+2026-04-24 00:10:45 [INFO] src.pipeline.stage6_ppi_network: Stage 6: PPI网络构建 (min_score=0.4)
+2026-04-24 00:10:45 [INFO] src.pipeline.stage6_ppi_network: 读取 112 个靶点
+2026-04-24 00:10:45 [INFO] src.connectors.string_connector: 
+==================================================
+2026-04-24 00:10:45 [INFO] src.connectors.string_connector:   获取 PPI 网络
+2026-04-24 00:10:45 [INFO] src.connectors.string_connector: ==================================================
+2026-04-24 00:10:45 [INFO] src.connectors.string_connector:   基因数: 112
+2026-04-24 00:10:45 [INFO] src.connectors.string_connector:   最低置信度: 0.4
+2026-04-24 00:10:48 [INFO] src.connectors.string_connector:   获取到 830 条相互作用
+2026-04-24 00:10:48 [INFO] src.connectors.string_connector:   置信度过滤后: 830 条相互作用
+2026-04-24 00:10:48 [INFO] src.connectors.string_connector:   网络节点数: 111
+2026-04-24 00:10:48 [INFO] src.connectors.string_connector:   已保存相互作用: D:\科研\网络药理学ppi筛选改进\code\src\outputs\shared\ppi_network\string_interactions_interactions.csv
+2026-04-24 00:10:48 [INFO] src.connectors.string_connector: 
+==================================================
+2026-04-24 00:10:48 [INFO] src.connectors.string_connector:   PPI 网络统计
+2026-04-24 00:10:48 [INFO] src.connectors.string_connector: ==================================================
+2026-04-24 00:10:48 [INFO] src.connectors.string_connector:   输入基因数: 112
+2026-04-24 00:10:48 [INFO] src.connectors.string_connector:   网络节点数: 111
+2026-04-24 00:10:48 [INFO] src.connectors.string_connector:   相互作用数: 830
+2026-04-24 00:10:48 [INFO] src.connectors.string_connector:   平均度数: 14.95
+2026-04-24 00:10:48 [INFO] src.pipeline.stage6_ppi_network: Stage 6 完成: 111 节点, 830 边
+2026-04-24 00:10:48 [INFO] __main__:   完成: 111 节点, 830 边
+2026-04-24 00:10:48 [INFO] __main__: 
+  生成韦恩图...
+2026-04-24 00:10:48 [INFO] __main__:   韦恩图已保存: D:\科研\网络药理学ppi筛选改进\code\src\outputs\shared\figures\venn_diagram.png
+2026-04-24 00:10:48 [INFO] __main__: 
+==================================================
+2026-04-24 00:10:48 [INFO] __main__:   分支A: 传统方法 (Degree Top-30)
+2026-04-24 00:10:48 [INFO] __main__: ==================================================
+2026-04-24 00:10:48 [INFO] __main__: 
+  读取 30 个Hub基因
+2026-04-24 00:10:48 [INFO] __main__: 
+  运行富集分析...
+2026-04-24 00:10:48 [INFO] src.enrichment.enrichment_analysis: 
+==================================================
+2026-04-24 00:10:48 [INFO] src.enrichment.enrichment_analysis:   Stage 8: 富集分析
+2026-04-24 00:10:48 [INFO] src.enrichment.enrichment_analysis: ==================================================
+2026-04-24 00:10:48 [INFO] src.enrichment.enrichment_analysis:   基因数: 30
+2026-04-24 00:10:48 [INFO] src.enrichment.enrichment_analysis:   P-value阈值: 0.01
+2026-04-24 00:10:48 [INFO] src.enrichment.enrichment_analysis:   背景基因数: 20500
+2026-04-24 00:10:48 [INFO] src.enrichment.enrichment_analysis: 
+  运行GO富集分析...
+2026-04-24 00:10:58 [INFO] src.enrichment.enrichment_analysis:   运行KEGG富集分析...
+2026-04-24 00:11:05 [INFO] src.enrichment.enrichment_analysis:   GO_BP: 20 条显著结果
+2026-04-24 00:11:05 [INFO] src.enrichment.enrichment_analysis:   GO_MF: 20 条显著结果
+2026-04-24 00:11:05 [INFO] src.enrichment.enrichment_analysis:   GO_CC: 4 条显著结果
+2026-04-24 00:11:05 [INFO] src.enrichment.enrichment_analysis:   KEGG: 20 条显著结果
+2026-04-24 00:11:05 [INFO] src.enrichment.enrichment_analysis: 
+  富集结果已保存到: D:\科研\网络药理学ppi筛选改进\code\src\outputs\traditional\enrichment
+2026-04-24 00:11:05 [INFO] __main__:   富集分析完成
+2026-04-24 00:11:05 [INFO] __main__: 
+  生成富集分析图表...
+2026-04-24 00:11:06 [INFO] src.visualization.enrichment_plotting:   保存: D:\科研\网络药理学ppi筛选改进\code\src\outputs\traditional\figures\go_biological_process.png
+2026-04-24 00:11:06 [INFO] src.visualization.enrichment_plotting:   保存: D:\科研\网络药理学ppi筛选改进\code\src\outputs\traditional\figures\go_molecular_function.png
+2026-04-24 00:11:06 [INFO] src.visualization.enrichment_plotting:   保存: D:\科研\网络药理学ppi筛选改进\code\src\outputs\traditional\figures\go_cellular_component.png
+2026-04-24 00:11:07 [INFO] src.visualization.enrichment_plotting:   保存: D:\科研\网络药理学ppi筛选改进\code\src\outputs\traditional\figures\go_grouped_barplot.png
+2026-04-24 00:11:08 [INFO] src.visualization.enrichment_plotting:   保存: D:\科研\网络药理学ppi筛选改进\code\src\outputs\traditional\figures\kegg_bubble_plot.png
+2026-04-24 00:11:08 [INFO] __main__:   富集图表已保存到: D:\科研\网络药理学ppi筛选改进\code\src\outputs\traditional\figures
+2026-04-24 00:11:08 [INFO] __main__: 
+  运行评估...
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: ============================================================
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 传统方法评估 (Degree Top-30)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: ============================================================
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 
+Top-30 Hub Genes:
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:    1. TNF             (Degree: 60)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:    2. SRC             (Degree: 56)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:    3. EGFR            (Degree: 50)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:    4. BCL2            (Degree: 47)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:    5. MMP9            (Degree: 45)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:    6. STAT3           (Degree: 45)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:    7. PTGS2           (Degree: 44)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:    8. ESR1            (Degree: 43)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:    9. HIF1A           (Degree: 40)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   10. ERBB2           (Degree: 36)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   11. KDR             (Degree: 36)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   12. HSP90AA1        (Degree: 35)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   13. APP             (Degree: 34)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   14. MMP2            (Degree: 32)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   15. FGF2            (Degree: 32)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   16. IL2             (Degree: 26)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   17. MET             (Degree: 25)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   18. KIT             (Degree: 25)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   19. MAPK14          (Degree: 24)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   20. FLT1            (Degree: 24)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   21. STAT1           (Degree: 23)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   22. MAOB            (Degree: 22)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   23. MMP7            (Degree: 22)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   24. MMP1            (Degree: 22)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   25. MAPT            (Degree: 21)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   26. ABCB1           (Degree: 21)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   27. DRD2            (Degree: 21)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   28. LGALS3          (Degree: 21)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   29. ESR2            (Degree: 20)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional:   30. FGFR1           (Degree: 20)
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 
+============================================================
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 评估结果
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: ============================================================
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 显著通路总数: 20
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 氧化应激相关通路数: 6
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 氧化应激通路占比: 30.0%
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 平均 Enrichment Factor: 36.20
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 最大 Enrichment Factor: 43.62
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 最小 Adjusted P-value: 3.47e-19
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 
+氧化应激相关通路详情:
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: --------------------------------------------------------------------------------
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: Rank  Term                                          k/N        EF       P-value
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: --------------------------------------------------------------------------------
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 1     MAPK signaling pathway                        11/294     25.57    1.36e-11
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 2     Fluid shear stress and atherosclerosis        8/139      39.33    5.45e-10
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 3     Lipid and atherosclerosis                     8/215      25.43    1.14e-08
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 4     IL-17 signaling pathway                       6/94       43.62    5.53e-08
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 5     Prostate cancer                               6/97       42.27    6.28e-08
+2026-04-24 00:11:08 [INFO] scripts.evaluate_traditional: 6     AGE-RAGE signaling pathway in diabetic comp.. 6/100      41.00    7.10e-08
+2026-04-24 00:11:08 [INFO] __main__: 
+  评估结果:
+2026-04-24 00:11:08 [INFO] __main__:     - 氧化应激通路数: 6
+2026-04-24 00:11:08 [INFO] __main__:     - 平均 EF: 36.2
+2026-04-24 00:11:08 [INFO] __main__:     - 占比: 30.0%
+2026-04-24 00:11:08 [INFO] __main__: 
+==================================================
+2026-04-24 00:11:08 [INFO] __main__:   传统方法流程完成
+2026-04-24 00:11:08 [INFO] __main__: ==================================================
+2026-04-24 00:11:08 [INFO] __main__:   总耗时: 0:00:24.655837
+2026-04-24 00:11:08 [INFO] __main__:   报告已保存: D:\科研\网络药理学ppi筛选改进\code\src\outputs\traditional\evaluation\pipeline_report_20260424_001108.md

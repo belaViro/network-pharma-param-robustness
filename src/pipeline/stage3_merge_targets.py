@@ -1,0 +1,173 @@
+"""
+Stage 3 - 合并去重靶点文件
+读取 swiss_targets 目录下的所有CSV，合并并按靶点去重
+"""
+
+import pandas as pd
+from pathlib import Path
+from typing import List, Dict
+
+
+def merge_and_deduplicate_targets(
+    csv_dir: str = None,
+    output_path: str = None,
+) -> Dict:
+    """合并所有成分的靶点CSV并去重
+
+    Args:
+        csv_dir: CSV文件目录，默认 src/outputs/shared/swiss_targets
+        output_path: 输出文件路径，默认 src/outputs/shared/merged_targets.csv
+
+    Returns:
+        包含统计信息的字典
+    """
+    import logging
+    logger = logging.getLogger(__name__)
+
+    if csv_dir is None:
+        from src.config import SWISS_TARGETS_DIR
+        csv_dir = SWISS_TARGETS_DIR
+    else:
+        csv_dir = Path(csv_dir)
+
+    if output_path is None:
+        from src.config import MERGED_TARGETS_CSV
+        output_path = MERGED_TARGETS_CSV
+    else:
+        output_path = Path(output_path)
+
+    try:
+        # 获取所有CSV文件
+        csv_files = list(csv_dir.glob("*_targets.csv"))
+
+        if not csv_files:
+            logger.warning(f"[Stage3] 未找到CSV文件: {csv_dir}")
+            return {"status": "无文件", "error": f"目录不存在或无匹配文件: {csv_dir}", "total_records": 0, "unique_targets": 0}
+
+        logger.info(f"Stage 3: 合并靶点CSV ({len(csv_files)} 个文件)")
+
+        # 读取并合并所有CSV
+        all_records = []
+        file_stats = {}
+
+        for csv_file in csv_files:
+            compound_name = csv_file.stem.replace("_targets", "")
+            try:
+                df = pd.read_csv(csv_file)
+            except Exception as e:
+                logger.error(f"[Stage3] 读取文件失败 {csv_file}: {e}")
+                continue
+
+            # 清理列名（可能有空格）
+            df.columns = df.columns.str.strip()
+
+            # 添加成分来源列
+            df["Source_Compound"] = compound_name
+
+            # 提取靶点名称（取Common name列，如果没有则用Target列）
+            if "Common name" in df.columns:
+                df["Target_Gene"] = df["Common name"].str.strip()
+            elif "Target" in df.columns:
+                df["Target_Gene"] = df["Target"].str.strip()
+            else:
+                logger.warning(f"[Stage3] {compound_name}: 未找到 'Common name' 或 'Target' 列，使用第一列")
+                df["Target_Gene"] = df.iloc[:, 0].astype(str).str.strip()
+
+            # 提取概率列
+            prob_col = None
+            for col in df.columns:
+                if "Probability" in col:
+                    prob_col = col
+                    break
+
+            if prob_col:
+                df["Probability"] = pd.to_numeric(df[prob_col], errors="coerce").fillna(0)
+            else:
+                logger.warning(f"[Stage3] {compound_name}: 未找到 Probability 列，默认设为 1.0")
+                df["Probability"] = 1.0
+
+            all_records.append(df[["Target_Gene", "Source_Compound", "Probability"]])
+
+            file_stats[compound_name] = len(df)
+            logger.info(f"[Stage3] {compound_name}: {len(df)} 条记录")
+
+        if not all_records:
+            return {"status": "错误", "error": "所有CSV文件读取失败", "total_records": 0, "unique_targets": 0}
+
+        # 合并所有记录
+        merged_df = pd.concat(all_records, ignore_index=True)
+        logger.info(f"合并后总记录数: {len(merged_df)}")
+
+        # 拆分多基因条目 (如 "PSEN2 PSENEN NCSTN" -> 多行)
+        multi_gene_mask = merged_df["Target_Gene"].str.contains(" ", na=False)
+        if multi_gene_mask.any():
+            multi_gene_count = multi_gene_mask.sum()
+            logger.info(f"发现 {multi_gene_count} 条多基因条目，将进行拆分...")
+
+            rows_to_expand = []
+            indices_to_remove = []
+
+            for idx, row in merged_df[multi_gene_mask].iterrows():
+                genes = row["Target_Gene"].split()
+                for gene in genes:
+                    rows_to_expand.append({
+                        "Target_Gene": gene.strip(),
+                        "Source_Compound": row["Source_Compound"],
+                        "Probability": row["Probability"]
+                    })
+                indices_to_remove.append(idx)
+
+            merged_df = merged_df.drop(index=indices_to_remove)
+            expanded_df = pd.DataFrame(rows_to_expand)
+            merged_df = pd.concat([merged_df, expanded_df], ignore_index=True)
+            logger.info(f"拆分后总记录数: {len(merged_df)}")
+
+        # 按靶点去重，保留最高概率
+        deduplicated_df = merged_df.loc[
+            merged_df.groupby("Target_Gene")["Probability"].idxmax()
+        ]
+
+        # 过滤：只保留 Probability > 0 的靶点
+        before_filter = len(deduplicated_df)
+        deduplicated_df = deduplicated_df[deduplicated_df["Probability"] > 0].copy()
+        logger.info(f"过滤 Probability>0: {before_filter} -> {len(deduplicated_df)} (排除 {before_filter - len(deduplicated_df)})")
+
+        # 按概率降序排序
+        deduplicated_df = deduplicated_df.sort_values(
+            "Probability", ascending=False
+        ).reset_index(drop=True)
+
+        # 保存结果
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        deduplicated_df.to_csv(output_path, index=False)
+
+        # 统计各成分贡献的靶点数
+        compound_contribution = (
+            deduplicated_df["Source_Compound"]
+            .value_counts()
+            .to_dict()
+        )
+
+        logger.info(f"Stage 3 完成: {len(csv_files)} 文件 -> {len(merged_df)} 记录 -> {len(deduplicated_df)} 去重靶点")
+
+        return {
+            "status": "成功",
+            "input_files": len(csv_files),
+            "total_records": len(merged_df),
+            "unique_targets": len(deduplicated_df),
+            "output_path": str(output_path),
+            "compound_contribution": compound_contribution,
+            "deduplicated_df": deduplicated_df,
+        }
+
+    except Exception as e:
+        logger.exception(f"[Stage3] 合并去重失败: {e}")
+        return {"status": "错误", "error": str(e), "total_records": 0, "unique_targets": 0}
+
+
+if __name__ == "__main__":
+    result = merge_and_deduplicate_targets()
+
+    if result["status"] == "成功":
+        logger.info(f"\n去重后的靶点列表示例 (前10个):")
+        logger.info(result["deduplicated_df"][["Target_Gene", "Source_Compound", "Probability"]].head(10).to_string(index=False))
