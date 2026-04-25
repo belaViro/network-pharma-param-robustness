@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 评估传统方法 (Degree Top-30) 的富集效果
 

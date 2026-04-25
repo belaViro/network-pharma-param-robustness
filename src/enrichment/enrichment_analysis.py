@@ -112,6 +112,9 @@ def run_enrichment_analysis(
                 df['N'] = df['Overlap'].apply(lambda x: int(x.split('/')[1]))
                 df['EF'] = (df['k'] / n_genes) / (df['N'] / background)
 
+                # 双重过滤：至少2个靶点命中 + 富集强度≥3.0
+                df = df[(df['k'] >= 2) & (df['EF'] >= 3.0)]
+
                 df = df.sort_values('Adjusted P-value').head(top_n)
                 significant_results[name] = df
 

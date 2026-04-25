@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Full Pipeline - 完整流水线 (Stage 1-6 + 传统方法评估)
 

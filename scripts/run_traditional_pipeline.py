@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 传统方法完整流程 (Stage 3-6 + 分支A)
 

@@ -4,7 +4,6 @@
 """
 
 from pathlib import Path
-from typing import Dict, Any
 
 # ============================================================================
 # 项目路径
@@ -117,11 +116,24 @@ LOG_LEVEL = "INFO"
 # ============================================================================
 
 STRAWBERRY_LEAF_MOLECULES: list[str] = [
+    'Miquelianin',
     'Sucrose',
     'Trehalose',
+    'Oleamide',
     'Catechin',
+    'Indole-3-acrylic acid',
+    'DL-Tryptophan',
+    '(3beta,9xi)-3-(beta-D-Glucopyranosyloxy)-14-hydroxycard-20(22)-enolide',
+    'Denin',
+    '2-Methylglutaric acid',
     'Procyanidin B1',
     'Scutellarin',
+    'Choline',
+    'DL-Malic acid',
+    'Citric acid',
+    'A-Ketoglutaric Acid',
+    'L-Allo-Isoleucine',
+    'Hexadecanamide',
 ]
 
 

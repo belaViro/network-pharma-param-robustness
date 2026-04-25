@@ -127,17 +127,24 @@ def merge_and_deduplicate_targets(
             merged_df.groupby("Target_Gene")["Probability"].idxmax()
         ]
 
-        # 过滤：只保留 Probability > 0 的靶点
-        before_filter = len(deduplicated_df)
-        deduplicated_df = deduplicated_df[deduplicated_df["Probability"] > 0].copy()
-        logger.info(f"过滤 Probability>0: {before_filter} -> {len(deduplicated_df)} (排除 {before_filter - len(deduplicated_df)})")
-
         # 按概率降序排序
         deduplicated_df = deduplicated_df.sort_values(
             "Probability", ascending=False
         ).reset_index(drop=True)
 
-        # 保存结果
+        # 保存完整并集到 swiss_targets/merged_targets.csv (含 Probability=0)
+        from src.config import SWISS_TARGETS_DIR
+        swiss_merged_path = SWISS_TARGETS_DIR / "merged_targets.csv"
+        swiss_merged_path.parent.mkdir(parents=True, exist_ok=True)
+        deduplicated_df.to_csv(swiss_merged_path, index=False)
+        logger.info(f"[Stage3] 完整并集保存至: {swiss_merged_path} ({len(deduplicated_df)} 靶点)")
+
+        # 过滤：只保留 Probability > 0 的靶点
+        before_filter = len(deduplicated_df)
+        deduplicated_df = deduplicated_df[deduplicated_df["Probability"] > 0].copy()
+        logger.info(f"过滤 Probability>0: {before_filter} -> {len(deduplicated_df)} (排除 {before_filter - len(deduplicated_df)})")
+
+        # 排序后保存到 shared/merged_targets.csv (仅 >0)
         output_path.parent.mkdir(parents=True, exist_ok=True)
         deduplicated_df.to_csv(output_path, index=False)
 

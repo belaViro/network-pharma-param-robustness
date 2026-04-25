@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 SwissTargetPrediction 自动化靶点预测流水线
 

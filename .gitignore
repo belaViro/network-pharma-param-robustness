@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+.pytest_cache/
+
+# 项目数据（流水线自动生成）
+src/data/go-basic.obo
+
+# 富集分析缓存（自动生成）
+src/outputs/sensitivity/enrichment_cache/
+
+# 流水线运行日志（自动生成）
+src/outputs/reports/
+src/outputs/traditional/evaluation/*.md
+src/outputs/traditional/evaluation/*.log
+
+# 操作系统
+.DS_Store
+Thumbs.db
