@@ -1,0 +1,650 @@
+{
+  "q1_targets": [
+    "ABCB1",
+    "APP",
+    "BCL2",
+    "CA9",
+    "DRD2",
+    "EGFR",
+    "ERBB2",
+    "ESR1",
+    "ESR2",
+    "FGF1",
+    "FGF2",
+    "FGFR1",
+    "FLT1",
+    "HIF1A",
+    "HSP90AA1",
+    "IL2",
+    "KDR",
+    "KIT",
+    "LGALS3",
+    "MAOB",
+    "MAPK14",
+    "MAPT",
+    "MET",
+    "MMP1",
+    "MMP2",
+    "MMP9",
+    "PTGS2",
+    "SRC",
+    "STAT1",
+    "STAT3",
+    "TNF"
+  ],
+  "q1_targets_count": 31,
+  "enrichment_summary": {
+    "total_significant": 40,
+    "direct_ox": 0,
+    "cross_talk": 15,
+    "backbone": 14,
+    "other": 11
+  },
+  "quadrant_distribution": {
+    "Q1: 核心稳健通路": 24,
+    "Q2: 低频高显著": 1,
+    "Q3: 稳健但效应弱": 15,
+    "Q4: 可忽略": 0,
+    "未在扫描中出现": 24
+  },
+  "category_quadrant_breakdown": {
+    "signaling_backbone → Q1: 核心稳健通路": 12,
+    "other → Q1: 核心稳健通路": 9,
+    "other → Q2: 低频高显著": 1,
+    "other → Q3: 稳健但效应弱": 1,
+    "N/A → 未在扫描中出现": 24,
+    "cross_talk → Q1: 核心稳健通路": 3,
+    "cross_talk → Q3: 稳健但效应弱": 12,
+    "signaling_backbone → Q3: 稳健但效应弱": 2
+  },
+  "key_metrics": {
+    "overall_q1_rate": 60.0,
+    "system_pathway_q1_rate": 60.0
+  },
+  "pathway_details": {
+    "GO_BP": [
+      {
+        "pathway": "positive regulation of phosphorylation (GO:0042327)",
+        "category": "signaling_backbone",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.75,
+        "avg_rank": 2.805555555555556,
+        "pvalue": 5.318188977234373e-16,
+        "ef": 36.593140379956644
+      },
+      {
+        "pathway": "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)",
+        "category": "signaling_backbone",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.75,
+        "avg_rank": 2.7916666666666665,
+        "pvalue": 4.2675431054236516e-15,
+        "ef": 24.552858511657618
+      },
+      {
+        "pathway": "regulation of protein kinase B signaling (GO:0051896)",
+        "category": "other",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.75,
+        "avg_rank": 7.625,
+        "pvalue": 5.62904009089602e-14,
+        "ef": 38.3356708742403
+      },
+      {
+        "pathway": "positive regulation of protein kinase B signaling (GO:0051897)",
+        "category": "other",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.75,
+        "avg_rank": 8.027777777777779,
+        "pvalue": 1.5038205305629608e-13,
+        "ef": 45.1813263874975
+      },
+      {
+        "pathway": "positive regulation of intracellular signal transduction (GO:1902533)",
+        "category": "other",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.7291666666666666,
+        "avg_rank": 8.885714285714286,
+        "pvalue": 1.5038205305629608e-13,
+        "ef": 18.16731655441333
+      },
+      {
+        "pathway": "positive regulation of protein serine/threonine kinase activity (GO:0071902)",
+        "category": "other",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.75,
+        "avg_rank": 13.77777777777778,
+        "pvalue": 9.23130481858697e-12,
+        "ef": 56.1472915398661
+      },
+      {
+        "pathway": "cytokine-mediated signaling pathway (GO:0019221)",
+        "category": "signaling_backbone",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.7083333333333334,
+        "avg_rank": 14.088235294117649,
+        "pvalue": 1.4203521523151094e-11,
+        "ef": 14.90831645109345
+      },
+      {
+        "pathway": "cellular response to cytokine stimulus (GO:0071345)",
+        "category": "signaling_backbone",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.625,
+        "avg_rank": 15.05,
+        "pvalue": 1.4203521523151094e-11,
+        "ef": 17.835631106946863
+      },
+      {
+        "pathway": "positive regulation of kinase activity (GO:0033674)",
+        "category": "other",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.5,
+        "avg_rank": 14.0,
+        "pvalue": 1.4203521523151094e-11,
+        "ef": 52.20713073005094
+      },
+      {
+        "pathway": "positive regulation of MAP kinase activity (GO:0043406)",
+        "category": "signaling_backbone",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.7395833333333334,
+        "avg_rank": 17.253521126760564,
+        "pvalue": 1.4203521523151094e-11,
+        "ef": 76.6713417484806
+      },
+      {
+        "pathway": "regulation of kinase activity (GO:0043549)",
+        "category": "other",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.3958333333333333,
+        "avg_rank": 19.21052631578948,
+        "pvalue": 1.4959216030404544e-10,
+        "ef": 56.28002745367193
+      },
+      {
+        "pathway": "regulation of MAP kinase activity (GO:0043405)",
+        "category": "signaling_backbone",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.3854166666666667,
+        "avg_rank": 21.027027027027028,
+        "pvalue": 1.7748474441331958e-10,
+        "ef": 54.53940804788826
+      },
+      {
+        "pathway": "regulation of cell population proliferation (GO:0042127)",
+        "category": "other",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.5,
+        "avg_rank": 21.5,
+        "pvalue": 1.8137661364956064e-10,
+        "ef": 12.117885492315487
+      },
+      {
+        "pathway": "peptidyl-tyrosine modification (GO:0018212)",
+        "category": "other",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.4166666666666667,
+        "avg_rank": 18.5,
+        "pvalue": 2.115991626829161e-10,
+        "ef": 82.66129032258065
+      },
+      {
+        "pathway": "regulation of phosphatidylinositol 3-kinase signaling (GO:0014066)",
+        "category": "other",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.65625,
+        "avg_rank": 18.666666666666668,
+        "pvalue": 2.935764892855483e-10,
+        "ef": 49.90870359099208
+      },
+      {
+        "pathway": "positive regulation of MAPK cascade (GO:0043410)",
+        "category": "signaling_backbone",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.3854166666666667,
+        "avg_rank": 19.10810810810811,
+        "pvalue": 5.518904335129334e-10,
+        "ef": 24.13468330586296
+      },
+      {
+        "pathway": "peptidyl-tyrosine phosphorylation (GO:0018108)",
+        "category": "signaling_backbone",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.3541666666666667,
+        "avg_rank": 23.0,
+        "pvalue": 7.996755507790424e-10,
+        "ef": 67.08742402992053
+      },
+      {
+        "pathway": "MAPK cascade (GO:0000165)",
+        "category": "signaling_backbone",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.5,
+        "avg_rank": 17.770833333333332,
+        "pvalue": 1.2933352028001672e-09,
+        "ef": 21.82476312147344
+      },
+      {
+        "pathway": "regulation of phospholipase C activity (GO:1900274)",
+        "category": "other",
+        "quadrant": "Q2: 低频高显著",
+        "frequency": 0.2083333333333333,
+        "avg_rank": 24.6,
+        "pvalue": 1.2933352028001672e-09,
+        "ef": 220.43010752688173
+      },
+      {
+        "pathway": "positive regulation of phosphatidylinositol 3-kinase signaling (GO:0014068)",
+        "category": "other",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 0.4375,
+        "avg_rank": 25.261904761904763,
+        "pvalue": 1.5023923736310644e-09,
+        "ef": 60.117302052785924
+      }
+    ],
+    "GO_MF": [
+      {
+        "pathway": "transmembrane receptor protein kinase activity (GO:0019199)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 1.6466794832425634e-10,
+        "ef": 77.1505376344086
+      },
+      {
+        "pathway": "transmembrane receptor protein tyrosine kinase activity (GO:0004714)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 1.6466794832425634e-10,
+        "ef": 77.1505376344086
+      },
+      {
+        "pathway": "protein tyrosine kinase activity (GO:0004713)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 1.6466794832425634e-10,
+        "ef": 48.98446833930704
+      },
+      {
+        "pathway": "protein phosphatase binding (GO:0019903)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 2.0356680189262622e-08,
+        "ef": 37.634408602150536
+      },
+      {
+        "pathway": "phosphatase binding (GO:0019902)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 4.921003742188598e-07,
+        "ef": 34.80475382003396
+      },
+      {
+        "pathway": "ubiquitin-like protein ligase binding (GO:0044389)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 8.496772270598616e-05,
+        "ef": 14.070006863417982
+      },
+      {
+        "pathway": "growth factor receptor binding (GO:0070851)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.00033340048539988747,
+        "ef": 25.19201228878648
+      },
+      {
+        "pathway": "Hsp90 protein binding (GO:0051879)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.00033340048539988747,
+        "ef": 56.68202764976959
+      },
+      {
+        "pathway": "DNA binding (GO:0003677)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.0003371117847630819,
+        "ef": 6.523209100672209
+      },
+      {
+        "pathway": "vascular endothelial growth factor-activated receptor activity (GO:0005021)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.0005727097748775445,
+        "ef": 188.94009216589862
+      },
+      {
+        "pathway": "ubiquitin protein ligase binding (GO:0031625)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.0005727097748775445,
+        "ef": 12.477175897748022
+      },
+      {
+        "pathway": "kinase binding (GO:0019900)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.0006823929604635349,
+        "ef": 8.60681547827304
+      },
+      {
+        "pathway": "receptor ligand activity (GO:0048018)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.0009711388122157492,
+        "ef": 10.77020069349585
+      },
+      {
+        "pathway": "tumor necrosis factor receptor binding (GO:0005164)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.0013569235750843,
+        "ef": 110.21505376344086
+      },
+      {
+        "pathway": "ATPase binding (GO:0051117)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.001586927903562,
+        "ef": 27.176314626601854
+      },
+      {
+        "pathway": "RNA polymerase II-specific DNA-binding transcription factor binding (GO:0061629)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.001586927903562,
+        "ef": 13.921901528013583
+      },
+      {
+        "pathway": "metalloendopeptidase activity (GO:0004222)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.0020208524707483,
+        "ef": 24.193548387096772
+      },
+      {
+        "pathway": "growth factor activity (GO:0008083)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.0022723935496418,
+        "ef": 22.803114571746384
+      },
+      {
+        "pathway": "protein homodimerization activity (GO:0042803)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.0024805838673029,
+        "ef": 6.238587948874011
+      },
+      {
+        "pathway": "histone acetyltransferase binding (GO:0035035)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.0029961013207026,
+        "ef": 62.9800307219662
+      }
+    ],
+    "GO_CC": [
+      {
+        "pathway": "membrane raft (GO:0045121)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 1.3793761430295309e-05,
+        "ef": 24.341975064318227
+      },
+      {
+        "pathway": "integral component of plasma membrane (GO:0005887)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.0017865480401349,
+        "ef": 4.548076496428096
+      },
+      {
+        "pathway": "ficolin-1-rich granule (GO:0101002)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.0049698281316186,
+        "ef": 14.375876577840113
+      },
+      {
+        "pathway": "axon (GO:0030424)",
+        "category": "N/A",
+        "quadrant": "未在扫描中出现",
+        "frequency": 0.0,
+        "avg_rank": 999.0,
+        "pvalue": 0.0055294242349789,
+        "ef": 12.966476913345984
+      }
+    ],
+    "KEGG": [
+      {
+        "pathway": "Pathways in cancer",
+        "category": "cross_talk",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.75,
+        "avg_rank": 1.8888888888888888,
+        "pvalue": 1.4634214740922995e-20,
+        "ef": 23.661988943563575
+      },
+      {
+        "pathway": "Proteoglycans in cancer",
+        "category": "cross_talk",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.75,
+        "avg_rank": 3.3194444444444446,
+        "pvalue": 1.7226407142707342e-18,
+        "ef": 45.16129032258064
+      },
+      {
+        "pathway": "MAPK signaling pathway",
+        "category": "signaling_backbone",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.75,
+        "avg_rank": 11.305555555555555,
+        "pvalue": 3.888177254048232e-13,
+        "ef": 26.991441737985514
+      },
+      {
+        "pathway": "Rap1 signaling pathway",
+        "category": "signaling_backbone",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.75,
+        "avg_rank": 9.15277777777778,
+        "pvalue": 3.888177254048232e-13,
+        "ef": 34.63901689708141
+      },
+      {
+        "pathway": "PI3K-Akt signaling pathway",
+        "category": "signaling_backbone",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.75,
+        "avg_rank": 9.40277777777778,
+        "pvalue": 2.7522278214110946e-12,
+        "ef": 22.416621104428646
+      },
+      {
+        "pathway": "Estrogen signaling pathway",
+        "category": "cross_talk",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 0.75,
+        "avg_rank": 24.86111111111111,
+        "pvalue": 7.347671099191853e-10,
+        "ef": 38.61549328938074
+      },
+      {
+        "pathway": "Fluid shear stress and atherosclerosis",
+        "category": "cross_talk",
+        "quadrant": "Q1: 核心稳健通路",
+        "frequency": 0.75,
+        "avg_rank": 20.72222222222222,
+        "pvalue": 7.347671099191853e-10,
+        "ef": 38.05987468090044
+      },
+      {
+        "pathway": "Bladder cancer",
+        "category": "cross_talk",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 1.0,
+        "avg_rank": 22.4375,
+        "pvalue": 7.536664077059042e-10,
+        "ef": 96.77419354838709
+      },
+      {
+        "pathway": "Breast cancer",
+        "category": "cross_talk",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 0.5,
+        "avg_rank": 31.83333333333333,
+        "pvalue": 8.970036815082365e-10,
+        "ef": 35.988588983980684
+      },
+      {
+        "pathway": "Chemical carcinogenesis",
+        "category": "cross_talk",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 0.75,
+        "avg_rank": 27.5,
+        "pvalue": 1.151300927725071e-09,
+        "ef": 24.902146038601703
+      },
+      {
+        "pathway": "Prolactin signaling pathway",
+        "category": "cross_talk",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 0.4166666666666667,
+        "avg_rank": 32.1,
+        "pvalue": 1.3110792302214916e-08,
+        "ef": 56.68202764976959
+      },
+      {
+        "pathway": "Central carbon metabolism in cancer",
+        "category": "cross_talk",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 0.4375,
+        "avg_rank": 32.76190476190476,
+        "pvalue": 1.3110792302214916e-08,
+        "ef": 56.68202764976959
+      },
+      {
+        "pathway": "Lipid and atherosclerosis",
+        "category": "cross_talk",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 0.6145833333333334,
+        "avg_rank": 33.0,
+        "pvalue": 1.3110792302214916e-08,
+        "ef": 24.606151537884468
+      },
+      {
+        "pathway": "Ras signaling pathway",
+        "category": "signaling_backbone",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 0.5416666666666666,
+        "avg_rank": 27.5,
+        "pvalue": 2.1852183547916065e-08,
+        "ef": 22.803114571746384
+      },
+      {
+        "pathway": "Calcium signaling pathway",
+        "category": "signaling_backbone",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 0.4895833333333333,
+        "avg_rank": 30.51063829787234,
+        "pvalue": 2.6271640512014277e-08,
+        "ef": 22.043010752688172
+      },
+      {
+        "pathway": "Gastric cancer",
+        "category": "cross_talk",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 0.3854166666666667,
+        "avg_rank": 33.567567567567565,
+        "pvalue": 2.6271640512014277e-08,
+        "ef": 31.067330591037017
+      },
+      {
+        "pathway": "Hepatitis B",
+        "category": "cross_talk",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 0.5625,
+        "avg_rank": 34.592592592592595,
+        "pvalue": 4.4315949109238224e-08,
+        "ef": 28.57427319792911
+      },
+      {
+        "pathway": "IL-17 signaling pathway",
+        "category": "cross_talk",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 0.5625,
+        "avg_rank": 34.666666666666664,
+        "pvalue": 5.730652083505937e-08,
+        "ef": 42.21002059025395
+      },
+      {
+        "pathway": "Prostate cancer",
+        "category": "cross_talk",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 0.6041666666666666,
+        "avg_rank": 36.46551724137931,
+        "pvalue": 6.567760948054278e-08,
+        "ef": 40.904556035916194
+      },
+      {
+        "pathway": "AGE-RAGE signaling pathway in diabetic complications",
+        "category": "cross_talk",
+        "quadrant": "Q3: 稳健但效应弱",
+        "frequency": 0.625,
+        "avg_rank": 36.43333333333333,
+        "pvalue": 7.50248542608602e-08,
+        "ef": 39.67741935483871
+      }
+    ]
+  }
+}

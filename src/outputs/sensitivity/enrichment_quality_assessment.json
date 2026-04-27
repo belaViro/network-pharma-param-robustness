@@ -1,0 +1,86 @@
+{
+  "total_pathways": 93,
+  "enriched_pathways": 40,
+  "metric_comparison": {
+    "frequency": {
+      "all_mean": 0.36111111111111116,
+      "all_std": 0.249949672873169,
+      "enriched_mean": 0.60078125,
+      "enriched_std": 0.1661883410577458,
+      "diff_pct": 66.37019230769229,
+      "mann_whitney_p": 2.7321975295133416e-15
+    },
+    "avg_logp": {
+      "all_mean": 8.092506911443447,
+      "all_std": 3.4772112681917,
+      "enriched_mean": 9.078874260929975,
+      "enriched_std": 2.352003817996032,
+      "diff_pct": 12.18865007197864,
+      "mann_whitney_p": 0.004239698903902013
+    },
+    "avg_rank": {
+      "all_mean": 20.261610471403806,
+      "all_std": 10.434906196224189,
+      "enriched_mean": 20.174303656740683,
+      "enriched_std": 10.328357307869151,
+      "diff_pct": -0.43089770571960684,
+      "mann_whitney_p": 0.9196429787202551
+    },
+    "rank_std": {
+      "all_mean": 3.4916616450094073,
+      "all_std": 2.637812129637394,
+      "enriched_mean": 4.238505089434585,
+      "enriched_std": 2.065101288422296,
+      "diff_pct": 21.389341819320684,
+      "mann_whitney_p": 0.004755387257442151
+    }
+  },
+  "weighted_q1_rates": {
+    "simple": 60.0,
+    "frequency_weighted": 63.02557433896836,
+    "logp_weighted": 68.15620301459704,
+    "combined_weighted": 71.70779236133615
+  },
+  "enriched_pathway_ids": [
+    "Pathways in cancer",
+    "Proteoglycans in cancer",
+    "MAPK signaling pathway",
+    "Rap1 signaling pathway",
+    "PI3K-Akt signaling pathway",
+    "Estrogen signaling pathway",
+    "Fluid shear stress and atherosclerosis",
+    "Bladder cancer",
+    "Breast cancer",
+    "Chemical carcinogenesis",
+    "Prolactin signaling pathway",
+    "Central carbon metabolism in cancer",
+    "Lipid and atherosclerosis",
+    "Ras signaling pathway",
+    "Calcium signaling pathway",
+    "Gastric cancer",
+    "Hepatitis B",
+    "IL-17 signaling pathway",
+    "Prostate cancer",
+    "AGE-RAGE signaling pathway in diabetic complications",
+    "positive regulation of phosphorylation (GO:0042327)",
+    "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)",
+    "regulation of protein kinase B signaling (GO:0051896)",
+    "positive regulation of protein kinase B signaling (GO:0051897)",
+    "positive regulation of intracellular signal transduction (GO:1902533)",
+    "positive regulation of protein serine/threonine kinase activity (GO:0071902)",
+    "cytokine-mediated signaling pathway (GO:0019221)",
+    "cellular response to cytokine stimulus (GO:0071345)",
+    "positive regulation of kinase activity (GO:0033674)",
+    "positive regulation of MAP kinase activity (GO:0043406)",
+    "regulation of kinase activity (GO:0043549)",
+    "regulation of MAP kinase activity (GO:0043405)",
+    "regulation of cell population proliferation (GO:0042127)",
+    "peptidyl-tyrosine modification (GO:0018212)",
+    "regulation of phosphatidylinositol 3-kinase signaling (GO:0014066)",
+    "positive regulation of MAPK cascade (GO:0043410)",
+    "peptidyl-tyrosine phosphorylation (GO:0018108)",
+    "MAPK cascade (GO:0000165)",
+    "regulation of phospholipase C activity (GO:1900274)",
+    "positive regulation of phosphatidylinositol 3-kinase signaling (GO:0014068)"
+  ]
+}
