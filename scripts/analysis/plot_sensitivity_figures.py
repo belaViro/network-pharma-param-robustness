@@ -173,18 +173,19 @@ def fig1_heatmap(df: pd.DataFrame):
 
 
 def fig2_target_robustness(df: pd.DataFrame):
-    """Scatter: frequency (x) vs avg_degree (y), colored by quadrant, labeled for key genes.
+    """Scatter: frequency (x) vs avg_degree_norm (y), colored by quadrant, labeled for Tier1 genes.
 
-    Uses DATA-DRIVEN median splits (consistent with run_sensitivity_analysis.py classification).
-    Y-axis uses avg_degree (NOT avg_degree_rank) to match the quadrant classification logic.
+    FIXED: Now uses avg_degree_norm (consistent with run_sensitivity_analysis.py classification)
+    so that quadrant colors, background shading, and divider lines are fully aligned.
+    Tier1 genes are explicitly labeled.
     """
     from matplotlib.font_manager import FontProperties
 
-    # Compute data-driven medians
+    # Compute data-driven medians using NORMALIZED degree (consistent with classification)
     freq_median = df["frequency"].median()
-    degree_median = df["avg_degree"].median()
+    degree_median = df["avg_degree_norm"].median()
 
-    # Font setup: separate English and Chinese fonts to avoid monospace fallback
+    # Font setup
     font_en = FontProperties(family="Arial", size=9)
     font_en_bold = FontProperties(family="Arial", size=9, weight="bold")
     font_en_small = FontProperties(family="Arial", size=7)
@@ -193,7 +194,7 @@ def fig2_target_robustness(df: pd.DataFrame):
     font_cn_small = FontProperties(family="SimHei", size=7.5)
     font_label = FontProperties(family="Arial", size=6.5, weight="bold")
 
-    fig, ax = plt.subplots(figsize=(8, 6))
+    fig, ax = plt.subplots(figsize=(9, 6.5))
 
     # Quadrant definitions
     quadrants = {
@@ -203,11 +204,14 @@ def fig2_target_robustness(df: pd.DataFrame):
         "Q4: 可忽略": {"marker": "o", "size": 25, "zorder": 1},
     }
 
-    # Background shading — aligned to actual degree_median ratio in y-range
+    # Background shading — aligned to normalized degree median
     x_max = 1.05
-    y_min = -2
-    y_max = df["avg_degree"].max() * 1.15
+    y_min = -0.05
+    y_max = df["avg_degree_norm"].max() * 1.15
+
+    # Compute correct axis-ratio for the degree median line
     y_med_ratio = (degree_median - y_min) / (y_max - y_min)
+    y_med_ratio = max(0.0, min(1.0, y_med_ratio))
 
     ax.axvspan(freq_median, x_max, ymin=y_med_ratio, ymax=1, alpha=0.10, color="#2166AC", zorder=0)
     ax.axvspan(0, freq_median, ymin=y_med_ratio, ymax=1, alpha=0.10, color="#E69F00", zorder=0)
@@ -222,7 +226,7 @@ def fig2_target_robustness(df: pd.DataFrame):
             continue
         ax.scatter(
             subset["frequency"],
-            subset["avg_degree"],
+            subset["avg_degree_norm"],
             c=color,
             marker=qstyle["marker"],
             s=qstyle["size"],
@@ -233,16 +237,25 @@ def fig2_target_robustness(df: pd.DataFrame):
             alpha=0.85,
         )
 
-    # No individual gene labels — keep figure clean for publication
+    # Label Tier1 genes (frequency = 1.0)
+    tier1 = df[df["frequency"] == 1.0].sort_values("avg_degree_norm", ascending=False)
+    for _, row in tier1.iterrows():
+        ax.annotate(
+            row["gene"],
+            (row["frequency"], row["avg_degree_norm"]),
+            textcoords="offset points",
+            xytext=(8, 3),
+            fontproperties=font_label,
+            color="#333333",
+            zorder=5,
+        )
 
-    # Axis labels — use English font to avoid monospace fallback
-    ax.set_xlabel("跨参数组合出现频率",
-                  fontproperties=font_cn, labelpad=6)
-    ax.set_ylabel("PPI网络平均度中心性",
-                  fontproperties=font_cn, labelpad=6)
+    # Axis labels
+    ax.set_xlabel("跨参数组合出现频率", fontproperties=font_cn, labelpad=6)
+    ax.set_ylabel("标准化平均度中心性 (degree / max_degree)", fontproperties=font_cn, labelpad=6)
     ax.set_xlim(-0.03, 1.08)
-    y_max = df["avg_degree"].max() * 1.15
-    ax.set_ylim(-2, y_max)
+    y_max = df["avg_degree_norm"].max() * 1.15
+    ax.set_ylim(y_min, y_max)
 
     # Tick labels
     for label in ax.get_xticklabels():
@@ -250,8 +263,8 @@ def fig2_target_robustness(df: pd.DataFrame):
     for label in ax.get_yticklabels():
         label.set_fontproperties(font_en)
 
-    # Legend — Chinese text via label strings, use smaller font
-    leg = ax.legend(frameon=True, fancybox=False, loc="upper right",
+    # Legend
+    leg = ax.legend(frameon=True, fancybox=False, loc="upper left",
                     edgecolor="#cccccc", prop=font_cn_small)
     ax.grid(alpha=0.2, linestyle="--", linewidth=0.3)
 
@@ -260,15 +273,15 @@ def fig2_target_robustness(df: pd.DataFrame):
     ax.axhline(y=degree_median, color="#555555", linestyle="--", linewidth=0.8, zorder=0, alpha=0.5)
 
     # Median annotations
-    ax.text(freq_median + 0.01, y_max * 0.95,
+    ax.text(freq_median + 0.01, y_max * 0.98,
             f"频率中位数 = {freq_median:.2f}", fontproperties=font_cn_small,
             color="#555555", va="top")
-    ax.text(0.98, degree_median + 1,
-            f"度中位数 = {degree_median:.1f}", fontproperties=font_cn_small,
+    ax.text(0.98, degree_median + 0.02,
+            f"标准化度中位数 = {degree_median:.3f}", fontproperties=font_cn_small,
             color="#555555", ha="right", va="bottom")
 
     # Title
-    fig.suptitle("靶点稳健性：二维象限分类",
+    fig.suptitle("靶点稳健性：二维象限分类（标准化度中心性）",
                  fontproperties=FontProperties(family="SimHei", size=12), y=0.98)
     save_fig(fig, "fig2_target_robustness_quadrant")
     plt.close(fig)
