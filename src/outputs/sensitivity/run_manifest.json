@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-04-28T09:41:41",
+  "analysis": "parameter_grid_sensitivity",
+  "parameter_grid": {
+    "probability_thresholds": [
+      0,
+      0.09,
+      0.1
+    ],
+    "string_thresholds": [
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.7
+    ],
+    "top_k_values": [
+      25,
+      30,
+      35,
+      40
+    ],
+    "pvalue_cutoff": 0.01,
+    "total_combinations": 72,
+    "successful_combinations": 72,
+    "probability_rule": "Probability > threshold"
+  },
+  "inputs": {
+    "swiss_targets_merged": {
+      "path": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\shared\\swiss_targets\\merged_targets.csv",
+      "sha256": "a27dbb4479710a52e5401eb12defb93e1f742fe332567efa320729f9379b7acf",
+      "rows": 288
+    },
+    "disease_genes": {
+      "path": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\shared\\disease_genes\\merged_disease_genes.csv",
+      "sha256": "0ccd46d44a2a463ddd9cdaf64a596e44d1298814347bb93004ad9f616d8097af",
+      "rows": 14766
+    },
+    "ppi_edges": {
+      "path": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\shared\\ppi_network\\string_interactions_interactions.csv",
+      "sha256": "e85ad56576dc2796ca9b6443b8acf7ad4b1370a0164a3aebfb432921633b6206",
+      "rows": 830
+    }
+  },
+  "outputs": {
+    "param_grid_results": "src/outputs/sensitivity/param_grid_results.csv",
+    "target_robustness": "src/outputs/sensitivity/target_robustness.csv",
+    "pathway_rank_stability": "src/outputs/sensitivity/pathway_rank_stability.csv",
+    "combo_targets": "src\\outputs\\sensitivity\\combo_targets.json",
+    "report": "src/outputs/sensitivity/sensitivity_analysis_report.md"
+  }
+}

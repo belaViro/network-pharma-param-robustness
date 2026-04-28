@@ -1,8 +1,7 @@
 """
 Fig.8: Upset plot - Target set intersections across Prob thresholds.
 
-Shows how target sets change as Prob threshold increases from 0→0.2,
-demonstrating why Prob is the most sensitive parameter.
+Shows how target sets change across the current main-grid Prob thresholds.
 """
 
 import json
@@ -43,7 +42,7 @@ plt.rcParams.update(
 def save_fig(fig, name):
     for fmt in ("png", "svg"):
         path = FIGURES_DIR / f"{name}.{fmt}"
-        fig.savefig(path, dpi=dpi, bbox_inches="tight", format=fmt)
+        fig.savefig(path, dpi=dpi, bbox_inches="tight", pad_inches=0.12, format=fmt)
         print(f"  Saved: {path}")
 
 
@@ -53,9 +52,9 @@ def save_fig(fig, name):
 with open(OUTPUTS_DIR / "combo_targets.json") as f:
     combo_targets = json.load(f)
 
-PROBS = [0, 0.09, 0.1, 0.2]
-LABELS = ["P=0.0", "P=0.09", "P=0.1", "P=0.2"]
-COLORS = ["#4393C3", "#92C5DE", "#F4A582", "#D6604D"]
+PROBS = [0, 0.09, 0.1]
+LABELS = ["P0", "P09", "P10"]
+COLORS = ["#4393C3", "#92C5DE", "#F4A582"]
 
 prob_unions = {}
 for p in PROBS:
@@ -99,7 +98,7 @@ for membership, genes in sorted_patterns:
         idx = PROBS.index(membership[0])
         bar_colors.append(COLORS[idx])
     elif set(membership) == set(PROBS):
-        bar_colors.append("#2166AC")  # all 4: dark blue
+        bar_colors.append("#2166AC")
     elif 0 in membership and 0.09 in membership and len(membership) == 2:
         bar_colors.append("#4393C3")  # P0=P0.09 only
     else:
@@ -141,10 +140,10 @@ for membership, genes in sorted_patterns:
     if len(membership) == 1:
         pattern_labels.append(f"仅{LABELS[PROBS.index(membership[0])]}")
     elif set(membership) == set(PROBS):
-        pattern_labels.append("全部4个")
+        pattern_labels.append("三阈值")
     else:
         names = [LABELS[PROBS.index(p)] for p in membership]
-        pattern_labels.append("∩".join(names).replace("P=", ""))
+        pattern_labels.append("/".join(names))
 
 ax_mat.set_xticklabels(pattern_labels, fontsize=8, rotation=30, ha="right")
 ax_mat.set_ylim(-0.5, n_sets - 0.5)
@@ -158,11 +157,7 @@ ax_mat.tick_params(axis="x", length=0)
 annotations = []
 for j, (membership, genes) in enumerate(sorted_patterns):
     if set(membership) == set(PROBS):
-        annotations.append((j, len(genes), f"核心稳健\n({', '.join(genes[:3])}...)"))
-    elif membership == (0.1, 0.2):
-        annotations.append((j, len(genes), f"CA家族劫持\n({', '.join(genes[:3])}...)"))
-    elif membership == (0.2,):
-        annotations.append((j, len(genes), f"P0.2特有\n({', '.join(genes[:2])}...)"))
+        annotations.append((j, len(genes), f"三阈值共有\n({', '.join(genes[:3])}...)"))
 
 for j, h, text in annotations:
     ax_bar.text(j, h + 2.5, text, ha="center", va="bottom", fontsize=7.5,
@@ -171,8 +166,8 @@ for j, h, text in annotations:
 
 # Legend for bar colors
 legend_elements = [
-    mpatches.Patch(facecolor="#2166AC", edgecolor="white", label="4阈值共有（核心稳健）"),
-    mpatches.Patch(facecolor="#4393C3", edgecolor="white", label="P0=P0.09独有"),
+    mpatches.Patch(facecolor="#2166AC", edgecolor="white", label="3阈值共有（主网格交集）"),
+    mpatches.Patch(facecolor="#4393C3", edgecolor="white", label="P0/P09共有"),
     mpatches.Patch(facecolor="#74A9CF", edgecolor="white", label="混合交集"),
 ]
 for color, label in zip(COLORS, LABELS):

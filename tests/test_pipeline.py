@@ -71,37 +71,42 @@ class TestStage2PredictAll:
             "name": molecule_name or smiles,
         }
 
-    def test_predict_single_smiles(self):
+    @patch("src.connectors.swiss_target.SwissTargetPredictor.run_batch")
+    def test_predict_single_smiles(self, mock_run_batch):
         """测试单个 SMILES 预测"""
-        import src.pipeline.stage2_predict as s2
-        original = s2.predict_target
-        s2.predict_target = self._mock_predict_target
-        try:
-            stage1_results = [{
-                "name": "Aspirin",
-                "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
-                "status": "成功"
-            }]
-            results = stage2_predict_all(stage1_results, "/tmp", max_workers=1)
-            assert len(results) == 1
-            assert results[0]["status"] == "成功"
-        finally:
-            s2.predict_target = original
+        mock_run_batch.return_value = [{
+            "name": "Aspirin",
+            "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+            "status": "成功",
+            "csv": "/tmp/Aspirin_targets.csv",
+        }]
+        stage1_results = [{
+            "name": "Aspirin",
+            "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+            "status": "成功"
+        }]
+        results = stage2_predict_all(stage1_results, "/tmp", max_workers=1)
+        assert len(results) == 1
+        assert results[0]["status"] == "成功"
+        mock_run_batch.assert_called_once()
 
-    def test_predict_skips_failed_stage1(self):
+    @patch("src.connectors.swiss_target.SwissTargetPredictor.run_batch")
+    def test_predict_skips_failed_stage1(self, mock_run_batch):
         """测试跳过 Stage 1 失败的结果"""
-        import src.pipeline.stage2_predict as s2
-        original = s2.predict_target
-        s2.predict_target = self._mock_predict_target
-        try:
-            stage1_results = [
-                {"name": "Aspirin", "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O", "status": "成功"},
-                {"name": "Invalid", "smiles": None, "status": "未找到"},
-            ]
-            results = stage2_predict_all(stage1_results, "/tmp", max_workers=1)
-            assert len(results) == 1
-        finally:
-            s2.predict_target = original
+        mock_run_batch.return_value = [{
+            "name": "Aspirin",
+            "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O",
+            "status": "成功",
+            "csv": "/tmp/Aspirin_targets.csv",
+        }]
+        stage1_results = [
+            {"name": "Aspirin", "smiles": "CC(=O)OC1=CC=CC=C1C(=O)O", "status": "成功"},
+            {"name": "Invalid", "smiles": None, "status": "未找到"},
+        ]
+        results = stage2_predict_all(stage1_results, "/tmp", max_workers=1)
+        assert len(results) == 1
+        called_smiles = mock_run_batch.call_args.kwargs["smiles_list"]
+        assert called_smiles == [("CC(=O)OC1=CC=CC=C1C(=O)O", "Aspirin")]
 
     def test_predict_empty_list(self):
         """测试空列表"""

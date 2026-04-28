@@ -45,7 +45,7 @@ def classify_pathway_quadrant(row):
     freq_high = row["frequency"] >= freq_median
     sig_high = row["avg_logp"] >= logp_median
     if freq_high and sig_high:
-        return "Q1: 核心稳健通路"
+        return "Q1: 候选稳健通路"
     elif not freq_high and sig_high:
         return "Q2: 低频高显著"
     elif freq_high and not sig_high:
@@ -60,7 +60,7 @@ print(f"\n{'象限':<20} {'数量':<6} {'占比':<8} {'平均频率':<10} {'平�
 print("-" * 60)
 
 quadrant_summary = {}
-for q in ["Q1: 核心稳健通路", "Q2: 低频高显著", "Q3: 稳健但效应弱", "Q4: 可忽略"]:
+for q in ["Q1: 候选稳健通路", "Q2: 低频高显著", "Q3: 稳健但效应弱", "Q4: 可忽略"]:
     sub = df[df["robustness_quadrant"] == q]
     if len(sub) > 0:
         pct = len(sub) / len(df) * 100
@@ -74,10 +74,10 @@ for q in ["Q1: 核心稳健通路", "Q2: 低频高显著", "Q3: 稳健但效应�
             "avg_logp": round(float(avg_logp), 4),
         }
 
-# ── Q1 core robust pathways detail ─────────────────────────────────────
-q1_df = df[df["robustness_quadrant"] == "Q1: 核心稳健通路"].sort_values("avg_rank")
+# ── Q1 candidate robust pathways detail ────────────────────────────────
+q1_df = df[df["robustness_quadrant"] == "Q1: 候选稳健通路"].sort_values("avg_rank")
 
-print(f"\nQ1 核心稳健通路详情 (n={len(q1_df)}):")
+print(f"\nQ1 候选稳健通路详情 (n={len(q1_df)}):")
 print(f"{'通路名称':<55} {'来源':<8} {'类别':<18} {'频率':<8} {'排名':<6} {'-log10P':<8}")
 print("-" * 105)
 
@@ -106,7 +106,7 @@ output_json = {
     },
     "total_pathways": int(len(df)),
     "quadrant_summary": quadrant_summary,
-    "q1_core_robust_pathways": [
+    "q1_candidate_robust_pathways": [
         {
             "pathway": r["pathway"],
             "source": r["source"],

@@ -21,11 +21,13 @@ import networkx as nx
 from itertools import product
 import time
 import logging
+import hashlib
+import json
 
 logging.basicConfig(level=logging.INFO, format="%(message)s")
 logger = logging.getLogger(__name__)
 
-from src.config import SWISS_TARGETS_DIR, BACKGROUND_GENES, MERGED_DISEASE_GENES_CSV
+from src.config import SWISS_TARGETS_DIR, BACKGROUND_GENES, MERGED_DISEASE_GENES_CSV, PPI_EDGES_CSV
 from src.sensitivity.enrichment_cache import cached_enrichment
 from src.sensitivity.analysis import analyze_enrichment
 
@@ -65,10 +67,10 @@ pred_df = pred_df[pred_df["Gene"].str.upper().isin(disease_genes_set)].copy()
 print(f"  疾病交集后: {len(pred_df)} 个靶点 (固定)")
 
 for p in PROB_THRESHOLDS:
-    n = len(pred_df[pred_df["Probability"] >= p])
-    print(f"    Prob>={p}: {n} 个靶点")
+    n = len(pred_df[pred_df["Probability"] > p])
+    print(f"    Prob>{p}: {n} 个靶点")
 
-string_edges = pd.read_csv("src/outputs/shared/ppi_network/string_interactions_interactions.csv")
+string_edges = pd.read_csv(PPI_EDGES_CSV)
 print(f"  STRING: {len(string_edges)} 条边")
 
 # ============================================================================
@@ -140,6 +142,7 @@ print("\n开始批量运行...")
 results_records = []
 all_target_records = []
 all_pathway_records = []
+combo_targets = {}
 
 start_time = time.time()
 
@@ -151,6 +154,8 @@ for idx, (prob_th, string_th, top_k) in enumerate(PARAM_COMBINATIONS):
     if result is None:
         print(f"  [{idx+1:2d}/{len(PARAM_COMBINATIONS)}] SKIP  {combo_str}")
         continue
+
+    combo_targets[combo_str] = [tinfo["gene"] for tinfo in result["topk_info"]]
 
     for tinfo in result["topk_info"]:
         all_target_records.append({
@@ -206,6 +211,11 @@ results_df = pd.DataFrame(results_records)
 results_df.to_csv("src/outputs/sensitivity/param_grid_results.csv", index=False)
 print(f"\n组合结果已保存: src/outputs/sensitivity/param_grid_results.csv")
 
+combo_targets_path = Path("src/outputs/sensitivity/combo_targets.json")
+with open(combo_targets_path, "w", encoding="utf-8") as f:
+    json.dump(combo_targets, f, indent=2, ensure_ascii=False)
+print(f"组合靶点集合已保存: {combo_targets_path}")
+
 # ============================================================================
 # 靶点稳健性分析（修复版：Degree 标准化 + 成功组合分母）
 # ============================================================================
@@ -222,7 +232,7 @@ combo_max_degree = {}
 for combo, group in target_df.groupby("combo"):
     combo_max_degree[combo] = group["degree"].max()
 
-# ---- 新增：计算标准化 Degree（相对 Degree = degree / max_degree_in_combo） ----
+# ---- 计算相对连接度（degree / max_degree_in_combo） ----
 target_df["degree_norm"] = target_df.apply(
     lambda row: row["degree"] / combo_max_degree[row["combo"]], axis=1
 )
@@ -231,7 +241,7 @@ target_stats = []
 for gene, group in target_df.groupby("gene"):
     freq = len(group) / n_total
     avg_degree = group["degree"].mean()
-    avg_degree_norm = group["degree_norm"].mean()  # 新增：标准化 Degree
+    avg_degree_norm = group["degree_norm"].mean()  # 平均相对连接度
     avg_degree_rank = group["degree_rank"].mean()
     avg_betweenness = group["betweenness"].mean()
     target_stats.append({
@@ -249,13 +259,13 @@ for gene, group in target_df.groupby("gene"):
 target_stats_df = pd.DataFrame(target_stats).sort_values("frequency", ascending=False)
 
 freq_med = target_stats_df["frequency"].median()
-# 修复：使用标准化 Degree 的中位数作为象限分割线
+# 使用平均相对连接度的中位数作为象限分割线
 degree_med = target_stats_df["avg_degree_norm"].median()
 
 def classify_target(row):
-    # 修复：使用标准化 Degree 判断拓扑重要性
+    # 使用平均相对连接度判断拓扑重要性
     if row["frequency"] >= freq_med and row["avg_degree_norm"] >= degree_med:
-        return "Q1: 核心稳健"
+        return "Q1: 候选稳健"
     elif row["frequency"] < freq_med and row["avg_degree_norm"] >= degree_med:
         return "Q2: 低频高重要"
     elif row["frequency"] >= freq_med and row["avg_degree_norm"] < degree_med:
@@ -268,10 +278,10 @@ target_stats_df["quadrant"] = target_stats_df.apply(classify_target, axis=1)
 print(f"\n总组合数: {n_total} (成功运行)")
 print(f"频率中位数: {freq_med:.2f}")
 print(f"平均Degree中位数(原始): {target_stats_df['avg_degree'].median():.1f}")
-print(f"平均Degree中位数(标准化): {degree_med:.3f}")
+print(f"平均相对连接度中位数: {degree_med:.3f}")
 
 q1_targets = target_stats_df[target_stats_df["quadrant"].str.contains("Q1")]["gene"].tolist()
-print(f"\nQ1 核心稳健靶点数: {len(q1_targets)}")
+print(f"\nQ1 候选稳健靶点数: {len(q1_targets)}")
 if q1_targets:
     print(f"  {', '.join(q1_targets)}")
 
@@ -340,11 +350,11 @@ for _, row in rank_stats_df.head(25).iterrows():
 # Pvalue 阈值敏感性对比
 # ============================================================================
 print("\n" + "=" * 70)
-print("Pvalue 阈值敏感性对比（Q1 稳健靶点）")
+print("Pvalue 阈值敏感性对比（Q1 候选稳健靶点）")
 print("=" * 70)
 
 q1_genes = sorted(target_stats_df[target_stats_df["quadrant"].str.contains("Q1")]["gene"].tolist())
-print(f"\nQ1 核心稳健靶点: {len(q1_genes)} 个")
+print(f"\nQ1 候选稳健靶点: {len(q1_genes)} 个")
 
 pval_results = {}
 for pval in [0.01, 0.05]:
@@ -383,7 +393,7 @@ print("=" * 70)
 
 checks = []
 n_q1 = len(q1_targets)
-checks.append(("Q1核心稳健靶点数>=5", n_q1 >= 5, f"{n_q1}"))
+checks.append(("Q1候选稳健靶点数>=5", n_q1 >= 5, f"{n_q1}"))
 
 key_targets = ["TNF", "SRC", "EGFR", "STAT3", "BCL2", "MMP9", "HIF1A", "PTGS2"]
 key_in_q1 = [t for t in key_targets if t in q1_targets]
@@ -454,8 +464,8 @@ md_lines.append(f"")
 md_lines.append(f"| Prob 阈值 | 疾病相关靶点数 |")
 md_lines.append(f"|-----------|---------------|")
 for p in PROB_THRESHOLDS:
-    n = len(pred_df[pred_df["Probability"] >= p])
-    md_lines.append(f"| ≥ {p} | {n} |")
+    n = len(pred_df[pred_df["Probability"] > p])
+    md_lines.append(f"| > {p} | {n} |")
 md_lines.append(f"")
 
 # 每组合的富集详情
@@ -503,16 +513,16 @@ md_lines.append(f"## 5. 靶点稳健性分析")
 md_lines.append(f"")
 md_lines.append(f"| 象限 | 说明 | 靶点数 |")
 md_lines.append(f"|------|------|--------|")
-for q, label in [("Q1: 核心稳健", "高频率 + 高度"), ("Q2: 低频高重要", "低频率 + 高度"),
-                  ("Q3: 稳健但边缘", "高频率 + 低度"), ("Q4: 可忽略", "低频率 + 低度")]:
+for q, label in [("Q1: 候选稳健", "高频率 + 高相对连接度"), ("Q2: 低频高重要", "低频率 + 高相对连接度"),
+                  ("Q3: 稳健但边缘", "高频率 + 低相对连接度"), ("Q4: 可忽略", "低频率 + 低相对连接度")]:
     count = len(target_stats_df[target_stats_df["quadrant"] == q])
     md_lines.append(f"| {q} | {label} | {count} |")
 md_lines.append(f"")
 
-md_lines.append(f"### 5.1 Q1 核心稳健靶点列表")
+md_lines.append(f"### 5.1 Q1 候选稳健靶点列表")
 md_lines.append(f"")
 q1_sorted = target_stats_df[target_stats_df["quadrant"].str.contains("Q1")].sort_values("frequency", ascending=False)
-md_lines.append(f"| 排名 | 基因 | 频率 | 出现次数 | 平均Degree(原始) | 平均Degree(标准化) | 平均排名 | 平均中介中心性 |")
+md_lines.append(f"| 排名 | 基因 | 频率 | 出现次数 | 平均Degree(原始) | 平均相对连接度 | 平均排名 | 平均中介中心性 |")
 md_lines.append(f"|------|------|------|---------|----------------|-------------------|---------|--------------|")
 for rank, (_, r) in enumerate(q1_sorted.iterrows(), 1):
     md_lines.append(f"| {rank} | {r['gene']} | {r['frequency']:.1%} | {int(r['count'])} | {r['avg_degree']:.1f} | {r['avg_degree_norm']:.3f} | {r['avg_degree_rank']:.1f} | {r['avg_betweenness']:.4f} |")
@@ -568,3 +578,57 @@ report_md_path = "src/outputs/sensitivity/sensitivity_analysis_report.md"
 with open(report_md_path, "w", encoding="utf-8") as f:
     f.write("\n".join(md_lines))
 print(f"\nMD 报告已保存: {report_md_path}")
+
+
+def file_sha256(path):
+    path = Path(path)
+    if not path.exists():
+        return None
+    h = hashlib.sha256()
+    with open(path, "rb") as fh:
+        for chunk in iter(lambda: fh.read(1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+manifest_path = Path("src/outputs/sensitivity/run_manifest.json")
+manifest = {
+    "generated_at": datetime.now().isoformat(timespec="seconds"),
+    "analysis": "parameter_grid_sensitivity",
+    "parameter_grid": {
+        "probability_thresholds": PROB_THRESHOLDS,
+        "string_thresholds": STRING_THRESHOLDS,
+        "top_k_values": TOP_K_VALUES,
+        "pvalue_cutoff": PVALUE_CUTOFF,
+        "total_combinations": len(PARAM_COMBINATIONS),
+        "successful_combinations": len(results_records),
+        "probability_rule": "Probability > threshold",
+    },
+    "inputs": {
+        "swiss_targets_merged": {
+            "path": str(SWISS_TARGETS_DIR / "merged_targets.csv"),
+            "sha256": file_sha256(SWISS_TARGETS_DIR / "merged_targets.csv"),
+            "rows": int(len(pd.read_csv(SWISS_TARGETS_DIR / "merged_targets.csv"))),
+        },
+        "disease_genes": {
+            "path": str(MERGED_DISEASE_GENES_CSV),
+            "sha256": file_sha256(MERGED_DISEASE_GENES_CSV),
+            "rows": int(len(pd.read_csv(MERGED_DISEASE_GENES_CSV))),
+        },
+        "ppi_edges": {
+            "path": str(PPI_EDGES_CSV),
+            "sha256": file_sha256(PPI_EDGES_CSV),
+            "rows": int(len(string_edges)),
+        },
+    },
+    "outputs": {
+        "param_grid_results": "src/outputs/sensitivity/param_grid_results.csv",
+        "target_robustness": "src/outputs/sensitivity/target_robustness.csv",
+        "pathway_rank_stability": "src/outputs/sensitivity/pathway_rank_stability.csv",
+        "combo_targets": str(combo_targets_path),
+        "report": report_md_path,
+    },
+}
+with open(manifest_path, "w", encoding="utf-8") as f:
+    json.dump(manifest, f, indent=2, ensure_ascii=False)
+print(f"运行清单已保存: {manifest_path}")

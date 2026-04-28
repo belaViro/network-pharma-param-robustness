@@ -1,7 +1,7 @@
 """
 稳健靶点 vs 各参数组合的富集效果对比
 
-比较Q1核心稳健靶点(33个)和Tier 1绝对稳健靶点(9个)的富集效果
+比较Q1候选稳健靶点和Tier 1绝对稳健靶点的富集效果
 是否优于每个参数组合的富集效果。
 
 用法:
@@ -53,19 +53,21 @@ for metric, label in [("significant_pathways", "总显著通路数"),
 # 运行Q1/Tier1稳健靶点的富集分析
 # ============================================================================
 target_df = pd.read_csv("src/outputs/sensitivity/target_robustness.csv")
-q1_genes = sorted(target_df[target_df["quadrant"] == "Q1: 核心稳健"]["gene"].tolist())
+q1_genes = sorted(target_df[target_df["quadrant"] == "Q1: 候选稳健"]["gene"].tolist())
 tier1_genes = sorted(target_df[target_df["frequency"] == 1.0]["gene"].tolist())
 
 print(f"\n{'='*80}")
-print(f"Q1 核心稳健靶点: {len(q1_genes)} 个")
+print(f"Q1 候选稳健靶点: {len(q1_genes)} 个")
 print(f"  {', '.join(q1_genes)}")
 print(f"Tier 1 绝对稳健靶点: {len(tier1_genes)} 个")
 print(f"  {', '.join(tier1_genes)}")
 
 PVALUE_CUTOFF = 0.01
 results = {}
+q1_label = f"Q1_候选稳健({len(q1_genes)}个)"
+tier1_label = f"Tier1_绝对稳健({len(tier1_genes)}个)"
 
-for label, genes in [("Q1_核心稳健(33个)", q1_genes), ("Tier1_绝对稳健(9个)", tier1_genes)]:
+for label, genes in [(q1_label, q1_genes), (tier1_label, tier1_genes)]:
     print(f"\n>> 运行 {label} 的富集分析...")
     enrichment = cached_enrichment(genes, PVALUE_CUTOFF, BACKGROUND_GENES)
     metrics = analyze_enrichment(enrichment, include_sources=["KEGG", "GO_BP"])
@@ -138,8 +140,8 @@ print(f"\n{'='*80}")
 print("综合判定")
 print("=" * 80)
 
-q1_metrics = results["Q1_核心稳健(33个)"]
-t1_metrics = results["Tier1_绝对稳健(9个)"]
+q1_metrics = results[q1_label]
+t1_metrics = results[tier1_label]
 
 def check(val, better, combo_vals, metric_name, higher_better=True):
     if higher_better:
@@ -158,7 +160,7 @@ q1_ef_better = q1_metrics["avg_ef"] >= combo_df["avg_ef"].max()
 q1_pval_better = q1_metrics["min_pvalue"] <= combo_df["min_pvalue"].min()
 q1_score = sum([q1_total_better, q1_backbone_better, q1_ef_better, q1_pval_better])
 
-print(f"\nQ1 核心稳健靶点 ({len(q1_genes)}个):")
+print(f"\nQ1 候选稳健靶点 ({len(q1_genes)}个):")
 print(check(q1_metrics['total_significant'], q1_total_better, combo_df['significant_pathways'], '总显著通路', True))
 print(check(q1_metrics['backbone'], q1_backbone_better, combo_df['backbone_count'], '主干道数', True))
 print(check(q1_metrics['avg_ef'], q1_ef_better, combo_df['avg_ef'], '平均EF', True))

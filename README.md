@@ -143,8 +143,10 @@ Key output files are written to `src/outputs/sensitivity/`:
 | File | Description |
 |---|---|
 | `param_grid_results.csv` | parameter-combination summary |
+| `combo_targets.json` | target set retained by each parameter combination |
 | `target_robustness.csv` | robust target frequency and topology metrics |
 | `pathway_rank_stability.csv` | pathway retention and ranking stability |
+| `run_manifest.json` | parameter grid, input paths, input hashes, and output paths |
 | `robust_vs_param_comparison.json` | robust targets vs parameter-specific sets |
 | `pubmed_validation.json` | PubMed post-hoc validation of pathway classification |
 | `figures/` | publication-oriented sensitivity figures |

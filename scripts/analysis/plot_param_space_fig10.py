@@ -42,7 +42,7 @@ plt.rcParams.update(
 def save_fig(fig, name):
     for fmt in ("png", "svg"):
         path = FIGURES_DIR / f"{name}.{fmt}"
-        fig.savefig(path, dpi=dpi, bbox_inches="tight", format=fmt)
+        fig.savefig(path, dpi=dpi, bbox_inches="tight", pad_inches=0.12, format=fmt)
         print(f"  Saved: {path}")
 
 
@@ -52,8 +52,8 @@ def save_fig(fig, name):
 df = pd.read_csv(OUTPUTS_DIR / "param_grid_results.csv")
 
 # Map Prob to color
-prob_colors = {0.0: "#2166AC", 0.09: "#4393C3", 0.1: "#F4A582", 0.2: "#D6604D"}
-prob_labels = {0.0: "P=0.0", 0.09: "P=0.09", 0.1: "P=0.1", 0.2: "P=0.2"}
+prob_colors = {0.0: "#2166AC", 0.09: "#4393C3", 0.1: "#F4A582"}
+prob_labels = {0.0: "P=0.0", 0.09: "P=0.09", 0.1: "P=0.1"}
 df["color"] = df["prob_threshold"].map(prob_colors)
 
 # Jitter x to separate Prob bubbles at same STRING
@@ -63,7 +63,7 @@ string_pos = {s: i for i, s in enumerate(string_vals)}
 df["x_pos"] = df["string_threshold"].map(string_pos)
 
 # Add small horizontal offset per Prob within same STRING
-prob_offsets = {0.0: -0.22, 0.09: -0.07, 0.1: 0.07, 0.2: 0.22}
+prob_offsets = {0.0: -0.18, 0.09: 0.0, 0.1: 0.18}
 df["x_jitter"] = df["x_pos"] + df["prob_threshold"].map(prob_offsets)
 
 # Bubble size: sqrt scale for area

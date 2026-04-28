@@ -3,7 +3,7 @@
 靶点-通路一致性验证脚本（P0）
 
 双重验证策略：
-1. 视角A（靶点驱动）: Q1核心稳健靶点 → 富集分析 → 具体通路列表
+1. 视角A（靶点驱动）: Q1候选稳健靶点 → 富集分析 → 具体通路列表
 2. 视角B（独立扫描）: 参数扫描中高频高显著通路
 3. 一致性: 两个视角的交集比例
 
@@ -38,8 +38,8 @@ print("靶点-通路一致性验证（双重验证策略）")
 print("=" * 70)
 
 target_df = pd.read_csv(TARGET_CSV)
-q1_genes = sorted(target_df[target_df["quadrant"] == "Q1: 核心稳健"]["gene"].tolist())
-print(f"\nQ1 核心稳健靶点: {len(q1_genes)} 个")
+q1_genes = sorted(target_df[target_df["quadrant"] == "Q1: 候选稳健"]["gene"].tolist())
+print(f"\nQ1 候选稳健靶点: {len(q1_genes)} 个")
 print(f"  {', '.join(q1_genes)}")
 
 # ── Perspective A: Target-driven validation ────────────────────────────

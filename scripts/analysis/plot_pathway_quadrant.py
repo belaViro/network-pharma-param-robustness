@@ -69,8 +69,26 @@ CATEGORY_LABEL = {
 def save_fig(fig, name):
     for fmt in ("png", "svg"):
         path = FIGURES_DIR / f"{name}.{fmt}"
-        fig.savefig(path, dpi=dpi, bbox_inches="tight", format=fmt)
+        fig.savefig(path, dpi=dpi, bbox_inches="tight", pad_inches=0.12, format=fmt)
         print(f"  Saved: {path}")
+
+
+def clean_pathway_name(name: str, max_len: int = 38) -> str:
+    import re
+
+    name = re.sub(r"\s*\(GO:\d+\)", "", str(name))
+    replacements = {
+        "transmembrane receptor protein tyrosine kinase": "TM receptor tyrosine kinase",
+        "positive regulation of": "+ regulation of",
+        "regulation of": "reg. of",
+        "phosphatidylinositol 3-kinase": "PI3K",
+        "protein kinase B": "AKT",
+    }
+    for old, new in replacements.items():
+        name = name.replace(old, new)
+    if len(name) > max_len:
+        name = name[: max_len - 3].rstrip() + "..."
+    return name
 
 
 # ── Load data ──────────────────────────────────────────────────────────
@@ -85,7 +103,7 @@ print(f"  Frequency median: {freq_med:.4f}")
 print(f"  Avg_logp median: {logp_med:.4f}")
 
 # ── Figure ─────────────────────────────────────────────────────────────
-fig, ax = plt.subplots(figsize=(9, 6.5))
+fig, ax = plt.subplots(figsize=(8.4, 5.9), constrained_layout=True)
 
 # Font properties
 font_cn = FontProperties(family="SimHei", size=9)
@@ -135,7 +153,7 @@ ax.axvline(x=freq_med, color="#555555", linestyle="--", linewidth=0.8, zorder=1,
 ax.axhline(y=logp_med, color="#555555", linestyle="--", linewidth=0.8, zorder=1, alpha=0.5)
 
 # Median annotations
-ax.text(freq_med + 0.01, y_max * 0.97,
+ax.text(freq_med + 0.01, y_max * 0.92,
         f"频率中位数 = {freq_med:.2f}",
         fontproperties=font_cn_small, color="#555555", va="top")
 ax.text(x_max * 0.98, logp_med + 0.3,
@@ -144,38 +162,36 @@ ax.text(x_max * 0.98, logp_med + 0.3,
 
 # Quadrant labels
 ax.text((freq_med + x_max) / 2, (logp_med + y_max) / 2,
-        "Q1\n核心稳健", fontproperties=font_cn_bold, fontsize=14,
-        ha="center", va="center", color=COLOR_QUADRANT_BG["Q1"], alpha=0.25, zorder=0)
+        "Q1\n候选稳健", fontproperties=font_cn_bold, fontsize=12,
+        ha="center", va="center", color=COLOR_QUADRANT_BG["Q1"], alpha=0.16, zorder=0)
 ax.text(freq_med / 2, (logp_med + y_max) / 2,
         "Q2\n低频高显著", fontproperties=font_cn_bold, fontsize=12,
-        ha="center", va="center", color=COLOR_QUADRANT_BG["Q2"], alpha=0.20, zorder=0)
+        ha="center", va="center", color=COLOR_QUADRANT_BG["Q2"], alpha=0.14, zorder=0)
 ax.text((freq_med + x_max) / 2, logp_med / 2,
         "Q3\n稳健但效应弱", fontproperties=font_cn_bold, fontsize=12,
-        ha="center", va="center", color=COLOR_QUADRANT_BG["Q3"], alpha=0.20, zorder=0)
+        ha="center", va="center", color=COLOR_QUADRANT_BG["Q3"], alpha=0.14, zorder=0)
 
-# Highlight Q1 pathways with annotations
-q1_df = df[df["robustness_quadrant"] == "Q1: 核心稳健通路"].sort_values("avg_rank")
-for _, r in q1_df.head(8).iterrows():
-    name = r["pathway"]
-    # Remove GO IDs for cleaner labels
-    import re
-    short = re.sub(r"\s*\(GO:\d+\)", "", name)
-    if len(short) > 35:
-        short = short[:32] + "..."
-    
-    ax.annotate(
-        short,
-        (r["frequency"], r["avg_logp"]),
-        xytext=(5, 5), textcoords="offset points",
-        fontsize=5.5, color="#333333",
-        fontproperties=FontProperties(family="SimHei", size=6),
-        bbox=dict(boxstyle="round,pad=0.15", facecolor="white", edgecolor="#cccccc", alpha=0.85),
-        arrowprops=dict(arrowstyle="-", color="#aaaaaa", lw=0.4),
+# Keep the scatter readable: list representative Q1 pathways in a compact note
+# instead of attaching many overlapping labels to the same dense point cluster.
+q1_df = df[df["robustness_quadrant"] == "Q1: 候选稳健通路"].sort_values("avg_rank")
+label_items = [clean_pathway_name(p, max_len=34) for p in q1_df["pathway"].head(5)]
+if label_items:
+    note = "代表性候选通路:\n" + "\n".join(f"- {item}" for item in label_items)
+    ax.text(
+        0.985,
+        0.965,
+        note,
+        transform=ax.transAxes,
+        ha="right",
+        va="top",
+        fontproperties=FontProperties(family="SimHei", size=6.5),
+        color="#333333",
+        bbox=dict(boxstyle="round,pad=0.35", facecolor="white", edgecolor="#cccccc", alpha=0.90),
     )
 
 # Axis labels
 ax.set_xlabel("跨参数组合出现频率", fontproperties=font_cn, labelpad=6)
-ax.set_ylabel("平均显著性强度 (-log₁₀ Adjusted P-value)", fontproperties=font_cn, labelpad=6)
+ax.set_ylabel("平均显著性强度 [-log10(adjusted p-value)]", fontproperties=font_cn, labelpad=6)
 ax.set_xlim(-0.02, x_max)
 ax.set_ylim(y_min, y_max)
 
@@ -192,7 +208,7 @@ ax.grid(alpha=0.2, linestyle="--", linewidth=0.3)
 
 # Title
 fig.suptitle("通路稳健性：二维象限分类（频率 × 显著性强度）",
-             fontproperties=FontProperties(family="SimHei", size=12), y=0.98)
+             fontproperties=FontProperties(family="SimHei", size=12), y=1.03)
 
 save_fig(fig, "fig9_pathway_robustness_quadrant")
 plt.close(fig)

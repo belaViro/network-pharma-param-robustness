@@ -3,6 +3,7 @@
 
 import json
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 from typing import Set
@@ -64,11 +65,14 @@ class TestPubMedConnectorCache(unittest.TestCase):
     """Test caching behaviour."""
 
     def setUp(self):
-        self.conn = PubMedConnector(cache_dir=Path(__file__).parent / "_test_cache")
+        self._tmp = tempfile.TemporaryDirectory()
+        self.cache_dir = Path(self._tmp.name)
+        self.conn = PubMedConnector(cache_dir=self.cache_dir)
         self.conn.clear_cache()
 
     def tearDown(self):
         self.conn.clear_cache()
+        self._tmp.cleanup()
 
     def test_cache_starts_empty(self):
         self.assertEqual(len(self.conn._cache), 0)
@@ -81,7 +85,7 @@ class TestPubMedConnectorCache(unittest.TestCase):
         }
         self.conn._save_cache()
         # Fresh connector should load the cache
-        conn2 = PubMedConnector(cache_dir=Path(__file__).parent / "_test_cache")
+        conn2 = PubMedConnector(cache_dir=self.cache_dir)
         self.assertEqual(len(conn2._cache), 1)
         self.assertEqual(conn2._cache["test::oxidative stress"]["count"], 42)
 
@@ -117,31 +121,30 @@ class TestComputeMetrics(unittest.TestCase):
 
     def test_batch_cooccurrence_with_seeded_cache(self):
         """Batch query should return correct counts when cache is seeded."""
-        conn = PubMedConnector(cache_dir=Path(__file__).parent / "_test_cache")
-        conn.clear_cache()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            conn = PubMedConnector(cache_dir=Path(tmpdir))
+            conn.clear_cache()
 
-        # Seed from validation JSON
-        for d in self.data["pathway_details"]:
-            p = d["pathway"]
-            c = d["pubmed_count"]
-            conn._cache[f"{p}::oxidative stress"] = {
-                "count": c,
-                "timestamp": "2026-04-26",
-                "query": f'"{p}"[Title/Abstract] AND "oxidative stress"[Title/Abstract]',
-            }
-        conn._save_cache()
+            # Seed from validation JSON
+            for d in self.data["pathway_details"]:
+                p = d["pathway"]
+                c = d["pubmed_count"]
+                conn._cache[f"{p}::oxidative stress"] = {
+                    "count": c,
+                    "timestamp": "2026-04-26",
+                    "query": f'"{p}"[Title/Abstract] AND "oxidative stress"[Title/Abstract]',
+                }
+            conn._save_cache()
 
-        counts = conn.batch_cooccurrence(
-            ["MAPK signaling pathway",
-             "AGE-RAGE signaling pathway in diabetic complications",
-             "Nitrogen metabolism"],
-            show_progress=False,
-        )
-        self.assertEqual(counts["MAPK signaling pathway"], 7091)
-        self.assertEqual(counts["AGE-RAGE signaling pathway in diabetic complications"], 0)
-        self.assertEqual(counts["Nitrogen metabolism"], 320)
-
-        conn.clear_cache()
+            counts = conn.batch_cooccurrence(
+                ["MAPK signaling pathway",
+                 "AGE-RAGE signaling pathway in diabetic complications",
+                 "Nitrogen metabolism"],
+                show_progress=False,
+            )
+            self.assertEqual(counts["MAPK signaling pathway"], 7091)
+            self.assertEqual(counts["AGE-RAGE signaling pathway in diabetic complications"], 0)
+            self.assertEqual(counts["Nitrogen metabolism"], 320)
 
 
 if __name__ == "__main__":

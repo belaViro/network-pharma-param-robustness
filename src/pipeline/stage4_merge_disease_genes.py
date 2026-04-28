@@ -6,6 +6,10 @@ Stage 4 - 合并疾病相关基因数据库
 import pandas as pd
 from pathlib import Path
 from typing import Dict
+import logging
+
+
+logger = logging.getLogger(__name__)
 
 
 def load_genecards(file_path: str) -> pd.DataFrame:
@@ -109,9 +113,6 @@ def merge_disease_genes(
     Returns:
         包含统计信息的字典
     """
-    import logging
-    logger = logging.getLogger(__name__)
-
     if input_dir is None:
         from src.config import DISEASE_GENES_DIR
         input_dir = DISEASE_GENES_DIR

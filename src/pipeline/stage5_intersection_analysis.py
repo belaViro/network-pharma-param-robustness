@@ -6,6 +6,10 @@ Stage 5 - 靶点与疾病基因交集分析
 import pandas as pd
 from pathlib import Path
 from typing import Dict
+import logging
+
+
+logger = logging.getLogger(__name__)
 
 
 def intersect_targets_with_disease_genes(
@@ -23,9 +27,6 @@ def intersect_targets_with_disease_genes(
     Returns:
         包含统计信息的字典
     """
-    import logging
-    logger = logging.getLogger(__name__)
-
     if targets_path is None:
         from src.config import MERGED_TARGETS_CSV
         targets_path = MERGED_TARGETS_CSV

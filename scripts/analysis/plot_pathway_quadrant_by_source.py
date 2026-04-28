@@ -81,7 +81,7 @@ SOURCE_EDGE = {
 def save_fig(fig, name):
     for fmt in ("png", "svg"):
         path = FIGURES_DIR / f"{name}.{fmt}"
-        fig.savefig(path, dpi=dpi, bbox_inches="tight", format=fmt)
+        fig.savefig(path, dpi=dpi, bbox_inches="tight", pad_inches=0.12, format=fmt)
         print(f"  Saved: {path}")
 
 
@@ -100,11 +100,11 @@ print(f"  Avg_logp median: {logp_med:.4f}")
 source_q1_rates = {}
 for src in df["source"].unique():
     sub = df[df["source"] == src]
-    q1_count = len(sub[sub["robustness_quadrant"] == "Q1: 核心稳健通路"])
+    q1_count = len(sub[sub["robustness_quadrant"] == "Q1: 候选稳健通路"])
     source_q1_rates[src] = q1_count / len(sub) * 100 if len(sub) > 0 else 0
 
 # ── Figure 1: All sources combined with shape coding ───────────────────
-fig, ax = plt.subplots(figsize=(10, 7))
+fig, ax = plt.subplots(figsize=(8.8, 6.1), constrained_layout=True)
 
 font_cn = FontProperties(family="SimHei", size=9)
 font_cn_bold = FontProperties(family="SimHei", size=9, weight="bold")
@@ -157,24 +157,24 @@ ax.axvline(x=freq_med, color="#555555", linestyle="--", linewidth=0.8, zorder=1,
 ax.axhline(y=logp_med, color="#555555", linestyle="--", linewidth=0.8, zorder=1, alpha=0.5)
 
 # Annotations
-ax.text(freq_med + 0.01, y_max * 0.97, f"频率中位数 = {freq_med:.2f}",
+ax.text(freq_med + 0.01, y_max * 0.92, f"频率中位数 = {freq_med:.2f}",
         fontproperties=font_cn_small, color="#555555", va="top")
 ax.text(x_max * 0.98, logp_med + 0.3, f"显著性中位数 = {logp_med:.1f}",
         fontproperties=font_cn_small, color="#555555", ha="right", va="bottom")
 
 # Quadrant labels (large, faint)
-ax.text((freq_med + x_max) / 2, (logp_med + y_max) / 2, "Q1\n核心稳健",
-        fontproperties=font_cn_bold, fontsize=16, ha="center", va="center",
-        color=COLOR_QUADRANT_BG["Q1"], alpha=0.18, zorder=0)
+ax.text((freq_med + x_max) / 2, (logp_med + y_max) / 2, "Q1\n候选稳健",
+        fontproperties=font_cn_bold, fontsize=13, ha="center", va="center",
+        color=COLOR_QUADRANT_BG["Q1"], alpha=0.14, zorder=0)
 ax.text(freq_med / 2, (logp_med + y_max) / 2, "Q2\n低频高显著",
         fontproperties=font_cn_bold, fontsize=12, ha="center", va="center",
-        color=COLOR_QUADRANT_BG["Q2"], alpha=0.15, zorder=0)
+        color=COLOR_QUADRANT_BG["Q2"], alpha=0.12, zorder=0)
 ax.text((freq_med + x_max) / 2, logp_med / 2, "Q3\n稳健但效应弱",
         fontproperties=font_cn_bold, fontsize=12, ha="center", va="center",
-        color=COLOR_QUADRANT_BG["Q3"], alpha=0.15, zorder=0)
+        color=COLOR_QUADRANT_BG["Q3"], alpha=0.12, zorder=0)
 
 # Source Q1 rate annotation box
-textstr = "Q1 核心稳健比例:\n"
+textstr = "Q1 候选比例:\n"
 for src in ["KEGG", "GO_BP", "GO_MF", "GO_CC"]:
     rate = source_q1_rates.get(src, 0)
     textstr += f"  {SOURCE_LABEL[src][:22]:<22}: {rate:5.1f}%\n"
@@ -185,7 +185,7 @@ ax.text(0.02, 0.98, textstr, transform=ax.transAxes, fontsize=7.5,
 
 # Axis labels
 ax.set_xlabel("跨参数组合出现频率", fontproperties=font_cn, labelpad=6)
-ax.set_ylabel("平均显著性强度 (-log₁₀ Adjusted P-value)", fontproperties=font_cn, labelpad=6)
+ax.set_ylabel("平均显著性强度 [-log10(adjusted p-value)]", fontproperties=font_cn, labelpad=6)
 ax.set_xlim(-0.02, x_max)
 ax.set_ylim(y_min, y_max)
 
@@ -209,20 +209,21 @@ for cat in ["signaling_backbone", "cross_talk", "direct_ox", "other"]:
     legend_elements.append(Patch(facecolor=COLOR_CATEGORY[cat], edgecolor="white",
                                   label=CATEGORY_LABEL[cat]))
 
-ax.legend(handles=legend_elements, frameon=True, fancybox=False, loc="lower left",
+ax.legend(handles=legend_elements, frameon=True, fancybox=False, loc="upper center",
+          bbox_to_anchor=(0.5, -0.10),
           edgecolor="#cccccc", prop=FontProperties(family="SimHei", size=6.5),
-          ncol=2, columnspacing=0.8, handletextpad=0.3)
+          ncol=4, columnspacing=0.8, handletextpad=0.3)
 
 ax.grid(alpha=0.2, linestyle="--", linewidth=0.3)
 
 fig.suptitle("通路稳健性象限（按数据库来源区分）",
-             fontproperties=FontProperties(family="SimHei", size=12), y=0.98)
+             fontproperties=FontProperties(family="SimHei", size=12), y=1.03)
 
 save_fig(fig, "fig9b_pathway_quadrant_by_source")
 plt.close(fig)
 
 # ── Figure 2: KEGG + GO_BP only (system pathways) ─────────────────────
-fig2, ax2 = plt.subplots(figsize=(9, 6.5))
+fig2, ax2 = plt.subplots(figsize=(8.6, 5.9), constrained_layout=True)
 
 system_df = df[df["source"].isin(["KEGG", "GO_BP"])]
 
@@ -258,30 +259,43 @@ for src in ["KEGG", "GO_BP"]:
 ax2.axvline(x=freq_med, color="#555555", linestyle="--", linewidth=0.8, zorder=1, alpha=0.5)
 ax2.axhline(y=logp_med, color="#555555", linestyle="--", linewidth=0.8, zorder=1, alpha=0.5)
 
-# Highlight KEGG pathways with names
-kegg_q1 = system_df[(system_df["source"] == "KEGG") & 
-                     (system_df["robustness_quadrant"] == "Q1: 核心稳健通路")].sort_values("avg_rank")
-for _, r in kegg_q1.head(8).iterrows():
+# Keep labels off the dense point cluster; list representative KEGG pathways instead.
+kegg_q1 = system_df[
+    (system_df["source"] == "KEGG")
+    & (system_df["robustness_quadrant"] == "Q1: 候选稳健通路")
+].sort_values("avg_rank")
+if len(kegg_q1):
     import re
-    short = re.sub(r"\s*\(GO:\d+\)", "", r["pathway"])
-    if len(short) > 30:
-        short = short[:27] + "..."
-    ax2.annotate(short, (r["frequency"], r["avg_logp"]),
-                xytext=(6, 4), textcoords="offset points",
-                fontsize=5.5, color="#333333",
-                fontproperties=FontProperties(family="SimHei", size=6),
-                bbox=dict(boxstyle="round,pad=0.15", facecolor="white", edgecolor="#cccccc", alpha=0.85),
-                arrowprops=dict(arrowstyle="-", color="#aaaaaa", lw=0.3))
 
-# Big annotation: 97.5%
-ax2.text(0.98, 0.98, "KEGG + GO_BP\nQ1 核心稳健率: 97.5%\n(39/40 条通路)",
+    names = []
+    for name in kegg_q1["pathway"].head(5):
+        short = re.sub(r"\s*\(GO:\d+\)", "", str(name))
+        if len(short) > 30:
+            short = short[:27] + "..."
+        names.append(short)
+    ax2.text(
+        0.02,
+        0.98,
+        "代表性KEGG候选:\n" + "\n".join(f"- {n}" for n in names),
+        transform=ax2.transAxes,
+        fontsize=6.7,
+        fontproperties=FontProperties(family="SimHei", size=6.7),
+        va="top",
+        ha="left",
+        bbox=dict(boxstyle="round,pad=0.35", facecolor="white", edgecolor="#cccccc", alpha=0.90),
+    )
+
+system_q1_count = int((system_df["robustness_quadrant"] == "Q1: 候选稳健通路").sum())
+system_total = len(system_df)
+system_q1_rate = system_q1_count / system_total * 100 if system_total else 0
+ax2.text(0.98, 0.98, f"KEGG + GO_BP\nQ1候选比例: {system_q1_rate:.1f}%\n({system_q1_count}/{system_total} 条通路)",
          transform=ax2.transAxes, fontsize=10, fontweight="bold",
          verticalalignment="top", horizontalalignment="right",
          fontproperties=FontProperties(family="SimHei", size=10),
          bbox=dict(boxstyle="round,pad=0.5", facecolor="#e8f4f8", edgecolor="#2166AC", alpha=0.95))
 
 ax2.set_xlabel("跨参数组合出现频率", fontproperties=font_cn, labelpad=6)
-ax2.set_ylabel("平均显著性强度 (-log₁₀ Adjusted P-value)", fontproperties=font_cn, labelpad=6)
+ax2.set_ylabel("平均显著性强度 [-log10(adjusted p-value)]", fontproperties=font_cn, labelpad=6)
 ax2.set_xlim(-0.02, x_max)
 ax2.set_ylim(y_min, y_max)
 
@@ -290,12 +304,13 @@ for label in ax2.get_xticklabels():
 for label in ax2.get_yticklabels():
     label.set_fontproperties(font_en)
 
-ax2.legend(frameon=True, fancybox=False, loc="lower left",
+ax2.legend(frameon=True, fancybox=False, loc="upper center",
+           bbox_to_anchor=(0.5, -0.10), ncol=2,
            edgecolor="#cccccc", prop=FontProperties(family="SimHei", size=7))
 ax2.grid(alpha=0.2, linestyle="--", linewidth=0.3)
 
 fig2.suptitle("系统级通路稳健性（KEGG + GO_BP）",
-              fontproperties=FontProperties(family="SimHei", size=12), y=0.98)
+              fontproperties=FontProperties(family="SimHei", size=12), y=1.03)
 
 save_fig(fig2, "fig9c_system_pathways_quadrant")
 plt.close(fig2)

@@ -1,17 +1,29 @@
+"""Manual DisGeNET API discovery probe.
+
+This module has no import-time side effects so pytest collection stays offline.
+Run it directly only when network access is intended.
+"""
+
 import requests
 
-# 尝试找到正确的 API 端点
-urls = [
+
+URLS = [
     "https://www.disgenet.org/swagger.json",
     "https://www.disgenet.org/api/swagger.json",
     "https://www.disgenet.org/api/v1/",
     "https://www.disgenet.org/api/v1/disease/search/Oxidative%20Stress",
 ]
 
-for url in urls:
-    try:
-        r = requests.get(url, timeout=10)
-        ct = r.headers.get("Content-Type", "unknown")
-        print(f"{url}: status={r.status_code}, type={ct}")
-    except Exception as e:
-        print(f"{url}: ERROR {e}")
+
+def main() -> None:
+    for url in URLS:
+        try:
+            response = requests.get(url, timeout=10)
+            content_type = response.headers.get("Content-Type", "unknown")
+            print(f"{url}: status={response.status_code}, type={content_type}")
+        except Exception as exc:
+            print(f"{url}: ERROR {exc}")
+
+
+if __name__ == "__main__":
+    main()

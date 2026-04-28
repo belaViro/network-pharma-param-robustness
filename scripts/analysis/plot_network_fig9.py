@@ -45,7 +45,7 @@ plt.rcParams.update(
 def save_fig(fig, name):
     for fmt in ("png", "svg"):
         path = FIGURES_DIR / f"{name}.{fmt}"
-        fig.savefig(path, dpi=dpi, bbox_inches="tight", format=fmt)
+        fig.savefig(path, dpi=dpi, bbox_inches="tight", pad_inches=0.12, format=fmt)
         print(f"  Saved: {path}")
 
 

@@ -18,6 +18,7 @@ class TestFetchSmiles:
         assert result["smiles"] is not None
         assert len(result["smiles"]) > 5  # SMILES 长度合理
 
+    @pytest.mark.network
     def test_fetch_caffeine(self):
         """测试获取 Caffeine 的 SMILES"""
         result = fetch_smiles("Caffeine")
@@ -25,6 +26,7 @@ class TestFetchSmiles:
         assert result["status"] == "成功"
         assert result["smiles"] is not None
 
+    @pytest.mark.network
     def test_fetch_invalid_molecule(self):
         """测试无效分子名称"""
         result = fetch_smiles("ThisIsNotARealMoleculeName12345")
@@ -32,6 +34,7 @@ class TestFetchSmiles:
         assert result["status"] != "成功"
         assert result["smiles"] is None
 
+    @pytest.mark.network
     def test_fetch_smiles_structure(self):
         """验证返回的 SMILES 基本格式"""
         result = fetch_smiles("Ibuprofen")

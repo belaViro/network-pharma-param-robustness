@@ -62,7 +62,7 @@ plt.rcParams.update(
 # ── Color palettes ─────────────────────────────────────────────────────
 COLOR_PROB = {0.0: "#2166AC", 0.09: "#92C5DE", 0.1: "#F4A582"}
 COLOR_QUADRANT = {
-    "Q1: 核心稳健": "#2166AC",
+    "Q1: 候选稳健": "#2166AC",
     "Q2: 低频高重要": "#E69F00",  # not present in current data
     "Q3: 稳健但边缘": "#B2182B",
     "Q4: 可忽略": "#D3D3D3",
@@ -82,8 +82,35 @@ def save_fig(fig: plt.Figure, name: str):
     """Save figure as PNG + SVG."""
     for ext in ["png", "svg"]:
         path = FIGURES_DIR / f"{name}.{ext}"
-        fig.savefig(path, dpi=300 if ext == "png" else 150)
+        fig.savefig(
+            path,
+            dpi=300 if ext == "png" else 150,
+            bbox_inches="tight",
+            pad_inches=0.12,
+        )
         print(f"  Saved: {path}")
+
+
+def clean_pathway_name(name: str, max_len: int = 46) -> str:
+    """Make pathway names readable in compact figures."""
+    import re
+
+    name = re.sub(r"\s*\(GO:\d+\)", "", str(name))
+    replacements = {
+        "transmembrane receptor protein tyrosine kinase": "TM receptor tyrosine kinase",
+        "positive regulation of": "+ regulation of",
+        "regulation of": "reg. of",
+        "cellular response to": "cell response to",
+        "phosphatidylinositol 3-kinase": "PI3K",
+        "protein serine/threonine kinase": "ser/thr kinase",
+        "protein kinase B": "AKT",
+        "signal transduction": "signaling",
+    }
+    for old, new in replacements.items():
+        name = name.replace(old, new)
+    if len(name) > max_len:
+        name = name[: max_len - 3].rstrip() + "..."
+    return name
 
 
 # ══════════════════════════════════════════════════════════════════════
@@ -194,18 +221,18 @@ def fig2_target_robustness(df: pd.DataFrame):
     font_cn_small = FontProperties(family="SimHei", size=7.5)
     font_label = FontProperties(family="Arial", size=6.5, weight="bold")
 
-    fig, ax = plt.subplots(figsize=(9, 6.5))
+    fig, ax = plt.subplots(figsize=(8.2, 5.8), constrained_layout=True)
 
     # Quadrant definitions
     quadrants = {
-        "Q1: 核心稳健": {"marker": "o", "size": 55, "zorder": 3},
+        "Q1: 候选稳健": {"marker": "o", "size": 55, "zorder": 3},
         "Q2: 低频高重要": {"marker": "s", "size": 55, "zorder": 4},
         "Q3: 稳健但边缘": {"marker": "^", "size": 50, "zorder": 2},
         "Q4: 可忽略": {"marker": "o", "size": 25, "zorder": 1},
     }
 
     # Background shading — aligned to normalized degree median
-    x_max = 1.05
+    x_max = 1.12
     y_min = -0.05
     y_max = df["avg_degree_norm"].max() * 1.15
 
@@ -224,36 +251,55 @@ def fig2_target_robustness(df: pd.DataFrame):
         color = COLOR_QUADRANT.get(qname, "#999999")
         if len(subset) == 0:
             continue
+        display_name = qname
         ax.scatter(
             subset["frequency"],
             subset["avg_degree_norm"],
             c=color,
             marker=qstyle["marker"],
             s=qstyle["size"],
-            label=f"{qname} (n={len(subset)})",
+            label=f"{display_name} (n={len(subset)})",
             edgecolors="white",
             linewidth=0.3,
             zorder=qstyle["zorder"],
             alpha=0.85,
         )
 
-    # Label Tier1 genes (frequency = 1.0)
+    # Label Tier1 genes with separated label anchors to avoid overlap near x=1.
     tier1 = df[df["frequency"] == 1.0].sort_values("avg_degree_norm", ascending=False)
-    for _, row in tier1.iterrows():
+    label_y = tier1["avg_degree_norm"].to_numpy().copy()
+    if len(label_y) > 1:
+        min_gap = 0.035
+        order = np.argsort(-label_y)
+        adjusted = label_y.copy()
+        last = None
+        for idx in order:
+            if last is None:
+                last = adjusted[idx]
+                continue
+            if last - adjusted[idx] < min_gap:
+                adjusted[idx] = last - min_gap
+            last = adjusted[idx]
+        label_y = np.clip(adjusted, y_min + 0.03, y_max - 0.03)
+
+    for (_, row), y_lab in zip(tier1.iterrows(), label_y):
         ax.annotate(
             row["gene"],
             (row["frequency"], row["avg_degree_norm"]),
-            textcoords="offset points",
-            xytext=(8, 3),
+            xytext=(1.018, y_lab),
+            textcoords="data",
             fontproperties=font_label,
             color="#333333",
             zorder=5,
+            ha="left",
+            va="center",
+            arrowprops=dict(arrowstyle="-", color="#9aa0a6", lw=0.35),
         )
 
     # Axis labels
     ax.set_xlabel("跨参数组合出现频率", fontproperties=font_cn, labelpad=6)
-    ax.set_ylabel("标准化平均度中心性 (degree / max_degree)", fontproperties=font_cn, labelpad=6)
-    ax.set_xlim(-0.03, 1.08)
+    ax.set_ylabel("平均相对连接度 (degree / 组合内最大度值)", fontproperties=font_cn, labelpad=6)
+    ax.set_xlim(-0.03, x_max)
     y_max = df["avg_degree_norm"].max() * 1.15
     ax.set_ylim(y_min, y_max)
 
@@ -273,16 +319,16 @@ def fig2_target_robustness(df: pd.DataFrame):
     ax.axhline(y=degree_median, color="#555555", linestyle="--", linewidth=0.8, zorder=0, alpha=0.5)
 
     # Median annotations
-    ax.text(freq_median + 0.01, y_max * 0.98,
+    ax.text(freq_median + 0.01, y_max * 0.93,
             f"频率中位数 = {freq_median:.2f}", fontproperties=font_cn_small,
             color="#555555", va="top")
     ax.text(0.98, degree_median + 0.02,
-            f"标准化度中位数 = {degree_median:.3f}", fontproperties=font_cn_small,
+            f"相对连接度中位数 = {degree_median:.3f}", fontproperties=font_cn_small,
             color="#555555", ha="right", va="bottom")
 
     # Title
-    fig.suptitle("靶点稳健性：二维象限分类（标准化度中心性）",
-                 fontproperties=FontProperties(family="SimHei", size=12), y=0.98)
+    fig.suptitle("靶点稳健性：二维象限分类（平均相对连接度）",
+                 fontproperties=FontProperties(family="SimHei", size=12), y=1.03)
     save_fig(fig, "fig2_target_robustness_quadrant")
     plt.close(fig)
 
@@ -293,13 +339,13 @@ def fig2_target_robustness(df: pd.DataFrame):
 
 
 def fig3_pathway_rank_stability(df: pd.DataFrame):
-    """Horizontal lollipop: top pathways with min → max rank range, colored by category."""
+    """Horizontal lollipop: top pathways with min/max rank range, colored by category."""
     # Filter to pathways appearing in >= 50% of combos for stability focus
     df_filt = df[df["frequency"] >= 0.5].copy()
     # Sort by median rank
     df_filt = df_filt.sort_values("avg_rank", ascending=True).head(25)
 
-    fig, ax = plt.subplots(figsize=(10, 8.5))
+    fig, ax = plt.subplots(figsize=(9.6, 7.6), constrained_layout=True)
 
     y_pos = np.arange(len(df_filt))
     categories = df_filt["pathway_category"].values
@@ -309,20 +355,7 @@ def fig3_pathway_rank_stability(df: pd.DataFrame):
     pathway_names = df_filt["pathway"].values
     rank_stds = df_filt["rank_std"].values
 
-    # Shorten long pathway names — remove GO IDs first, then trim from right
-    def shorten(name: str, max_len: int = 68) -> str:
-        import re
-        name = re.sub(r"\s*\(GO:\d+\)", "", name)
-        # Abbreviate common GO prefixes
-        name = name.replace("positive regulation of ", "+reg. of ")
-        name = name.replace("regulation of ", "reg. of ")
-        name = name.replace("cellular response to ", "cell. resp. to ")
-        name = name.replace("transmembrane receptor protein ", "TM receptor ")
-        if len(name) > max_len:
-            return name[:max_len - 3].rstrip() + "..."
-        return name
-
-    short_names = [shorten(p) for p in pathway_names]
+    short_names = [clean_pathway_name(p, max_len=42) for p in pathway_names]
 
     # Draw horizontal bars for rank range
     colors = [COLOR_CATEGORY.get(c, "#D3D3D3") for c in categories]
@@ -356,9 +389,9 @@ def fig3_pathway_rank_stability(df: pd.DataFrame):
     ]
 
     ax.set_yticks(y_pos)
-    ax.set_yticklabels(short_names, fontsize=6.5)
+    ax.set_yticklabels(short_names, fontsize=7.0)
     ax.tick_params(axis="y", pad=2)
-    ax.set_xlabel("排名范围（最小→平均←最大）", fontsize=10)
+    ax.set_xlabel("Rank range (min - mean - max)", fontsize=10)
     ax.set_xlim(0, max_ranks.max() + 2)
     ax.invert_yaxis()
     ax.legend(handles=legend_patches, frameon=True, fancybox=False, fontsize=8,
@@ -376,7 +409,7 @@ def fig3_pathway_rank_stability(df: pd.DataFrame):
                 va="center",
             )
 
-    fig.suptitle("通路排名稳定性", fontsize=12, y=0.98)
+    fig.suptitle("通路排名稳定性", fontsize=12, y=0.99)
     save_fig(fig, "fig3_pathway_rank_stability")
     plt.close(fig)
 
@@ -436,7 +469,7 @@ def fig4_pvalue_comparison(df_full_pathway=None):
                     ha="center", va="bottom", fontsize=7, color=color)
 
     # Annotate EF separately (it's on a different scale)
-    ax.annotate(f"平均EF: P=0.01→{p001_ef:.1f}  |  P=0.05→{p005_ef:.1f}",
+    ax.annotate(f"平均EF: P=0.01 -> {p001_ef:.1f}  |  P=0.05 -> {p005_ef:.1f}",
                 (0.5, 0.95), xycoords="axes fraction", fontsize=8,
                 color="#555555", ha="center", fontweight="bold",
                 bbox=dict(boxstyle="round,pad=0.3", fc="white", ec="#cccccc", alpha=0.8))
@@ -490,7 +523,7 @@ def fig5_robust_vs_param(df_grid: pd.DataFrame, comp_path: Path):
     x = np.arange(len(labels))
     width = 0.25
 
-    bars1 = ax.bar(x - width, q1_vals, width, label=f"Q1稳健靶点(n={comp['n_q1_targets']})",
+    bars1 = ax.bar(x - width, q1_vals, width, label=f"Q1候选稳健靶点(n={comp['n_q1_targets']})",
                    color="#2166AC", edgecolor="white", linewidth=0.3)
     bars2 = ax.bar(x, tier1_vals, width, label=f"Tier1核心靶点(n={comp['n_tier1_targets']})",
                    color="#B2182B", edgecolor="white", linewidth=0.3)
@@ -583,7 +616,7 @@ def fig7_target_frequency_histogram(df: pd.DataFrame):
     # Stacked bars by quadrant (bottom → top)
     prefixes = ["Q4", "Q3", "Q2", "Q1"]
     labels = ["Q4: 低频低连接", "Q3: 高频低连接",
-              "Q2: 高连接低稳健", "Q1: 核心稳健"]
+              "Q2: 高连接低稳健", "Q1: 候选稳健"]
     colors = ["#D6604D", "#F4A582", "#92C5DE", "#2166AC"]
 
     bottom = np.zeros(len(x))

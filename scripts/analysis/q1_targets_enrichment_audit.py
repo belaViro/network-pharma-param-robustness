@@ -33,8 +33,8 @@ print("Q1靶点富集结果审计：通路落点分析")
 print("=" * 70)
 
 target_df = pd.read_csv(TARGET_CSV)
-q1_genes = sorted(target_df[target_df["quadrant"] == "Q1: 核心稳健"]["gene"].tolist())
-print(f"\nQ1 核心稳健靶点: {len(q1_genes)} 个")
+q1_genes = sorted(target_df[target_df["quadrant"] == "Q1: 候选稳健"]["gene"].tolist())
+print(f"\nQ1 候选稳健靶点: {len(q1_genes)} 个")
 
 # ── Run enrichment on Q1 targets ───────────────────────────────────────
 print(f"\n运行 Q1 靶点富集分析 (Pvalue={PVALUE_CUTOFF})...")
@@ -60,7 +60,7 @@ print("Q1靶点富集通路 落点分析")
 print("=" * 70)
 
 results_by_source = {}
-quadrant_summary = {"Q1: 核心稳健通路": 0, "Q2: 低频高显著": 0, 
+quadrant_summary = {"Q1: 候选稳健通路": 0, "Q2: 低频高显著": 0,
                     "Q3: 稳健但效应弱": 0, "Q4: 可忽略": 0, "未在扫描中出现": 0}
 category_quadrant_breakdown = {}
 
@@ -93,7 +93,7 @@ for source, df_sig in enrichment["significant"].items():
         cat_key = f"{category} → {quadrant}"
         category_quadrant_breakdown[cat_key] = category_quadrant_breakdown.get(cat_key, 0) + 1
         
-        q_short = quadrant.replace("Q1: 核心稳健通路", "Q1").replace("Q2: 低频高显著", "Q2")\
+        q_short = quadrant.replace("Q1: 候选稳健通路", "Q1").replace("Q2: 低频高显著", "Q2")\
                          .replace("Q3: 稳健但效应弱", "Q3").replace("Q4: 可忽略", "Q4")\
                          .replace("未在扫描中出现", "NEW")
         
@@ -121,7 +121,7 @@ total_enriched = metrics['total_significant']
 source_stats = {}
 for source, pathways in results_by_source.items():
     total = len(pathways)
-    q1 = sum(1 for p in pathways if p["quadrant"] == "Q1: 核心稳健通路")
+    q1 = sum(1 for p in pathways if p["quadrant"] == "Q1: 候选稳健通路")
     q3 = sum(1 for p in pathways if p["quadrant"] == "Q3: 稳健但效应弱")
     q4 = sum(1 for p in pathways if p["quadrant"] == "Q4: 可忽略")
     q2 = sum(1 for p in pathways if p["quadrant"] == "Q2: 低频高显著")
@@ -135,7 +135,7 @@ for source in ("KEGG", "GO_BP"):
     if source in results_by_source:
         kegg_bp_pathways.extend(results_by_source[source])
 kegg_bp_total = len(kegg_bp_pathways)
-kegg_bp_q1 = sum(1 for p in kegg_bp_pathways if p["quadrant"] == "Q1: 核心稳健通路")
+kegg_bp_q1 = sum(1 for p in kegg_bp_pathways if p["quadrant"] == "Q1: 候选稳健通路")
 kegg_bp_rate = kegg_bp_q1 / kegg_bp_total * 100 if kegg_bp_total else 0
 
 print(f"\n  {'='*50}")
@@ -153,7 +153,7 @@ for cat_quad, cnt in sorted(category_quadrant_breakdown.items(), key=lambda x: -
     print(f"  {cat_quad}: {cnt} 条")
 
 # ── Key insight ────────────────────────────────────────────────────────
-q1_count = quadrant_summary.get("Q1: 核心稳健通路", 0)
+q1_count = quadrant_summary.get("Q1: 候选稳健通路", 0)
 q1_rate = q1_count / total_enriched * 100 if total_enriched else 0
 
 print(f"\n{'='*70}")

@@ -9,8 +9,8 @@ Stage 3: 靶点合并去重 + Probability>0过滤
 Stage 4: 疾病基因数据库合并 (GeneCards + OMIM + TTD)
 Stage 5: 靶点与疾病基因交集分析
 Stage 6: PPI网络构建 (String DB)
-Stage 7: GNN节点筛选 vs Degree Centrality
-Stage 8: 富集分析对比 (GO/KEGG)
+Stage 7: 参数稳健性分析（Prob × STRING × TopK）
+Stage 8: 富集分析与通路稳健性评估 (GO/KEGG)
 ```
 
 ---
@@ -44,16 +44,6 @@ code/
 │   │   ├── stage6_ppi_network.py    # ✅ 已实现
 │   │   └── enrichment/              # Stage 8: 富集分析
 │   │       └── enrichment_analysis.py
-│   │
-│   ├── gnn/                         # Stage 7: GNN 靶点筛选
-│   │   ├── data/
-│   │   │   ├── feature_builder.py
-│   │   │   ├── bio_feature_builder.py
-│   │   │   └── ppi_dataset.py
-│   │   ├── model/
-│   │   │   └── gat_scorer.py
-│   │   └── evaluation/
-│   │       └── comparator.py
 │   │
 │   ├── visualization/               # 可视化模块
 │   │   ├── ppi_network.py
@@ -91,16 +81,11 @@ code/
 │       │   ├── enrichment/
 │       │   ├── figures/
 │       │   └── evaluation/
-│       ├── gnn/                     # GNN 方法输出
-│       │   ├── node_features.csv
-│       │   ├── gnn_scores.csv
-│       │   ├── figures/
-│       │   └── evaluation/
-│       └── bio_gnn/                 # Bio-GNN 方法输出
-│           ├── bio_node_features.csv
-│           ├── bio_gnn_scores.csv
-│           ├── figures/
-│           └── evaluation/
+│       └── sensitivity/             # 参数稳健性分析输出
+│           ├── param_grid_results.csv
+│           ├── target_robustness.csv
+│           ├── pathway_rank_stability.csv
+│           └── figures/
 ```
 
 ---
@@ -122,14 +107,11 @@ python scripts/run_pipeline.py
 # 运行传统方法 (Stage 3-6 + 分支A)
 python scripts/run_traditional_pipeline.py
 
-# 运行 GNN/Hybrid 方法 (分支B)
-python scripts/run_gnn_pipeline.py
-
-# 运行 Bio-GNN 方法 (分支C)
-python scripts/run_bio_gnn_pipeline.py
-
 # 运行完整流水线 (Stage 1-6 + 分支A)
 python scripts/run_full_pipeline.py
+
+# 运行参数稳健性分析
+python scripts/analysis/run_sensitivity_analysis.py
 ```
 
 ---
@@ -144,5 +126,7 @@ python scripts/run_full_pipeline.py
 | Stage 4 | ✅ 完成 | `docs/stage4_merge_disease.md` |
 | Stage 5 | ✅ 完成 | `docs/stage5_intersection.md` |
 | Stage 6 | ✅ 完成 | `docs/stage6_ppi_network.md` |
-| Stage 7 | ✅ 已实现 (GNN节点筛选) | `scripts/run_gnn_pipeline.py` / `scripts/run_bio_gnn_pipeline.py` |
-| Stage 8 | ✅ 完成 (富集分析) | `src/enrichment/enrichment_analysis.py` |
+| Stage 7 | ✅ 当前主线 (参数稳健性分析) | `scripts/analysis/run_sensitivity_analysis.py` |
+| Stage 8 | ✅ 当前主线 (富集与通路稳健性) | `src/enrichment/enrichment_analysis.py` / `scripts/analysis/augment_pathway_robustness.py` |
+
+> 注：早期 GNN/Hybrid 方案已转为探索记录，不作为当前投稿主工作流。

@@ -4,6 +4,11 @@ __pycache__/
 *.pyo
 *.egg-info/
 *.egg
+tmp_*.py
+.env
+*.bak
+tests/_test_cache/
+src/outputs/sensitivity/mvp*.csv
 dist/
 build/
 .pytest_cache/

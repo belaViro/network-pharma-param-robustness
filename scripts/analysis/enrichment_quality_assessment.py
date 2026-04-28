@@ -27,7 +27,6 @@ OUTPUT_JSON = OUTPUTS_DIR / "enrichment_quality_assessment.json"
 pathway_df = pd.read_csv(PATHWAY_CSV)
 audit_data = json.load(open(AUDIT_JSON, 'r', encoding='utf-8'))
 
-# 全通路池 (93条)
 all_pathways = pathway_df.copy()
 
 # Q1靶点富集到的系统通路 (KEGG + GO_BP = 40条)
@@ -56,7 +55,9 @@ metrics = ['frequency', 'avg_logp', 'avg_rank', 'rank_std']
 print(f"\n{'='*70}")
 print("核心质量指标对比 (平均值 ± 标准差)")
 print(f"{'='*70}")
-print(f"{'指标':<20} {'全通路池 (93条)':<22} {'富集通路 (40条)':<22} {'差异':<10}")
+all_label = f"全通路池 ({len(all_pathways)}条)"
+enriched_label = f"富集通路 ({len(enriched_df)}条)"
+print(f"{'指标':<20} {all_label:<22} {enriched_label:<22} {'差异':<10}")
 print("-" * 70)
 
 comparison_results = {}
@@ -137,7 +138,7 @@ print(f"\n{'='*70}")
 print("富集通路的分层质量")
 print(f"{'='*70}")
 
-for quadrant in ['Q1: 核心稳健通路', 'Q2: 低频高显著', 'Q3: 稳健但效应弱', 'Q4: 可忽略']:
+for quadrant in ['Q1: 候选稳健通路', 'Q2: 低频高显著', 'Q3: 稳健但效应弱', 'Q4: 可忽略']:
     subset = enriched_df[enriched_df['robustness_quadrant'] == quadrant]
     if len(subset) == 0:
         continue
