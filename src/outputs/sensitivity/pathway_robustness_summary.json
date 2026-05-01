@@ -1,0 +1,270 @@
+{
+  "method": "Pathway robustness = occurrence frequency x average -log10(adjusted p-value)",
+  "thresholds": {
+    "frequency_median": 0.0804,
+    "avg_logp_median": 7.5159
+  },
+  "total_pathways": 213,
+  "absolute_robust_count": 1,
+  "candidate_robust_count": 70,
+  "quadrant_summary": {
+    "Q1: 候选稳健通路": {
+      "count": 70,
+      "percentage": 32.86,
+      "avg_frequency": 0.3703,
+      "avg_logp": 10.8708
+    },
+    "Q2: 低频高显著": {
+      "count": 37,
+      "percentage": 17.37,
+      "avg_frequency": 0.0304,
+      "avg_logp": 10.7622
+    },
+    "Q3: 稳健但效应弱": {
+      "count": 45,
+      "percentage": 21.13,
+      "avg_frequency": 0.1554,
+      "avg_logp": 4.4906
+    },
+    "Q4: 可忽略": {
+      "count": 61,
+      "percentage": 28.64,
+      "avg_frequency": 0.0367,
+      "avg_logp": 3.6467
+    }
+  },
+  "absolute_robust_pathways": [
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 1.0,
+      "count": 112,
+      "avg_logp": 16.33320134377788,
+      "avg_rank": 3.767857142857143,
+      "avg_ef": 23.454948588169135
+    }
+  ],
+  "candidate_robust_pathways_top20": [
+    {
+      "candidate_rank": 1,
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 1.0,
+      "count": 112,
+      "avg_logp": 16.33320134377788,
+      "avg_rank": 3.767857142857143,
+      "avg_ef": 23.454948588169135
+    },
+    {
+      "candidate_rank": 2,
+      "pathway": "AGE-RAGE signaling pathway in diabetic complications",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.9375,
+      "count": 105,
+      "avg_logp": 10.785479973772356,
+      "avg_rank": 11.19047619047619,
+      "avg_ef": 67.01213397070539
+    },
+    {
+      "candidate_rank": 3,
+      "pathway": "Proteoglycans in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.8660714285714286,
+      "count": 97,
+      "avg_logp": 16.44838510214122,
+      "avg_rank": 5.597938144329897,
+      "avg_ef": 52.18033666701815
+    },
+    {
+      "candidate_rank": 4,
+      "pathway": "Hepatitis B",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.8035714285714286,
+      "count": 90,
+      "avg_logp": 13.499646810155054,
+      "avg_rank": 8.533333333333333,
+      "avg_ef": 54.310470964791946
+    },
+    {
+      "candidate_rank": 5,
+      "pathway": "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.8035714285714286,
+      "count": 90,
+      "avg_logp": 11.536201846679882,
+      "avg_rank": 13.11111111111111,
+      "avg_ef": 24.985735163152164
+    },
+    {
+      "candidate_rank": 6,
+      "pathway": "cellular response to cytokine stimulus (GO:0071345)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.7946428571428571,
+      "count": 89,
+      "avg_logp": 10.350880532433663,
+      "avg_rank": 16.02247191011236,
+      "avg_ef": 21.93140317341912
+    },
+    {
+      "candidate_rank": 7,
+      "pathway": "Lipid and atherosclerosis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.7857142857142857,
+      "count": 88,
+      "avg_logp": 13.355253839306028,
+      "avg_rank": 8.090909090909092,
+      "avg_ef": 44.94397463002113
+    },
+    {
+      "candidate_rank": 8,
+      "pathway": "cytokine-mediated signaling pathway (GO:0019221)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.7857142857142857,
+      "count": 88,
+      "avg_logp": 9.69685209887812,
+      "avg_rank": 17.704545454545453,
+      "avg_ef": 17.997395452105597
+    },
+    {
+      "candidate_rank": 9,
+      "pathway": "Chemical carcinogenesis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.75,
+      "count": 84,
+      "avg_logp": 11.553002684999438,
+      "avg_rank": 13.30952380952381,
+      "avg_ef": 38.22051205419406
+    },
+    {
+      "candidate_rank": 10,
+      "pathway": "Fluid shear stress and atherosclerosis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.7053571428571429,
+      "count": 79,
+      "avg_logp": 10.021983200007412,
+      "avg_rank": 15.848101265822784,
+      "avg_ef": 51.264001457062186
+    },
+    {
+      "candidate_rank": 11,
+      "pathway": "Kaposi sarcoma-associated herpesvirus infection",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.6964285714285714,
+      "count": 78,
+      "avg_logp": 12.709900844330456,
+      "avg_rank": 11.653846153846152,
+      "avg_ef": 44.67494796510341
+    },
+    {
+      "candidate_rank": 12,
+      "pathway": "MicroRNAs in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.6964285714285714,
+      "count": 78,
+      "avg_logp": 9.766685852241586,
+      "avg_rank": 16.17948717948718,
+      "avg_ef": 24.692766898412057
+    },
+    {
+      "candidate_rank": 13,
+      "pathway": "negative regulation of apoptotic process (GO:0043066)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.6875,
+      "count": 77,
+      "avg_logp": 9.766797483620955,
+      "avg_rank": 25.01298701298701,
+      "avg_ef": 20.1312982550096
+    },
+    {
+      "candidate_rank": 14,
+      "pathway": "positive regulation of protein kinase B signaling (GO:0051897)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.6607142857142857,
+      "count": 74,
+      "avg_logp": 9.139477363153174,
+      "avg_rank": 26.7027027027027,
+      "avg_ef": 44.066224609702864
+    },
+    {
+      "candidate_rank": 15,
+      "pathway": "positive regulation of intracellular signal transduction (GO:1902533)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.6428571428571429,
+      "count": 72,
+      "avg_logp": 9.40868274951463,
+      "avg_rank": 25.444444444444443,
+      "avg_ef": 17.735169922669925
+    },
+    {
+      "candidate_rank": 16,
+      "pathway": "regulation of phosphatidylinositol 3-kinase signaling (GO:0014066)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.6071428571428571,
+      "count": 68,
+      "avg_logp": 9.213416533930706,
+      "avg_rank": 29.88235294117647,
+      "avg_ef": 56.34087125416204
+    },
+    {
+      "candidate_rank": 17,
+      "pathway": "regulation of protein kinase B signaling (GO:0051896)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.5892857142857143,
+      "count": 66,
+      "avg_logp": 9.548807493110186,
+      "avg_rank": 26.75757575757576,
+      "avg_ef": 35.367076562728734
+    },
+    {
+      "candidate_rank": 18,
+      "pathway": "Estrogen signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.5803571428571429,
+      "count": 65,
+      "avg_logp": 8.53952287864096,
+      "avg_rank": 16.153846153846153,
+      "avg_ef": 57.50589556428972
+    },
+    {
+      "candidate_rank": 19,
+      "pathway": "positive regulation of phosphorylation (GO:0042327)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.5625,
+      "count": 63,
+      "avg_logp": 10.215519818005651,
+      "avg_rank": 24.63492063492064,
+      "avg_ef": 30.01024740155174
+    },
+    {
+      "candidate_rank": 20,
+      "pathway": "Prostate cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.5267857142857143,
+      "count": 59,
+      "avg_logp": 11.413163933044146,
+      "avg_rank": 15.389830508474576,
+      "avg_ef": 67.47364435901916
+    }
+  ]
+}

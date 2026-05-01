@@ -200,11 +200,10 @@ def fig1_heatmap(df: pd.DataFrame):
 
 
 def fig2_target_robustness(df: pd.DataFrame):
-    """Scatter: frequency (x) vs avg_degree_norm (y), colored by quadrant, labeled for Tier1 genes.
+    """Scatter: frequency (x) vs avg_degree_norm (y), colored by quadrant.
 
     FIXED: Now uses avg_degree_norm (consistent with run_sensitivity_analysis.py classification)
     so that quadrant colors, background shading, and divider lines are fully aligned.
-    Tier1 genes are explicitly labeled.
     """
     from matplotlib.font_manager import FontProperties
 
@@ -219,7 +218,6 @@ def fig2_target_robustness(df: pd.DataFrame):
     font_cn = FontProperties(family="SimHei", size=9)
     font_cn_bold = FontProperties(family="SimHei", size=9, weight="bold")
     font_cn_small = FontProperties(family="SimHei", size=7.5)
-    font_label = FontProperties(family="Arial", size=6.5, weight="bold")
 
     fig, ax = plt.subplots(figsize=(8.2, 5.8), constrained_layout=True)
 
@@ -231,19 +229,31 @@ def fig2_target_robustness(df: pd.DataFrame):
         "Q4: 可忽略": {"marker": "o", "size": 25, "zorder": 1},
     }
 
-    # Background shading — aligned to normalized degree median
-    x_max = 1.12
+    # Background shading — aligned to normalized degree median. Use data-coordinate
+    # rectangles so each quadrant fills the full axis range, including left margin.
+    x_min = -0.03
+    x_max = 1.05
     y_min = -0.05
     y_max = df["avg_degree_norm"].max() * 1.15
 
-    # Compute correct axis-ratio for the degree median line
-    y_med_ratio = (degree_median - y_min) / (y_max - y_min)
-    y_med_ratio = max(0.0, min(1.0, y_med_ratio))
-
-    ax.axvspan(freq_median, x_max, ymin=y_med_ratio, ymax=1, alpha=0.10, color="#2166AC", zorder=0)
-    ax.axvspan(0, freq_median, ymin=y_med_ratio, ymax=1, alpha=0.10, color="#E69F00", zorder=0)
-    ax.axvspan(freq_median, x_max, ymin=0, ymax=y_med_ratio, alpha=0.10, color="#B2182B", zorder=0)
-    ax.axvspan(0, freq_median, ymin=0, ymax=y_med_ratio, alpha=0.10, color="#D3D3D3", zorder=0)
+    quadrant_backgrounds = [
+        (freq_median, degree_median, x_max - freq_median, y_max - degree_median, "#2166AC"),
+        (x_min, degree_median, freq_median - x_min, y_max - degree_median, "#E69F00"),
+        (freq_median, y_min, x_max - freq_median, degree_median - y_min, "#B2182B"),
+        (x_min, y_min, freq_median - x_min, degree_median - y_min, "#D3D3D3"),
+    ]
+    for x, y, width, height, color in quadrant_backgrounds:
+        ax.add_patch(
+            mpatches.Rectangle(
+                (x, y),
+                width,
+                height,
+                facecolor=color,
+                alpha=0.10,
+                edgecolor="none",
+                zorder=0,
+            )
+        )
 
     # Plot each quadrant
     for qname, qstyle in quadrants.items():
@@ -265,42 +275,10 @@ def fig2_target_robustness(df: pd.DataFrame):
             alpha=0.85,
         )
 
-    # Label Tier1 genes with separated label anchors to avoid overlap near x=1.
-    tier1 = df[df["frequency"] == 1.0].sort_values("avg_degree_norm", ascending=False)
-    label_y = tier1["avg_degree_norm"].to_numpy().copy()
-    if len(label_y) > 1:
-        min_gap = 0.035
-        order = np.argsort(-label_y)
-        adjusted = label_y.copy()
-        last = None
-        for idx in order:
-            if last is None:
-                last = adjusted[idx]
-                continue
-            if last - adjusted[idx] < min_gap:
-                adjusted[idx] = last - min_gap
-            last = adjusted[idx]
-        label_y = np.clip(adjusted, y_min + 0.03, y_max - 0.03)
-
-    for (_, row), y_lab in zip(tier1.iterrows(), label_y):
-        ax.annotate(
-            row["gene"],
-            (row["frequency"], row["avg_degree_norm"]),
-            xytext=(1.018, y_lab),
-            textcoords="data",
-            fontproperties=font_label,
-            color="#333333",
-            zorder=5,
-            ha="left",
-            va="center",
-            arrowprops=dict(arrowstyle="-", color="#9aa0a6", lw=0.35),
-        )
-
     # Axis labels
     ax.set_xlabel("跨参数组合出现频率", fontproperties=font_cn, labelpad=6)
     ax.set_ylabel("平均相对连接度 (degree / 组合内最大度值)", fontproperties=font_cn, labelpad=6)
-    ax.set_xlim(-0.03, x_max)
-    y_max = df["avg_degree_norm"].max() * 1.15
+    ax.set_xlim(x_min, x_max)
     ax.set_ylim(y_min, y_max)
 
     # Tick labels

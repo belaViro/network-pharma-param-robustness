@@ -9,31 +9,31 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from pathlib import Path
 
+from src.config import STRAWBERRY_LEAF_MOLECULES, safe_compound_file_stem
+
 
 # 化合物配色
-COLORS = {
-    'Catechin': '#2E7D32',        # 深绿
-    'Procyanidin B1': '#66BB6A', # 浅绿
-    'Scutellarin': '#FF9800',      # 橙色
-    'Sucrose': '#2196F3',          # 蓝色
-    'Trehalose': '#9C27B0',       # 紫色
-}
+COLOR_PALETTE = [
+    '#2E7D32', '#66BB6A', '#FF9800', '#2196F3', '#9C27B0', '#C62828',
+    '#00897B', '#6D4C41', '#3949AB', '#F4511E', '#7CB342', '#546E7A',
+    '#D81B60', '#00ACC1', '#5E35B1', '#8D6E63', '#039BE5', '#C0CA33',
+]
 
-COMPOUNDS = ['Catechin', 'Procyanidin B1', 'Scutellarin', 'Sucrose', 'Trehalose']
+COMPOUNDS = STRAWBERRY_LEAF_MOLECULES
+COLORS = {compound: COLOR_PALETTE[i % len(COLOR_PALETTE)] for i, compound in enumerate(COMPOUNDS)}
+
+
+def _active_compounds(df: pd.DataFrame) -> list[str]:
+    """Return compounds that are present as columns in the relationship table."""
+    return [compound for compound in COMPOUNDS if compound in df.columns]
 
 
 def load_data(data_dir: Path):
     """加载数据"""
     swiss_data = {}
-    compound_map = {
-        'Catechin': 'Catechin',
-        'Procyanidin_B1': 'Procyanidin B1',
-        'Scutellarin': 'Scutellarin',
-        'Sucrose': 'Sucrose',
-        'Trehalose': 'Trehalose',
-    }
 
-    for compound_file, compound_display in compound_map.items():
+    for compound_display in COMPOUNDS:
+        compound_file = safe_compound_file_stem(compound_display)
         file_path = data_dir / 'swiss_targets' / f'{compound_file}_targets.csv'
         if file_path.exists():
             df = pd.read_csv(file_path)
@@ -83,9 +83,10 @@ def build_relationship_df(swiss_data, hub_df, kegg_df, top_n=12):
 def plot_stacked_bar(df, output_path):
     """堆叠条形图"""
     fig = go.Figure()
+    compounds = _active_compounds(df)
 
     # 添加堆叠条形
-    for compound in COMPOUNDS:
+    for compound in compounds:
         fig.add_trace(go.Bar(
             name=compound,
             y=df['pathway_short'],
@@ -164,7 +165,7 @@ def plot_stacked_bar(df, output_path):
             xanchor='right',
         )
 
-    fig.update_xaxes(range=[-3, df[COMPOUNDS].sum(axis=1).max() + 5])
+    fig.update_xaxes(range=[-3, df[compounds].sum(axis=1).max() + 5])
     fig.update_yaxes(range=[-1, len(df)])
 
     fig.write_image(output_path, scale=2)
@@ -175,8 +176,9 @@ def plot_stacked_bar(df, output_path):
 def plot_grouped_dot(df, output_path):
     """点图/气泡图 - 展示成分-靶点贡献"""
     fig = go.Figure()
+    compounds = _active_compounds(df)
 
-    for compound in COMPOUNDS:
+    for compound in compounds:
         fig.add_trace(go.Scatter(
             name=compound,
             x=df[compound],
@@ -199,11 +201,11 @@ def plot_grouped_dot(df, output_path):
 
     # 添加连接线
     for i, pathway in enumerate(df['pathway_short']):
-        values = [df[c].iloc[i] for c in COMPOUNDS]
+        values = [df[c].iloc[i] for c in compounds]
         total = sum(values)
         if total > 0:
             cumulative = 0
-            for compound in COMPOUNDS:
+            for compound in compounds:
                 val = df[compound].iloc[i]
                 if val > 0:
                     cumulative += val
@@ -227,7 +229,7 @@ def plot_grouped_dot(df, output_path):
         xaxis=dict(
             title='Number of Predicted Targets',
             tickfont=dict(size=10),
-            range=[-1, df[COMPOUNDS].sum(axis=1).max() + 3],
+            range=[-1, df[compounds].sum(axis=1).max() + 3],
         ),
         yaxis=dict(
             title='',
@@ -258,12 +260,13 @@ def plot_grouped_dot(df, output_path):
 def plot_heatmap_style(df, output_path):
     """热力图风格 - 展示成分-通路矩阵"""
     # 构建矩阵
-    matrix = df[COMPOUNDS].values
+    compounds = _active_compounds(df)
+    matrix = df[compounds].values
 
     fig = go.Figure(data=go.Heatmap(
         z=matrix,
         y=df['pathway_short'],
-        x=COMPOUNDS,
+        x=compounds,
         colorscale=[
             [0, '#FFFFFF'],
             [0.1, '#E8F5E9'],
@@ -285,7 +288,7 @@ def plot_heatmap_style(df, output_path):
     ))
 
     # 添加总计行
-    totals = df[COMPOUNDS].sum(axis=1).values
+    totals = df[compounds].sum(axis=1).values
 
     fig.update_layout(
         title=dict(
@@ -322,6 +325,7 @@ logger = logging.getLogger(__name__)
 def plot_combined_panel(df, output_path, hub_csv_path):
     """组合面板图 - 完整展示"""
     from plotly.subplots import make_subplots
+    compounds = _active_compounds(df)
     fig = make_subplots(
         rows=1, cols=2,
         column_widths=[0.7, 0.3],
@@ -330,7 +334,7 @@ def plot_combined_panel(df, output_path, hub_csv_path):
     )
 
     # 左侧: 堆叠条形图
-    for compound in COMPOUNDS:
+    for compound in compounds:
         fig.add_trace(go.Bar(
             name=compound,
             y=df['pathway_short'],

@@ -13,40 +13,40 @@ from typing import Dict, List, Tuple
 import warnings
 import logging
 
+from src.config import STRAWBERRY_LEAF_MOLECULES, safe_compound_file_stem
+
 logger = logging.getLogger(__name__)
 
 warnings.filterwarnings('ignore')
 
 # 学术配色
+COLOR_PALETTE = [
+    '#4CAF50', '#8BC34A', '#FF9800', '#2196F3', '#9C27B0', '#C62828',
+    '#00897B', '#6D4C41', '#3949AB', '#F4511E', '#7CB342', '#546E7A',
+    '#D81B60', '#00ACC1', '#5E35B1', '#8D6E63', '#039BE5', '#C0CA33',
+]
 COLORS = {
-    'Catechin': '#4CAF50',        # 绿色
-    'Procyanidin B1': '#8BC34A',  # 浅绿
-    'Scutellarin': '#FF9800',      # 橙色
-    'Sucrose': '#2196F3',          # 蓝色
-    'Trehalose': '#9C27B0',        # 紫色
+    compound: COLOR_PALETTE[i % len(COLOR_PALETTE)]
+    for i, compound in enumerate(STRAWBERRY_LEAF_MOLECULES)
 }
+
+
+def _active_compounds(df: pd.DataFrame) -> list[str]:
+    """Return configured compounds that are present in the relationship table."""
+    return [compound for compound in STRAWBERRY_LEAF_MOLECULES if compound in df.columns]
 
 
 def load_data(data_dir: Path) -> Tuple[Dict, pd.DataFrame, pd.DataFrame]:
     """加载所有数据"""
     # 1. 加载SwissTargetPrediction结果
-    compounds = ['Catechin', 'Procyanidin_B1', 'Scutellarin', 'Sucrose', 'Trehalose']
-    compound_display = {
-        'Catechin': 'Catechin',
-        'Procyanidin_B1': 'Procyanidin B1',
-        'Scutellarin': 'Scutellarin',
-        'Sucrose': 'Sucrose',
-        'Trehalose': 'Trehalose',
-    }
-
     swiss_data = {}
-    for compound in compounds:
-        file_path = data_dir / 'swiss_targets' / f'{compound}_targets.csv'
+    for compound in STRAWBERRY_LEAF_MOLECULES:
+        file_path = data_dir / 'swiss_targets' / f'{safe_compound_file_stem(compound)}_targets.csv'
         if file_path.exists():
             df = pd.read_csv(file_path)
             # 筛选概率 > 0 的
             df = df[df['Probability*'] > 0]
-            swiss_data[compound_display[compound]] = set(df['Common name'].tolist())
+            swiss_data[compound] = set(df['Common name'].tolist())
 
     # 2. 加载Hub节点
     hub_df = pd.read_csv(data_dir / 'ppi_network' / 'hub_nodes.csv')
@@ -113,7 +113,7 @@ def plot_compound_target_pathway(
 
     fig, ax = plt.subplots(figsize=figsize)
 
-    compounds = ['Catechin', 'Procyanidin B1', 'Scutellarin', 'Sucrose', 'Trehalose']
+    compounds = _active_compounds(df)
     n_pathways = len(df)
 
     # Y轴位置
@@ -223,7 +223,7 @@ def plot_enhanced_bubble_pathway(
 
     fig, ax = plt.subplots(figsize=figsize)
 
-    compounds = ['Catechin', 'Procyanidin B1', 'Scutellarin', 'Sucrose', 'Trehalose']
+    compounds = _active_compounds(df)
     n_pathways = len(df)
 
     # Y轴
@@ -308,7 +308,7 @@ def plot_grouped_bar_with_targets(
     fig, (ax_main, ax_legend) = plt.subplots(1, 2, figsize=figsize,
                                                gridspec_kw={'width_ratios': [3, 1]})
 
-    compounds = ['Catechin', 'Procyanidin B1', 'Scutellarin', 'Sucrose', 'Trehalose']
+    compounds = _active_compounds(df)
     n_pathways = len(df)
 
     # ========== 主图：堆叠条形图 ==========

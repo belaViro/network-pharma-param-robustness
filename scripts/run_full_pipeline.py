@@ -29,6 +29,7 @@ from src.pipeline import (
     intersect_targets_with_disease_genes,
     build_ppi_network,
 )
+from src.config import STRAWBERRY_LEAF_MOLECULES
 from src.enrichment import run_enrichment_analysis, plot_all_enrichment
 from scripts.evaluate_traditional import evaluate_traditional_method
 from src.logging_config import setup_logging
@@ -211,16 +212,10 @@ def run_full_pipeline(
 
 if __name__ == "__main__":
     setup_logging()
-    strawberry_leaf_molecules = [
-        'Sucrose',
-        'Trehalose',
-        'Catechin',
-        'Procyanidin B1',
-        'Scutellarin',
-    ]
+    strawberry_leaf_molecules = STRAWBERRY_LEAF_MOLECULES
     logger.info(f"\n{'#'*60}")
     logger.info(f"# 完整流水线 - 草莓叶活性成分靶点筛选")
-    logger.info(f"# 分子数: {len(strawberry_leaf_molecules)}")
+    logger.info(f"# 去重分子数: {len(strawberry_leaf_molecules)}")
     logger.info(f"{'#'*60}\n")
 
     results = run_full_pipeline(

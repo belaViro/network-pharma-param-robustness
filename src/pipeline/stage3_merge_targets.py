@@ -51,6 +51,20 @@ def merge_and_deduplicate_targets(
             logger.warning(f"[Stage3] 未找到CSV文件: {csv_dir}")
             return {"status": "无文件", "error": f"目录不存在或无匹配文件: {csv_dir}", "total_records": 0, "unique_targets": 0}
 
+        from src.config import STRAWBERRY_LEAF_MOLECULES, safe_compound_file_stem
+
+        expected_stems = {safe_compound_file_stem(name) for name in STRAWBERRY_LEAF_MOLECULES}
+        available_stems = {p.stem.replace("_targets", "") for p in csv_files}
+        missing_compound_files = sorted(expected_stems - available_stems)
+
+        if missing_compound_files:
+            logger.warning(
+                "[Stage3] 当前缺少 %d/%d 个配置成分的 SwissTarget CSV: %s",
+                len(missing_compound_files),
+                len(expected_stems),
+                ", ".join(missing_compound_files),
+            )
+
         logger.info(f"Stage 3: 合并靶点CSV ({len(csv_files)} 个文件)")
 
         # 读取并合并所有CSV
@@ -139,17 +153,25 @@ def merge_and_deduplicate_targets(
             "Probability", ascending=False
         ).reset_index(drop=True)
 
-        # 保存完整并集到 swiss_targets/merged_targets.csv (含 Probability=0)
-        from src.config import SWISS_TARGETS_DIR
+        # 保存完整并集到 swiss_targets/merged_targets.csv，供敏感性分析按多阈值重筛。
+        from src.config import PROBABILITY_THRESHOLD, SWISS_TARGETS_DIR
         swiss_merged_path = SWISS_TARGETS_DIR / "merged_targets.csv"
         swiss_merged_path.parent.mkdir(parents=True, exist_ok=True)
         deduplicated_df.to_csv(swiss_merged_path, index=False)
         logger.info(f"[Stage3] 完整并集保存至: {swiss_merged_path} ({len(deduplicated_df)} 靶点)")
 
-        # 过滤：只保留 Probability > 0 的靶点
+        # 主分析过滤：只保留 Probability > 预设主阈值的靶点。
         before_filter = len(deduplicated_df)
-        deduplicated_df = deduplicated_df[deduplicated_df["Probability"] > 0].copy()
-        logger.info(f"过滤 Probability>0: {before_filter} -> {len(deduplicated_df)} (排除 {before_filter - len(deduplicated_df)})")
+        deduplicated_df = deduplicated_df[
+            deduplicated_df["Probability"] > PROBABILITY_THRESHOLD
+        ].copy()
+        logger.info(
+            "过滤 Probability>%s: %d -> %d (排除 %d)",
+            PROBABILITY_THRESHOLD,
+            before_filter,
+            len(deduplicated_df),
+            before_filter - len(deduplicated_df),
+        )
 
         # 排序后保存到 shared/merged_targets.csv (仅 >0)
         output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -170,7 +192,9 @@ def merge_and_deduplicate_targets(
             "total_records": len(merged_df),
             "unique_targets": len(deduplicated_df),
             "output_path": str(output_path),
+            "probability_threshold": PROBABILITY_THRESHOLD,
             "compound_contribution": compound_contribution,
+            "missing_compound_files": missing_compound_files,
             "deduplicated_df": deduplicated_df,
         }
 

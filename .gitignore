@@ -20,6 +20,8 @@ src/data/go-basic.obo
 src/outputs/sensitivity/enrichment_cache/
 
 # 流水线运行日志（自动生成）
+run_*.log
+run_*.err.log
 src/outputs/reports/
 src/outputs/traditional/evaluation/*.md
 src/outputs/traditional/evaluation/*.log

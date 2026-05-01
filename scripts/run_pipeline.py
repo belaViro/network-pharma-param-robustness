@@ -16,6 +16,7 @@ from typing import List, Dict
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from src.pipeline import stage1_fetch_all, stage2_predict_all
+from src.config import STRAWBERRY_LEAF_MOLECULES
 from src.logging_config import setup_logging
 import logging
 
@@ -81,6 +82,7 @@ def run_pipeline(
         r2 = next((r for r in stage2_results if r["smiles"] == r1.get("smiles")), None)
         final_results.append({
             "name": r1["name"],
+            "query_name": r1.get("query_name", r1["name"]),
             "smiles": r1.get("smiles", ""),
             "cid": r1.get("cid"),
             "stage1_status": r1["status"],
@@ -99,10 +101,9 @@ def run_pipeline(
         f.write(f"**Stage 2 成功**: {stage2_success} | **Stage 2 失败**: {stage2_failed}\n\n")
         f.write("---\n\n")
         f.write("## 详细结果\n\n")
-        f.write("| 序号 | 分子名称 | CID | Stage 1 | Stage 2 | CSV |\n")
-        f.write("|------|---------|-----|---------|--------|-----|\n")
+        f.write("| 序号 | 分子名称 | PubChem查询名 | CID | Stage 1 | Stage 2 | CSV |\n")
+        f.write("|------|---------|--------------|-----|---------|--------|-----|\n")
         for i, r in enumerate(final_results, 1):
-            smiles_short = r["smiles"][:30] + "..." if len(r["smiles"]) > 30 else r["smiles"]
             cid = r.get("cid")
             if cid:
                 cid_link = f"[{cid}](https://pubchem.ncbi.nlm.nih.gov/compound/{cid})"
@@ -111,7 +112,7 @@ def run_pipeline(
             s1_icon = "✓" if r["stage1_status"] == "成功" else "✗"
             s2_icon = "✓" if r["stage2_status"] == "成功" else "✗"
             csv_name = Path(r["csv"]).name if r["csv"] else "-"
-            f.write(f"| {i} | {r['name']} | {cid_link} | {s1_icon} | {s2_icon} | {csv_name} |\n")
+            f.write(f"| {i} | {r['name']} | {r['query_name']} | {cid_link} | {s1_icon} | {s2_icon} | {csv_name} |\n")
 
     logger.info(f"\n{'='*50}")
     logger.info(f"  流水线完成")
@@ -142,15 +143,9 @@ def run_from_smiles(smiles_list: List[str], output_dir: str = None, max_workers:
 
 if __name__ == "__main__":
     setup_logging()
-    strawberry_leaf_molecules = [
-        'Sucrose',
-        'Trehalose',
-        'Catechin',
-        'Procyanidin B1',
-        'Scutellarin',
-    ]
+    strawberry_leaf_molecules = STRAWBERRY_LEAF_MOLECULES
     logger.info(f"\n{'#'*50}")
     logger.info(f"# SwissTargetPrediction 靶点预测流水线")
-    logger.info(f"# 草莓叶活性成分: {len(strawberry_leaf_molecules)} 个分子")
+    logger.info(f"# 草莓叶活性成分: {len(strawberry_leaf_molecules)} 个去重分子")
     logger.info(f"{'#'*50}\n")
     run_pipeline(strawberry_leaf_molecules, max_workers=1)

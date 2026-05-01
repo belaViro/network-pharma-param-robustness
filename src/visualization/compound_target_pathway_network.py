@@ -3,7 +3,7 @@
 Compound-Target-Pathway Network Visualization
 
 三层网络布局:
-Layer 1 (顶部): 5种草莓叶活性成分
+Layer 1 (顶部): 草莓叶活性成分
 Layer 2 (中部): 核心靶点 (Hub Genes from PPI)
 Layer 3 (底部): 富集通路 (KEGG/GO)
 """
@@ -17,6 +17,8 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Optional
 import warnings
 import logging
+
+from src.config import STRAWBERRY_LEAF_MOLECULES, safe_compound_file_stem
 
 logger = logging.getLogger(__name__)
 
@@ -42,16 +44,13 @@ COLORS = {
 
 def load_swiss_targets(data_dir: Path) -> Dict[str, pd.DataFrame]:
     """加载各化合物的靶点预测结果"""
-    compounds = ['Catechin', 'Procyanidin_B1', 'Scutellarin', 'Sucrose', 'Trehalose']
     targets_dict = {}
 
-    for compound in compounds:
-        file_path = data_dir / 'swiss_targets' / f'{compound}_targets.csv'
+    for compound in STRAWBERRY_LEAF_MOLECULES:
+        file_path = data_dir / 'swiss_targets' / f'{safe_compound_file_stem(compound)}_targets.csv'
         if file_path.exists():
             df = pd.read_csv(file_path)
             targets_dict[compound] = df
-        else:
-            targets_dict[compound] = pd.DataFrame()
 
     return targets_dict
 
@@ -92,26 +91,16 @@ def build_network_data(
     all_nodes = {'compounds': [], 'targets': [], 'pathways': []}
 
     # 1. 化合物 -> 靶点 边
-    compound_names = {
-        'Catechin': 'Catechin',
-        'Procyanidin_B1': 'Procyanidin B1',
-        'Scutellarin': 'Scutellarin',
-        'Sucrose': 'Sucrose',
-        'Trehalose': 'Trehalose',
-    }
-
     hub_genes = set(hub_nodes['Gene'].tolist()) if len(hub_nodes) > 0 else set()
 
-    for compound_file, compound_display in compound_names.items():
-        if compound_file in swiss_targets:
-            df = swiss_targets[compound_file]
-            # 使用 'Common name' 作为基因名列
-            if 'Common name' in df.columns and 'Probability*' in df.columns:
-                for _, row in df.iterrows():
-                    gene = row['Common name']
-                    prob = float(row['Probability*'])
-                    if prob >= prob_threshold and gene in hub_genes:
-                        compound_target_edges[(compound_display, gene)] = prob
+    for compound_display, df in swiss_targets.items():
+        # 使用 'Common name' 作为基因名列
+        if 'Common name' in df.columns and 'Probability*' in df.columns:
+            for _, row in df.iterrows():
+                gene = row['Common name']
+                prob = float(row['Probability*'])
+                if prob >= prob_threshold and gene in hub_genes:
+                    compound_target_edges[(compound_display, gene)] = prob
 
     # 2. 靶点 -> 通路 边 (从富集结果解析)
     for _, row in pathways.iterrows():
@@ -162,7 +151,8 @@ def calculate_node_importance(
             # 计算通路连接数
             pathway_count = sum(1 for (g, p) in target_pathway_edges.keys() if g == gene)
             # 综合得分
-            importance[gene] = 0.5 * norm_deg + 0.3 * (compound_count / 5) + 0.2 * (pathway_count / 10)
+            n_compounds = max(len({c for c, _ in compound_target_edges.keys()}), 1)
+            importance[gene] = 0.5 * norm_deg + 0.3 * (compound_count / n_compounds) + 0.2 * (pathway_count / 10)
 
     return importance
 
@@ -467,7 +457,7 @@ def create_network_figure(data_dir: Path, output_dir: Path) -> str:
         logger.info("  错误: 缺少Hub节点或通路数据")
         return None
 
-    logger.info(f"  - 化合物: 5种")
+    logger.info(f"  - 化合物: {len(swiss_targets)}种")
     logger.info(f"  - Hub靶点: {len(hub_nodes)}个")
     logger.info(f"  - 富集通路: {len(pathways)}条")
 

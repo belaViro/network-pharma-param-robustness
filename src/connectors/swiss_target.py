@@ -14,6 +14,7 @@ from typing import Optional
 
 from playwright.sync_api import sync_playwright
 from playwright_stealth.stealth import Stealth
+from src.config import safe_compound_file_stem
 
 logger = logging.getLogger(__name__)
 
@@ -223,9 +224,7 @@ class SwissTargetPredictor:
         download = download_info.value
         # 使用分子名称（如果有的话），否则用smiles前20字符
         if molecule_name:
-            safe_name = "".join(c for c in molecule_name if c.isalnum() or c in (' ', '-', '_')).strip()
-            safe_name = safe_name.replace(' ', '_')
-            file_path = str(Path(self.download_path) / f"{safe_name}_targets.csv")
+            file_path = str(Path(self.download_path) / f"{safe_compound_file_stem(molecule_name)}_targets.csv")
         else:
             file_path = str(Path(self.download_path) / f"{self.config.smiles[:20]}_targets.csv")
         download.save_as(file_path)

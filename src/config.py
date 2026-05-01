@@ -64,7 +64,9 @@ STRING_API_TIMEOUT = 300  # seconds
 # ============================================================================
 
 # 靶点预测
-PROBABILITY_THRESHOLD = 0.0  # SwissTarget Probability > 0
+PRIMARY_PROBABILITY_THRESHOLD = 0.05
+PROBABILITY_THRESHOLD = PRIMARY_PROBABILITY_THRESHOLD
+PROBABILITY_THRESHOLDS: list[float] = [0.0, 0.03, 0.05, 0.08, 0.10, 0.15, 0.20]
 
 # 富集分析
 PVALUE_CUTOFF = 0.01
@@ -102,6 +104,9 @@ ANTIOXIDANT_KEYWORDS: list[str] = [
 # 分析参数目录
 SENSITIVITY_FIGURES_DIR = SENSITIVITY_DIR / "figures"
 SENSITIVITY_EVAL_DIR = SENSITIVITY_DIR / "evaluation"
+SENSITIVITY_FULL_TARGETS_CSV = SENSITIVITY_DIR / "intersected_targets_probability_gt0.csv"
+SENSITIVITY_PPI_NETWORK_DIR = SENSITIVITY_DIR / "ppi_network_full"
+SENSITIVITY_PPI_EDGES_CSV = SENSITIVITY_PPI_NETWORK_DIR / "string_interactions_interactions.csv"
 
 # ============================================================================
 # 日志配置
@@ -115,26 +120,111 @@ LOG_LEVEL = "INFO"
 # 化合物列表
 # ============================================================================
 
-STRAWBERRY_LEAF_MOLECULES: list[str] = [
-    'Miquelianin',
-    'Sucrose',
-    'Trehalose',
-    'Oleamide',
-    'Catechin',
-    'Indole-3-acrylic acid',
-    'DL-Tryptophan',
-    '(3beta,9xi)-3-(beta-D-Glucopyranosyloxy)-14-hydroxycard-20(22)-enolide',
-    'Denin',
-    '2-Methylglutaric acid',
-    'Procyanidin B1',
-    'Scutellarin',
-    'Choline',
-    'DL-Malic acid',
-    'Citric acid',
-    'A-Ketoglutaric Acid',
-    'L-Allo-Isoleucine',
-    'Hexadecanamide',
+# LC-MS/MS 原始鉴定成分为 19 条记录；Trehalose 与 alpha,alpha-Trehalose
+# 为同一化合物，正式分析使用 18 个去重后的 canonical compound。
+STRAWBERRY_LEAF_RAW_COMPOUNDS: list[str] = [
+    "Miquelianin",
+    "Sucrose",
+    "Trehalose",
+    "Oleamide",
+    "Catechin",
+    "Indole-3-acrylic acid",
+    "DL-Tryptophan",
+    "(3beta,9xi)-3-(beta-D-Glucopyranosyloxy)-14-hydroxycard-20(22)-enolide",
+    "Denin",
+    "2-Methylglutaric acid",
+    "Procyanidin B1",
+    "Scutellarin",
+    "Choline",
+    "alpha,alpha-Trehalose",
+    "DL-Malic acid",
+    "Citric acid",
+    "A-Ketoglutaric Acid",
+    "L-Allo-Isoleucine",
+    "Hexadecanamide",
 ]
+
+STRAWBERRY_LEAF_COMPOUND_CANONICAL_MAP: dict[str, str] = {
+    "alpha,alpha-Trehalose": "Trehalose",
+}
+
+STRAWBERRY_LEAF_COMPOUND_ALIASES: dict[str, list[str]] = {
+    "Miquelianin": [
+        "Quercetin 3-O-glucuronide",
+        "Quercetin-3-O-glucuronide",
+    ],
+    "Trehalose": [
+        "alpha,alpha-Trehalose",
+        "D-Trehalose",
+    ],
+    "Indole-3-acrylic acid": [
+        "3-Indoleacrylic acid",
+        "Indoleacrylic acid",
+    ],
+    "DL-Tryptophan": [
+        "Tryptophan",
+    ],
+    "(3beta,9xi)-3-(beta-D-Glucopyranosyloxy)-14-hydroxycard-20(22)-enolide": [
+        "3-(beta-D-Glucopyranosyloxy)-14-hydroxycard-20(22)-enolide",
+    ],
+    "A-Ketoglutaric Acid": [
+        "alpha-Ketoglutaric acid",
+        "2-Oxoglutaric acid",
+    ],
+    "L-Allo-Isoleucine": [
+        "L-Alloisoleucine",
+    ],
+    "Hexadecanamide": [
+        "Palmitamide",
+    ],
+}
+
+STRAWBERRY_LEAF_COMPOUND_MANUAL_SMILES: dict[str, dict[str, str | int]] = {
+    # PubChem name search does not reliably resolve "Denin"; use the curated
+    # structure recorded by KNApSAcK/CropMetabolome for C33H56O14 Denin.
+    "Denin": {
+        "smiles": "CC(O)[C@H]1CC[C@]2(O)[C@@H]3CC[C@H]4C[C@@H](O[C@@H]5O[C@@H](C)[C@@H](O[C@H]6O[C@H](CO)[C@@H](O)[C@H](O)[C@H]6O)[C@@H](O)[C@@H]5O)CC[C@]4(C)[C@H]3[C@H](O)[C@@H](O)[C@]12C",
+        "cid": 101268475,
+        "source": "manual_curated",
+    },
+}
+
+
+def canonicalize_compound_name(name: str) -> str:
+    """Return the deduplicated canonical compound name used in analysis."""
+    return STRAWBERRY_LEAF_COMPOUND_CANONICAL_MAP.get(name, name)
+
+
+def get_strawberry_leaf_molecules(include_duplicates: bool = False) -> list[str]:
+    """Return strawberry leaf compound names for pipeline execution.
+
+    Parameters
+    ----------
+    include_duplicates:
+        If True, return all 19 LC-MS/MS raw records. If False, collapse
+        duplicate chemical identities and return the 18 canonical compounds
+        used for target prediction and robustness analysis.
+    """
+    if include_duplicates:
+        return list(STRAWBERRY_LEAF_RAW_COMPOUNDS)
+
+    molecules: list[str] = []
+    seen: set[str] = set()
+    for raw_name in STRAWBERRY_LEAF_RAW_COMPOUNDS:
+        canonical = canonicalize_compound_name(raw_name)
+        if canonical not in seen:
+            molecules.append(canonical)
+            seen.add(canonical)
+    return molecules
+
+
+def safe_compound_file_stem(name: str) -> str:
+    """Return the filename stem used for per-compound SwissTarget CSV files."""
+    safe_name = "".join(c for c in name if c.isalnum() or c in (" ", "-", "_")).strip()
+    return safe_name.replace(" ", "_")
+
+
+STRAWBERRY_LEAF_MOLECULES: list[str] = get_strawberry_leaf_molecules()
 
 
 # ============================================================================
