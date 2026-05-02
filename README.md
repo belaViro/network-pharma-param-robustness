@@ -1,5 +1,7 @@
 # Network Pharmacology Parameter Robustness Analysis
 
+**English** | [中文](./README_CN.md)
+
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
