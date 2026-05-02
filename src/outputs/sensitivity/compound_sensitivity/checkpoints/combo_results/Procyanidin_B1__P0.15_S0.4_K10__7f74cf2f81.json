@@ -1,0 +1,144 @@
+{
+  "status": "ok",
+  "n_targets": 39,
+  "n_ppi_nodes": 38,
+  "n_ppi_edges": 76,
+  "top_k": 10,
+  "topk_genes": [
+    "BCL2",
+    "PTGS2",
+    "CA1",
+    "STAT3",
+    "ACHE",
+    "HTR1A",
+    "CA4",
+    "CA9",
+    "CA2",
+    "CA12"
+  ],
+  "topk_info": [
+    {
+      "gene": "BCL2",
+      "degree": 12,
+      "degree_rank": 1,
+      "betweenness": 0.19405440238773572
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 12,
+      "degree_rank": 2,
+      "betweenness": 0.16602179102179107
+    },
+    {
+      "gene": "CA1",
+      "degree": 9,
+      "degree_rank": 3,
+      "betweenness": 0.17348740682074013
+    },
+    {
+      "gene": "STAT3",
+      "degree": 9,
+      "degree_rank": 4,
+      "betweenness": 0.10335628668962003
+    },
+    {
+      "gene": "ACHE",
+      "degree": 7,
+      "degree_rank": 5,
+      "betweenness": 0.1994157619157619
+    },
+    {
+      "gene": "HTR1A",
+      "degree": 7,
+      "degree_rank": 6,
+      "betweenness": 0.1167917917917918
+    },
+    {
+      "gene": "CA4",
+      "degree": 7,
+      "degree_rank": 7,
+      "betweenness": 0.06313992563992563
+    },
+    {
+      "gene": "CA9",
+      "degree": 7,
+      "degree_rank": 8,
+      "betweenness": 0.1110904860904861
+    },
+    {
+      "gene": "CA2",
+      "degree": 6,
+      "degree_rank": 9,
+      "betweenness": 0.025754875754875756
+    },
+    {
+      "gene": "CA12",
+      "degree": 5,
+      "degree_rank": 10,
+      "betweenness": 0.01155065321731988
+    }
+  ],
+  "significant_pathways": 6,
+  "direct_ox_count": 0,
+  "cross_talk_count": 2,
+  "backbone_count": 0,
+  "other_count": 4,
+  "avg_ef": 203.86,
+  "min_pvalue": 4.725041189158024e-12,
+  "pathway_details": [
+    {
+      "pathway": "bicarbonate transport (GO:0015701)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 8.385143818540562e-10,
+      "ef": 292.85714285714283
+    },
+    {
+      "pathway": "organic anion transport (GO:0015711)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 9.115551328761105e-08,
+      "ef": 103.53535353535354
+    },
+    {
+      "pathway": "Nitrogen metabolism",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 4.725041189158024e-12,
+      "ef": 602.9411764705883
+    },
+    {
+      "pathway": "Proximal tubule bicarbonate reclamation",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0022925940310701,
+      "ef": 178.2608695652174
+    },
+    {
+      "pathway": "Chemical carcinogenesis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0051315052736124,
+      "ef": 25.732217573221757
+    },
+    {
+      "pathway": "MicroRNAs in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0082662936109832,
+      "ef": 19.838709677419356
+    }
+  ],
+  "enrichment_cache_id": "288c4d6aeadc79fc",
+  "enrichment_cache_source": "new",
+  "drop_compound": "Procyanidin_B1",
+  "drop_compound_name": "Procyanidin B1",
+  "combo": "P0.15_S0.4_K10",
+  "prob_threshold": 0.15,
+  "string_threshold": 0.4,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 10,
+  "elapsed_seconds": 17.558,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Procyanidin_B1__P0.15_S0.4_K10__7f74cf2f81.json",
+  "created_at": "2026-05-02T22:15:29"
+}

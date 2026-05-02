@@ -1,0 +1,242 @@
+{
+  "status": "ok",
+  "n_targets": 30,
+  "n_ppi_nodes": 28,
+  "n_ppi_edges": 24,
+  "top_k": 20,
+  "topk_genes": [
+    "CA2",
+    "CA1",
+    "CA4",
+    "CA9",
+    "PTGS2",
+    "CA3",
+    "CA7",
+    "STAT3",
+    "FAAH",
+    "CA12",
+    "CA6",
+    "CDK1",
+    "EGLN1",
+    "CNR1",
+    "CA5A",
+    "PTGS1",
+    "CA5B",
+    "AKR1B1",
+    "NOX4",
+    "SLC5A7"
+  ],
+  "topk_info": [
+    {
+      "gene": "CA2",
+      "degree": 5,
+      "degree_rank": 1,
+      "betweenness": 0.008309591642924977
+    },
+    {
+      "gene": "CA1",
+      "degree": 5,
+      "degree_rank": 2,
+      "betweenness": 0.014007597340930673
+    },
+    {
+      "gene": "CA4",
+      "degree": 5,
+      "degree_rank": 3,
+      "betweenness": 0.016144349477682812
+    },
+    {
+      "gene": "CA9",
+      "degree": 5,
+      "degree_rank": 4,
+      "betweenness": 0.026353276353276354
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 4,
+      "degree_rank": 5,
+      "betweenness": 0.04843304843304844
+    },
+    {
+      "gene": "CA3",
+      "degree": 4,
+      "degree_rank": 6,
+      "betweenness": 0.002849002849002849
+    },
+    {
+      "gene": "CA7",
+      "degree": 3,
+      "degree_rank": 7,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "STAT3",
+      "degree": 3,
+      "degree_rank": 8,
+      "betweenness": 0.03133903133903134
+    },
+    {
+      "gene": "FAAH",
+      "degree": 2,
+      "degree_rank": 9,
+      "betweenness": 0.017094017094017096
+    },
+    {
+      "gene": "CA12",
+      "degree": 2,
+      "degree_rank": 10,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA6",
+      "degree": 2,
+      "degree_rank": 11,
+      "betweenness": 0.0007122507122507123
+    },
+    {
+      "gene": "CDK1",
+      "degree": 1,
+      "degree_rank": 12,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "EGLN1",
+      "degree": 1,
+      "degree_rank": 13,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CNR1",
+      "degree": 1,
+      "degree_rank": 14,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA5A",
+      "degree": 1,
+      "degree_rank": 15,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PTGS1",
+      "degree": 1,
+      "degree_rank": 16,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA5B",
+      "degree": 1,
+      "degree_rank": 17,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "AKR1B1",
+      "degree": 1,
+      "degree_rank": 18,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "NOX4",
+      "degree": 1,
+      "degree_rank": 19,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "SLC5A7",
+      "degree": 0,
+      "degree_rank": 20,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 10,
+  "direct_ox_count": 0,
+  "cross_talk_count": 0,
+  "backbone_count": 0,
+  "other_count": 10,
+  "avg_ef": 164.81,
+  "min_pvalue": 9.142585389031712e-26,
+  "pathway_details": [
+    {
+      "pathway": "bicarbonate transport (GO:0015701)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 3.496968696170208e-21,
+      "ef": 292.85714285714283
+    },
+    {
+      "pathway": "organic anion transport (GO:0015711)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.4418911750349435e-16,
+      "ef": 103.53535353535354
+    },
+    {
+      "pathway": "arachidonic acid metabolic process (GO:0019369)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0017766941652893,
+      "ef": 53.94736842105263
+    },
+    {
+      "pathway": "icosanoid metabolic process (GO:0006690)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0017766941652893,
+      "ef": 53.94736842105263
+    },
+    {
+      "pathway": "cyclooxygenase pathway (GO:0019371)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0030557604910365,
+      "ef": 186.36363636363635
+    },
+    {
+      "pathway": "prostanoid biosynthetic process (GO:0046457)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0048498117681207,
+      "ef": 136.66666666666669
+    },
+    {
+      "pathway": "prostaglandin biosynthetic process (GO:0001516)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0067537430279131,
+      "ef": 107.89473684210527
+    },
+    {
+      "pathway": "Nitrogen metabolism",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 9.142585389031712e-26,
+      "ef": 602.9411764705883
+    },
+    {
+      "pathway": "Proximal tubule bicarbonate reclamation",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0085443988737404,
+      "ef": 89.1304347826087
+    },
+    {
+      "pathway": "Retrograde endocannabinoid signaling",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0099050121025393,
+      "ef": 20.777027027027025
+    }
+  ],
+  "enrichment_cache_id": "5a551b7cd135b556",
+  "enrichment_cache_source": "new",
+  "drop_compound": "Procyanidin_B1",
+  "drop_compound_name": "Procyanidin B1",
+  "combo": "P0.2_S0.5_K20",
+  "prob_threshold": 0.2,
+  "string_threshold": 0.5,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 20,
+  "elapsed_seconds": 15.372,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Procyanidin_B1__P0.2_S0.5_K20__e7a293d816.json",
+  "created_at": "2026-05-02T22:30:58"
+}

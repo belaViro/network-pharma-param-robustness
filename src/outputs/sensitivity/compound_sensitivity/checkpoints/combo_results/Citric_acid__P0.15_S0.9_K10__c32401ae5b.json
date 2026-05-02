@@ -1,0 +1,340 @@
+{
+  "status": "ok",
+  "n_targets": 41,
+  "n_ppi_nodes": 24,
+  "n_ppi_edges": 12,
+  "top_k": 10,
+  "topk_genes": [
+    "STAT3",
+    "HTR2A",
+    "MMP2",
+    "BCL2",
+    "HTR2C",
+    "PTGS2",
+    "HTR2B",
+    "IDO1",
+    "FAAH",
+    "CDK1"
+  ],
+  "topk_info": [
+    {
+      "gene": "STAT3",
+      "degree": 3,
+      "degree_rank": 1,
+      "betweenness": 0.04743083003952569
+    },
+    {
+      "gene": "HTR2A",
+      "degree": 3,
+      "degree_rank": 2,
+      "betweenness": 0.007905138339920948
+    },
+    {
+      "gene": "MMP2",
+      "degree": 2,
+      "degree_rank": 3,
+      "betweenness": 0.01976284584980237
+    },
+    {
+      "gene": "BCL2",
+      "degree": 2,
+      "degree_rank": 4,
+      "betweenness": 0.01976284584980237
+    },
+    {
+      "gene": "HTR2C",
+      "degree": 2,
+      "degree_rank": 5,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 2,
+      "degree_rank": 6,
+      "betweenness": 0.01976284584980237
+    },
+    {
+      "gene": "HTR2B",
+      "degree": 2,
+      "degree_rank": 7,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "IDO1",
+      "degree": 1,
+      "degree_rank": 8,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FAAH",
+      "degree": 1,
+      "degree_rank": 9,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CDK1",
+      "degree": 1,
+      "degree_rank": 10,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 34,
+  "direct_ox_count": 0,
+  "cross_talk_count": 7,
+  "backbone_count": 6,
+  "other_count": 21,
+  "avg_ef": 156.69,
+  "min_pvalue": 3.507957548278932e-07,
+  "pathway_details": [
+    {
+      "pathway": "regulation of phosphatidylinositol biosynthetic process (GO:0010511)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 3.507957548278932e-07,
+      "ef": 1230.0
+    },
+    {
+      "pathway": "positive regulation of phospholipid biosynthetic process (GO:0071073)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 6.135850392026296e-07,
+      "ef": 878.5714285714286
+    },
+    {
+      "pathway": "G protein-coupled serotonin receptor signaling pathway (GO:0098664)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.4014067890846586e-06,
+      "ef": 615.0
+    },
+    {
+      "pathway": "negative regulation of sequestering of calcium ion (GO:0051283)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 2.006695909649961e-05,
+      "ef": 246.0
+    },
+    {
+      "pathway": "release of sequestered calcium ion into cytosol (GO:0051209)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 2.0405296697338625e-05,
+      "ef": 227.77777777777774
+    },
+    {
+      "pathway": "cellular calcium ion homeostasis (GO:0006874)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 2.7048028379949103e-05,
+      "ef": 60.294117647058826
+    },
+    {
+      "pathway": "calcium ion transmembrane import into cytosol (GO:0097553)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 5.698063953517476e-05,
+      "ef": 146.42857142857142
+    },
+    {
+      "pathway": "negative regulation of autophagy (GO:0010507)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.00014056012075804524,
+      "ef": 104.23728813559322
+    },
+    {
+      "pathway": "G protein-coupled receptor signaling pathway, coupled to cyclic nucleotide second messenger (GO:0007187)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0001676119716336303,
+      "ef": 94.6153846153846
+    },
+    {
+      "pathway": "negative regulation of cellular catabolic process (GO:0031330)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0001807551171110596,
+      "ef": 89.13043478260869
+    },
+    {
+      "pathway": "phospholipase C-activating G protein-coupled receptor signaling pathway (GO:0007200)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.00026674665990063907,
+      "ef": 75.92592592592592
+    },
+    {
+      "pathway": "calcium ion homeostasis (GO:0055074)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0004207745036075958,
+      "ef": 63.402061855670105
+    },
+    {
+      "pathway": "cellular metal ion homeostasis (GO:0006875)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0004788422362311816,
+      "ef": 59.13461538461538
+    },
+    {
+      "pathway": "cellular divalent inorganic cation homeostasis (GO:0072503)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0005306457078671893,
+      "ef": 55.40540540540541
+    },
+    {
+      "pathway": "cGMP-mediated signaling (GO:0019934)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0005306457078671893,
+      "ef": 292.8571428571429
+    },
+    {
+      "pathway": "ERK1 and ERK2 cascade (GO:0070371)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.001379801963144,
+      "ef": 178.2608695652174
+    },
+    {
+      "pathway": "cellular response to cytokine stimulus (GO:0071345)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.001430137336814,
+      "ef": 17.012448132780083
+    },
+    {
+      "pathway": "positive regulation of ERK1 and ERK2 cascade (GO:0070374)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0015545140112391,
+      "ef": 35.75581395348837
+    },
+    {
+      "pathway": "activation of phospholipase C activity (GO:0007202)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0022725018036157,
+      "ef": 128.125
+    },
+    {
+      "pathway": "phosphatidylinositol 3-kinase signaling (GO:0014065)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0024404941684308,
+      "ef": 120.58823529411765
+    },
+    {
+      "pathway": "Gap junction",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 6.191863847979339e-06,
+      "ef": 93.18181818181817
+    },
+    {
+      "pathway": "Serotonergic synapse",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 8.497209331563085e-06,
+      "ef": 72.56637168141594
+    },
+    {
+      "pathway": "Inflammatory mediator regulation of TRP channels",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0003050400057972974,
+      "ef": 62.755102040816325
+    },
+    {
+      "pathway": "AGE-RAGE signaling pathway in diabetic complications",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0003050400057972974,
+      "ef": 61.5
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0015624004123248,
+      "ef": 15.442561205273071
+    },
+    {
+      "pathway": "Chemical carcinogenesis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0023639034208582,
+      "ef": 25.732217573221757
+    },
+    {
+      "pathway": "Calcium signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0023639034208582,
+      "ef": 25.625
+    },
+    {
+      "pathway": "MicroRNAs in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0043882793243491,
+      "ef": 19.838709677419356
+    },
+    {
+      "pathway": "Neuroactive ligand-receptor interaction",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0049898858347909,
+      "ef": 18.035190615835777
+    },
+    {
+      "pathway": "p53 signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0049898858347909,
+      "ef": 56.16438356164384
+    },
+    {
+      "pathway": "Small cell lung cancer",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0071890498904697,
+      "ef": 44.56521739130435
+    },
+    {
+      "pathway": "NF-kappa B signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0083431743306333,
+      "ef": 39.42307692307693
+    },
+    {
+      "pathway": "HIF-1 signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0083431743306333,
+      "ef": 37.61467889908257
+    },
+    {
+      "pathway": "Toxoplasmosis",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0083431743306333,
+      "ef": 36.60714285714286
+    }
+  ],
+  "enrichment_cache_id": "07bc6566e60b033d",
+  "enrichment_cache_source": "compound",
+  "drop_compound": "Citric_acid",
+  "drop_compound_name": "Citric acid",
+  "combo": "P0.15_S0.9_K10",
+  "prob_threshold": 0.15,
+  "string_threshold": 0.9,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 10,
+  "elapsed_seconds": 0.008,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Citric_acid__P0.15_S0.9_K10__c32401ae5b.json",
+  "created_at": "2026-05-02T23:05:09"
+}

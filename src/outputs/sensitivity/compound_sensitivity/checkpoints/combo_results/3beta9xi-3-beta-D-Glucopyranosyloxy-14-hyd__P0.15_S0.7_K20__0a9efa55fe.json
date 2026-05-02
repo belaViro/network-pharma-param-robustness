@@ -1,0 +1,389 @@
+{
+  "status": "ok",
+  "n_targets": 40,
+  "n_ppi_nodes": 35,
+  "n_ppi_edges": 24,
+  "top_k": 20,
+  "topk_genes": [
+    "BCL2",
+    "MMP9",
+    "PTGS2",
+    "HTR2A",
+    "MMP2",
+    "CA1",
+    "HTR2C",
+    "HTR1A",
+    "CNR1",
+    "HTR2B",
+    "CA3",
+    "CA7",
+    "IDO1",
+    "FAAH",
+    "CA2",
+    "CDK1",
+    "CA12",
+    "ACHE",
+    "HTR7",
+    "PGF"
+  ],
+  "topk_info": [
+    {
+      "gene": "BCL2",
+      "degree": 4,
+      "degree_rank": 1,
+      "betweenness": 0.0089126559714795
+    },
+    {
+      "gene": "MMP9",
+      "degree": 4,
+      "degree_rank": 2,
+      "betweenness": 0.0089126559714795
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 4,
+      "degree_rank": 3,
+      "betweenness": 0.0089126559714795
+    },
+    {
+      "gene": "HTR2A",
+      "degree": 4,
+      "degree_rank": 4,
+      "betweenness": 0.0213903743315508
+    },
+    {
+      "gene": "MMP2",
+      "degree": 3,
+      "degree_rank": 5,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA1",
+      "degree": 3,
+      "degree_rank": 6,
+      "betweenness": 0.0089126559714795
+    },
+    {
+      "gene": "HTR2C",
+      "degree": 2,
+      "degree_rank": 7,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "HTR1A",
+      "degree": 2,
+      "degree_rank": 8,
+      "betweenness": 0.0089126559714795
+    },
+    {
+      "gene": "CNR1",
+      "degree": 2,
+      "degree_rank": 9,
+      "betweenness": 0.0089126559714795
+    },
+    {
+      "gene": "HTR2B",
+      "degree": 2,
+      "degree_rank": 10,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA3",
+      "degree": 2,
+      "degree_rank": 11,
+      "betweenness": 0.0053475935828877
+    },
+    {
+      "gene": "CA7",
+      "degree": 1,
+      "degree_rank": 12,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "IDO1",
+      "degree": 1,
+      "degree_rank": 13,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FAAH",
+      "degree": 1,
+      "degree_rank": 14,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA2",
+      "degree": 1,
+      "degree_rank": 15,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CDK1",
+      "degree": 1,
+      "degree_rank": 16,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA12",
+      "degree": 1,
+      "degree_rank": 17,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ACHE",
+      "degree": 1,
+      "degree_rank": 18,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "HTR7",
+      "degree": 1,
+      "degree_rank": 19,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PGF",
+      "degree": 1,
+      "degree_rank": 20,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 31,
+  "direct_ox_count": 0,
+  "cross_talk_count": 6,
+  "backbone_count": 2,
+  "other_count": 23,
+  "avg_ef": 111.07,
+  "min_pvalue": 3.0356935162509347e-10,
+  "pathway_details": [
+    {
+      "pathway": "G protein-coupled receptor signaling pathway, coupled to cyclic nucleotide second messenger (GO:0007187)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.37377498778568e-08,
+      "ef": 94.6153846153846
+    },
+    {
+      "pathway": "G protein-coupled serotonin receptor signaling pathway (GO:0098664)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 2.4395209749878048e-08,
+      "ef": 410.0
+    },
+    {
+      "pathway": "bicarbonate transport (GO:0015701)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 2.4395209749878048e-08,
+      "ef": 146.42857142857142
+    },
+    {
+      "pathway": "regulation of phosphatidylinositol biosynthetic process (GO:0010511)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 8.432238239852782e-07,
+      "ef": 615.0
+    },
+    {
+      "pathway": "positive regulation of phospholipid biosynthetic process (GO:0071073)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 2.358067320535833e-06,
+      "ef": 439.2857142857143
+    },
+    {
+      "pathway": "organic anion transport (GO:0015711)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 2.582052988730998e-06,
+      "ef": 51.76767676767677
+    },
+    {
+      "pathway": "negative regulation of sequestering of calcium ion (GO:0051283)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.00010942800081079866,
+      "ef": 123.0
+    },
+    {
+      "pathway": "release of sequestered calcium ion into cytosol (GO:0051209)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.00012161352596928445,
+      "ef": 113.88888888888887
+    },
+    {
+      "pathway": "anterograde trans-synaptic signaling (GO:0098916)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.00015197458649123826,
+      "ef": 21.00409836065574
+    },
+    {
+      "pathway": "cellular calcium ion homeostasis (GO:0006874)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.00034291943488018315,
+      "ef": 30.147058823529413
+    },
+    {
+      "pathway": "calcium ion transmembrane import into cytosol (GO:0097553)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.00034291943488018315,
+      "ef": 73.21428571428571
+    },
+    {
+      "pathway": "chemical synaptic transmission (GO:0007268)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.00034291943488018315,
+      "ef": 16.748366013071895
+    },
+    {
+      "pathway": "cellular response to UV-A (GO:0071492)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.001579049442647,
+      "ef": 186.36363636363635
+    },
+    {
+      "pathway": "phospholipase C-activating G protein-coupled receptor signaling pathway (GO:0007200)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0019585231339161,
+      "ef": 37.96296296296296
+    },
+    {
+      "pathway": "response to UV-A (GO:0070141)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0021189369300082,
+      "ef": 146.42857142857144
+    },
+    {
+      "pathway": "cGMP-mediated signaling (GO:0019934)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0021189369300082,
+      "ef": 146.42857142857144
+    },
+    {
+      "pathway": "calcium ion homeostasis (GO:0055074)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0027589484469389,
+      "ef": 31.701030927835053
+    },
+    {
+      "pathway": "cellular metal ion homeostasis (GO:0006875)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0032039560104127,
+      "ef": 29.56730769230769
+    },
+    {
+      "pathway": "regulation of neuroinflammatory response (GO:0150077)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0033430181654457,
+      "ef": 107.89473684210527
+    },
+    {
+      "pathway": "cellular divalent inorganic cation homeostasis (GO:0072503)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0034967359887532,
+      "ef": 27.702702702702705
+    },
+    {
+      "pathway": "Nitrogen metabolism",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 3.0356935162509347e-10,
+      "ef": 301.47058823529414
+    },
+    {
+      "pathway": "Serotonergic synapse",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 4.392856378661233e-08,
+      "ef": 54.42477876106195
+    },
+    {
+      "pathway": "Neuroactive ligand-receptor interaction",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 2.1101003851372e-05,
+      "ef": 18.035190615835777
+    },
+    {
+      "pathway": "Gap junction",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 3.413271426246348e-05,
+      "ef": 46.590909090909086
+    },
+    {
+      "pathway": "Calcium signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0014319456743813,
+      "ef": 17.083333333333336
+    },
+    {
+      "pathway": "Inflammatory mediator regulation of TRP channels",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0017341583664379,
+      "ef": 31.377551020408163
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0017510994504473,
+      "ef": 9.65160075329567
+    },
+    {
+      "pathway": "Estrogen signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0032433507734848,
+      "ef": 22.445255474452555
+    },
+    {
+      "pathway": "Fluid shear stress and atherosclerosis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0032433507734848,
+      "ef": 22.12230215827338
+    },
+    {
+      "pathway": "Retrograde endocannabinoid signaling",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0035080251196493,
+      "ef": 20.777027027027025
+    },
+    {
+      "pathway": "Bladder cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0058805133543657,
+      "ef": 50.0
+    }
+  ],
+  "enrichment_cache_id": "565ba249f0b80d12",
+  "enrichment_cache_source": "new",
+  "drop_compound": "3beta9xi-3-beta-D-Glucopyranosyloxy-14-hydroxycard-2022-enolide",
+  "drop_compound_name": "(3beta,9xi)-3-(beta-D-Glucopyranosyloxy)-14-hydroxycard-20(22)-enolide",
+  "combo": "P0.15_S0.7_K20",
+  "prob_threshold": 0.15,
+  "string_threshold": 0.7,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 20,
+  "elapsed_seconds": 15.753,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\3beta9xi-3-beta-D-Glucopyranosyloxy-14-hyd__P0.15_S0.7_K20__0a9efa55fe.json",
+  "created_at": "2026-05-02T21:53:25"
+}

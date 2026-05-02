@@ -1,0 +1,193 @@
+{
+  "status": "ok",
+  "n_targets": 30,
+  "n_ppi_nodes": 16,
+  "n_ppi_edges": 3,
+  "top_k": 16,
+  "topk_genes": [
+    "MMP2",
+    "CNR1",
+    "MMP9",
+    "FAAH",
+    "STAT3",
+    "CDK1",
+    "ATP1A1",
+    "CA9",
+    "PTGS1",
+    "ACLY",
+    "FGF1",
+    "AKR1B1",
+    "EGLN1",
+    "BACE1",
+    "TDO2",
+    "PGF"
+  ],
+  "topk_info": [
+    {
+      "gene": "MMP2",
+      "degree": 2,
+      "degree_rank": 1,
+      "betweenness": 0.009523809523809525
+    },
+    {
+      "gene": "CNR1",
+      "degree": 1,
+      "degree_rank": 2,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "MMP9",
+      "degree": 1,
+      "degree_rank": 3,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FAAH",
+      "degree": 1,
+      "degree_rank": 4,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "STAT3",
+      "degree": 1,
+      "degree_rank": 5,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CDK1",
+      "degree": 0,
+      "degree_rank": 6,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ATP1A1",
+      "degree": 0,
+      "degree_rank": 7,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA9",
+      "degree": 0,
+      "degree_rank": 8,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PTGS1",
+      "degree": 0,
+      "degree_rank": 9,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ACLY",
+      "degree": 0,
+      "degree_rank": 10,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FGF1",
+      "degree": 0,
+      "degree_rank": 11,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "AKR1B1",
+      "degree": 0,
+      "degree_rank": 12,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "EGLN1",
+      "degree": 0,
+      "degree_rank": 13,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "BACE1",
+      "degree": 0,
+      "degree_rank": 14,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "TDO2",
+      "degree": 0,
+      "degree_rank": 15,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PGF",
+      "degree": 0,
+      "degree_rank": 16,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 7,
+  "direct_ox_count": 0,
+  "cross_talk_count": 1,
+  "backbone_count": 1,
+  "other_count": 5,
+  "avg_ef": 119.68,
+  "min_pvalue": 0.0002065142688690584,
+  "pathway_details": [
+    {
+      "pathway": "response to peptide (GO:1901652)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0015728626391468,
+      "ef": 98.5576923076923
+    },
+    {
+      "pathway": "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0024866567010575,
+      "ef": 15.857054455445544
+    },
+    {
+      "pathway": "cellular response to UV-A (GO:0071492)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0045677656354955,
+      "ef": 232.95454545454544
+    },
+    {
+      "pathway": "response to UV-A (GO:0070141)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0052224410369913,
+      "ef": 183.0357142857143
+    },
+    {
+      "pathway": "acetyl-CoA metabolic process (GO:0006084)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0052224410369913,
+      "ef": 170.83333333333334
+    },
+    {
+      "pathway": "positive regulation of vascular associated smooth muscle cell proliferation (GO:1904707)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0086797836376589,
+      "ef": 122.02380952380952
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0002065142688690584,
+      "ef": 14.477401129943503
+    }
+  ],
+  "enrichment_cache_id": "82b4d521b6cc0a62",
+  "enrichment_cache_source": "compound",
+  "drop_compound": "Miquelianin",
+  "drop_compound_name": "Miquelianin",
+  "combo": "P0.2_S0.9_K50",
+  "prob_threshold": 0.2,
+  "string_threshold": 0.9,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 50,
+  "elapsed_seconds": 0.002,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Miquelianin__P0.2_S0.9_K50__1081907a62.json",
+  "created_at": "2026-05-02T19:20:01"
+}

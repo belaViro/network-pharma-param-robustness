@@ -1,0 +1,193 @@
+{
+  "status": "ok",
+  "n_targets": 30,
+  "n_ppi_nodes": 14,
+  "n_ppi_edges": 3,
+  "top_k": 14,
+  "topk_genes": [
+    "PTGS2",
+    "CNR1",
+    "PTGS1",
+    "FAAH",
+    "STAT3",
+    "CDK1",
+    "ATP1A1",
+    "CA9",
+    "ACLY",
+    "FGF1",
+    "AKR1B1",
+    "EGLN1",
+    "BACE1",
+    "TDO2"
+  ],
+  "topk_info": [
+    {
+      "gene": "PTGS2",
+      "degree": 2,
+      "degree_rank": 1,
+      "betweenness": 0.01282051282051282
+    },
+    {
+      "gene": "CNR1",
+      "degree": 1,
+      "degree_rank": 2,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PTGS1",
+      "degree": 1,
+      "degree_rank": 3,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FAAH",
+      "degree": 1,
+      "degree_rank": 4,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "STAT3",
+      "degree": 1,
+      "degree_rank": 5,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CDK1",
+      "degree": 0,
+      "degree_rank": 6,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ATP1A1",
+      "degree": 0,
+      "degree_rank": 7,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA9",
+      "degree": 0,
+      "degree_rank": 8,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ACLY",
+      "degree": 0,
+      "degree_rank": 9,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FGF1",
+      "degree": 0,
+      "degree_rank": 10,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "AKR1B1",
+      "degree": 0,
+      "degree_rank": 11,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "EGLN1",
+      "degree": 0,
+      "degree_rank": 12,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "BACE1",
+      "degree": 0,
+      "degree_rank": 13,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "TDO2",
+      "degree": 0,
+      "degree_rank": 14,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 9,
+  "direct_ox_count": 0,
+  "cross_talk_count": 0,
+  "backbone_count": 1,
+  "other_count": 8,
+  "avg_ef": 125.38,
+  "min_pvalue": 0.0014921966224497,
+  "pathway_details": [
+    {
+      "pathway": "arachidonic acid metabolic process (GO:0019369)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0014921966224497,
+      "ef": 77.06766917293233
+    },
+    {
+      "pathway": "icosanoid metabolic process (GO:0006690)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0014921966224497,
+      "ef": 77.06766917293233
+    },
+    {
+      "pathway": "cyclooxygenase pathway (GO:0019371)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0031750511119724,
+      "ef": 266.2337662337662
+    },
+    {
+      "pathway": "acetyl-CoA metabolic process (GO:0006084)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0036310841815809,
+      "ef": 195.23809523809524
+    },
+    {
+      "pathway": "prostanoid biosynthetic process (GO:0046457)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0036310841815809,
+      "ef": 195.23809523809524
+    },
+    {
+      "pathway": "prostaglandin biosynthetic process (GO:0001516)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.004395509688922,
+      "ef": 154.13533834586465
+    },
+    {
+      "pathway": "fatty acid metabolic process (GO:0006631)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.004395509688922,
+      "ef": 35.426267281105986
+    },
+    {
+      "pathway": "cellular response to hypoxia (GO:0071456)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0045277170233232,
+      "ef": 33.533260632497274
+    },
+    {
+      "pathway": "prostaglandin metabolic process (GO:0006693)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0088767391364736,
+      "ef": 94.4700460829493
+    }
+  ],
+  "enrichment_cache_id": "2a79a7b176eb500c",
+  "enrichment_cache_source": "new",
+  "drop_compound": "Procyanidin_B1",
+  "drop_compound_name": "Procyanidin B1",
+  "combo": "P0.2_S0.9_K20",
+  "prob_threshold": 0.2,
+  "string_threshold": 0.9,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 20,
+  "elapsed_seconds": 18.593,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Procyanidin_B1__P0.2_S0.9_K20__ac453ce8a9.json",
+  "created_at": "2026-05-02T22:32:38"
+}

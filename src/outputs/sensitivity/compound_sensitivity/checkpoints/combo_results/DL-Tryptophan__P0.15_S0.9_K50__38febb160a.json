@@ -1,0 +1,347 @@
+{
+  "status": "ok",
+  "n_targets": 36,
+  "n_ppi_nodes": 19,
+  "n_ppi_edges": 7,
+  "top_k": 19,
+  "topk_genes": [
+    "STAT3",
+    "MMP2",
+    "BCL2",
+    "PTGS2",
+    "FAAH",
+    "CDK1",
+    "MMP9",
+    "CNR1",
+    "PTGS1",
+    "ACHE",
+    "EGLN1",
+    "PGF",
+    "ACLY",
+    "ATP1A1",
+    "CA9",
+    "AKR1B1",
+    "BACE1",
+    "TDO2",
+    "FGF1"
+  ],
+  "topk_info": [
+    {
+      "gene": "STAT3",
+      "degree": 3,
+      "degree_rank": 1,
+      "betweenness": 0.0784313725490196
+    },
+    {
+      "gene": "MMP2",
+      "degree": 2,
+      "degree_rank": 2,
+      "betweenness": 0.032679738562091505
+    },
+    {
+      "gene": "BCL2",
+      "degree": 2,
+      "degree_rank": 3,
+      "betweenness": 0.032679738562091505
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 2,
+      "degree_rank": 4,
+      "betweenness": 0.032679738562091505
+    },
+    {
+      "gene": "FAAH",
+      "degree": 1,
+      "degree_rank": 5,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CDK1",
+      "degree": 1,
+      "degree_rank": 6,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "MMP9",
+      "degree": 1,
+      "degree_rank": 7,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CNR1",
+      "degree": 1,
+      "degree_rank": 8,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PTGS1",
+      "degree": 1,
+      "degree_rank": 9,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ACHE",
+      "degree": 0,
+      "degree_rank": 10,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "EGLN1",
+      "degree": 0,
+      "degree_rank": 11,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PGF",
+      "degree": 0,
+      "degree_rank": 12,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ACLY",
+      "degree": 0,
+      "degree_rank": 13,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ATP1A1",
+      "degree": 0,
+      "degree_rank": 14,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA9",
+      "degree": 0,
+      "degree_rank": 15,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "AKR1B1",
+      "degree": 0,
+      "degree_rank": 16,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "BACE1",
+      "degree": 0,
+      "degree_rank": 17,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "TDO2",
+      "degree": 0,
+      "degree_rank": 18,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FGF1",
+      "degree": 0,
+      "degree_rank": 19,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 26,
+  "direct_ox_count": 0,
+  "cross_talk_count": 7,
+  "backbone_count": 5,
+  "other_count": 14,
+  "avg_ef": 69.16,
+  "min_pvalue": 1.6420661300938795e-06,
+  "pathway_details": [
+    {
+      "pathway": "response to peptide (GO:1901652)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0034126631006444,
+      "ef": 82.99595141700405
+    },
+    {
+      "pathway": "arachidonic acid metabolic process (GO:0019369)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0036029706795769,
+      "ef": 56.78670360110803
+    },
+    {
+      "pathway": "icosanoid metabolic process (GO:0006690)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0036029706795769,
+      "ef": 56.78670360110803
+    },
+    {
+      "pathway": "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0039637526202196,
+      "ef": 13.353309015112037
+    },
+    {
+      "pathway": "cellular response to UV-A (GO:0071492)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0040937605892748,
+      "ef": 196.17224880382773
+    },
+    {
+      "pathway": "cyclooxygenase pathway (GO:0019371)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0040937605892748,
+      "ef": 196.17224880382773
+    },
+    {
+      "pathway": "prostanoid biosynthetic process (GO:0046457)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0046786269430464,
+      "ef": 143.859649122807
+    },
+    {
+      "pathway": "acetyl-CoA metabolic process (GO:0006084)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0046786269430464,
+      "ef": 143.859649122807
+    },
+    {
+      "pathway": "cellular response to cytokine stimulus (GO:0071345)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0046786269430464,
+      "ef": 11.192400087355317
+    },
+    {
+      "pathway": "response to UV-A (GO:0070141)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0046786269430464,
+      "ef": 154.13533834586465
+    },
+    {
+      "pathway": "amyloid precursor protein metabolic process (GO:0042982)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.005847892498739,
+      "ef": 119.88304093567251
+    },
+    {
+      "pathway": "regulation of neuroinflammatory response (GO:0150077)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.005847892498739,
+      "ef": 113.57340720221606
+    },
+    {
+      "pathway": "prostaglandin biosynthetic process (GO:0001516)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.005847892498739,
+      "ef": 113.57340720221606
+    },
+    {
+      "pathway": "positive regulation of vascular associated smooth muscle cell proliferation (GO:1904707)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0066611085407701,
+      "ef": 102.75689223057643
+    },
+    {
+      "pathway": "fatty acid metabolic process (GO:0006631)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0073366045271654,
+      "ef": 26.103565365025464
+    },
+    {
+      "pathway": "cytokine-mediated signaling pathway (GO:0019221)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0075451189839931,
+      "ef": 8.687176879396558
+    },
+    {
+      "pathway": "cellular response to hypoxia (GO:0071456)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0076108124058641,
+      "ef": 24.708718360787465
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 1.6420661300938795e-06,
+      "ef": 16.25532758449797
+    },
+    {
+      "pathway": "AGE-RAGE signaling pathway in diabetic complications",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0054769130907144,
+      "ef": 32.368421052631575
+    },
+    {
+      "pathway": "HIF-1 signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0054769130907144,
+      "ef": 29.695799130854656
+    },
+    {
+      "pathway": "MicroRNAs in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0054769130907144,
+      "ef": 13.921901528013581
+    },
+    {
+      "pathway": "Estrogen signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0058678086637692,
+      "ef": 23.626584709950055
+    },
+    {
+      "pathway": "Fluid shear stress and atherosclerosis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0058678086637692,
+      "ef": 23.286633850814084
+    },
+    {
+      "pathway": "Retrograde endocannabinoid signaling",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.006046460227643,
+      "ef": 21.870554765291605
+    },
+    {
+      "pathway": "Hepatitis B",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0068927063917938,
+      "ef": 19.980506822612085
+    },
+    {
+      "pathway": "Bladder cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0091439478329522,
+      "ef": 52.63157894736842
+    }
+  ],
+  "enrichment_cache_id": "48a32ca1f3727ea1",
+  "enrichment_cache_source": "compound",
+  "drop_compound": "DL-Tryptophan",
+  "drop_compound_name": "DL-Tryptophan",
+  "combo": "P0.15_S0.9_K50",
+  "prob_threshold": 0.15,
+  "string_threshold": 0.9,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 50,
+  "elapsed_seconds": 0.009,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\DL-Tryptophan__P0.15_S0.9_K50__38febb160a.json",
+  "created_at": "2026-05-02T21:29:27"
+}

@@ -1,0 +1,312 @@
+{
+  "status": "ok",
+  "n_targets": 31,
+  "n_ppi_nodes": 26,
+  "n_ppi_edges": 12,
+  "top_k": 26,
+  "topk_genes": [
+    "CA1",
+    "MMP9",
+    "PTGS2",
+    "MMP2",
+    "CA3",
+    "CA7",
+    "FAAH",
+    "CA2",
+    "CA12",
+    "PGF",
+    "CNR1",
+    "CA5A",
+    "PTGS1",
+    "CA5B",
+    "CA4",
+    "CA9",
+    "SLC22A6",
+    "CDK1",
+    "ADRA2C",
+    "EGLN1",
+    "ACLY",
+    "AKR1B1",
+    "BACE1",
+    "NOX4",
+    "TDO2",
+    "FGF1"
+  ],
+  "topk_info": [
+    {
+      "gene": "CA1",
+      "degree": 3,
+      "degree_rank": 1,
+      "betweenness": 0.016666666666666666
+    },
+    {
+      "gene": "MMP9",
+      "degree": 3,
+      "degree_rank": 2,
+      "betweenness": 0.01
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 3,
+      "degree_rank": 3,
+      "betweenness": 0.01
+    },
+    {
+      "gene": "MMP2",
+      "degree": 2,
+      "degree_rank": 4,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA3",
+      "degree": 2,
+      "degree_rank": 5,
+      "betweenness": 0.01
+    },
+    {
+      "gene": "CA7",
+      "degree": 1,
+      "degree_rank": 6,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FAAH",
+      "degree": 1,
+      "degree_rank": 7,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA2",
+      "degree": 1,
+      "degree_rank": 8,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA12",
+      "degree": 1,
+      "degree_rank": 9,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PGF",
+      "degree": 1,
+      "degree_rank": 10,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CNR1",
+      "degree": 1,
+      "degree_rank": 11,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA5A",
+      "degree": 1,
+      "degree_rank": 12,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PTGS1",
+      "degree": 1,
+      "degree_rank": 13,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA5B",
+      "degree": 1,
+      "degree_rank": 14,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA4",
+      "degree": 1,
+      "degree_rank": 15,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA9",
+      "degree": 1,
+      "degree_rank": 16,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "SLC22A6",
+      "degree": 0,
+      "degree_rank": 17,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CDK1",
+      "degree": 0,
+      "degree_rank": 18,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ADRA2C",
+      "degree": 0,
+      "degree_rank": 19,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "EGLN1",
+      "degree": 0,
+      "degree_rank": 20,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ACLY",
+      "degree": 0,
+      "degree_rank": 21,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "AKR1B1",
+      "degree": 0,
+      "degree_rank": 22,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "BACE1",
+      "degree": 0,
+      "degree_rank": 23,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "NOX4",
+      "degree": 0,
+      "degree_rank": 24,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "TDO2",
+      "degree": 0,
+      "degree_rank": 25,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FGF1",
+      "degree": 0,
+      "degree_rank": 26,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 14,
+  "direct_ox_count": 0,
+  "cross_talk_count": 1,
+  "backbone_count": 0,
+  "other_count": 13,
+  "avg_ef": 116.85,
+  "min_pvalue": 3.854558824783533e-21,
+  "pathway_details": [
+    {
+      "pathway": "bicarbonate transport (GO:0015701)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 5.599735427586034e-17,
+      "ef": 202.74725274725273
+    },
+    {
+      "pathway": "organic anion transport (GO:0015711)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 5.023436296892885e-15,
+      "ef": 79.64257964257965
+    },
+    {
+      "pathway": "arachidonic acid metabolic process (GO:0019369)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0049700090039307,
+      "ef": 41.497975708502025
+    },
+    {
+      "pathway": "icosanoid metabolic process (GO:0006690)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0049700090039307,
+      "ef": 41.497975708502025
+    },
+    {
+      "pathway": "cellular response to UV-A (GO:0071492)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.005398008221269,
+      "ef": 143.35664335664336
+    },
+    {
+      "pathway": "cyclooxygenase pathway (GO:0019371)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.005398008221269,
+      "ef": 143.35664335664336
+    },
+    {
+      "pathway": "response to UV-A (GO:0070141)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0068482836506521,
+      "ef": 112.63736263736266
+    },
+    {
+      "pathway": "acetyl-CoA metabolic process (GO:0006084)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0068482836506521,
+      "ef": 105.12820512820514
+    },
+    {
+      "pathway": "prostanoid biosynthetic process (GO:0046457)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0068482836506521,
+      "ef": 105.12820512820514
+    },
+    {
+      "pathway": "regulation of neuroinflammatory response (GO:0150077)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0090960088140655,
+      "ef": 82.99595141700405
+    },
+    {
+      "pathway": "prostaglandin biosynthetic process (GO:0001516)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0090960088140655,
+      "ef": 82.99595141700405
+    },
+    {
+      "pathway": "Nitrogen metabolism",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 3.854558824783533e-21,
+      "ef": 417.420814479638
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0017946245076804,
+      "ef": 8.90916992611908
+    },
+    {
+      "pathway": "Proximal tubule bicarbonate reclamation",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0097028382304353,
+      "ef": 68.561872909699
+    }
+  ],
+  "enrichment_cache_id": "5115b20923f76f62",
+  "enrichment_cache_source": "new",
+  "drop_compound": "3beta9xi-3-beta-D-Glucopyranosyloxy-14-hydroxycard-2022-enolide",
+  "drop_compound_name": "(3beta,9xi)-3-(beta-D-Glucopyranosyloxy)-14-hydroxycard-20(22)-enolide",
+  "combo": "P0.2_S0.7_K30",
+  "prob_threshold": 0.2,
+  "string_threshold": 0.7,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 30,
+  "elapsed_seconds": 15.968,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\3beta9xi-3-beta-D-Glucopyranosyloxy-14-hyd__P0.2_S0.7_K30__b1ed27debc.json",
+  "created_at": "2026-05-02T21:57:08"
+}

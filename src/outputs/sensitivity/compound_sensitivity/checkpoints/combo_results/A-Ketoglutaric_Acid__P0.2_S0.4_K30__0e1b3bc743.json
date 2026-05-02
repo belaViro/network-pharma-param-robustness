@@ -1,0 +1,326 @@
+{
+  "status": "ok",
+  "n_targets": 32,
+  "n_ppi_nodes": 31,
+  "n_ppi_edges": 56,
+  "top_k": 30,
+  "topk_genes": [
+    "MMP9",
+    "PTGS2",
+    "CA1",
+    "STAT3",
+    "CA2",
+    "CA4",
+    "MMP2",
+    "CA9",
+    "CA7",
+    "CA12",
+    "CA6",
+    "CA3",
+    "NOX4",
+    "PGF",
+    "CA5A",
+    "PTGS1",
+    "AKR1B1",
+    "BACE1",
+    "FGF1",
+    "FAAH",
+    "CDK1",
+    "ADRA2C",
+    "CNR1",
+    "CA5B",
+    "HPSE",
+    "SLC5A7",
+    "PAOX",
+    "SLC22A6",
+    "ACLY",
+    "ATP1A1"
+  ],
+  "topk_info": [
+    {
+      "gene": "MMP9",
+      "degree": 11,
+      "degree_rank": 1,
+      "betweenness": 0.22401253918495292
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 10,
+      "degree_rank": 2,
+      "betweenness": 0.1627076180524456
+    },
+    {
+      "gene": "CA1",
+      "degree": 8,
+      "degree_rank": 3,
+      "betweenness": 0.09219709409364582
+    },
+    {
+      "gene": "STAT3",
+      "degree": 8,
+      "degree_rank": 4,
+      "betweenness": 0.06321689804448426
+    },
+    {
+      "gene": "CA2",
+      "degree": 7,
+      "degree_rank": 5,
+      "betweenness": 0.1210839926357168
+    },
+    {
+      "gene": "CA4",
+      "degree": 7,
+      "degree_rank": 6,
+      "betweenness": 0.08190525949146639
+    },
+    {
+      "gene": "MMP2",
+      "degree": 6,
+      "degree_rank": 7,
+      "betweenness": 0.015249042145593868
+    },
+    {
+      "gene": "CA9",
+      "degree": 6,
+      "degree_rank": 8,
+      "betweenness": 0.09536174553415933
+    },
+    {
+      "gene": "CA7",
+      "degree": 4,
+      "degree_rank": 9,
+      "betweenness": 0.0019157088122605363
+    },
+    {
+      "gene": "CA12",
+      "degree": 4,
+      "degree_rank": 10,
+      "betweenness": 0.0022605363984674327
+    },
+    {
+      "gene": "CA6",
+      "degree": 4,
+      "degree_rank": 11,
+      "betweenness": 0.04359581031994825
+    },
+    {
+      "gene": "CA3",
+      "degree": 4,
+      "degree_rank": 12,
+      "betweenness": 0.0010344827586206897
+    },
+    {
+      "gene": "NOX4",
+      "degree": 4,
+      "degree_rank": 13,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PGF",
+      "degree": 3,
+      "degree_rank": 14,
+      "betweenness": 0.0011494252873563218
+    },
+    {
+      "gene": "CA5A",
+      "degree": 3,
+      "degree_rank": 15,
+      "betweenness": 0.01117430462258049
+    },
+    {
+      "gene": "PTGS1",
+      "degree": 3,
+      "degree_rank": 16,
+      "betweenness": 0.009085933223864256
+    },
+    {
+      "gene": "AKR1B1",
+      "degree": 3,
+      "degree_rank": 17,
+      "betweenness": 0.05148529631288252
+    },
+    {
+      "gene": "BACE1",
+      "degree": 3,
+      "degree_rank": 18,
+      "betweenness": 0.019039408866995067
+    },
+    {
+      "gene": "FGF1",
+      "degree": 3,
+      "degree_rank": 19,
+      "betweenness": 0.0012260536398467432
+    },
+    {
+      "gene": "FAAH",
+      "degree": 2,
+      "degree_rank": 20,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CDK1",
+      "degree": 2,
+      "degree_rank": 21,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ADRA2C",
+      "degree": 2,
+      "degree_rank": 22,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CNR1",
+      "degree": 2,
+      "degree_rank": 23,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA5B",
+      "degree": 2,
+      "degree_rank": 24,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "HPSE",
+      "degree": 1,
+      "degree_rank": 25,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "SLC5A7",
+      "degree": 0,
+      "degree_rank": 26,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PAOX",
+      "degree": 0,
+      "degree_rank": 27,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "SLC22A6",
+      "degree": 0,
+      "degree_rank": 28,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ACLY",
+      "degree": 0,
+      "degree_rank": 29,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ATP1A1",
+      "degree": 0,
+      "degree_rank": 30,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 12,
+  "direct_ox_count": 0,
+  "cross_talk_count": 3,
+  "backbone_count": 0,
+  "other_count": 9,
+  "avg_ef": 98.07,
+  "min_pvalue": 2.2031073431908552e-23,
+  "pathway_details": [
+    {
+      "pathway": "bicarbonate transport (GO:0015701)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 9.545119575133823e-19,
+      "ef": 195.23809523809524
+    },
+    {
+      "pathway": "organic anion transport (GO:0015711)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 3.1068482776395835e-16,
+      "ef": 75.92592592592592
+    },
+    {
+      "pathway": "response to peptide (GO:1901652)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0044634885860949,
+      "ef": 52.56410256410257
+    },
+    {
+      "pathway": "arachidonic acid metabolic process (GO:0019369)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.008419681678663,
+      "ef": 35.96491228070176
+    },
+    {
+      "pathway": "icosanoid metabolic process (GO:0006690)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.008419681678663,
+      "ef": 35.96491228070176
+    },
+    {
+      "pathway": "cellular response to UV-A (GO:0071492)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0084562952688672,
+      "ef": 124.24242424242424
+    },
+    {
+      "pathway": "cyclooxygenase pathway (GO:0019371)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0084562952688672,
+      "ef": 124.24242424242424
+    },
+    {
+      "pathway": "Nitrogen metabolism",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 2.2031073431908552e-23,
+      "ef": 401.96078431372547
+    },
+    {
+      "pathway": "Proximal tubule bicarbonate reclamation",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.00028274572912345366,
+      "ef": 89.1304347826087
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0041903127539385,
+      "ef": 7.7212806026365355
+    },
+    {
+      "pathway": "Proteoglycans in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0063760962888385,
+      "ef": 13.333333333333332
+    },
+    {
+      "pathway": "AGE-RAGE signaling pathway in diabetic complications",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0095530135557345,
+      "ef": 20.5
+    }
+  ],
+  "enrichment_cache_id": "741f430ccc6e8693",
+  "enrichment_cache_source": "new",
+  "drop_compound": "A-Ketoglutaric_Acid",
+  "drop_compound_name": "A-Ketoglutaric Acid",
+  "combo": "P0.2_S0.4_K30",
+  "prob_threshold": 0.2,
+  "string_threshold": 0.4,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 30,
+  "elapsed_seconds": 15.748,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\A-Ketoglutaric_Acid__P0.2_S0.4_K30__0e1b3bc743.json",
+  "created_at": "2026-05-02T23:13:58"
+}

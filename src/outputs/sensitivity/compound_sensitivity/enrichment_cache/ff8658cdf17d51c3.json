@@ -1,0 +1,96 @@
+{
+  "GO_BP": [
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "bicarbonate transport (GO:0015701)",
+      "Overlap": "7/35",
+      "P-value": 3.166541957285629e-18,
+      "Adjusted P-value": 5.604779264395563e-16,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 1663.5,
+      "Combined Score": 67028.88858783519,
+      "Genes": "CA12;CA1;CA3;CA2;CA4;CA7;CA9",
+      "k": 7,
+      "N": 35,
+      "EF": 410.0
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "organic anion transport (GO:0015711)",
+      "Overlap": "7/99",
+      "P-value": 6.9532731320120715e-15,
+      "Adjusted P-value": 6.153646721830684e-13,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 504.6594202898551,
+      "Combined Score": 16451.67701541448,
+      "Genes": "CA12;CA1;CA3;CA2;CA4;CA7;CA9",
+      "k": 7,
+      "N": 99,
+      "EF": 144.94949494949495
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "regulation of cellular pH (GO:0030641)",
+      "Overlap": "2/31",
+      "P-value": 0.00010381978350160118,
+      "Adjusted P-value": 0.0061253672265944,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 172.07758620689654,
+      "Combined Score": 1578.4425771666922,
+      "Genes": "CA2;CA7",
+      "k": 2,
+      "N": 31,
+      "EF": 132.25806451612902
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "regulation of intracellular pH (GO:0051453)",
+      "Overlap": "2/37",
+      "P-value": 0.0001484593618046431,
+      "Adjusted P-value": 0.0065693267598554,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 142.53571428571428,
+      "Combined Score": 1256.4807280914272,
+      "Genes": "CA2;CA7",
+      "k": 2,
+      "N": 37,
+      "EF": 110.8108108108108
+    }
+  ],
+  "KEGG": [
+    {
+      "Gene_set": "KEGG_2021_Human",
+      "Term": "Nitrogen metabolism",
+      "Overlap": "7/17",
+      "P-value": 9.177441128391832e-21,
+      "Adjusted P-value": 4.864043798047671e-19,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 4662.0,
+      "Combined Score": 215093.20463284056,
+      "Genes": "CA12;CA1;CA3;CA2;CA4;CA7;CA9",
+      "k": 7,
+      "N": 17,
+      "EF": 844.1176470588235
+    },
+    {
+      "Gene_set": "KEGG_2021_Human",
+      "Term": "Proximal tubule bicarbonate reclamation",
+      "Overlap": "2/23",
+      "P-value": 5.660726002642441e-05,
+      "Adjusted P-value": 0.0015000923907002,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 237.72619047619048,
+      "Combined Score": 2324.813162697444,
+      "Genes": "CA2;CA4",
+      "k": 2,
+      "N": 23,
+      "EF": 178.2608695652174
+    }
+  ]
+}

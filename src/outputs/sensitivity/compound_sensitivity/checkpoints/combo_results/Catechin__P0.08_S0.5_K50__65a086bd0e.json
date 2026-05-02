@@ -1,0 +1,662 @@
+{
+  "status": "ok",
+  "n_targets": 181,
+  "n_ppi_nodes": 176,
+  "n_ppi_edges": 1039,
+  "top_k": 50,
+  "topk_genes": [
+    "TNF",
+    "SRC",
+    "EGFR",
+    "STAT3",
+    "BCL2",
+    "CASP3",
+    "HIF1A",
+    "ESR1",
+    "MMP9",
+    "PTGS2",
+    "HSP90AA1",
+    "KDR",
+    "FGF2",
+    "MAPK1",
+    "MTOR",
+    "MAPK14",
+    "PIK3CA",
+    "PARP1",
+    "ICAM1",
+    "BCL2L1",
+    "MMP2",
+    "MET",
+    "KIT",
+    "MAPK8",
+    "IL2",
+    "CDK1",
+    "MAP2K1",
+    "CDK2",
+    "NTRK1",
+    "PRKCA",
+    "PLAU",
+    "CCNA2",
+    "FGFR1",
+    "ESR2",
+    "FGF1",
+    "MAPT",
+    "LGALS3",
+    "MMP1",
+    "CCNA1",
+    "TERT",
+    "MAPK9",
+    "CCNE1",
+    "IDO1",
+    "BACE1",
+    "CSF1R",
+    "GSTP1",
+    "PGF",
+    "CA9",
+    "ABCB1",
+    "MMP7"
+  ],
+  "topk_info": [
+    {
+      "gene": "TNF",
+      "degree": 67,
+      "degree_rank": 1,
+      "betweenness": 0.15011548440092432
+    },
+    {
+      "gene": "SRC",
+      "degree": 65,
+      "degree_rank": 2,
+      "betweenness": 0.22744565698516953
+    },
+    {
+      "gene": "EGFR",
+      "degree": 60,
+      "degree_rank": 3,
+      "betweenness": 0.06698758914689511
+    },
+    {
+      "gene": "STAT3",
+      "degree": 55,
+      "degree_rank": 4,
+      "betweenness": 0.04603562303156678
+    },
+    {
+      "gene": "BCL2",
+      "degree": 51,
+      "degree_rank": 5,
+      "betweenness": 0.03417641153344606
+    },
+    {
+      "gene": "CASP3",
+      "degree": 48,
+      "degree_rank": 6,
+      "betweenness": 0.04080673641814299
+    },
+    {
+      "gene": "HIF1A",
+      "degree": 47,
+      "degree_rank": 7,
+      "betweenness": 0.028204811114883148
+    },
+    {
+      "gene": "ESR1",
+      "degree": 47,
+      "degree_rank": 8,
+      "betweenness": 0.04530520629269378
+    },
+    {
+      "gene": "MMP9",
+      "degree": 45,
+      "degree_rank": 9,
+      "betweenness": 0.026096685925341652
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 43,
+      "degree_rank": 10,
+      "betweenness": 0.05476705538641393
+    },
+    {
+      "gene": "HSP90AA1",
+      "degree": 41,
+      "degree_rank": 11,
+      "betweenness": 0.025339245221051493
+    },
+    {
+      "gene": "KDR",
+      "degree": 35,
+      "degree_rank": 12,
+      "betweenness": 0.024386681248395284
+    },
+    {
+      "gene": "FGF2",
+      "degree": 34,
+      "degree_rank": 13,
+      "betweenness": 0.00980180106123575
+    },
+    {
+      "gene": "MAPK1",
+      "degree": 33,
+      "degree_rank": 14,
+      "betweenness": 0.016097366742749104
+    },
+    {
+      "gene": "MTOR",
+      "degree": 33,
+      "degree_rank": 15,
+      "betweenness": 0.026562220835649873
+    },
+    {
+      "gene": "MAPK14",
+      "degree": 33,
+      "degree_rank": 16,
+      "betweenness": 0.012271858909182
+    },
+    {
+      "gene": "PIK3CA",
+      "degree": 31,
+      "degree_rank": 17,
+      "betweenness": 0.003751686568868717
+    },
+    {
+      "gene": "PARP1",
+      "degree": 30,
+      "degree_rank": 18,
+      "betweenness": 0.01691325006899782
+    },
+    {
+      "gene": "ICAM1",
+      "degree": 29,
+      "degree_rank": 19,
+      "betweenness": 0.005716867281239043
+    },
+    {
+      "gene": "BCL2L1",
+      "degree": 29,
+      "degree_rank": 20,
+      "betweenness": 0.004749086369010445
+    },
+    {
+      "gene": "MMP2",
+      "degree": 27,
+      "degree_rank": 21,
+      "betweenness": 0.004320171097199297
+    },
+    {
+      "gene": "MET",
+      "degree": 27,
+      "degree_rank": 22,
+      "betweenness": 0.003948098855348837
+    },
+    {
+      "gene": "KIT",
+      "degree": 25,
+      "degree_rank": 23,
+      "betweenness": 0.0064092228144521975
+    },
+    {
+      "gene": "MAPK8",
+      "degree": 24,
+      "degree_rank": 24,
+      "betweenness": 0.0016839484615355756
+    },
+    {
+      "gene": "IL2",
+      "degree": 24,
+      "degree_rank": 25,
+      "betweenness": 0.012518653546339074
+    },
+    {
+      "gene": "CDK1",
+      "degree": 23,
+      "degree_rank": 26,
+      "betweenness": 0.0028547401335147563
+    },
+    {
+      "gene": "MAP2K1",
+      "degree": 23,
+      "degree_rank": 27,
+      "betweenness": 0.0035253764021205445
+    },
+    {
+      "gene": "CDK2",
+      "degree": 23,
+      "degree_rank": 28,
+      "betweenness": 0.0024751813373755063
+    },
+    {
+      "gene": "NTRK1",
+      "degree": 23,
+      "degree_rank": 29,
+      "betweenness": 0.0060205805446631126
+    },
+    {
+      "gene": "PRKCA",
+      "degree": 21,
+      "degree_rank": 30,
+      "betweenness": 0.02320274666754407
+    },
+    {
+      "gene": "PLAU",
+      "degree": 21,
+      "degree_rank": 31,
+      "betweenness": 0.022091658168918952
+    },
+    {
+      "gene": "CCNA2",
+      "degree": 21,
+      "degree_rank": 32,
+      "betweenness": 0.002800493810358876
+    },
+    {
+      "gene": "FGFR1",
+      "degree": 19,
+      "degree_rank": 33,
+      "betweenness": 0.00901581383585037
+    },
+    {
+      "gene": "ESR2",
+      "degree": 18,
+      "degree_rank": 34,
+      "betweenness": 0.0032449767819091348
+    },
+    {
+      "gene": "FGF1",
+      "degree": 17,
+      "degree_rank": 35,
+      "betweenness": 0.0007267838400911321
+    },
+    {
+      "gene": "MAPT",
+      "degree": 17,
+      "degree_rank": 36,
+      "betweenness": 0.010058240922344714
+    },
+    {
+      "gene": "LGALS3",
+      "degree": 17,
+      "degree_rank": 37,
+      "betweenness": 0.016925812163213323
+    },
+    {
+      "gene": "MMP1",
+      "degree": 17,
+      "degree_rank": 38,
+      "betweenness": 0.000852467062410953
+    },
+    {
+      "gene": "CCNA1",
+      "degree": 17,
+      "degree_rank": 39,
+      "betweenness": 0.0019195193389865573
+    },
+    {
+      "gene": "TERT",
+      "degree": 17,
+      "degree_rank": 40,
+      "betweenness": 0.0005486633728936444
+    },
+    {
+      "gene": "MAPK9",
+      "degree": 16,
+      "degree_rank": 41,
+      "betweenness": 0.0008485966356708333
+    },
+    {
+      "gene": "CCNE1",
+      "degree": 16,
+      "degree_rank": 42,
+      "betweenness": 0.009551798192257504
+    },
+    {
+      "gene": "IDO1",
+      "degree": 15,
+      "degree_rank": 43,
+      "betweenness": 0.013491418052198506
+    },
+    {
+      "gene": "BACE1",
+      "degree": 14,
+      "degree_rank": 44,
+      "betweenness": 0.003979935397895144
+    },
+    {
+      "gene": "CSF1R",
+      "degree": 14,
+      "degree_rank": 45,
+      "betweenness": 0.0006829770921472376
+    },
+    {
+      "gene": "GSTP1",
+      "degree": 14,
+      "degree_rank": 46,
+      "betweenness": 0.011689024039270348
+    },
+    {
+      "gene": "PGF",
+      "degree": 14,
+      "degree_rank": 47,
+      "betweenness": 0.00027561928773013936
+    },
+    {
+      "gene": "CA9",
+      "degree": 13,
+      "degree_rank": 48,
+      "betweenness": 0.021305713533306705
+    },
+    {
+      "gene": "ABCB1",
+      "degree": 13,
+      "degree_rank": 49,
+      "betweenness": 0.013243484510484002
+    },
+    {
+      "gene": "MMP7",
+      "degree": 13,
+      "degree_rank": 50,
+      "betweenness": 0.0013714666624455869
+    }
+  ],
+  "significant_pathways": 40,
+  "direct_ox_count": 1,
+  "cross_talk_count": 14,
+  "backbone_count": 14,
+  "other_count": 11,
+  "avg_ef": 30.59,
+  "min_pvalue": 7.002841614119381e-42,
+  "pathway_details": [
+    {
+      "pathway": "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 1.078790153663452e-16,
+      "ef": 19.282178217821784
+    },
+    {
+      "pathway": "cellular response to cytokine stimulus (GO:0071345)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 3.6869247175814504e-14,
+      "ef": 15.311203319502074
+    },
+    {
+      "pathway": "protein phosphorylation (GO:0006468)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 4.0641350914794484e-14,
+      "ef": 14.879032258064516
+    },
+    {
+      "pathway": "MAPK cascade (GO:0000165)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 1.9020295621468021e-13,
+      "ef": 20.2970297029703
+    },
+    {
+      "pathway": "positive regulation of phosphorylation (GO:0042327)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 3.548458021363682e-13,
+      "ef": 22.687747035573125
+    },
+    {
+      "pathway": "cytokine-mediated signaling pathway (GO:0019221)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 1.0189111016510545e-12,
+      "ef": 11.884057971014492
+    },
+    {
+      "pathway": "negative regulation of apoptotic process (GO:0043066)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 5.5866101160772195e-12,
+      "ef": 13.525773195876289
+    },
+    {
+      "pathway": "positive regulation of cell migration (GO:0030335)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.477299736705504e-11,
+      "ef": 19.814126394052046
+    },
+    {
+      "pathway": "regulation of protein kinase B signaling (GO:0051896)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.477299736705504e-11,
+      "ef": 23.768115942028984
+    },
+    {
+      "pathway": "regulation of phosphatidylinositol 3-kinase signaling (GO:0014066)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.477299736705504e-11,
+      "ef": 38.679245283018865
+    },
+    {
+      "pathway": "positive regulation of protein kinase B signaling (GO:0051897)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 2.5557743010117168e-11,
+      "ef": 28.012422360248447
+    },
+    {
+      "pathway": "response to reactive oxygen species (GO:0000302)",
+      "source": "GO_BP",
+      "pathway_category": "direct_ox",
+      "pvalue": 2.154165466714868e-10,
+      "ef": 55.59322033898305
+    },
+    {
+      "pathway": "positive regulation of MAPK cascade (GO:0043410)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 2.9099005406780605e-10,
+      "ef": 17.956204379562042
+    },
+    {
+      "pathway": "positive regulation of intracellular signal transduction (GO:1902533)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 2.9099005406780605e-10,
+      "ef": 11.263736263736263
+    },
+    {
+      "pathway": "positive regulation of protein serine/threonine kinase activity (GO:0071902)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 4.929390648142557e-10,
+      "ef": 34.81132075471698
+    },
+    {
+      "pathway": "negative regulation of programmed cell death (GO:0043069)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 6.306142323809727e-10,
+      "ef": 13.989501312335959
+    },
+    {
+      "pathway": "positive regulation of kinase activity (GO:0033674)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 8.458918411895536e-10,
+      "ef": 32.36842105263158
+    },
+    {
+      "pathway": "phosphorylation (GO:0016310)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 1.031072126708094e-09,
+      "ef": 13.325000000000001
+    },
+    {
+      "pathway": "positive regulation of phosphatidylinositol 3-kinase signaling (GO:0014068)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.2483332659615771e-09,
+      "ef": 42.5974025974026
+    },
+    {
+      "pathway": "negative regulation of extrinsic apoptotic signaling pathway (GO:2001237)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 1.5827868290569976e-09,
+      "ef": 41.0
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 7.002841614119381e-42,
+      "ef": 27.024482109227872
+    },
+    {
+      "pathway": "Proteoglycans in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 2.266612544828786e-25,
+      "ef": 40.0
+    },
+    {
+      "pathway": "PI3K-Akt signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 2.47940932434318e-22,
+      "ef": 24.322033898305083
+    },
+    {
+      "pathway": "Hepatitis B",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 4.5530652116691355e-22,
+      "ef": 43.0246913580247
+    },
+    {
+      "pathway": "MAPK signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 6.7231950887219566e-21,
+      "ef": 26.496598639455783
+    },
+    {
+      "pathway": "Ras signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 1.5953722940916285e-19,
+      "ef": 30.043103448275865
+    },
+    {
+      "pathway": "Lipid and atherosclerosis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 1.824220196110812e-18,
+      "ef": 30.51162790697674
+    },
+    {
+      "pathway": "Prostate cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 2.7004576403718e-18,
+      "ef": 54.948453608247426
+    },
+    {
+      "pathway": "Rap1 signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 4.4926826605292865e-17,
+      "ef": 29.285714285714285
+    },
+    {
+      "pathway": "Human T-cell leukemia virus 1 infection",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 7.6384283388352e-17,
+      "ef": 28.082191780821915
+    },
+    {
+      "pathway": "AGE-RAGE signaling pathway in diabetic complications",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 2.198822467829065e-16,
+      "ef": 49.199999999999996
+    },
+    {
+      "pathway": "Fluid shear stress and atherosclerosis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 2.198822467829065e-16,
+      "ef": 38.3453237410072
+    },
+    {
+      "pathway": "Chemical carcinogenesis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 2.198822467829065e-16,
+      "ef": 25.732217573221757
+    },
+    {
+      "pathway": "Kaposi sarcoma-associated herpesvirus infection",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 3.687585337397673e-16,
+      "ef": 29.74093264248705
+    },
+    {
+      "pathway": "Gastric cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 4.722750180277703e-16,
+      "ef": 35.77181208053691
+    },
+    {
+      "pathway": "Relaxin signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 3.750603510587632e-15,
+      "ef": 38.13953488372093
+    },
+    {
+      "pathway": "MicroRNAs in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 8.209682320413692e-15,
+      "ef": 19.838709677419356
+    },
+    {
+      "pathway": "Progesterone-mediated oocyte maturation",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 9.690777023385458e-15,
+      "ef": 45.1
+    },
+    {
+      "pathway": "Central carbon metabolism in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 1.283742612672024e-14,
+      "ef": 58.57142857142858
+    },
+    {
+      "pathway": "Prolactin signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 1.283742612672024e-14,
+      "ef": 58.57142857142858
+    }
+  ],
+  "enrichment_cache_id": "dc7614ab68b4cfb2",
+  "enrichment_cache_source": "new",
+  "drop_compound": "Catechin",
+  "drop_compound_name": "Catechin",
+  "combo": "P0.08_S0.5_K50",
+  "prob_threshold": 0.08,
+  "string_threshold": 0.5,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 50,
+  "elapsed_seconds": 16.427,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Catechin__P0.08_S0.5_K50__65a086bd0e.json",
+  "created_at": "2026-05-02T20:59:36"
+}

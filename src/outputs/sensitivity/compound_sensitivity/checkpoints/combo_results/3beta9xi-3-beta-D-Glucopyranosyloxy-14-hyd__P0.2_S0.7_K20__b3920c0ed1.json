@@ -1,0 +1,340 @@
+{
+  "status": "ok",
+  "n_targets": 31,
+  "n_ppi_nodes": 26,
+  "n_ppi_edges": 12,
+  "top_k": 20,
+  "topk_genes": [
+    "CA1",
+    "MMP9",
+    "PTGS2",
+    "MMP2",
+    "CA3",
+    "CA7",
+    "FAAH",
+    "CA2",
+    "CA12",
+    "PGF",
+    "CNR1",
+    "CA5A",
+    "PTGS1",
+    "CA5B",
+    "CA4",
+    "CA9",
+    "SLC22A6",
+    "CDK1",
+    "ADRA2C",
+    "EGLN1"
+  ],
+  "topk_info": [
+    {
+      "gene": "CA1",
+      "degree": 3,
+      "degree_rank": 1,
+      "betweenness": 0.016666666666666666
+    },
+    {
+      "gene": "MMP9",
+      "degree": 3,
+      "degree_rank": 2,
+      "betweenness": 0.01
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 3,
+      "degree_rank": 3,
+      "betweenness": 0.01
+    },
+    {
+      "gene": "MMP2",
+      "degree": 2,
+      "degree_rank": 4,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA3",
+      "degree": 2,
+      "degree_rank": 5,
+      "betweenness": 0.01
+    },
+    {
+      "gene": "CA7",
+      "degree": 1,
+      "degree_rank": 6,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FAAH",
+      "degree": 1,
+      "degree_rank": 7,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA2",
+      "degree": 1,
+      "degree_rank": 8,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA12",
+      "degree": 1,
+      "degree_rank": 9,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PGF",
+      "degree": 1,
+      "degree_rank": 10,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CNR1",
+      "degree": 1,
+      "degree_rank": 11,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA5A",
+      "degree": 1,
+      "degree_rank": 12,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PTGS1",
+      "degree": 1,
+      "degree_rank": 13,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA5B",
+      "degree": 1,
+      "degree_rank": 14,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA4",
+      "degree": 1,
+      "degree_rank": 15,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA9",
+      "degree": 1,
+      "degree_rank": 16,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "SLC22A6",
+      "degree": 0,
+      "degree_rank": 17,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CDK1",
+      "degree": 0,
+      "degree_rank": 18,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ADRA2C",
+      "degree": 0,
+      "degree_rank": 19,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "EGLN1",
+      "degree": 0,
+      "degree_rank": 20,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 24,
+  "direct_ox_count": 0,
+  "cross_talk_count": 2,
+  "backbone_count": 1,
+  "other_count": 21,
+  "avg_ef": 108.19,
+  "min_pvalue": 1.7013278090983854e-22,
+  "pathway_details": [
+    {
+      "pathway": "bicarbonate transport (GO:0015701)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 2.142456543994964e-18,
+      "ef": 263.57142857142856
+    },
+    {
+      "pathway": "organic anion transport (GO:0015711)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.2653330719694402e-16,
+      "ef": 103.53535353535354
+    },
+    {
+      "pathway": "arachidonic acid metabolic process (GO:0019369)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0015591397777028,
+      "ef": 53.94736842105263
+    },
+    {
+      "pathway": "icosanoid metabolic process (GO:0006690)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0015591397777028,
+      "ef": 53.94736842105263
+    },
+    {
+      "pathway": "cellular response to UV-A (GO:0071492)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.00223465478086,
+      "ef": 186.36363636363635
+    },
+    {
+      "pathway": "cyclooxygenase pathway (GO:0019371)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.00223465478086,
+      "ef": 186.36363636363635
+    },
+    {
+      "pathway": "response to UV-A (GO:0070141)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0031634617168441,
+      "ef": 146.42857142857144
+    },
+    {
+      "pathway": "prostanoid biosynthetic process (GO:0046457)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0031919679494263,
+      "ef": 136.66666666666669
+    },
+    {
+      "pathway": "prostaglandin biosynthetic process (GO:0001516)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0041487278600038,
+      "ef": 107.89473684210527
+    },
+    {
+      "pathway": "regulation of neuroinflammatory response (GO:0150077)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0041487278600038,
+      "ef": 107.89473684210527
+    },
+    {
+      "pathway": "positive regulation of vascular associated smooth muscle cell proliferation (GO:1904707)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0046262079335132,
+      "ef": 97.61904761904762
+    },
+    {
+      "pathway": "cellular response to hypoxia (GO:0071456)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0062038357057143,
+      "ef": 23.473282442748094
+    },
+    {
+      "pathway": "regulation of cellular pH (GO:0030641)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0079602531692659,
+      "ef": 66.12903225806451
+    },
+    {
+      "pathway": "prostaglandin metabolic process (GO:0006693)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0079602531692659,
+      "ef": 66.12903225806451
+    },
+    {
+      "pathway": "endodermal cell differentiation (GO:0035987)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0079602531692659,
+      "ef": 64.0625
+    },
+    {
+      "pathway": "regulation of vascular associated smooth muscle cell proliferation (GO:1904705)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0088804966034296,
+      "ef": 55.4054054054054
+    },
+    {
+      "pathway": "endoderm formation (GO:0001706)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0088804966034296,
+      "ef": 56.94444444444444
+    },
+    {
+      "pathway": "regulation of intracellular pH (GO:0051453)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0088804966034296,
+      "ef": 55.4054054054054
+    },
+    {
+      "pathway": "response to peptide (GO:1901652)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0093493149118255,
+      "ef": 52.56410256410257
+    },
+    {
+      "pathway": "Nitrogen metabolism",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 1.7013278090983854e-22,
+      "ef": 542.6470588235294
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0042541416060869,
+      "ef": 9.65160075329567
+    },
+    {
+      "pathway": "Proximal tubule bicarbonate reclamation",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0046677734588026,
+      "ef": 89.1304347826087
+    },
+    {
+      "pathway": "Retrograde endocannabinoid signaling",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0060874553546856,
+      "ef": 20.777027027027025
+    },
+    {
+      "pathway": "Bladder cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0089798898046667,
+      "ef": 50.0
+    }
+  ],
+  "enrichment_cache_id": "971fa7f680084034",
+  "enrichment_cache_source": "new",
+  "drop_compound": "3beta9xi-3-beta-D-Glucopyranosyloxy-14-hydroxycard-2022-enolide",
+  "drop_compound_name": "(3beta,9xi)-3-(beta-D-Glucopyranosyloxy)-14-hydroxycard-20(22)-enolide",
+  "combo": "P0.2_S0.7_K20",
+  "prob_threshold": 0.2,
+  "string_threshold": 0.7,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 20,
+  "elapsed_seconds": 15.682,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\3beta9xi-3-beta-D-Glucopyranosyloxy-14-hyd__P0.2_S0.7_K20__b3920c0ed1.json",
+  "created_at": "2026-05-02T21:56:52"
+}

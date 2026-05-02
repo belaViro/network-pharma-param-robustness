@@ -1,0 +1,144 @@
+{
+  "status": "ok",
+  "n_targets": 30,
+  "n_ppi_nodes": 25,
+  "n_ppi_edges": 9,
+  "top_k": 10,
+  "topk_genes": [
+    "CA1",
+    "PTGS2",
+    "CA3",
+    "CA7",
+    "FAAH",
+    "CA2",
+    "CA12",
+    "STAT3",
+    "CNR1",
+    "CA5A"
+  ],
+  "topk_info": [
+    {
+      "gene": "CA1",
+      "degree": 3,
+      "degree_rank": 1,
+      "betweenness": 0.018115942028985508
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 2,
+      "degree_rank": 2,
+      "betweenness": 0.0036231884057971015
+    },
+    {
+      "gene": "CA3",
+      "degree": 2,
+      "degree_rank": 3,
+      "betweenness": 0.010869565217391304
+    },
+    {
+      "gene": "CA7",
+      "degree": 1,
+      "degree_rank": 4,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FAAH",
+      "degree": 1,
+      "degree_rank": 5,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA2",
+      "degree": 1,
+      "degree_rank": 6,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA12",
+      "degree": 1,
+      "degree_rank": 7,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "STAT3",
+      "degree": 1,
+      "degree_rank": 8,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CNR1",
+      "degree": 1,
+      "degree_rank": 9,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA5A",
+      "degree": 1,
+      "degree_rank": 10,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 6,
+  "direct_ox_count": 0,
+  "cross_talk_count": 0,
+  "backbone_count": 0,
+  "other_count": 6,
+  "avg_ef": 247.3,
+  "min_pvalue": 1.634354379604862e-15,
+  "pathway_details": [
+    {
+      "pathway": "bicarbonate transport (GO:0015701)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 6.83160056827068e-13,
+      "ef": 351.4285714285714
+    },
+    {
+      "pathway": "organic anion transport (GO:0015711)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 2.3326890218498836e-10,
+      "ef": 124.24242424242424
+    },
+    {
+      "pathway": "regulation of cellular pH (GO:0030641)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0061945804155955,
+      "ef": 132.25806451612902
+    },
+    {
+      "pathway": "regulation of intracellular pH (GO:0051453)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0066435564407577,
+      "ef": 110.8108108108108
+    },
+    {
+      "pathway": "Nitrogen metabolism",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 1.634354379604862e-15,
+      "ef": 723.5294117647059
+    },
+    {
+      "pathway": "Retrograde endocannabinoid signaling",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0012842915872253,
+      "ef": 41.55405405405405
+    }
+  ],
+  "enrichment_cache_id": "e75a7f4521b9382a",
+  "enrichment_cache_source": "new",
+  "drop_compound": "Procyanidin_B1",
+  "drop_compound_name": "Procyanidin B1",
+  "combo": "P0.2_S0.7_K10",
+  "prob_threshold": 0.2,
+  "string_threshold": 0.7,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 10,
+  "elapsed_seconds": 17.164,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Procyanidin_B1__P0.2_S0.7_K10__85bede6ed5.json",
+  "created_at": "2026-05-02T22:31:31"
+}

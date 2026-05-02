@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-05-02T23:59:51",
+  "analysis": "leave_one_compound_out_full_parameter_grid",
+  "n_compounds": 18,
+  "n_parameter_combinations": 112,
+  "expected_combinations": 2016,
+  "completed_checkpoints": 2016,
+  "ok_combinations": 2016,
+  "skipped_combinations": 0,
+  "dual_retention_threshold": 0.8,
+  "dual_robust_target_count": 29,
+  "dual_robust_pathway_count": 58,
+  "top_influential_compounds": [
+    {
+      "drop_compound": "3beta9xi-3-beta-D-Glucopyranosyloxy-14-hydroxycard-2022-enolide",
+      "drop_compound_name": "(3beta,9xi)-3-(beta-D-Glucopyranosyloxy)-14-hydroxycard-20(22)-enolide",
+      "ok_combinations": 112,
+      "skipped_combinations": 0,
+      "mean_target_retention_vs_full_combo": 0.7567055149682835,
+      "mean_pathway_retention_vs_full_combo": 0.6546645955506124,
+      "q1_target_retention_vs_full": 0.72,
+      "q1_pathway_retention_vs_full": 0.6428571428571429,
+      "mean_retention": 0.6935568133440096,
+      "compound_influence_score": 0.30644318665599035
+    },
+    {
+      "drop_compound": "Catechin",
+      "drop_compound_name": "Catechin",
+      "ok_combinations": 112,
+      "skipped_combinations": 0,
+      "mean_target_retention_vs_full_combo": 0.8588993923551038,
+      "mean_pathway_retention_vs_full_combo": 0.7682677155876616,
+      "q1_target_retention_vs_full": 0.84,
+      "q1_pathway_retention_vs_full": 0.7285714285714285,
+      "mean_retention": 0.7989346341285485,
+      "compound_influence_score": 0.20106536587145152
+    },
+    {
+      "drop_compound": "DL-Tryptophan",
+      "drop_compound_name": "DL-Tryptophan",
+      "ok_combinations": 112,
+      "skipped_combinations": 0,
+      "mean_target_retention_vs_full_combo": 0.944239550962112,
+      "mean_pathway_retention_vs_full_combo": 0.891881761162795,
+      "q1_target_retention_vs_full": 0.92,
+      "q1_pathway_retention_vs_full": 0.8142857142857143,
+      "mean_retention": 0.8926017566026554,
+      "compound_influence_score": 0.1073982433973446
+    },
+    {
+      "drop_compound": "Procyanidin_B1",
+      "drop_compound_name": "Procyanidin B1",
+      "ok_combinations": 112,
+      "skipped_combinations": 0,
+      "mean_target_retention_vs_full_combo": 0.9392844629286159,
+      "mean_pathway_retention_vs_full_combo": 0.8355409279879622,
+      "q1_target_retention_vs_full": 0.96,
+      "q1_pathway_retention_vs_full": 0.9714285714285714,
+      "mean_retention": 0.9265634905862874,
+      "compound_influence_score": 0.0734365094137126
+    },
+    {
+      "drop_compound": "Miquelianin",
+      "drop_compound_name": "Miquelianin",
+      "ok_combinations": 112,
+      "skipped_combinations": 0,
+      "mean_target_retention_vs_full_combo": 0.954640331132852,
+      "mean_pathway_retention_vs_full_combo": 0.8999313280931774,
+      "q1_target_retention_vs_full": 0.96,
+      "q1_pathway_retention_vs_full": 0.9142857142857143,
+      "mean_retention": 0.9322143433779359,
+      "compound_influence_score": 0.06778565662206415
+    },
+    {
+      "drop_compound": "Oleamide",
+      "drop_compound_name": "Oleamide",
+      "ok_combinations": 112,
+      "skipped_combinations": 0,
+      "mean_target_retention_vs_full_combo": 0.9461400387778074,
+      "mean_pathway_retention_vs_full_combo": 0.9173912303141515,
+      "q1_target_retention_vs_full": 0.92,
+      "q1_pathway_retention_vs_full": 0.9571428571428572,
+      "mean_retention": 0.935168531558704,
+      "compound_influence_score": 0.06483146844129595
+    },
+    {
+      "drop_compound": "Indole-3-acrylic_acid",
+      "drop_compound_name": "Indole-3-acrylic acid",
+      "ok_combinations": 112,
+      "skipped_combinations": 0,
+      "mean_target_retention_vs_full_combo": 0.968858709865094,
+      "mean_pathway_retention_vs_full_combo": 0.9519964063610503,
+      "q1_target_retention_vs_full": 0.98,
+      "q1_pathway_retention_vs_full": 0.9,
+      "mean_retention": 0.950213779056536,
+      "compound_influence_score": 0.049786220943463966
+    },
+    {
+      "drop_compound": "Hexadecanamide",
+      "drop_compound_name": "Hexadecanamide",
+      "ok_combinations": 112,
+      "skipped_combinations": 0,
+      "mean_target_retention_vs_full_combo": 0.9640567835365853,
+      "mean_pathway_retention_vs_full_combo": 0.9483134763376698,
+      "q1_target_retention_vs_full": 0.98,
+      "q1_pathway_retention_vs_full": 0.9428571428571428,
+      "mean_retention": 0.9588068506828495,
+      "compound_influence_score": 0.04119314931715046
+    },
+    {
+      "drop_compound": "2-Methylglutaric_acid",
+      "drop_compound_name": "2-Methylglutaric acid",
+      "ok_combinations": 112,
+      "skipped_combinations": 0,
+      "mean_target_retention_vs_full_combo": 0.9751367210695759,
+      "mean_pathway_retention_vs_full_combo": 0.9711177635410786,
+      "q1_target_retention_vs_full": 0.98,
+      "q1_pathway_retention_vs_full": 0.9571428571428572,
+      "mean_retention": 0.9708493354383779,
+      "compound_influence_score": 0.029150664561622075
+    },
+    {
+      "drop_compound": "Trehalose",
+      "drop_compound_name": "Trehalose",
+      "ok_combinations": 112,
+      "skipped_combinations": 0,
+      "mean_target_retention_vs_full_combo": 0.9796027574841417,
+      "mean_pathway_retention_vs_full_combo": 0.9882226060923498,
+      "q1_target_retention_vs_full": 0.98,
+      "q1_pathway_retention_vs_full": 0.9428571428571428,
+      "mean_retention": 0.9726706266084086,
+      "compound_influence_score": 0.02732937339159136
+    }
+  ],
+  "outputs": {
+    "compound_sensitivity_results": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\compound_sensitivity_results.csv",
+    "compound_influence_scores": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\compound_influence_scores.csv",
+    "dual_robust_targets": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\dual_robust_targets.csv",
+    "dual_robust_pathways": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\dual_robust_pathways.csv",
+    "leave_one_out_target_robustness": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\leave_one_out_target_robustness.csv",
+    "leave_one_out_pathway_robustness": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\leave_one_out_pathway_robustness.csv"
+  }
+}

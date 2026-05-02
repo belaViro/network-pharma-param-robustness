@@ -1,0 +1,111 @@
+{
+  "GO_BP": [
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "bicarbonate transport (GO:0015701)",
+      "Overlap": "10/35",
+      "P-value": 8.373701707704888e-22,
+      "Adjusted P-value": 3.8853975923750683e-19,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 443.26666666666665,
+      "Combined Score": 21512.518574999933,
+      "Genes": "CA12;CA1;CA3;CA5B;CA2;CA5A;CA4;CA7;CA6;CA9",
+      "k": 10,
+      "N": 35,
+      "EF": 209.18367346938777
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "organic anion transport (GO:0015711)",
+      "Overlap": "11/99",
+      "P-value": 4.934621371423448e-19,
+      "Adjusted P-value": 1.1448321581702396e-16,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 146.2058823529412,
+      "Combined Score": 6162.993285780039,
+      "Genes": "CA12;SLC22A6;CA1;CA3;CA5B;CA2;CA5A;CA4;CA7;CA6;CA9",
+      "k": 11,
+      "N": 99,
+      "EF": 81.34920634920636
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "response to peptide (GO:1901652)",
+      "Overlap": "3/39",
+      "P-value": 2.171121485754607e-05,
+      "Adjusted P-value": 0.0033580012313004,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 66.45333333333333,
+      "Combined Score": 713.554735735547,
+      "Genes": "MMP2;STAT3;MMP9",
+      "k": 3,
+      "N": 39,
+      "EF": 56.318681318681314
+    }
+  ],
+  "KEGG": [
+    {
+      "Gene_set": "KEGG_2021_Human",
+      "Term": "Nitrogen metabolism",
+      "Overlap": "10/17",
+      "P-value": 8.998567499231418e-26,
+      "Adjusted P-value": 8.908581824239105e-24,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 1584.5238095238096,
+      "Combined Score": 91379.72105181673,
+      "Genes": "CA12;CA1;CA3;CA5B;CA2;CA5A;CA4;CA7;CA6;CA9",
+      "k": 10,
+      "N": 17,
+      "EF": 430.672268907563
+    },
+    {
+      "Gene_set": "KEGG_2021_Human",
+      "Term": "Proximal tubule bicarbonate reclamation",
+      "Overlap": "3/23",
+      "P-value": 4.270814164171367e-06,
+      "Adjusted P-value": 0.00021140530112648265,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 119.712,
+      "Combined Score": 1480.0839820254544,
+      "Genes": "CA2;CA4;ATP1A1",
+      "k": 3,
+      "N": 23,
+      "EF": 95.4968944099379
+    },
+    {
+      "Gene_set": "KEGG_2021_Human",
+      "Term": "Pathways in cancer",
+      "Overlap": "6/531",
+      "P-value": 7.797722523764168e-05,
+      "Adjusted P-value": 0.0025732484328421,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 10.102337662337662,
+      "Combined Score": 95.5589591234624,
+      "Genes": "EGLN1;MMP2;STAT3;FGF1;MMP9;PGF",
+      "k": 6,
+      "N": 531,
+      "EF": 8.272800645682002
+    },
+    {
+      "Gene_set": "KEGG_2021_Human",
+      "Term": "Proteoglycans in cancer",
+      "Overlap": "4/205",
+      "P-value": 0.0001809609620813432,
+      "Adjusted P-value": 0.0044787838115132,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 16.393864013267,
+      "Combined Score": 141.269684152509,
+      "Genes": "MMP2;STAT3;HPSE;MMP9",
+      "k": 4,
+      "N": 205,
+      "EF": 14.285714285714285
+    }
+  ]
+}

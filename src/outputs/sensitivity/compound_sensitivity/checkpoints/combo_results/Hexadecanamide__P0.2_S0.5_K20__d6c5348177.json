@@ -1,0 +1,256 @@
+{
+  "status": "ok",
+  "n_targets": 32,
+  "n_ppi_nodes": 31,
+  "n_ppi_edges": 36,
+  "top_k": 20,
+  "topk_genes": [
+    "MMP9",
+    "PTGS2",
+    "CA9",
+    "CA4",
+    "CA1",
+    "CA2",
+    "STAT3",
+    "CA3",
+    "MMP2",
+    "CA7",
+    "CDK1",
+    "FGF1",
+    "PGF",
+    "CA6",
+    "NOX4",
+    "FAAH",
+    "CA12",
+    "EGLN1",
+    "AKR1B1",
+    "BACE1"
+  ],
+  "topk_info": [
+    {
+      "gene": "MMP9",
+      "degree": 8,
+      "degree_rank": 1,
+      "betweenness": 0.3080459770114943
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 6,
+      "degree_rank": 2,
+      "betweenness": 0.13333333333333333
+    },
+    {
+      "gene": "CA9",
+      "degree": 6,
+      "degree_rank": 3,
+      "betweenness": 0.2603448275862069
+    },
+    {
+      "gene": "CA4",
+      "degree": 5,
+      "degree_rank": 4,
+      "betweenness": 0.03793103448275862
+    },
+    {
+      "gene": "CA1",
+      "degree": 5,
+      "degree_rank": 5,
+      "betweenness": 0.05114942528735632
+    },
+    {
+      "gene": "CA2",
+      "degree": 5,
+      "degree_rank": 6,
+      "betweenness": 0.031609195402298854
+    },
+    {
+      "gene": "STAT3",
+      "degree": 5,
+      "degree_rank": 7,
+      "betweenness": 0.052873563218390804
+    },
+    {
+      "gene": "CA3",
+      "degree": 4,
+      "degree_rank": 8,
+      "betweenness": 0.0022988505747126436
+    },
+    {
+      "gene": "MMP2",
+      "degree": 4,
+      "degree_rank": 9,
+      "betweenness": 0.04597701149425287
+    },
+    {
+      "gene": "CA7",
+      "degree": 3,
+      "degree_rank": 10,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CDK1",
+      "degree": 2,
+      "degree_rank": 11,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FGF1",
+      "degree": 2,
+      "degree_rank": 12,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PGF",
+      "degree": 2,
+      "degree_rank": 13,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA6",
+      "degree": 2,
+      "degree_rank": 14,
+      "betweenness": 0.0005747126436781609
+    },
+    {
+      "gene": "NOX4",
+      "degree": 2,
+      "degree_rank": 15,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FAAH",
+      "degree": 2,
+      "degree_rank": 16,
+      "betweenness": 0.04597701149425287
+    },
+    {
+      "gene": "CA12",
+      "degree": 2,
+      "degree_rank": 17,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "EGLN1",
+      "degree": 1,
+      "degree_rank": 18,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "AKR1B1",
+      "degree": 1,
+      "degree_rank": 19,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "BACE1",
+      "degree": 1,
+      "degree_rank": 20,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 12,
+  "direct_ox_count": 0,
+  "cross_talk_count": 2,
+  "backbone_count": 1,
+  "other_count": 9,
+  "avg_ef": 130.22,
+  "min_pvalue": 4.129519073424376e-19,
+  "pathway_details": [
+    {
+      "pathway": "bicarbonate transport (GO:0015701)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.8653003236403944e-15,
+      "ef": 234.2857142857143
+    },
+    {
+      "pathway": "organic anion transport (GO:0015711)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 6.557799985685674e-12,
+      "ef": 82.82828282828284
+    },
+    {
+      "pathway": "response to peptide (GO:1901652)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0010310113132623,
+      "ef": 78.84615384615384
+    },
+    {
+      "pathway": "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0040096448196103,
+      "ef": 12.685643564356436
+    },
+    {
+      "pathway": "cellular response to UV-A (GO:0071492)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0042094659825502,
+      "ef": 186.36363636363635
+    },
+    {
+      "pathway": "response to UV-A (GO:0070141)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0057935490744529,
+      "ef": 146.42857142857144
+    },
+    {
+      "pathway": "regulation of neuroinflammatory response (GO:0150077)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0093036255996763,
+      "ef": 107.89473684210527
+    },
+    {
+      "pathway": "positive regulation of vascular associated smooth muscle cell proliferation (GO:1904707)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0099853470657952,
+      "ef": 97.61904761904762
+    },
+    {
+      "pathway": "Nitrogen metabolism",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 4.129519073424376e-19,
+      "ef": 482.3529411764706
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 2.2068929962398612e-05,
+      "ef": 13.512241054613936
+    },
+    {
+      "pathway": "AGE-RAGE signaling pathway in diabetic complications",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0037259489439354,
+      "ef": 30.75
+    },
+    {
+      "pathway": "Proximal tubule bicarbonate reclamation",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0051029048829283,
+      "ef": 89.1304347826087
+    }
+  ],
+  "enrichment_cache_id": "adb31509aa1a24dd",
+  "enrichment_cache_source": "compound",
+  "drop_compound": "Hexadecanamide",
+  "drop_compound_name": "Hexadecanamide",
+  "combo": "P0.2_S0.5_K20",
+  "prob_threshold": 0.2,
+  "string_threshold": 0.5,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 20,
+  "elapsed_seconds": 0.011,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Hexadecanamide__P0.2_S0.5_K20__d6c5348177.json",
+  "created_at": "2026-05-02T23:59:30"
+}

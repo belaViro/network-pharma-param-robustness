@@ -1,0 +1,96 @@
+{
+  "GO_BP": [
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "bicarbonate transport (GO:0015701)",
+      "Overlap": "6/35",
+      "P-value": 3.816536630318815e-15,
+      "Adjusted P-value": 6.83160056827068e-13,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 1032.4655172413793,
+      "Combined Score": 34277.269790089034,
+      "Genes": "CA12;CA1;CA3;CA2;CA5A;CA7",
+      "k": 6,
+      "N": 35,
+      "EF": 351.4285714285714
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "organic anion transport (GO:0015711)",
+      "Overlap": "6/99",
+      "P-value": 2.606356448994284e-12,
+      "Adjusted P-value": 2.3326890218498836e-10,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 320.9193548387097,
+      "Combined Score": 8559.90373127309,
+      "Genes": "CA12;CA1;CA3;CA2;CA5A;CA7",
+      "k": 6,
+      "N": 99,
+      "EF": 124.24242424242424
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "regulation of cellular pH (GO:0030641)",
+      "Overlap": "2/31",
+      "P-value": 0.00010381978350160118,
+      "Adjusted P-value": 0.0061945804155955,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 172.07758620689654,
+      "Combined Score": 1578.4425771666922,
+      "Genes": "CA2;CA7",
+      "k": 2,
+      "N": 31,
+      "EF": 132.25806451612902
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "regulation of intracellular pH (GO:0051453)",
+      "Overlap": "2/37",
+      "P-value": 0.0001484593618046431,
+      "Adjusted P-value": 0.0066435564407577,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 142.53571428571428,
+      "Combined Score": 1256.4807280914272,
+      "Genes": "CA2;CA7",
+      "k": 2,
+      "N": 37,
+      "EF": 110.8108108108108
+    }
+  ],
+  "KEGG": [
+    {
+      "Gene_set": "KEGG_2021_Human",
+      "Term": "Nitrogen metabolism",
+      "Overlap": "6/17",
+      "P-value": 2.9184899635801106e-17,
+      "Adjusted P-value": 1.634354379604862e-15,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 2724.409090909091,
+      "Combined Score": 103726.10102698307,
+      "Genes": "CA12;CA1;CA3;CA2;CA5A;CA7",
+      "k": 6,
+      "N": 17,
+      "EF": 723.5294117647059
+    },
+    {
+      "Gene_set": "KEGG_2021_Human",
+      "Term": "Retrograde endocannabinoid signaling",
+      "Overlap": "3/148",
+      "P-value": 4.586755668662118e-05,
+      "Adjusted P-value": 0.0012842915872253,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 58.6551724137931,
+      "Combined Score": 585.9506562450003,
+      "Genes": "FAAH;CNR1;PTGS2",
+      "k": 3,
+      "N": 148,
+      "EF": 41.55405405405405
+    }
+  ]
+}

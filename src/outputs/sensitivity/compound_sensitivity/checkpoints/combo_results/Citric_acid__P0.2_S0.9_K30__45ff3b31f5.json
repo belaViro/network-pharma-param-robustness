@@ -1,0 +1,249 @@
+{
+  "status": "ok",
+  "n_targets": 32,
+  "n_ppi_nodes": 16,
+  "n_ppi_edges": 5,
+  "top_k": 16,
+  "topk_genes": [
+    "MMP2",
+    "PTGS2",
+    "STAT3",
+    "CNR1",
+    "PTGS1",
+    "MMP9",
+    "FAAH",
+    "CDK1",
+    "ATP1A1",
+    "CA9",
+    "FGF1",
+    "AKR1B1",
+    "EGLN1",
+    "BACE1",
+    "TDO2",
+    "PGF"
+  ],
+  "topk_info": [
+    {
+      "gene": "MMP2",
+      "degree": 2,
+      "degree_rank": 1,
+      "betweenness": 0.028571428571428574
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 2,
+      "degree_rank": 2,
+      "betweenness": 0.028571428571428574
+    },
+    {
+      "gene": "STAT3",
+      "degree": 2,
+      "degree_rank": 3,
+      "betweenness": 0.0380952380952381
+    },
+    {
+      "gene": "CNR1",
+      "degree": 1,
+      "degree_rank": 4,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PTGS1",
+      "degree": 1,
+      "degree_rank": 5,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "MMP9",
+      "degree": 1,
+      "degree_rank": 6,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FAAH",
+      "degree": 1,
+      "degree_rank": 7,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CDK1",
+      "degree": 0,
+      "degree_rank": 8,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ATP1A1",
+      "degree": 0,
+      "degree_rank": 9,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA9",
+      "degree": 0,
+      "degree_rank": 10,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FGF1",
+      "degree": 0,
+      "degree_rank": 11,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "AKR1B1",
+      "degree": 0,
+      "degree_rank": 12,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "EGLN1",
+      "degree": 0,
+      "degree_rank": 13,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "BACE1",
+      "degree": 0,
+      "degree_rank": 14,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "TDO2",
+      "degree": 0,
+      "degree_rank": 15,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PGF",
+      "degree": 0,
+      "degree_rank": 16,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 15,
+  "direct_ox_count": 0,
+  "cross_talk_count": 1,
+  "backbone_count": 2,
+  "other_count": 12,
+  "avg_ef": 111.32,
+  "min_pvalue": 8.556767632866505e-06,
+  "pathway_details": [
+    {
+      "pathway": "response to peptide (GO:1901652)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0012689023698239,
+      "ef": 98.5576923076923
+    },
+    {
+      "pathway": "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0012689023698239,
+      "ef": 15.857054455445544
+    },
+    {
+      "pathway": "arachidonic acid metabolic process (GO:0019369)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0012689023698239,
+      "ef": 67.4342105263158
+    },
+    {
+      "pathway": "icosanoid metabolic process (GO:0006690)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0012689023698239,
+      "ef": 67.4342105263158
+    },
+    {
+      "pathway": "cellular response to UV-A (GO:0071492)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0023222213782375,
+      "ef": 232.95454545454544
+    },
+    {
+      "pathway": "cyclooxygenase pathway (GO:0019371)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0023222213782375,
+      "ef": 232.95454545454544
+    },
+    {
+      "pathway": "response to UV-A (GO:0070141)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.003288739855134,
+      "ef": 183.0357142857143
+    },
+    {
+      "pathway": "prostanoid biosynthetic process (GO:0046457)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.00331881744557,
+      "ef": 170.83333333333334
+    },
+    {
+      "pathway": "regulation of neuroinflammatory response (GO:0150077)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0043158996110586,
+      "ef": 134.8684210526316
+    },
+    {
+      "pathway": "prostaglandin biosynthetic process (GO:0001516)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0043158996110586,
+      "ef": 134.8684210526316
+    },
+    {
+      "pathway": "positive regulation of vascular associated smooth muscle cell proliferation (GO:1904707)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0048139022398526,
+      "ef": 122.02380952380952
+    },
+    {
+      "pathway": "cellular response to hypoxia (GO:0071456)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0051051966468561,
+      "ef": 29.341603053435115
+    },
+    {
+      "pathway": "prostaglandin metabolic process (GO:0006693)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0088878821307539,
+      "ef": 82.66129032258064
+    },
+    {
+      "pathway": "endodermal cell differentiation (GO:0035987)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0088878821307539,
+      "ef": 80.078125
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 8.556767632866505e-06,
+      "ef": 16.890301318267422
+    }
+  ],
+  "enrichment_cache_id": "48a5ba3ad4b7f472",
+  "enrichment_cache_source": "compound",
+  "drop_compound": "Citric_acid",
+  "drop_compound_name": "Citric acid",
+  "combo": "P0.2_S0.9_K30",
+  "prob_threshold": 0.2,
+  "string_threshold": 0.9,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 30,
+  "elapsed_seconds": 0.008,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Citric_acid__P0.2_S0.9_K30__45ff3b31f5.json",
+  "created_at": "2026-05-02T23:09:19"
+}

@@ -1,0 +1,19 @@
+compound_name,compound_stem,target_file,file_exists,raw_target_records,loo_disease_filtered_targets
+Miquelianin,Miquelianin,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\Miquelianin_targets.csv,True,106,614.0
+Sucrose,Sucrose,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\Sucrose_targets.csv,True,105,635.0
+Trehalose,Trehalose,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\Trehalose_targets.csv,True,105,635.0
+Oleamide,Oleamide,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\Oleamide_targets.csv,True,100,625.0
+Catechin,Catechin,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\Catechin_targets.csv,True,104,628.0
+Indole-3-acrylic acid,Indole-3-acrylic_acid,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\Indole-3-acrylic_acid_targets.csv,True,105,606.0
+DL-Tryptophan,DL-Tryptophan,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\DL-Tryptophan_targets.csv,True,102,609.0
+"(3beta,9xi)-3-(beta-D-Glucopyranosyloxy)-14-hydroxycard-20(22)-enolide",3beta9xi-3-beta-D-Glucopyranosyloxy-14-hydroxycard-2022-enolide,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\3beta9xi-3-beta-D-Glucopyranosyloxy-14-hydroxycard-2022-enolide_targets.csv,True,104,604.0
+Denin,Denin,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\Denin_targets.csv,True,110,630.0
+2-Methylglutaric acid,2-Methylglutaric_acid,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\2-Methylglutaric_acid_targets.csv,True,109,636.0
+Procyanidin B1,Procyanidin_B1,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\Procyanidin_B1_targets.csv,True,106,627.0
+Scutellarin,Scutellarin,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\Scutellarin_targets.csv,True,100,614.0
+Choline,Choline,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\Choline_targets.csv,True,73,617.0
+DL-Malic acid,DL-Malic_acid,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\DL-Malic_acid_targets.csv,True,44,639.0
+Citric acid,Citric_acid,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\Citric_acid_targets.csv,True,67,639.0
+A-Ketoglutaric Acid,A-Ketoglutaric_Acid,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\A-Ketoglutaric_Acid_targets.csv,True,86,635.0
+L-Allo-Isoleucine,L-Allo-Isoleucine,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\L-Allo-Isoleucine_targets.csv,True,108,629.0
+Hexadecanamide,Hexadecanamide,D:\科研\网络药理学参数敏感性分析\code\src\outputs\shared\swiss_targets\Hexadecanamide_targets.csv,True,100,630.0

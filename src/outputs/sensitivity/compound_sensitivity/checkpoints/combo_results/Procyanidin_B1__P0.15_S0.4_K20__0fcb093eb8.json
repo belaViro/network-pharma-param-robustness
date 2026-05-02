@@ -1,0 +1,270 @@
+{
+  "status": "ok",
+  "n_targets": 39,
+  "n_ppi_nodes": 38,
+  "n_ppi_edges": 76,
+  "top_k": 20,
+  "topk_genes": [
+    "BCL2",
+    "PTGS2",
+    "CA1",
+    "STAT3",
+    "ACHE",
+    "HTR1A",
+    "CA4",
+    "CA9",
+    "CA2",
+    "CA12",
+    "HTR2A",
+    "CA7",
+    "IDO1",
+    "FAAH",
+    "ABCB1",
+    "CA6",
+    "CNR1",
+    "CA3",
+    "BACE1",
+    "HTR2C"
+  ],
+  "topk_info": [
+    {
+      "gene": "BCL2",
+      "degree": 12,
+      "degree_rank": 1,
+      "betweenness": 0.19405440238773572
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 12,
+      "degree_rank": 2,
+      "betweenness": 0.16602179102179107
+    },
+    {
+      "gene": "CA1",
+      "degree": 9,
+      "degree_rank": 3,
+      "betweenness": 0.17348740682074013
+    },
+    {
+      "gene": "STAT3",
+      "degree": 9,
+      "degree_rank": 4,
+      "betweenness": 0.10335628668962003
+    },
+    {
+      "gene": "ACHE",
+      "degree": 7,
+      "degree_rank": 5,
+      "betweenness": 0.1994157619157619
+    },
+    {
+      "gene": "HTR1A",
+      "degree": 7,
+      "degree_rank": 6,
+      "betweenness": 0.1167917917917918
+    },
+    {
+      "gene": "CA4",
+      "degree": 7,
+      "degree_rank": 7,
+      "betweenness": 0.06313992563992563
+    },
+    {
+      "gene": "CA9",
+      "degree": 7,
+      "degree_rank": 8,
+      "betweenness": 0.1110904860904861
+    },
+    {
+      "gene": "CA2",
+      "degree": 6,
+      "degree_rank": 9,
+      "betweenness": 0.025754875754875756
+    },
+    {
+      "gene": "CA12",
+      "degree": 5,
+      "degree_rank": 10,
+      "betweenness": 0.01155065321731988
+    },
+    {
+      "gene": "HTR2A",
+      "degree": 5,
+      "degree_rank": 11,
+      "betweenness": 0.033858858858858865
+    },
+    {
+      "gene": "CA7",
+      "degree": 4,
+      "degree_rank": 12,
+      "betweenness": 0.0013406263406263404
+    },
+    {
+      "gene": "IDO1",
+      "degree": 4,
+      "degree_rank": 13,
+      "betweenness": 0.04804804804804805
+    },
+    {
+      "gene": "FAAH",
+      "degree": 4,
+      "degree_rank": 14,
+      "betweenness": 0.020276228609561943
+    },
+    {
+      "gene": "ABCB1",
+      "degree": 4,
+      "degree_rank": 15,
+      "betweenness": 0.04804804804804805
+    },
+    {
+      "gene": "CA6",
+      "degree": 4,
+      "degree_rank": 16,
+      "betweenness": 0.047812097812097804
+    },
+    {
+      "gene": "CNR1",
+      "degree": 4,
+      "degree_rank": 17,
+      "betweenness": 0.055905905905905925
+    },
+    {
+      "gene": "CA3",
+      "degree": 4,
+      "degree_rank": 18,
+      "betweenness": 0.0006756756756756757
+    },
+    {
+      "gene": "BACE1",
+      "degree": 4,
+      "degree_rank": 19,
+      "betweenness": 0.023987953154619823
+    },
+    {
+      "gene": "HTR2C",
+      "degree": 3,
+      "degree_rank": 20,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 14,
+  "direct_ox_count": 0,
+  "cross_talk_count": 2,
+  "backbone_count": 0,
+  "other_count": 12,
+  "avg_ef": 172.46,
+  "min_pvalue": 4.2735720643577845e-19,
+  "pathway_details": [
+    {
+      "pathway": "bicarbonate transport (GO:0015701)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.639622012878964e-15,
+      "ef": 234.2857142857143
+    },
+    {
+      "pathway": "organic anion transport (GO:0015711)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 5.764387147911358e-12,
+      "ef": 82.82828282828284
+    },
+    {
+      "pathway": "G protein-coupled serotonin receptor signaling pathway (GO:0098664)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.2121282468547318e-05,
+      "ef": 307.5
+    },
+    {
+      "pathway": "G protein-coupled receptor signaling pathway, coupled to cyclic nucleotide second messenger (GO:0007187)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 4.212152856524446e-05,
+      "ef": 63.07692307692307
+    },
+    {
+      "pathway": "regulation of phosphatidylinositol biosynthetic process (GO:0010511)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0006751737580397443,
+      "ef": 410.0
+    },
+    {
+      "pathway": "positive regulation of phospholipid biosynthetic process (GO:0071073)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0011801459612936,
+      "ef": 292.8571428571429
+    },
+    {
+      "pathway": "regulation of anion transport (GO:0044070)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0013479329842156,
+      "ef": 256.25
+    },
+    {
+      "pathway": "amyloid precursor protein metabolic process (GO:0042982)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0064063505573589,
+      "ef": 113.88888888888889
+    },
+    {
+      "pathway": "Nitrogen metabolism",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 4.2735720643577845e-19,
+      "ef": 482.3529411764706
+    },
+    {
+      "pathway": "Serotonergic synapse",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0001942262114574099,
+      "ef": 36.28318584070797
+    },
+    {
+      "pathway": "MicroRNAs in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0052809131927979,
+      "ef": 13.225806451612904
+    },
+    {
+      "pathway": "Proximal tubule bicarbonate reclamation",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0052809131927979,
+      "ef": 89.1304347826087
+    },
+    {
+      "pathway": "Neuroactive ligand-receptor interaction",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0057692165676851,
+      "ef": 12.023460410557185
+    },
+    {
+      "pathway": "Retrograde endocannabinoid signaling",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0061218477578194,
+      "ef": 20.777027027027025
+    }
+  ],
+  "enrichment_cache_id": "eb62a56a7303b983",
+  "enrichment_cache_source": "new",
+  "drop_compound": "Procyanidin_B1",
+  "drop_compound_name": "Procyanidin B1",
+  "combo": "P0.15_S0.4_K20",
+  "prob_threshold": 0.15,
+  "string_threshold": 0.4,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 20,
+  "elapsed_seconds": 16.073,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Procyanidin_B1__P0.15_S0.4_K20__0fcb093eb8.json",
+  "created_at": "2026-05-02T22:15:45"
+}

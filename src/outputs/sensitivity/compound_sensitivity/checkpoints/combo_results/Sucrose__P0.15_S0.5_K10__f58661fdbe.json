@@ -1,0 +1,382 @@
+{
+  "status": "ok",
+  "n_targets": 42,
+  "n_ppi_nodes": 40,
+  "n_ppi_edges": 65,
+  "top_k": 10,
+  "topk_genes": [
+    "BCL2",
+    "MMP9",
+    "PTGS2",
+    "STAT3",
+    "CA9",
+    "CA1",
+    "MMP2",
+    "CA2",
+    "HTR1A",
+    "CA4"
+  ],
+  "topk_info": [
+    {
+      "gene": "BCL2",
+      "degree": 10,
+      "degree_rank": 1,
+      "betweenness": 0.1483371891266628
+    },
+    {
+      "gene": "MMP9",
+      "degree": 10,
+      "degree_rank": 2,
+      "betweenness": 0.1689817492449071
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 9,
+      "degree_rank": 3,
+      "betweenness": 0.30154392391234497
+    },
+    {
+      "gene": "STAT3",
+      "degree": 8,
+      "degree_rank": 4,
+      "betweenness": 0.07656962920120813
+    },
+    {
+      "gene": "CA9",
+      "degree": 7,
+      "degree_rank": 5,
+      "betweenness": 0.20281794229162647
+    },
+    {
+      "gene": "CA1",
+      "degree": 6,
+      "degree_rank": 6,
+      "betweenness": 0.09802390591864275
+    },
+    {
+      "gene": "MMP2",
+      "degree": 5,
+      "degree_rank": 7,
+      "betweenness": 0.008129297602981813
+    },
+    {
+      "gene": "CA2",
+      "degree": 5,
+      "degree_rank": 8,
+      "betweenness": 0.018408199987147357
+    },
+    {
+      "gene": "HTR1A",
+      "degree": 5,
+      "degree_rank": 9,
+      "betweenness": 0.13765182186234817
+    },
+    {
+      "gene": "CA4",
+      "degree": 5,
+      "degree_rank": 10,
+      "betweenness": 0.021444637234110917
+    }
+  ],
+  "significant_pathways": 40,
+  "direct_ox_count": 0,
+  "cross_talk_count": 15,
+  "backbone_count": 6,
+  "other_count": 19,
+  "avg_ef": 97.96,
+  "min_pvalue": 6.427586187201607e-09,
+  "pathway_details": [
+    {
+      "pathway": "bicarbonate transport (GO:0015701)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 5.075555468210251e-07,
+      "ef": 234.2857142857143
+    },
+    {
+      "pathway": "organic anion transport (GO:0015711)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.7068844886992345e-05,
+      "ef": 82.82828282828284
+    },
+    {
+      "pathway": "cytokine-mediated signaling pathway (GO:0019221)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 1.7068844886992345e-05,
+      "ef": 19.806763285024154
+    },
+    {
+      "pathway": "response to peptide (GO:1901652)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 6.314810617057843e-05,
+      "ef": 157.69230769230768
+    },
+    {
+      "pathway": "cellular response to cytokine stimulus (GO:0071345)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0001125805074076163,
+      "ef": 21.265560165975103
+    },
+    {
+      "pathway": "cellular response to UV-A (GO:0071492)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0006378349180871548,
+      "ef": 372.7272727272727
+    },
+    {
+      "pathway": "response to UV-A (GO:0070141)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0009038470848287288,
+      "ef": 292.8571428571429
+    },
+    {
+      "pathway": "regulation of neuroinflammatory response (GO:0150077)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0014841617001714,
+      "ef": 215.78947368421055
+    },
+    {
+      "pathway": "positive regulation of vascular associated smooth muscle cell proliferation (GO:1904707)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0016192765827141,
+      "ef": 195.23809523809524
+    },
+    {
+      "pathway": "endodermal cell differentiation (GO:0035987)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0034320604162299,
+      "ef": 128.125
+    },
+    {
+      "pathway": "regulation of vascular associated smooth muscle cell proliferation (GO:1904705)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0038352001799532,
+      "ef": 110.8108108108108
+    },
+    {
+      "pathway": "endoderm formation (GO:0001706)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0038352001799532,
+      "ef": 113.88888888888889
+    },
+    {
+      "pathway": "response to amyloid-beta (GO:1904645)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0050191834954479,
+      "ef": 93.18181818181817
+    },
+    {
+      "pathway": "positive regulation of smooth muscle cell proliferation (GO:0048661)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0050964315178373,
+      "ef": 89.1304347826087
+    },
+    {
+      "pathway": "regulation of intrinsic apoptotic signaling pathway (GO:2001242)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0060843166509849,
+      "ef": 78.84615384615385
+    },
+    {
+      "pathway": "negative regulation of autophagy (GO:0010507)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0073464808297297,
+      "ef": 69.49152542372882
+    },
+    {
+      "pathway": "negative regulation of intrinsic apoptotic signaling pathway (GO:2001243)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0077412779114876,
+      "ef": 64.0625
+    },
+    {
+      "pathway": "extracellular matrix disassembly (GO:0022617)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0077412779114876,
+      "ef": 62.121212121212125
+    },
+    {
+      "pathway": "cellular component disassembly (GO:0022411)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0077412779114876,
+      "ef": 62.121212121212125
+    },
+    {
+      "pathway": "negative regulation of cellular catabolic process (GO:0031330)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0080369199520576,
+      "ef": 59.42028985507247
+    },
+    {
+      "pathway": "Nitrogen metabolism",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 6.427586187201607e-09,
+      "ef": 482.3529411764706
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.00012563137240378673,
+      "ef": 19.30320150659134
+    },
+    {
+      "pathway": "MicroRNAs in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0003050400057972974,
+      "ef": 26.451612903225808
+    },
+    {
+      "pathway": "AGE-RAGE signaling pathway in diabetic complications",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0003050400057972974,
+      "ef": 61.5
+    },
+    {
+      "pathway": "Estrogen signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.000545210379365822,
+      "ef": 44.89051094890511
+    },
+    {
+      "pathway": "Fluid shear stress and atherosclerosis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.000545210379365822,
+      "ef": 44.24460431654676
+    },
+    {
+      "pathway": "Proximal tubule bicarbonate reclamation",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0006454197025994059,
+      "ef": 178.2608695652174
+    },
+    {
+      "pathway": "Hepatitis B",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0006454197025994059,
+      "ef": 37.96296296296296
+    },
+    {
+      "pathway": "Proteoglycans in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0011539535180218,
+      "ef": 30.0
+    },
+    {
+      "pathway": "Lipid and atherosclerosis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.001195742032367,
+      "ef": 28.604651162790695
+    },
+    {
+      "pathway": "Bladder cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0013620662146008,
+      "ef": 100.0
+    },
+    {
+      "pathway": "Chemical carcinogenesis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0013620662146008,
+      "ef": 25.732217573221757
+    },
+    {
+      "pathway": "Leukocyte transendothelial migration",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0057603738223689,
+      "ef": 35.96491228070176
+    },
+    {
+      "pathway": "Serotonergic synapse",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0057603738223689,
+      "ef": 36.28318584070797
+    },
+    {
+      "pathway": "Toxoplasmosis",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0057603738223689,
+      "ef": 36.60714285714286
+    },
+    {
+      "pathway": "TNF signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0057603738223689,
+      "ef": 36.60714285714286
+    },
+    {
+      "pathway": "Small cell lung cancer",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0057603738223689,
+      "ef": 44.56521739130435
+    },
+    {
+      "pathway": "NF-kappa B signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0057603738223689,
+      "ef": 39.42307692307693
+    },
+    {
+      "pathway": "Prostate cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0057603738223689,
+      "ef": 42.26804123711341
+    },
+    {
+      "pathway": "IL-17 signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0057603738223689,
+      "ef": 43.61702127659575
+    }
+  ],
+  "enrichment_cache_id": "c7d41d85333aba2c",
+  "enrichment_cache_source": "global",
+  "drop_compound": "Sucrose",
+  "drop_compound_name": "Sucrose",
+  "combo": "P0.15_S0.5_K10",
+  "prob_threshold": 0.15,
+  "string_threshold": 0.5,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 10,
+  "elapsed_seconds": 0.011,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Sucrose__P0.15_S0.5_K10__f58661fdbe.json",
+  "created_at": "2026-05-02T19:20:48"
+}

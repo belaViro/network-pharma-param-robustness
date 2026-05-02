@@ -1,0 +1,256 @@
+{
+  "status": "ok",
+  "n_targets": 31,
+  "n_ppi_nodes": 15,
+  "n_ppi_edges": 4,
+  "top_k": 15,
+  "topk_genes": [
+    "MMP2",
+    "PTGS2",
+    "STAT3",
+    "PTGS1",
+    "MMP9",
+    "CDK1",
+    "ATP1A1",
+    "CA9",
+    "ACLY",
+    "FGF1",
+    "AKR1B1",
+    "EGLN1",
+    "BACE1",
+    "TDO2",
+    "PGF"
+  ],
+  "topk_info": [
+    {
+      "gene": "MMP2",
+      "degree": 2,
+      "degree_rank": 1,
+      "betweenness": 0.03296703296703297
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 2,
+      "degree_rank": 2,
+      "betweenness": 0.03296703296703297
+    },
+    {
+      "gene": "STAT3",
+      "degree": 2,
+      "degree_rank": 3,
+      "betweenness": 0.04395604395604396
+    },
+    {
+      "gene": "PTGS1",
+      "degree": 1,
+      "degree_rank": 4,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "MMP9",
+      "degree": 1,
+      "degree_rank": 5,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CDK1",
+      "degree": 0,
+      "degree_rank": 6,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ATP1A1",
+      "degree": 0,
+      "degree_rank": 7,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA9",
+      "degree": 0,
+      "degree_rank": 8,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ACLY",
+      "degree": 0,
+      "degree_rank": 9,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FGF1",
+      "degree": 0,
+      "degree_rank": 10,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "AKR1B1",
+      "degree": 0,
+      "degree_rank": 11,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "EGLN1",
+      "degree": 0,
+      "degree_rank": 12,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "BACE1",
+      "degree": 0,
+      "degree_rank": 13,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "TDO2",
+      "degree": 0,
+      "degree_rank": 14,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PGF",
+      "degree": 0,
+      "degree_rank": 15,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 17,
+  "direct_ox_count": 0,
+  "cross_talk_count": 1,
+  "backbone_count": 3,
+  "other_count": 13,
+  "avg_ef": 116.51,
+  "min_pvalue": 4.877978990079245e-06,
+  "pathway_details": [
+    {
+      "pathway": "response to peptide (GO:1901652)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0013318435218298,
+      "ef": 105.12820512820514
+    },
+    {
+      "pathway": "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0018092154648046,
+      "ef": 16.914191419141915
+    },
+    {
+      "pathway": "cellular response to UV-A (GO:0071492)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0031207325831025,
+      "ef": 248.48484848484847
+    },
+    {
+      "pathway": "cyclooxygenase pathway (GO:0019371)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0031207325831025,
+      "ef": 248.48484848484847
+    },
+    {
+      "pathway": "response to UV-A (GO:0070141)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0033985598150682,
+      "ef": 195.23809523809524
+    },
+    {
+      "pathway": "acetyl-CoA metabolic process (GO:0006084)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0033985598150682,
+      "ef": 182.22222222222223
+    },
+    {
+      "pathway": "prostanoid biosynthetic process (GO:0046457)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0033985598150682,
+      "ef": 182.22222222222223
+    },
+    {
+      "pathway": "regulation of neuroinflammatory response (GO:0150077)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0042974054884278,
+      "ef": 143.859649122807
+    },
+    {
+      "pathway": "prostaglandin biosynthetic process (GO:0001516)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0042974054884278,
+      "ef": 143.859649122807
+    },
+    {
+      "pathway": "positive regulation of vascular associated smooth muscle cell proliferation (GO:1904707)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0046540426212196,
+      "ef": 130.15873015873015
+    },
+    {
+      "pathway": "cellular response to hypoxia (GO:0071456)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0046540426212196,
+      "ef": 31.297709923664126
+    },
+    {
+      "pathway": "prostaglandin metabolic process (GO:0006693)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0085812096399991,
+      "ef": 88.17204301075269
+    },
+    {
+      "pathway": "endodermal cell differentiation (GO:0035987)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0085812096399991,
+      "ef": 85.41666666666666
+    },
+    {
+      "pathway": "endoderm formation (GO:0001706)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0099644507318876,
+      "ef": 75.92592592592592
+    },
+    {
+      "pathway": "regulation of vascular associated smooth muscle cell proliferation (GO:1904705)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0099644507318876,
+      "ef": 73.87387387387388
+    },
+    {
+      "pathway": "cellular response to cytokine stimulus (GO:0071345)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0099859137261488,
+      "ef": 11.341632088520056
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 4.877978990079245e-06,
+      "ef": 18.016321406151917
+    }
+  ],
+  "enrichment_cache_id": "182c2ae4b3cbf1cd",
+  "enrichment_cache_source": "compound",
+  "drop_compound": "Oleamide",
+  "drop_compound_name": "Oleamide",
+  "combo": "P0.2_S0.9_K30",
+  "prob_threshold": 0.2,
+  "string_threshold": 0.9,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 30,
+  "elapsed_seconds": 0.008,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Oleamide__P0.2_S0.9_K30__196d7c7352.json",
+  "created_at": "2026-05-02T20:48:54"
+}

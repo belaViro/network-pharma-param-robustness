@@ -1,0 +1,96 @@
+{
+  "GO_BP": [
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "bicarbonate transport (GO:0015701)",
+      "Overlap": "8/35",
+      "P-value": 1.6646120322390805e-21,
+      "Adjusted P-value": 2.8797788157736093e-19,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 2957.4814814814813,
+      "Combined Score": 141499.7990659398,
+      "Genes": "CA12;CA1;CA3;CA2;CA4;CA7;CA6;CA9",
+      "k": 8,
+      "N": 35,
+      "EF": 468.5714285714286
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "organic anion transport (GO:0015711)",
+      "Overlap": "8/99",
+      "P-value": 1.2044012221675207e-17,
+      "Adjusted P-value": 1.0418070571749053e-15,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 874.6813186813187,
+      "Combined Score": 34075.80336710034,
+      "Genes": "CA12;CA1;CA3;CA2;CA4;CA7;CA6;CA9",
+      "k": 8,
+      "N": 99,
+      "EF": 165.65656565656568
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "regulation of cellular pH (GO:0030641)",
+      "Overlap": "2/31",
+      "P-value": 0.00010381978350160118,
+      "Adjusted P-value": 0.0059869408485923,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 172.07758620689654,
+      "Combined Score": 1578.4425771666922,
+      "Genes": "CA2;CA7",
+      "k": 2,
+      "N": 31,
+      "EF": 132.25806451612902
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "regulation of intracellular pH (GO:0051453)",
+      "Overlap": "2/37",
+      "P-value": 0.0001484593618046431,
+      "Adjusted P-value": 0.0064208673980508,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 142.53571428571428,
+      "Combined Score": 1256.4807280914272,
+      "Genes": "CA2;CA7",
+      "k": 2,
+      "N": 37,
+      "EF": 110.8108108108108
+    }
+  ],
+  "KEGG": [
+    {
+      "Gene_set": "KEGG_2021_Human",
+      "Term": "Nitrogen metabolism",
+      "Overlap": "8/17",
+      "P-value": 1.7215450903965794e-24,
+      "Adjusted P-value": 9.12418897910187e-23,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 8880.444444444445,
+      "Combined Score": 485927.4413943558,
+      "Genes": "CA12;CA1;CA3;CA2;CA4;CA7;CA6;CA9",
+      "k": 8,
+      "N": 17,
+      "EF": 964.7058823529412
+    },
+    {
+      "Gene_set": "KEGG_2021_Human",
+      "Term": "Proximal tubule bicarbonate reclamation",
+      "Overlap": "2/23",
+      "P-value": 5.660726002642441e-05,
+      "Adjusted P-value": 0.0015000923907002,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 237.72619047619048,
+      "Combined Score": 2324.813162697444,
+      "Genes": "CA2;CA4",
+      "k": 2,
+      "N": 23,
+      "EF": 178.2608695652174
+    }
+  ]
+}

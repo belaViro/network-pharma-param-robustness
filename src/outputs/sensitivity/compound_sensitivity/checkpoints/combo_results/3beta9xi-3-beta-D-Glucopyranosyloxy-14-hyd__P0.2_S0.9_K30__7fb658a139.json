@@ -1,0 +1,305 @@
+{
+  "status": "ok",
+  "n_targets": 31,
+  "n_ppi_nodes": 15,
+  "n_ppi_edges": 3,
+  "top_k": 15,
+  "topk_genes": [
+    "CNR1",
+    "MMP2",
+    "PTGS1",
+    "PTGS2",
+    "MMP9",
+    "FAAH",
+    "CDK1",
+    "CA9",
+    "ACLY",
+    "AKR1B1",
+    "EGLN1",
+    "BACE1",
+    "TDO2",
+    "PGF",
+    "FGF1"
+  ],
+  "topk_info": [
+    {
+      "gene": "CNR1",
+      "degree": 1,
+      "degree_rank": 1,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "MMP2",
+      "degree": 1,
+      "degree_rank": 2,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PTGS1",
+      "degree": 1,
+      "degree_rank": 3,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PTGS2",
+      "degree": 1,
+      "degree_rank": 4,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "MMP9",
+      "degree": 1,
+      "degree_rank": 5,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FAAH",
+      "degree": 1,
+      "degree_rank": 6,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CDK1",
+      "degree": 0,
+      "degree_rank": 7,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA9",
+      "degree": 0,
+      "degree_rank": 8,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "ACLY",
+      "degree": 0,
+      "degree_rank": 9,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "AKR1B1",
+      "degree": 0,
+      "degree_rank": 10,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "EGLN1",
+      "degree": 0,
+      "degree_rank": 11,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "BACE1",
+      "degree": 0,
+      "degree_rank": 12,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "TDO2",
+      "degree": 0,
+      "degree_rank": 13,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PGF",
+      "degree": 0,
+      "degree_rank": 14,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "FGF1",
+      "degree": 0,
+      "degree_rank": 15,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 24,
+  "direct_ox_count": 0,
+  "cross_talk_count": 2,
+  "backbone_count": 3,
+  "other_count": 19,
+  "avg_ef": 94.1,
+  "min_pvalue": 9.172637126489765e-05,
+  "pathway_details": [
+    {
+      "pathway": "arachidonic acid metabolic process (GO:0019369)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0015447331831542,
+      "ef": 71.92982456140352
+    },
+    {
+      "pathway": "icosanoid metabolic process (GO:0006690)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0015447331831542,
+      "ef": 71.92982456140352
+    },
+    {
+      "pathway": "cellular response to UV-A (GO:0071492)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0022794290987177,
+      "ef": 248.48484848484847
+    },
+    {
+      "pathway": "cyclooxygenase pathway (GO:0019371)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0022794290987177,
+      "ef": 248.48484848484847
+    },
+    {
+      "pathway": "response to UV-A (GO:0070141)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0024823582059369,
+      "ef": 195.23809523809524
+    },
+    {
+      "pathway": "acetyl-CoA metabolic process (GO:0006084)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0024823582059369,
+      "ef": 182.22222222222223
+    },
+    {
+      "pathway": "prostanoid biosynthetic process (GO:0046457)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0024823582059369,
+      "ef": 182.22222222222223
+    },
+    {
+      "pathway": "cellular response to hypoxia (GO:0071456)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0031160995814502,
+      "ef": 31.297709923664126
+    },
+    {
+      "pathway": "fatty acid metabolic process (GO:0006631)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0031160995814502,
+      "ef": 33.064516129032256
+    },
+    {
+      "pathway": "positive regulation of vascular associated smooth muscle cell proliferation (GO:1904707)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0031160995814502,
+      "ef": 130.15873015873015
+    },
+    {
+      "pathway": "regulation of neuroinflammatory response (GO:0150077)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0031160995814502,
+      "ef": 143.859649122807
+    },
+    {
+      "pathway": "prostaglandin biosynthetic process (GO:0001516)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0031160995814502,
+      "ef": 143.859649122807
+    },
+    {
+      "pathway": "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0045759393786936,
+      "ef": 13.53135313531353
+    },
+    {
+      "pathway": "prostaglandin metabolic process (GO:0006693)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0054321297890071,
+      "ef": 88.17204301075269
+    },
+    {
+      "pathway": "endodermal cell differentiation (GO:0035987)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0054321297890071,
+      "ef": 85.41666666666666
+    },
+    {
+      "pathway": "endoderm formation (GO:0001706)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0064219250786291,
+      "ef": 75.92592592592592
+    },
+    {
+      "pathway": "regulation of vascular associated smooth muscle cell proliferation (GO:1904705)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0064219250786291,
+      "ef": 73.87387387387388
+    },
+    {
+      "pathway": "response to peptide (GO:1901652)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.006742325088476,
+      "ef": 70.08547008547009
+    },
+    {
+      "pathway": "regulation of angiogenesis (GO:0045765)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.00714799370347,
+      "ef": 20.19704433497537
+    },
+    {
+      "pathway": "positive regulation of protein modification process (GO:0031401)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0075448396135183,
+      "ef": 19.1588785046729
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 9.172637126489765e-05,
+      "ef": 15.442561205273071
+    },
+    {
+      "pathway": "Retrograde endocannabinoid signaling",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0055853212926091,
+      "ef": 27.7027027027027
+    },
+    {
+      "pathway": "Bladder cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0078050744650445,
+      "ef": 66.66666666666667
+    },
+    {
+      "pathway": "Rap1 signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0078050744650445,
+      "ef": 19.523809523809526
+    }
+  ],
+  "enrichment_cache_id": "de286a09b8316b0f",
+  "enrichment_cache_source": "compound",
+  "drop_compound": "3beta9xi-3-beta-D-Glucopyranosyloxy-14-hydroxycard-2022-enolide",
+  "drop_compound_name": "(3beta,9xi)-3-(beta-D-Glucopyranosyloxy)-14-hydroxycard-20(22)-enolide",
+  "combo": "P0.2_S0.9_K30",
+  "prob_threshold": 0.2,
+  "string_threshold": 0.9,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 30,
+  "elapsed_seconds": 0.009,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\3beta9xi-3-beta-D-Glucopyranosyloxy-14-hyd__P0.2_S0.9_K30__7fb658a139.json",
+  "created_at": "2026-05-02T21:57:34"
+}

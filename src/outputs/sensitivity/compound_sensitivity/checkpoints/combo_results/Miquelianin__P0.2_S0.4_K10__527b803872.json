@@ -1,0 +1,305 @@
+{
+  "status": "ok",
+  "n_targets": 30,
+  "n_ppi_nodes": 29,
+  "n_ppi_edges": 44,
+  "top_k": 10,
+  "topk_genes": [
+    "MMP9",
+    "CA1",
+    "CA2",
+    "CA4",
+    "CA9",
+    "STAT3",
+    "CA12",
+    "CA7",
+    "MMP2",
+    "CA6"
+  ],
+  "topk_info": [
+    {
+      "gene": "MMP9",
+      "degree": 9,
+      "degree_rank": 1,
+      "betweenness": 0.19413273381527346
+    },
+    {
+      "gene": "CA1",
+      "degree": 8,
+      "degree_rank": 2,
+      "betweenness": 0.0723095981032489
+    },
+    {
+      "gene": "CA2",
+      "degree": 7,
+      "degree_rank": 3,
+      "betweenness": 0.11634235840585044
+    },
+    {
+      "gene": "CA4",
+      "degree": 7,
+      "degree_rank": 4,
+      "betweenness": 0.08761103681738601
+    },
+    {
+      "gene": "CA9",
+      "degree": 7,
+      "degree_rank": 5,
+      "betweenness": 0.12195460330380962
+    },
+    {
+      "gene": "STAT3",
+      "degree": 6,
+      "degree_rank": 6,
+      "betweenness": 0.05365476675000485
+    },
+    {
+      "gene": "CA12",
+      "degree": 5,
+      "degree_rank": 7,
+      "betweenness": 0.0140652557319224
+    },
+    {
+      "gene": "CA7",
+      "degree": 4,
+      "degree_rank": 8,
+      "betweenness": 0.0026455026455026454
+    },
+    {
+      "gene": "MMP2",
+      "degree": 4,
+      "degree_rank": 9,
+      "betweenness": 0.016093474426807756
+    },
+    {
+      "gene": "CA6",
+      "degree": 4,
+      "degree_rank": 10,
+      "betweenness": 0.03758987925654592
+    }
+  ],
+  "significant_pathways": 29,
+  "direct_ox_count": 0,
+  "cross_talk_count": 7,
+  "backbone_count": 2,
+  "other_count": 20,
+  "avg_ef": 135.85,
+  "min_pvalue": 4.405171741628079e-19,
+  "pathway_details": [
+    {
+      "pathway": "bicarbonate transport (GO:0015701)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 6.301418494998402e-16,
+      "ef": 410.0
+    },
+    {
+      "pathway": "organic anion transport (GO:0015711)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 6.918506766352012e-13,
+      "ef": 144.94949494949495
+    },
+    {
+      "pathway": "response to peptide (GO:1901652)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 5.404934678686068e-05,
+      "ef": 157.69230769230768
+    },
+    {
+      "pathway": "cellular response to UV-A (GO:0071492)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0006141733001581152,
+      "ef": 372.7272727272727
+    },
+    {
+      "pathway": "response to UV-A (GO:0070141)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0008122961220428512,
+      "ef": 292.8571428571429
+    },
+    {
+      "pathway": "positive regulation of vascular associated smooth muscle cell proliferation (GO:1904707)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0015592066449682,
+      "ef": 195.23809523809524
+    },
+    {
+      "pathway": "regulation of vascular associated smooth muscle cell proliferation (GO:1904705)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0026857648181021,
+      "ef": 110.8108108108108
+    },
+    {
+      "pathway": "endoderm formation (GO:0001706)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0026857648181021,
+      "ef": 113.88888888888889
+    },
+    {
+      "pathway": "regulation of intracellular pH (GO:0051453)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0026857648181021,
+      "ef": 110.8108108108108
+    },
+    {
+      "pathway": "regulation of cellular pH (GO:0030641)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0026857648181021,
+      "ef": 132.25806451612902
+    },
+    {
+      "pathway": "endodermal cell differentiation (GO:0035987)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0026857648181021,
+      "ef": 128.125
+    },
+    {
+      "pathway": "cytokine-mediated signaling pathway (GO:0019221)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0027611208353866,
+      "ef": 13.204508856682772
+    },
+    {
+      "pathway": "response to amyloid-beta (GO:1904645)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0032219919857875,
+      "ef": 93.18181818181817
+    },
+    {
+      "pathway": "positive regulation of smooth muscle cell proliferation (GO:0048661)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0032715802324181,
+      "ef": 89.1304347826087
+    },
+    {
+      "pathway": "extracellular matrix disassembly (GO:0022617)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0059011636659949,
+      "ef": 62.121212121212125
+    },
+    {
+      "pathway": "cellular component disassembly (GO:0022411)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0059011636659949,
+      "ef": 62.121212121212125
+    },
+    {
+      "pathway": "cellular response to UV (GO:0034644)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0075540891148845,
+      "ef": 53.24675324675325
+    },
+    {
+      "pathway": "ephrin receptor signaling pathway (GO:0048013)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0080867510244618,
+      "ef": 50.0
+    },
+    {
+      "pathway": "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0092517848058135,
+      "ef": 15.222772277227723
+    },
+    {
+      "pathway": "Nitrogen metabolism",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 4.405171741628079e-19,
+      "ef": 844.1176470588235
+    },
+    {
+      "pathway": "Proximal tubule bicarbonate reclamation",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0013585742406341,
+      "ef": 178.2608695652174
+    },
+    {
+      "pathway": "Proteoglycans in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0019322012394783,
+      "ef": 30.0
+    },
+    {
+      "pathway": "Bladder cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0021911180234752,
+      "ef": 100.0
+    },
+    {
+      "pathway": "AGE-RAGE signaling pathway in diabetic complications",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0099868145703802,
+      "ef": 41.0
+    },
+    {
+      "pathway": "Leukocyte transendothelial migration",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0099868145703802,
+      "ef": 35.96491228070176
+    },
+    {
+      "pathway": "Relaxin signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0099868145703802,
+      "ef": 31.782945736434108
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0099868145703802,
+      "ef": 11.581920903954803
+    },
+    {
+      "pathway": "Estrogen signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0099868145703802,
+      "ef": 29.927007299270077
+    },
+    {
+      "pathway": "Fluid shear stress and atherosclerosis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0099868145703802,
+      "ef": 29.496402877697843
+    }
+  ],
+  "enrichment_cache_id": "3c2013594b49a548",
+  "enrichment_cache_source": "new",
+  "drop_compound": "Miquelianin",
+  "drop_compound_name": "Miquelianin",
+  "combo": "P0.2_S0.4_K10",
+  "prob_threshold": 0.2,
+  "string_threshold": 0.4,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 10,
+  "elapsed_seconds": 18.234,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Miquelianin__P0.2_S0.4_K10__527b803872.json",
+  "created_at": "2026-05-02T19:16:07"
+}

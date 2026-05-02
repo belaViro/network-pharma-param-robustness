@@ -1,0 +1,473 @@
+{
+  "status": "ok",
+  "n_targets": 38,
+  "n_ppi_nodes": 37,
+  "n_ppi_edges": 73,
+  "top_k": 30,
+  "topk_genes": [
+    "MMP9",
+    "BCL2",
+    "STAT3",
+    "CA1",
+    "CA9",
+    "CA2",
+    "CA4",
+    "MMP2",
+    "HTR1A",
+    "ABCB1",
+    "CA12",
+    "HTR2A",
+    "CA7",
+    "IDO1",
+    "CA6",
+    "CA3",
+    "HTR2C",
+    "CDK1",
+    "EGLN1",
+    "PGF",
+    "CNR1",
+    "CA5A",
+    "HTR2B",
+    "BACE1",
+    "FGF1",
+    "FAAH",
+    "HTR7",
+    "PTGS1",
+    "CA5B",
+    "AKR1B1"
+  ],
+  "topk_info": [
+    {
+      "gene": "MMP9",
+      "degree": 12,
+      "degree_rank": 1,
+      "betweenness": 0.19778832719308903
+    },
+    {
+      "gene": "BCL2",
+      "degree": 11,
+      "degree_rank": 2,
+      "betweenness": 0.38219726261392933
+    },
+    {
+      "gene": "STAT3",
+      "degree": 9,
+      "degree_rank": 3,
+      "betweenness": 0.07770861413718558
+    },
+    {
+      "gene": "CA1",
+      "degree": 8,
+      "degree_rank": 4,
+      "betweenness": 0.06575566849376374
+    },
+    {
+      "gene": "CA9",
+      "degree": 8,
+      "degree_rank": 5,
+      "betweenness": 0.18974749456892318
+    },
+    {
+      "gene": "CA2",
+      "degree": 7,
+      "degree_rank": 6,
+      "betweenness": 0.0978137162660972
+    },
+    {
+      "gene": "CA4",
+      "degree": 7,
+      "degree_rank": 7,
+      "betweenness": 0.09940306166496642
+    },
+    {
+      "gene": "MMP2",
+      "degree": 6,
+      "degree_rank": 8,
+      "betweenness": 0.016666666666666666
+    },
+    {
+      "gene": "HTR1A",
+      "degree": 6,
+      "degree_rank": 9,
+      "betweenness": 0.05793650793650794
+    },
+    {
+      "gene": "ABCB1",
+      "degree": 5,
+      "degree_rank": 10,
+      "betweenness": 0.050793650793650794
+    },
+    {
+      "gene": "CA12",
+      "degree": 5,
+      "degree_rank": 11,
+      "betweenness": 0.013068783068783068
+    },
+    {
+      "gene": "HTR2A",
+      "degree": 5,
+      "degree_rank": 12,
+      "betweenness": 0.173015873015873
+    },
+    {
+      "gene": "CA7",
+      "degree": 4,
+      "degree_rank": 13,
+      "betweenness": 0.0014550264550264552
+    },
+    {
+      "gene": "IDO1",
+      "degree": 4,
+      "degree_rank": 14,
+      "betweenness": 0.050793650793650794
+    },
+    {
+      "gene": "CA6",
+      "degree": 4,
+      "degree_rank": 15,
+      "betweenness": 0.0364535002035002
+    },
+    {
+      "gene": "CA3",
+      "degree": 4,
+      "degree_rank": 16,
+      "betweenness": 0.0007142857142857143
+    },
+    {
+      "gene": "HTR2C",
+      "degree": 3,
+      "degree_rank": 17,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CDK1",
+      "degree": 3,
+      "degree_rank": 18,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "EGLN1",
+      "degree": 3,
+      "degree_rank": 19,
+      "betweenness": 0.012698412698412695
+    },
+    {
+      "gene": "PGF",
+      "degree": 3,
+      "degree_rank": 20,
+      "betweenness": 0.0007936507936507937
+    },
+    {
+      "gene": "CNR1",
+      "degree": 3,
+      "degree_rank": 21,
+      "betweenness": 0.2896825396825397
+    },
+    {
+      "gene": "CA5A",
+      "degree": 3,
+      "degree_rank": 22,
+      "betweenness": 0.014657610907610905
+    },
+    {
+      "gene": "HTR2B",
+      "degree": 3,
+      "degree_rank": 23,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "BACE1",
+      "degree": 3,
+      "degree_rank": 24,
+      "betweenness": 0.013866642616642612
+    },
+    {
+      "gene": "FGF1",
+      "degree": 3,
+      "degree_rank": 25,
+      "betweenness": 0.001058201058201058
+    },
+    {
+      "gene": "FAAH",
+      "degree": 2,
+      "degree_rank": 26,
+      "betweenness": 0.04285714285714286
+    },
+    {
+      "gene": "HTR7",
+      "degree": 2,
+      "degree_rank": 27,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "PTGS1",
+      "degree": 2,
+      "degree_rank": 28,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA5B",
+      "degree": 2,
+      "degree_rank": 29,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "AKR1B1",
+      "degree": 2,
+      "degree_rank": 30,
+      "betweenness": 0.006724503450693928
+    }
+  ],
+  "significant_pathways": 33,
+  "direct_ox_count": 0,
+  "cross_talk_count": 7,
+  "backbone_count": 4,
+  "other_count": 22,
+  "avg_ef": 86.39,
+  "min_pvalue": 2.1619277666826152e-23,
+  "pathway_details": [
+    {
+      "pathway": "bicarbonate transport (GO:0015701)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.0023331978697641e-18,
+      "ef": 195.23809523809524
+    },
+    {
+      "pathway": "organic anion transport (GO:0015711)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 4.0137917364421656e-14,
+      "ef": 69.02356902356902
+    },
+    {
+      "pathway": "G protein-coupled receptor signaling pathway, coupled to cyclic nucleotide second messenger (GO:0007187)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 9.073926030459741e-08,
+      "ef": 63.07692307692307
+    },
+    {
+      "pathway": "G protein-coupled serotonin receptor signaling pathway (GO:0098664)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.1239309871470796e-07,
+      "ef": 273.3333333333333
+    },
+    {
+      "pathway": "regulation of phosphatidylinositol biosynthetic process (GO:0010511)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 3.184722690364287e-06,
+      "ef": 410.0
+    },
+    {
+      "pathway": "positive regulation of phospholipid biosynthetic process (GO:0071073)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 9.27015652130762e-06,
+      "ef": 292.8571428571429
+    },
+    {
+      "pathway": "negative regulation of sequestering of calcium ion (GO:0051283)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0005127510384243235,
+      "ef": 82.0
+    },
+    {
+      "pathway": "release of sequestered calcium ion into cytosol (GO:0051209)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0005694220918965461,
+      "ef": 75.92592592592592
+    },
+    {
+      "pathway": "response to peptide (GO:1901652)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0015096783865462,
+      "ef": 52.56410256410257
+    },
+    {
+      "pathway": "anterograde trans-synaptic signaling (GO:0098916)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0015096783865462,
+      "ef": 14.002732240437158
+    },
+    {
+      "pathway": "calcium ion transmembrane import into cytosol (GO:0097553)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0016008816984055,
+      "ef": 48.80952380952381
+    },
+    {
+      "pathway": "cellular calcium ion homeostasis (GO:0006874)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0021337553073639,
+      "ef": 20.098039215686274
+    },
+    {
+      "pathway": "regulation of anion transport (GO:0044070)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0024410370263194,
+      "ef": 170.83333333333331
+    },
+    {
+      "pathway": "chemical synaptic transmission (GO:0007268)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.003161597097033,
+      "ef": 11.16557734204793
+    },
+    {
+      "pathway": "negative regulation of autophagy (GO:0010507)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0032678052892696,
+      "ef": 34.74576271186441
+    },
+    {
+      "pathway": "cellular response to UV-A (GO:0071492)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0038849813434625,
+      "ef": 124.24242424242424
+    },
+    {
+      "pathway": "negative regulation of cellular catabolic process (GO:0031330)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0046002940997406,
+      "ef": 29.710144927536234
+    },
+    {
+      "pathway": "response to UV-A (GO:0070141)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.005397840805851,
+      "ef": 97.61904761904762
+    },
+    {
+      "pathway": "cGMP-mediated signaling (GO:0019934)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.005397840805851,
+      "ef": 97.61904761904762
+    },
+    {
+      "pathway": "phospholipase C-activating G protein-coupled receptor signaling pathway (GO:0007200)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0062908029241089,
+      "ef": 25.308641975308642
+    },
+    {
+      "pathway": "Nitrogen metabolism",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 2.1619277666826152e-23,
+      "ef": 401.96078431372547
+    },
+    {
+      "pathway": "Serotonergic synapse",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 7.94015899969933e-07,
+      "ef": 36.28318584070797
+    },
+    {
+      "pathway": "Gap junction",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.00022476195736972996,
+      "ef": 31.06060606060606
+    },
+    {
+      "pathway": "Neuroactive ligand-receptor interaction",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.00022476195736972996,
+      "ef": 12.023460410557185
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.00022476195736972996,
+      "ef": 9.008160703075959
+    },
+    {
+      "pathway": "Calcium signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.000465815173818359,
+      "ef": 14.23611111111111
+    },
+    {
+      "pathway": "Inflammatory mediator regulation of TRP channels",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.005859032846683,
+      "ef": 20.918367346938776
+    },
+    {
+      "pathway": "AGE-RAGE signaling pathway in diabetic complications",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.005859032846683,
+      "ef": 20.5
+    },
+    {
+      "pathway": "Proximal tubule bicarbonate reclamation",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0060303274454605,
+      "ef": 59.42028985507247
+    },
+    {
+      "pathway": "HIF-1 signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0060303274454605,
+      "ef": 18.807339449541285
+    },
+    {
+      "pathway": "Estrogen signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0093891434898865,
+      "ef": 14.963503649635038
+    },
+    {
+      "pathway": "MicroRNAs in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0093891434898865,
+      "ef": 8.817204301075268
+    },
+    {
+      "pathway": "Fluid shear stress and atherosclerosis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.0093891434898865,
+      "ef": 14.748201438848922
+    }
+  ],
+  "enrichment_cache_id": "0db5a29613fad446",
+  "enrichment_cache_source": "new",
+  "drop_compound": "Miquelianin",
+  "drop_compound_name": "Miquelianin",
+  "combo": "P0.15_S0.4_K30",
+  "prob_threshold": 0.15,
+  "string_threshold": 0.4,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 30,
+  "elapsed_seconds": 387.584,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Miquelianin__P0.15_S0.4_K30__0aac149a87.json",
+  "created_at": "2026-05-02T19:11:06"
+}

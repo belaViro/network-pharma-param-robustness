@@ -1,0 +1,235 @@
+{
+  "status": "ok",
+  "n_targets": 30,
+  "n_ppi_nodes": 29,
+  "n_ppi_edges": 44,
+  "top_k": 20,
+  "topk_genes": [
+    "MMP9",
+    "CA1",
+    "CA2",
+    "CA4",
+    "CA9",
+    "STAT3",
+    "CA12",
+    "CA7",
+    "MMP2",
+    "CA6",
+    "CA3",
+    "PGF",
+    "CA5A",
+    "FGF1",
+    "CDK1",
+    "EGLN1",
+    "CA5B",
+    "AKR1B1",
+    "BACE1",
+    "FAAH"
+  ],
+  "topk_info": [
+    {
+      "gene": "MMP9",
+      "degree": 9,
+      "degree_rank": 1,
+      "betweenness": 0.19413273381527346
+    },
+    {
+      "gene": "CA1",
+      "degree": 8,
+      "degree_rank": 2,
+      "betweenness": 0.0723095981032489
+    },
+    {
+      "gene": "CA2",
+      "degree": 7,
+      "degree_rank": 3,
+      "betweenness": 0.11634235840585044
+    },
+    {
+      "gene": "CA4",
+      "degree": 7,
+      "degree_rank": 4,
+      "betweenness": 0.08761103681738601
+    },
+    {
+      "gene": "CA9",
+      "degree": 7,
+      "degree_rank": 5,
+      "betweenness": 0.12195460330380962
+    },
+    {
+      "gene": "STAT3",
+      "degree": 6,
+      "degree_rank": 6,
+      "betweenness": 0.05365476675000485
+    },
+    {
+      "gene": "CA12",
+      "degree": 5,
+      "degree_rank": 7,
+      "betweenness": 0.0140652557319224
+    },
+    {
+      "gene": "CA7",
+      "degree": 4,
+      "degree_rank": 8,
+      "betweenness": 0.0026455026455026454
+    },
+    {
+      "gene": "MMP2",
+      "degree": 4,
+      "degree_rank": 9,
+      "betweenness": 0.016093474426807756
+    },
+    {
+      "gene": "CA6",
+      "degree": 4,
+      "degree_rank": 10,
+      "betweenness": 0.03758987925654592
+    },
+    {
+      "gene": "CA3",
+      "degree": 4,
+      "degree_rank": 11,
+      "betweenness": 0.0011904761904761904
+    },
+    {
+      "gene": "PGF",
+      "degree": 3,
+      "degree_rank": 12,
+      "betweenness": 0.0015432098765432096
+    },
+    {
+      "gene": "CA5A",
+      "degree": 3,
+      "degree_rank": 13,
+      "betweenness": 0.013203771537104874
+    },
+    {
+      "gene": "FGF1",
+      "degree": 3,
+      "degree_rank": 14,
+      "betweenness": 0.001763668430335097
+    },
+    {
+      "gene": "CDK1",
+      "degree": 2,
+      "degree_rank": 15,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "EGLN1",
+      "degree": 2,
+      "degree_rank": 16,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "CA5B",
+      "degree": 2,
+      "degree_rank": 17,
+      "betweenness": 0.0
+    },
+    {
+      "gene": "AKR1B1",
+      "degree": 2,
+      "degree_rank": 18,
+      "betweenness": 0.0075584174790524
+    },
+    {
+      "gene": "BACE1",
+      "degree": 2,
+      "degree_rank": 19,
+      "betweenness": 0.007018495907384795
+    },
+    {
+      "gene": "FAAH",
+      "degree": 1,
+      "degree_rank": 20,
+      "betweenness": 0.0
+    }
+  ],
+  "significant_pathways": 9,
+  "direct_ox_count": 0,
+  "cross_talk_count": 1,
+  "backbone_count": 1,
+  "other_count": 7,
+  "avg_ef": 169.37,
+  "min_pvalue": 9.396546094282592e-26,
+  "pathway_details": [
+    {
+      "pathway": "bicarbonate transport (GO:0015701)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 4.2820024851063766e-21,
+      "ef": 292.85714285714283
+    },
+    {
+      "pathway": "organic anion transport (GO:0015711)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 1.7655810306550327e-16,
+      "ef": 103.53535353535354
+    },
+    {
+      "pathway": "response to peptide (GO:1901652)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0009164545006776076,
+      "ef": 78.84615384615384
+    },
+    {
+      "pathway": "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "pvalue": 0.0035641287285425,
+      "ef": 12.685643564356436
+    },
+    {
+      "pathway": "cellular response to UV-A (GO:0071492)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0037417475400447,
+      "ef": 186.36363636363635
+    },
+    {
+      "pathway": "response to UV-A (GO:0070141)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "pvalue": 0.0051498213995137,
+      "ef": 146.42857142857144
+    },
+    {
+      "pathway": "Nitrogen metabolism",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 9.396546094282592e-26,
+      "ef": 602.9411764705883
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "pvalue": 0.00035559549460532463,
+      "ef": 11.581920903954803
+    },
+    {
+      "pathway": "Proximal tubule bicarbonate reclamation",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "pvalue": 0.0058544955245999,
+      "ef": 89.1304347826087
+    }
+  ],
+  "enrichment_cache_id": "c9d0cdcf31b38f6e",
+  "enrichment_cache_source": "new",
+  "drop_compound": "Miquelianin",
+  "drop_compound_name": "Miquelianin",
+  "combo": "P0.2_S0.4_K20",
+  "prob_threshold": 0.2,
+  "string_threshold": 0.4,
+  "pvalue_cutoff": 0.01,
+  "top_k_param": 20,
+  "elapsed_seconds": 19.818,
+  "checkpoint_file": "D:\\科研\\网络药理学参数敏感性分析\\code\\src\\outputs\\sensitivity\\compound_sensitivity\\checkpoints\\combo_results\\Miquelianin__P0.2_S0.4_K20__cf56af8207.json",
+  "created_at": "2026-05-02T19:16:27"
+}

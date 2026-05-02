@@ -1,0 +1,111 @@
+{
+  "GO_BP": [
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "response to peptide (GO:1901652)",
+      "Overlap": "3/39",
+      "P-value": 3.77185285167105e-06,
+      "Adjusted P-value": 0.0015728626391468,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 127.87179487179488,
+      "Combined Score": 1596.8558397068698,
+      "Genes": "MMP2;STAT3;MMP9",
+      "k": 3,
+      "N": 39,
+      "EF": 98.5576923076923
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)",
+      "Overlap": "5/404",
+      "P-value": 1.1926411036247476e-05,
+      "Adjusted P-value": 0.0024866567010575,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 22.311460469355207,
+      "Combined Score": 252.9395655468523,
+      "Genes": "MMP2;STAT3;FGF1;MMP9;PGF",
+      "k": 5,
+      "N": 404,
+      "EF": 15.857054455445544
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "cellular response to UV-A (GO:0071492)",
+      "Overlap": "2/11",
+      "P-value": 3.286162327694617e-05,
+      "Adjusted P-value": 0.0045677656354955,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 317.06349206349205,
+      "Combined Score": 3273.1114414226845,
+      "Genes": "MMP2;MMP9",
+      "k": 2,
+      "N": 11,
+      "EF": 232.95454545454544
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "response to UV-A (GO:0070141)",
+      "Overlap": "2/14",
+      "P-value": 5.429523345740245e-05,
+      "Adjusted P-value": 0.0052224410369913,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 237.7619047619048,
+      "Combined Score": 2335.077288749032,
+      "Genes": "MMP2;MMP9",
+      "k": 2,
+      "N": 14,
+      "EF": 183.0357142857143
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "acetyl-CoA metabolic process (GO:0006084)",
+      "Overlap": "2/15",
+      "P-value": 6.261919708622724e-05,
+      "Adjusted P-value": 0.0052224410369913,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 219.46153846153845,
+      "Combined Score": 2124.04503914007,
+      "Genes": "ACLY;TDO2",
+      "k": 2,
+      "N": 15,
+      "EF": 170.83333333333334
+    },
+    {
+      "Gene_set": "GO_Biological_Process_2021",
+      "Term": "positive regulation of vascular associated smooth muscle cell proliferation (GO:1904707)",
+      "Overlap": "2/21",
+      "P-value": 0.0001248889732037253,
+      "Adjusted P-value": 0.0086797836376589,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 150.11278195488725,
+      "Combined Score": 1349.2265083047014,
+      "Genes": "MMP2;MMP9",
+      "k": 2,
+      "N": 21,
+      "EF": 122.02380952380952
+    }
+  ],
+  "KEGG": [
+    {
+      "Gene_set": "KEGG_2021_Human",
+      "Term": "Pathways in cancer",
+      "Overlap": "6/531",
+      "P-value": 2.173834409147983e-06,
+      "Adjusted P-value": 0.0002065142688690584,
+      "Old P-value": 0,
+      "Old Adjusted P-value": 0,
+      "Odds Ratio": 22.238857142857142,
+      "Combined Score": 289.9728572710804,
+      "Genes": "EGLN1;MMP2;STAT3;FGF1;MMP9;PGF",
+      "k": 6,
+      "N": 531,
+      "EF": 14.477401129943503
+    }
+  ]
+}
