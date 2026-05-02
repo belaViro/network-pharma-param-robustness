@@ -1,0 +1,126 @@
+{
+  "analysis": "degree-matched permutation pilot",
+  "n_permutations": 1,
+  "seed": 20260501,
+  "top_k_targets": 30,
+  "pvalue_cutoff": 0.01,
+  "top_n_per_source": 20,
+  "match_pool_size": 80,
+  "null_design": "Nearest-degree random target sets from PPI universe, excluding observed Top30 targets; one matched null gene per observed target, unique genes within each random set.",
+  "mechanism_terms": [
+    "AGE-RAGE signaling pathway in diabetic complications",
+    "Fluid shear stress and atherosclerosis",
+    "HIF-1 signaling pathway",
+    "Lipid and atherosclerosis",
+    "MAPK cascade (GO:0000165)",
+    "PI3K-Akt signaling pathway",
+    "TNF signaling pathway",
+    "cellular response to cytokine stimulus (GO:0071345)",
+    "cellular response to oxidative stress (GO:0034599)",
+    "cellular response to reactive oxygen species (GO:0034614)",
+    "cytokine-mediated signaling pathway (GO:0019221)",
+    "response to reactive oxygen species (GO:0000302)",
+    "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)"
+  ],
+  "degree_diagnostics": {
+    "observed_mean_degree": 70.1,
+    "observed_median_degree": 62.5,
+    "observed_min_degree": 38.0,
+    "observed_max_degree": 126.0,
+    "null_mean_degree_mean": 32.433333,
+    "null_mean_degree_sd": NaN,
+    "null_degree_distance_mean": 37.666667,
+    "null_degree_distance_median": 33.5,
+    "note": "Observed Top30 are extremely high-degree hubs. Exact matching while excluding Top30 is impossible in this universe, so the null uses nearest-degree non-Top30 genes."
+  },
+  "comparisons": {
+    "mechanism_hits": {
+      "real": 10.0,
+      "null_mean": 2.0,
+      "null_sd": NaN,
+      "null_median": 2.0,
+      "real_percentile": 100.0,
+      "empirical_p_greater_equal": 0.5
+    },
+    "mechanism_logp_sum": {
+      "real": 150.450497,
+      "null_mean": 7.266832,
+      "null_sd": NaN,
+      "null_median": 7.266832,
+      "real_percentile": 100.0,
+      "empirical_p_greater_equal": 0.5
+    },
+    "total_significant": {
+      "real": 40.0,
+      "null_mean": 40.0,
+      "null_sd": NaN,
+      "null_median": 40.0,
+      "real_percentile": 0.0,
+      "empirical_p_greater_equal": 1.0
+    },
+    "kegg_significant": {
+      "real": 20.0,
+      "null_mean": 20.0,
+      "null_sd": NaN,
+      "null_median": 20.0,
+      "real_percentile": 0.0,
+      "empirical_p_greater_equal": 1.0
+    },
+    "go_bp_significant": {
+      "real": 20.0,
+      "null_mean": 20.0,
+      "null_sd": NaN,
+      "null_median": 20.0,
+      "real_percentile": 0.0,
+      "empirical_p_greater_equal": 1.0
+    },
+    "avg_logp": {
+      "real": 12.992679,
+      "null_mean": 3.547645,
+      "null_sd": NaN,
+      "null_median": 3.547645,
+      "real_percentile": 100.0,
+      "empirical_p_greater_equal": 0.5
+    },
+    "max_logp": {
+      "real": 26.203188,
+      "null_mean": 5.101101,
+      "null_sd": NaN,
+      "null_median": 5.101101,
+      "real_percentile": 100.0,
+      "empirical_p_greater_equal": 0.5
+    },
+    "avg_ef": {
+      "real": 43.589245,
+      "null_mean": 38.845664,
+      "null_sd": NaN,
+      "null_median": 38.845664,
+      "real_percentile": 100.0,
+      "empirical_p_greater_equal": 0.5
+    },
+    "direct_ox": {
+      "real": 0.0,
+      "null_mean": 0.0,
+      "null_sd": NaN,
+      "null_median": 0.0,
+      "real_percentile": 0.0,
+      "empirical_p_greater_equal": 1.0
+    },
+    "cross_talk": {
+      "real": 13.0,
+      "null_mean": 5.0,
+      "null_sd": NaN,
+      "null_median": 5.0,
+      "real_percentile": 100.0,
+      "empirical_p_greater_equal": 0.5
+    },
+    "backbone": {
+      "real": 14.0,
+      "null_mean": 10.0,
+      "null_sd": NaN,
+      "null_median": 10.0,
+      "real_percentile": 100.0,
+      "empirical_p_greater_equal": 0.5
+    }
+  }
+}

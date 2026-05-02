@@ -1,0 +1,3 @@
+sample_id,n_genes,total_significant,kegg_significant,go_bp_significant,direct_ox,cross_talk,backbone,other,mechanism_hits,mechanism_logp_sum,avg_logp,max_logp,min_adjusted_pvalue,avg_ef
+real_top30,30,40,20,20,0,13,14,13,10,150.450497,12.992679,26.203188,6.263427307429437e-27,43.589245
+random_0001,30,40,20,20,0,5,10,25,2,7.266832,3.547645,5.101101,7.923173719776679e-06,38.845664

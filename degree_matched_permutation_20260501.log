@@ -1,0 +1,12 @@
+D:\科研\网络药理学参数敏感性分析\code\src\data\go-basic.obo: fmt(1.2) rel(2026-03-25) 41,853 Terms
+Observed Top30: STAT3, BCL2, MMP9, PTGS2, SRC, EGFR, CASP3, MMP2, HSP90AA1, TNF, MAPK1, ESR1, FGF2, PIK3CA, HIF1A, CDK1, KDR, MAPK14, MAPK8, APP, BCL2L1, MTOR, ERBB2, ICAM1, PARP1, STAT1, PRKCA, MET, IL2, KIT
+Universe genes: 285
+Running degree-matched randomization: n=100
+[  1/100] terms=40, KEGG=20, mechanism_hits=2, avg_logp=3.55
+[ 10/100] terms=40, KEGG=20, mechanism_hits=2, avg_logp=4.18
+[ 20/100] terms=40, KEGG=20, mechanism_hits=1, avg_logp=4.26
+[ 30/100] terms=40, KEGG=20, mechanism_hits=2, avg_logp=3.19
+[ 40/100] terms=40, KEGG=20, mechanism_hits=2, avg_logp=3.47
+[ 50/100] terms=40, KEGG=20, mechanism_hits=1, avg_logp=2.81
+[ 60/100] terms=40, KEGG=20, mechanism_hits=2, avg_logp=3.67
+[ 70/100] terms=40, KEGG=20, mechanism_hits=0, avg_logp=3.58
