@@ -1,0 +1,37 @@
+{
+  "tool": "AutoDock Vina v1.2.7",
+  "settings": {
+    "exhaustiveness": 8,
+    "cpu": 4,
+    "num_modes": 9,
+    "grid_size": "20x20x20 Å",
+    "spacing": 0.375
+  },
+  "receptors": {
+    "STAT3": {"pdb": "6NJS", "domain": "SH2", "center": [13.028, 55.637, 0.25]},
+    "EGFR": {"pdb": "1M17", "domain": "kinase", "center": [22.014, 0.253, 52.794]},
+    "SRC": {"pdb": "2H8H", "domain": "kinase", "center": [20.255, 20.924, 58.253]}
+  },
+  "ligands": {
+    "Catechin": {"mw": 290.3, "atoms": 35},
+    "Miquelianin": {"mw": 464.4, "atoms": 53},
+    "Procyanidin_B1": {"mw": 578.5, "atoms": 68}
+  },
+  "results": [
+    {"receptor": "STAT3", "ligand": "Catechin", "affinity_kcal_mol": -6.265, "interpretation": "moderate"},
+    {"receptor": "STAT3", "ligand": "Miquelianin", "affinity_kcal_mol": -7.234, "interpretation": "good"},
+    {"receptor": "STAT3", "ligand": "Procyanidin_B1", "affinity_kcal_mol": -7.024, "interpretation": "good"},
+    {"receptor": "EGFR", "ligand": "Catechin", "affinity_kcal_mol": -8.267, "interpretation": "strong"},
+    {"receptor": "EGFR", "ligand": "Miquelianin", "affinity_kcal_mol": -9.499, "interpretation": "strong"},
+    {"receptor": "EGFR", "ligand": "Procyanidin_B1", "affinity_kcal_mol": -7.795, "interpretation": "good"},
+    {"receptor": "SRC", "ligand": "Catechin", "affinity_kcal_mol": -9.160, "interpretation": "strong"},
+    {"receptor": "SRC", "ligand": "Miquelianin", "affinity_kcal_mol": -9.764, "interpretation": "strong"},
+    {"receptor": "SRC", "ligand": "Procyanidin_B1", "affinity_kcal_mol": -8.310, "interpretation": "strong"}
+  ],
+  "interpretation_thresholds": {
+    "weak": "> -6.0",
+    "moderate": "-6.0 to -7.0",
+    "good": "-7.0 to -8.0",
+    "strong": "< -8.0"
+  }
+}
