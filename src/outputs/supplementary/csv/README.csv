@@ -1,0 +1,7 @@
+﻿generated_at,sheet,table,description,source,rows
+2026-05-03T11:50:07,S1_compounds,Table S1,Canonical strawberry leaf compounds and SwissTargetPrediction summary.,src/outputs/shared/swiss_targets/*_targets.csv,18
+2026-05-03T11:50:07,S2_param_grid,Table S2,Results for the 112 parameter combinations.,src/outputs/sensitivity/param_grid_results.csv,112
+2026-05-03T11:50:07,S3_Q1_targets,Table S3,Q1 candidate robust targets from target robustness analysis.,src/outputs/sensitivity/target_robustness.csv,50
+2026-05-03T11:50:07,S4_dual_targets,Table S4,Dual-robust targets retained under parameter and compound perturbation.,src/outputs/sensitivity/compound_sensitivity/dual_robust_targets.csv,29
+2026-05-03T11:50:07,S5_compound_influence,Table S5,Compound influence scores from leave-one-compound-out analysis.,src/outputs/sensitivity/compound_sensitivity/compound_influence_scores.csv,18
+2026-05-03T11:50:07,S6_dual_terms,Table S6,Dual-robust functional enrichment terms.,src/outputs/sensitivity/compound_sensitivity/dual_robust_pathways.csv,58

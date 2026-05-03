@@ -25,11 +25,13 @@ This repository contains the complete reproducibility package for a systematic r
 | Total parameter combinations | **112** (7 × 4 × 4) |
 | Total compound LOO combinations | **2,016** (18 × 112) |
 | SwissTarget union targets | 684 |
-| Disease-intersected targets | 639 |
+| Disease-filtered predicted targets | 639 |
+| Positive-probability disease targets | 286 |
+| Main reporting threshold targets (Probability > 0.05) | 219 |
 | Q1 high-confidence candidates | 50 |
 | **Dual-robust targets** | **29** (58% retention) |
 | **Tier 1 target** | **STAT3** (freq = 100%, LOO = 100%) |
-| Dual-robust pathways | 58 |
+| Dual-robust functional enrichment terms | 58 |
 | Top compound influence | Cardiac glycoside (score = 0.306) |
 
 ---
@@ -140,11 +142,25 @@ This executes the full pipeline: parameter grid → robust-vs-parametric compari
 |------|-------------|
 | `src/outputs/sensitivity/compound_sensitivity/compound_influence_scores.csv` | Influence score per compound (0–1) |
 | `src/outputs/sensitivity/compound_sensitivity/dual_robust_targets.csv` | 29 dual-robust targets with LOO retention rates |
-| `src/outputs/sensitivity/compound_sensitivity/loo_pathway_robustness.csv` | Pathway retention under compound dropout |
+| `src/outputs/sensitivity/compound_sensitivity/dual_robust_pathways.csv` | 58 dual-robust functional enrichment terms with LOO retention rates |
+| `src/outputs/sensitivity/compound_sensitivity/leave_one_out_pathway_robustness.csv` | Functional-term robustness under compound dropout |
 
 ### Checkpoints
 
 - `src/outputs/sensitivity/compound_sensitivity/checkpoints/combo_results/` — 2,016 individual JSON files (one per compound × combo), enabling full audit and resume.
+
+### Supplementary Tables
+
+| File | Description |
+|------|-------------|
+| `src/outputs/supplementary/supplementary_tables_v1.xlsx` | Combined workbook for Tables S1-S6 |
+| `src/outputs/supplementary/csv/` | CSV copy for each supplementary table |
+
+Generation command:
+
+```bash
+python scripts/analysis/export_supplementary_tables.py
+```
 
 ---
 
@@ -179,10 +195,10 @@ LC-MS/MS identified 19 raw records; after deduplication (Trehalose ≡ alpha,alp
 12. Scutellarin
 13. Choline
 14. DL-Malic acid
-15. alpha-Linolenic acid
-16. Palmitic acid
-17. Linoleic acid
-18. Stearic acid
+15. Citric acid
+16. A-Ketoglutaric Acid
+17. L-Allo-Isoleucine
+18. Hexadecanamide
 
 ---
 
@@ -191,9 +207,10 @@ LC-MS/MS identified 19 raw records; after deduplication (Trehalose ≡ alpha,alp
 | Tier | Criteria | Count | Examples |
 |------|----------|-------|----------|
 | **Tier 1** | param_freq = 100% AND LOO_freq = 100% | 1 | **STAT3** |
-| **Tier 2** | Dual-robust (param-robust & compound-robust) | 28 | AKT1, MAPK3, EGFR, ... |
-| **Compound-specific** | LOO_freq drops to 0 when cardiac glycoside removed | — | CASP3, MAPK1, PIK3CA |
-| **Parameter-conditional** | Low-frequency dual-robust | — | MET, IL2, KIT |
+| **Tier 2** | param_freq >= 50% and dual-robust | 13 | EGFR, HSP90AA1, TNF, BCL2, SRC, ... |
+| **Tier 3** | param_freq < 50% but dual-robust | 15 | MAPK14, MET, IL2, KIT, CA1, ... |
+| **Compound-sensitive** | High parameter frequency but lost after dropping key compound | 3 | CASP3, MAPK1, PIK3CA |
+| **Peripheral** | Low parameter frequency and non-dual-robust | 18 | APP, MAPK8, BCL2L1, MTOR, ... |
 
 ---
 

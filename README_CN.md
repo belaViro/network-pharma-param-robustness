@@ -25,11 +25,13 @@
 | 参数组合总数 | **112**（7 × 4 × 4） |
 | 化合物 LOO 组合总数 | **2,016**（18 × 112） |
 | SwissTarget 并集靶点 | 684 |
-| 疾病交集靶点 | 639 |
+| 疾病过滤预测靶点 | 639 |
+| 正概率疾病靶点 | 286 |
+| 主报告阈值靶点（Probability > 0.05） | 219 |
 | Q1 高置信候选靶点 | 50 |
 | **双稳健靶点** | **29**（Q1 保留率 58%） |
 | **Tier 1 靶点** | **STAT3**（参数频率 100%，LOO 频率 100%） |
-| 双稳健通路 | 58 |
+| 双稳健功能富集条目 | 58 |
 | 最高化合物影响度 | Cardiac glycoside（得分 0.306） |
 
 ---
@@ -140,11 +142,25 @@ bash reproduce.sh
 |------|------|
 | `src/outputs/sensitivity/compound_sensitivity/compound_influence_scores.csv` | 各化合物的影响度评分（0–1） |
 | `src/outputs/sensitivity/compound_sensitivity/dual_robust_targets.csv` | 29 个双稳健靶点及其 LOO 保留率 |
-| `src/outputs/sensitivity/compound_sensitivity/loo_pathway_robustness.csv` | 化合物剔除后的通路保留情况 |
+| `src/outputs/sensitivity/compound_sensitivity/dual_robust_pathways.csv` | 58 个双稳健功能富集条目及其 LOO 保留率 |
+| `src/outputs/sensitivity/compound_sensitivity/leave_one_out_pathway_robustness.csv` | 各化合物剔除后的功能富集条目稳健性 |
 
 ### 检查点
 
 - `src/outputs/sensitivity/compound_sensitivity/checkpoints/combo_results/` — 2,016 个独立 JSON 文件（每个化合物 × 组合一份），支持全量审计与断点续跑。
+
+### 论文补充表
+
+| 文件 | 说明 |
+|------|------|
+| `src/outputs/supplementary/supplementary_tables_v1.xlsx` | Table S1-S6 汇总工作簿 |
+| `src/outputs/supplementary/csv/` | 每张补充表的 CSV 副本 |
+
+生成命令：
+
+```bash
+python scripts/analysis/export_supplementary_tables.py
+```
 
 ---
 
@@ -179,10 +195,10 @@ LC-MS/MS 共鉴定 19 条原始记录；去重后（Trehalose ≡ alpha,alpha-Tr
 12. Scutellarin（野黄芩苷）
 13. Choline（胆碱）
 14. DL-Malic acid（DL-苹果酸）
-15. alpha-Linolenic acid（α-亚麻酸）
-16. Palmitic acid（棕榈酸）
-17. Linoleic acid（亚油酸）
-18. Stearic acid（硬脂酸）
+15. Citric acid（柠檬酸）
+16. A-Ketoglutaric Acid（α-酮戊二酸）
+17. L-Allo-Isoleucine（L-别异亮氨酸）
+18. Hexadecanamide（十六碳酰胺）
 
 ---
 
@@ -191,9 +207,10 @@ LC-MS/MS 共鉴定 19 条原始记录；去重后（Trehalose ≡ alpha,alpha-Tr
 | 层级 | 判定标准 | 数量 | 代表靶点 |
 |------|----------|------|----------|
 | **Tier 1** | 参数频率 = 100% 且 LOO 频率 = 100% | 1 | **STAT3** |
-| **Tier 2** | 双稳健（参数稳健 & 化合物稳健） | 28 | AKT1, MAPK3, EGFR, ... |
-| **化合物特异性** | 剔除强心苷后 LOO 频率降至 0 | — | CASP3, MAPK1, PIK3CA |
-| **参数条件性** | 低频率双稳健 | — | MET, IL2, KIT |
+| **Tier 2** | 参数频率 ≥ 50% 且双稳健 | 13 | EGFR, HSP90AA1, TNF, BCL2, SRC, ... |
+| **Tier 3** | 参数频率 < 50% 但双稳健 | 15 | MAPK14, MET, IL2, KIT, CA1, ... |
+| **化合物敏感型** | 参数频率较高但剔除关键化合物后消失 | 3 | CASP3, MAPK1, PIK3CA |
+| **外围型** | 参数频率低且非双稳健 | 18 | APP, MAPK8, BCL2L1, MTOR, ... |
 
 ---
 
