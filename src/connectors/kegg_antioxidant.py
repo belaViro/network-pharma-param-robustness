@@ -3,6 +3,8 @@ KEGG抗氧化通路筛选接口
 专门用于识别与抗氧化/氧化应激强相关的KEGG通路
 """
 
+import re
+
 import pandas as pd
 import gseapy as gp
 from pathlib import Path
@@ -105,7 +107,10 @@ def get_antioxidant_pathways(
     # 筛选抗氧化相关通路
     def is_antioxidant_related(term: str) -> bool:
         term_lower = term.lower()
-        return any(kw.lower() in term_lower for kw in ANTIOXIDANT_KEYWORDS)
+        return any(
+            re.search(r"\b" + re.escape(kw.lower()) + r"\b", term_lower)
+            for kw in ANTIOXIDANT_KEYWORDS
+        )
 
     anti_df = sig_df[sig_df['Term'].apply(is_antioxidant_related)].copy()
 
@@ -134,9 +139,16 @@ def filter_by_keywords(
     if exclude_keywords is None:
         exclude_keywords = []
 
+    def _keyword_match(text: str, keywords: List[str]) -> bool:
+        text_lower = text.lower()
+        return any(
+            re.search(r"\b" + re.escape(kw.lower()) + r"\b", text_lower)
+            for kw in keywords
+        )
+
     mask = pathways_df['Term'].apply(
-        lambda x: any(kw.lower() in x.lower() for kw in include_keywords)
-        and not any(ekw.lower() in x.lower() for ekw in exclude_keywords)
+        lambda x: _keyword_match(x, include_keywords)
+        and not _keyword_match(x, exclude_keywords)
     )
 
     return pathways_df[mask].copy()

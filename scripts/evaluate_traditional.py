@@ -6,42 +6,24 @@ Usage:
     python scripts/evaluate_traditional.py
 """
 
+import re
+
 import pandas as pd
 from pathlib import Path
+from src.config import ANTIOXIDANT_KEYWORDS
 from src.logging_config import setup_logging
 import logging
 
 logger = logging.getLogger(__name__)
 
-# 氧化应激关键词
-ANTIOXIDANT_KEYWORDS = [
-    'oxidative stress',
-    'ROS',
-    'ferroptosis',
-    'glutathione',
-    'catalase',
-    'peroxidase',
-    'superoxide',
-    'NF-kappa',
-    'MAPK',
-    'p53',
-    'apoptosis',
-    'NADPH oxidase',
-    'thioredoxin',
-    'lipid peroxidation',
-    'autophagy',
-    'mitophagy',
-    'AGE-RAGE',
-    'IL-17',
-    'TNF',
-    'NOD-like',
-]
-
 
 def is_oxidative_stress_pathway(term: str) -> bool:
-    """判断通路是否与氧化应激相关"""
+    """判断通路是否与氧化应激相关（单词边界匹配，避免子串假阳性）"""
     term_lower = str(term).lower()
-    return any(kw.lower() in term_lower for kw in ANTIOXIDANT_KEYWORDS)
+    return any(
+        re.search(r"\b" + re.escape(kw.lower()) + r"\b", term_lower)
+        for kw in ANTIOXIDANT_KEYWORDS
+    )
 
 
 def evaluate_traditional_method(

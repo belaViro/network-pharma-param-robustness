@@ -50,6 +50,12 @@ TOP_K_VALUES = [10, 20, 30, 50]
 PARAM_COMBINATIONS = list(product(PROB_THRESHOLDS, STRING_THRESHOLDS, TOP_K_VALUES))
 
 
+def normalize_gene_symbol(value) -> str:
+    if pd.isna(value):
+        return ""
+    return str(value).strip().upper()
+
+
 def main() -> None:
     print("=" * 70)
     print("参数网格敏感性分析")
@@ -68,12 +74,26 @@ def main() -> None:
     pred_df = pred_df[["Target_Gene", "Probability"]].rename(
         columns={"Target_Gene": "Gene"}
     )
-    print(f"  SwissTarget 并集: {len(pred_df)} 个靶点")
+    raw_target_count = len(pred_df)
+    pred_df["Gene"] = pred_df["Gene"].map(normalize_gene_symbol)
+    pred_df["Probability"] = pd.to_numeric(pred_df["Probability"], errors="coerce")
+    pred_df = pred_df[(pred_df["Gene"] != "") & pred_df["Probability"].notna()].copy()
+    pred_df = (
+        pred_df.groupby("Gene", as_index=False)["Probability"]
+        .max()
+        .sort_values("Probability", ascending=False)
+        .reset_index(drop=True)
+    )
+    print(f"  SwissTarget 并集: {len(pred_df)} 个靶点 (规范化后，原始记录 {raw_target_count})")
     
     # 加载疾病基因 & 预过滤
     disease_genes_df = pd.read_csv(MERGED_DISEASE_GENES_CSV)
-    disease_genes_set = set(disease_genes_df["Gene_Symbol"].str.upper())
-    pred_df = pred_df[pred_df["Gene"].str.upper().isin(disease_genes_set)].copy()
+    disease_genes_set = {
+        normalize_gene_symbol(gene)
+        for gene in disease_genes_df["Gene_Symbol"]
+    }
+    disease_genes_set.discard("")
+    pred_df = pred_df[pred_df["Gene"].isin(disease_genes_set)].copy()
     print(f"  疾病交集后: {len(pred_df)} 个靶点 (固定)")
     
     for p in PROB_THRESHOLDS:
@@ -82,13 +102,24 @@ def main() -> None:
     
     PPI_INPUT_CSV = SENSITIVITY_PPI_EDGES_CSV if SENSITIVITY_PPI_EDGES_CSV.exists() else PPI_EDGES_CSV
     string_edges = pd.read_csv(PPI_INPUT_CSV)
-    print(f"  STRING: {len(string_edges)} 条边 ({PPI_INPUT_CSV})")
+    raw_edge_count = len(string_edges)
+    string_edges["protein1"] = string_edges["protein1"].map(normalize_gene_symbol)
+    string_edges["protein2"] = string_edges["protein2"].map(normalize_gene_symbol)
+    string_edges["combined_score"] = pd.to_numeric(string_edges["combined_score"], errors="coerce")
+    string_edges = string_edges[
+        (string_edges["protein1"] != "")
+        & (string_edges["protein2"] != "")
+        & string_edges["combined_score"].notna()
+    ].copy()
+    print(f"  STRING: {len(string_edges)} 条边 (规范化后，原始记录 {raw_edge_count}; {PPI_INPUT_CSV})")
     
     # ============================================================================
     # 单次分析
     # ============================================================================
     def run_single(filtered_targets, string_edges_df, string_th, pval_th, background, top_k=30):
-        n_targets = len(filtered_targets)
+        target_set = {normalize_gene_symbol(gene) for gene in filtered_targets}
+        target_set.discard("")
+        n_targets = len(target_set)
         if n_targets < 10:
             return None
     
@@ -98,9 +129,12 @@ def main() -> None:
     
         G = nx.Graph()
         for _, row in filtered_edges.iterrows():
-            G.add_edge(row["protein1"], row["protein2"], weight=row["combined_score"])
+            p1 = normalize_gene_symbol(row["protein1"])
+            p2 = normalize_gene_symbol(row["protein2"])
+            if p1 and p2:
+                G.add_edge(p1, p2, weight=row["combined_score"])
     
-        valid_nodes = [n for n in G.nodes() if n in filtered_targets]
+        valid_nodes = [n for n in G.nodes() if n in target_set]
         G = G.subgraph(valid_nodes).copy()
         if G.number_of_nodes() < 10:
             return None
