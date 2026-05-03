@@ -1,14 +1,14 @@
 """
-Generate PyMOL scripts (.pml) and batch runner for all 9 docking combinations.
-User can run these in PyMOL (free educational version) to get publication-quality images.
+Generate PyMOL scripts (.pml) and a batch runner for the 9 core docking pairs.
 """
-import os
+from pathlib import Path
 
-RESULTS_DIR = r'D:\科研\网络药理学参数敏感性分析\分子对接\results'
-RECEPTORS_DIR = r'D:\科研\网络药理学参数敏感性分析\分子对接\receptors'
-LIGANDS_DIR = r'D:\科研\网络药理学参数敏感性分析\分子对接\ligands'
-PYMOL_DIR = r'D:\科研\网络药理学参数敏感性分析\分子对接\pymol_scripts'
-os.makedirs(PYMOL_DIR, exist_ok=True)
+BASE_DIR = Path(__file__).resolve().parent
+RESULTS_DIR = BASE_DIR / "results"
+RECEPTORS_DIR = BASE_DIR / "receptors"
+LIGANDS_DIR = BASE_DIR / "ligands"
+PYMOL_DIR = BASE_DIR / "pymol_scripts"
+PYMOL_DIR.mkdir(exist_ok=True)
 
 combinations = [
     ('STAT3', 'Catechin', -6.265),
@@ -26,9 +26,9 @@ combinations = [
 def generate_pml(receptor, ligand, affinity):
     """Generate a PyMOL script for one combination."""
     
-    rec_pdbqt = os.path.join(RECEPTORS_DIR, f"{receptor}.pdbqt").replace('\\', '/')
-    lig_pdbqt = os.path.join(RESULTS_DIR, f"{receptor}_{ligand}_docked.pdbqt").replace('\\', '/')
-    output = os.path.join(RESULTS_DIR, f"{receptor}_{ligand}_pymol.png").replace('\\', '/')
+    rec_pdbqt = (RECEPTORS_DIR / f"{receptor}.pdbqt").as_posix()
+    lig_pdbqt = (RESULTS_DIR / f"{receptor}_{ligand}_docked.pdbqt").as_posix()
+    output = (RESULTS_DIR / f"{receptor}_{ligand}_pymol.png").as_posix()
     
     pml = f'''# PyMOL Script: {receptor} x {ligand}
 # Affinity: {affinity:.2f} kcal/mol
@@ -110,10 +110,10 @@ print("Image saved: {output}")
 print("Generating PyMOL scripts...")
 for receptor, ligand, affinity in combinations:
     pml_content = generate_pml(receptor, ligand, affinity)
-    pml_file = os.path.join(PYMOL_DIR, f"{receptor}_{ligand}.pml")
-    with open(pml_file, 'w') as f:
+    pml_file = PYMOL_DIR / f"{receptor}_{ligand}.pml"
+    with pml_file.open('w', encoding='utf-8') as f:
         f.write(pml_content)
-    print(f"  {os.path.basename(pml_file)}")
+    print(f"  {pml_file.name}")
 
 # Generate batch runner (runs all 9)
 batch_pml = '''# PyMOL Batch Script: Run all 9 docking visualizations
@@ -123,10 +123,10 @@ batch_pml = '''# PyMOL Batch Script: Run all 9 docking visualizations
 for receptor, ligand, affinity in combinations:
     batch_pml += f'run "{receptor}_{ligand}.pml"\n'
 
-batch_file = os.path.join(PYMOL_DIR, "batch_run_all.pml")
-with open(batch_file, 'w') as f:
+batch_file = PYMOL_DIR / "batch_run_all.pml"
+with batch_file.open('w', encoding='utf-8') as f:
     f.write(batch_pml)
-print(f"\n  {os.path.basename(batch_file)} (runs all 9)")
+print(f"\n  {batch_file.name} (runs all 9)")
 
 # Generate README
 readme = '''# PyMOL 分子对接可视化脚本
@@ -161,8 +161,8 @@ readme = '''# PyMOL 分子对接可视化脚本
 - `results/*_pymol.png` — PyMOL渲染的高清3D结合模式图
 '''
 
-readme_file = os.path.join(PYMOL_DIR, "README.md")
-with open(readme_file, 'w') as f:
+readme_file = PYMOL_DIR / "README.md"
+with readme_file.open('w', encoding='utf-8') as f:
     f.write(readme)
 
 print(f"\n{'='*50}")

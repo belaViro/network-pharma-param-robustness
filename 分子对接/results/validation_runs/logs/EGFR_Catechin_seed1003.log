@@ -1,0 +1,54 @@
+COMMAND:
+D:\科研\网络药理学参数敏感性分析\code\分子对接\vina_1.2.7_win.exe --receptor D:\科研\网络药理学参数敏感性分析\code\分子对接\receptors\EGFR.pdbqt --ligand D:\科研\网络药理学参数敏感性分析\code\分子对接\ligands\Catechin.pdbqt --center_x 22.014 --center_y 0.253 --center_z 52.794 --size_x 20 --size_y 20 --size_z 20 --out D:\科研\网络药理学参数敏感性分析\code\分子对接\results\validation_runs\poses\EGFR_Catechin_seed1003.pdbqt --cpu 4 --num_modes 9 --exhaustiveness 16 --seed 1003
+
+STDOUT:
+AutoDock Vina v1.2.7
+#################################################################
+# If you used AutoDock Vina in your work, please cite:          #
+#                                                               #
+# J. Eberhardt, D. Santos-Martins, A. F. Tillack, and S. Forli  #
+# AutoDock Vina 1.2.0: New Docking Methods, Expanded Force      #
+# Field, and Python Bindings, J. Chem. Inf. Model. (2021)       #
+# DOI 10.1021/acs.jcim.1c00203                                  #
+#                                                               #
+# O. Trott, A. J. Olson,                                        #
+# AutoDock Vina: improving the speed and accuracy of docking    #
+# with a new scoring function, efficient optimization and       #
+# multithreading, J. Comp. Chem. (2010)                         #
+# DOI 10.1002/jcc.21334                                         #
+#                                                               #
+# Please see https://github.com/ccsb-scripps/AutoDock-Vina for  #
+# more information.                                             #
+#################################################################
+
+Scoring function : vina
+Rigid receptor: D:\科研\网络药理学参数敏感性分析\code\分子对接\receptors\EGFR.pdbqt
+Ligand: D:\科研\网络药理学参数敏感性分析\code\分子对接\ligands\Catechin.pdbqt
+Grid center: X 22.014 Y 0.253 Z 52.794
+Grid size  : X 20 Y 20 Z 20
+Grid space : 0.375
+Exhaustiveness: 16
+CPU: 4
+Verbosity: 1
+
+Computing Vina grid ... done.
+Performing docking (random seed: 1003) ... 
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+
+mode |   affinity | dist from best mode
+     | (kcal/mol) | rmsd l.b.| rmsd u.b.
+-----+------------+----------+----------
+   1       -8.251          0          0
+   2       -8.149      1.417      7.062
+   3       -8.068      1.345      2.639
+   4       -7.996      1.676      3.041
+   5       -7.947      1.447      1.807
+   6       -7.868      1.618      7.032
+   7       -7.804      1.466      2.137
+   8       -7.556      1.936      7.042
+   9       -7.435      1.928      3.893
+
+
+STDERR:

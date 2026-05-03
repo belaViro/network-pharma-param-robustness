@@ -1,0 +1,393 @@
+{
+  "tool": "AutoDock Vina v1.2.7",
+  "settings": {
+    "exhaustiveness": 16,
+    "cpu": 4,
+    "num_modes": 9,
+    "box_size_angstrom": [
+      20,
+      20,
+      20
+    ],
+    "seeds": [
+      1001,
+      1002,
+      1003
+    ]
+  },
+  "receptors": {
+    "STAT3": {
+      "pdb_id": "6NJS",
+      "domain": "SH2",
+      "center": [
+        13.028,
+        55.637,
+        0.25
+      ]
+    },
+    "EGFR": {
+      "pdb_id": "1M17",
+      "domain": "kinase",
+      "center": [
+        22.014,
+        0.253,
+        52.794
+      ]
+    },
+    "SRC": {
+      "pdb_id": "2H8H",
+      "domain": "kinase",
+      "center": [
+        20.255,
+        20.924,
+        58.253
+      ]
+    }
+  },
+  "replicates": [
+    {
+      "receptor": "STAT3",
+      "ligand": "Catechin",
+      "kind": "core",
+      "seed": "1001",
+      "affinity_kcal_mol": "-6.288",
+      "pose_file": "results\\validation_runs\\poses\\STAT3_Catechin_seed1001.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\STAT3_Catechin_seed1001.log"
+    },
+    {
+      "receptor": "STAT3",
+      "ligand": "Catechin",
+      "kind": "core",
+      "seed": "1002",
+      "affinity_kcal_mol": "-6.277",
+      "pose_file": "results\\validation_runs\\poses\\STAT3_Catechin_seed1002.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\STAT3_Catechin_seed1002.log"
+    },
+    {
+      "receptor": "STAT3",
+      "ligand": "Catechin",
+      "kind": "core",
+      "seed": "1003",
+      "affinity_kcal_mol": "-6.303",
+      "pose_file": "results\\validation_runs\\poses\\STAT3_Catechin_seed1003.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\STAT3_Catechin_seed1003.log"
+    },
+    {
+      "receptor": "STAT3",
+      "ligand": "Miquelianin",
+      "kind": "core",
+      "seed": "1001",
+      "affinity_kcal_mol": "-7.219",
+      "pose_file": "results\\validation_runs\\poses\\STAT3_Miquelianin_seed1001.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\STAT3_Miquelianin_seed1001.log"
+    },
+    {
+      "receptor": "STAT3",
+      "ligand": "Miquelianin",
+      "kind": "core",
+      "seed": "1002",
+      "affinity_kcal_mol": "-7.23",
+      "pose_file": "results\\validation_runs\\poses\\STAT3_Miquelianin_seed1002.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\STAT3_Miquelianin_seed1002.log"
+    },
+    {
+      "receptor": "STAT3",
+      "ligand": "Miquelianin",
+      "kind": "core",
+      "seed": "1003",
+      "affinity_kcal_mol": "-7.209",
+      "pose_file": "results\\validation_runs\\poses\\STAT3_Miquelianin_seed1003.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\STAT3_Miquelianin_seed1003.log"
+    },
+    {
+      "receptor": "STAT3",
+      "ligand": "Procyanidin_B1",
+      "kind": "core",
+      "seed": "1001",
+      "affinity_kcal_mol": "-7.024",
+      "pose_file": "results\\validation_runs\\poses\\STAT3_Procyanidin_B1_seed1001.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\STAT3_Procyanidin_B1_seed1001.log"
+    },
+    {
+      "receptor": "STAT3",
+      "ligand": "Procyanidin_B1",
+      "kind": "core",
+      "seed": "1002",
+      "affinity_kcal_mol": "-7.038",
+      "pose_file": "results\\validation_runs\\poses\\STAT3_Procyanidin_B1_seed1002.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\STAT3_Procyanidin_B1_seed1002.log"
+    },
+    {
+      "receptor": "STAT3",
+      "ligand": "Procyanidin_B1",
+      "kind": "core",
+      "seed": "1003",
+      "affinity_kcal_mol": "-7.036",
+      "pose_file": "results\\validation_runs\\poses\\STAT3_Procyanidin_B1_seed1003.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\STAT3_Procyanidin_B1_seed1003.log"
+    },
+    {
+      "receptor": "EGFR",
+      "ligand": "Catechin",
+      "kind": "core",
+      "seed": "1001",
+      "affinity_kcal_mol": "-8.247",
+      "pose_file": "results\\validation_runs\\poses\\EGFR_Catechin_seed1001.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\EGFR_Catechin_seed1001.log"
+    },
+    {
+      "receptor": "EGFR",
+      "ligand": "Catechin",
+      "kind": "core",
+      "seed": "1002",
+      "affinity_kcal_mol": "-8.224",
+      "pose_file": "results\\validation_runs\\poses\\EGFR_Catechin_seed1002.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\EGFR_Catechin_seed1002.log"
+    },
+    {
+      "receptor": "EGFR",
+      "ligand": "Catechin",
+      "kind": "core",
+      "seed": "1003",
+      "affinity_kcal_mol": "-8.251",
+      "pose_file": "results\\validation_runs\\poses\\EGFR_Catechin_seed1003.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\EGFR_Catechin_seed1003.log"
+    },
+    {
+      "receptor": "EGFR",
+      "ligand": "Miquelianin",
+      "kind": "core",
+      "seed": "1001",
+      "affinity_kcal_mol": "-9.489",
+      "pose_file": "results\\validation_runs\\poses\\EGFR_Miquelianin_seed1001.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\EGFR_Miquelianin_seed1001.log"
+    },
+    {
+      "receptor": "EGFR",
+      "ligand": "Miquelianin",
+      "kind": "core",
+      "seed": "1002",
+      "affinity_kcal_mol": "-9.467",
+      "pose_file": "results\\validation_runs\\poses\\EGFR_Miquelianin_seed1002.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\EGFR_Miquelianin_seed1002.log"
+    },
+    {
+      "receptor": "EGFR",
+      "ligand": "Miquelianin",
+      "kind": "core",
+      "seed": "1003",
+      "affinity_kcal_mol": "-9.495",
+      "pose_file": "results\\validation_runs\\poses\\EGFR_Miquelianin_seed1003.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\EGFR_Miquelianin_seed1003.log"
+    },
+    {
+      "receptor": "EGFR",
+      "ligand": "Procyanidin_B1",
+      "kind": "core",
+      "seed": "1001",
+      "affinity_kcal_mol": "-8.482",
+      "pose_file": "results\\validation_runs\\poses\\EGFR_Procyanidin_B1_seed1001.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\EGFR_Procyanidin_B1_seed1001.log"
+    },
+    {
+      "receptor": "EGFR",
+      "ligand": "Procyanidin_B1",
+      "kind": "core",
+      "seed": "1002",
+      "affinity_kcal_mol": "-8.514",
+      "pose_file": "results\\validation_runs\\poses\\EGFR_Procyanidin_B1_seed1002.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\EGFR_Procyanidin_B1_seed1002.log"
+    },
+    {
+      "receptor": "EGFR",
+      "ligand": "Procyanidin_B1",
+      "kind": "core",
+      "seed": "1003",
+      "affinity_kcal_mol": "-8.495",
+      "pose_file": "results\\validation_runs\\poses\\EGFR_Procyanidin_B1_seed1003.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\EGFR_Procyanidin_B1_seed1003.log"
+    },
+    {
+      "receptor": "SRC",
+      "ligand": "Catechin",
+      "kind": "core",
+      "seed": "1001",
+      "affinity_kcal_mol": "-9.171",
+      "pose_file": "results\\validation_runs\\poses\\SRC_Catechin_seed1001.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\SRC_Catechin_seed1001.log"
+    },
+    {
+      "receptor": "SRC",
+      "ligand": "Catechin",
+      "kind": "core",
+      "seed": "1002",
+      "affinity_kcal_mol": "-9.139",
+      "pose_file": "results\\validation_runs\\poses\\SRC_Catechin_seed1002.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\SRC_Catechin_seed1002.log"
+    },
+    {
+      "receptor": "SRC",
+      "ligand": "Catechin",
+      "kind": "core",
+      "seed": "1003",
+      "affinity_kcal_mol": "-9.124",
+      "pose_file": "results\\validation_runs\\poses\\SRC_Catechin_seed1003.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\SRC_Catechin_seed1003.log"
+    },
+    {
+      "receptor": "SRC",
+      "ligand": "Miquelianin",
+      "kind": "core",
+      "seed": "1001",
+      "affinity_kcal_mol": "-9.796",
+      "pose_file": "results\\validation_runs\\poses\\SRC_Miquelianin_seed1001.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\SRC_Miquelianin_seed1001.log"
+    },
+    {
+      "receptor": "SRC",
+      "ligand": "Miquelianin",
+      "kind": "core",
+      "seed": "1002",
+      "affinity_kcal_mol": "-9.825",
+      "pose_file": "results\\validation_runs\\poses\\SRC_Miquelianin_seed1002.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\SRC_Miquelianin_seed1002.log"
+    },
+    {
+      "receptor": "SRC",
+      "ligand": "Miquelianin",
+      "kind": "core",
+      "seed": "1003",
+      "affinity_kcal_mol": "-9.778",
+      "pose_file": "results\\validation_runs\\poses\\SRC_Miquelianin_seed1003.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\SRC_Miquelianin_seed1003.log"
+    },
+    {
+      "receptor": "SRC",
+      "ligand": "Procyanidin_B1",
+      "kind": "core",
+      "seed": "1001",
+      "affinity_kcal_mol": "-8.302",
+      "pose_file": "results\\validation_runs\\poses\\SRC_Procyanidin_B1_seed1001.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\SRC_Procyanidin_B1_seed1001.log"
+    },
+    {
+      "receptor": "SRC",
+      "ligand": "Procyanidin_B1",
+      "kind": "core",
+      "seed": "1002",
+      "affinity_kcal_mol": "-8.327",
+      "pose_file": "results\\validation_runs\\poses\\SRC_Procyanidin_B1_seed1002.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\SRC_Procyanidin_B1_seed1002.log"
+    },
+    {
+      "receptor": "SRC",
+      "ligand": "Procyanidin_B1",
+      "kind": "core",
+      "seed": "1003",
+      "affinity_kcal_mol": "-8.331",
+      "pose_file": "results\\validation_runs\\poses\\SRC_Procyanidin_B1_seed1003.pdbqt",
+      "log_file": "results\\validation_runs\\logs\\SRC_Procyanidin_B1_seed1003.log"
+    }
+  ],
+  "summary": [
+    {
+      "receptor": "EGFR",
+      "ligand": "Catechin",
+      "kind": "core",
+      "n": "3",
+      "mean_affinity_kcal_mol": "-8.241",
+      "sd_affinity_kcal_mol": "0.015",
+      "best_affinity_kcal_mol": "-8.251",
+      "worst_affinity_kcal_mol": "-8.224",
+      "stability": "stable"
+    },
+    {
+      "receptor": "EGFR",
+      "ligand": "Miquelianin",
+      "kind": "core",
+      "n": "3",
+      "mean_affinity_kcal_mol": "-9.484",
+      "sd_affinity_kcal_mol": "0.015",
+      "best_affinity_kcal_mol": "-9.495",
+      "worst_affinity_kcal_mol": "-9.467",
+      "stability": "stable"
+    },
+    {
+      "receptor": "EGFR",
+      "ligand": "Procyanidin_B1",
+      "kind": "core",
+      "n": "3",
+      "mean_affinity_kcal_mol": "-8.497",
+      "sd_affinity_kcal_mol": "0.016",
+      "best_affinity_kcal_mol": "-8.514",
+      "worst_affinity_kcal_mol": "-8.482",
+      "stability": "stable"
+    },
+    {
+      "receptor": "SRC",
+      "ligand": "Catechin",
+      "kind": "core",
+      "n": "3",
+      "mean_affinity_kcal_mol": "-9.145",
+      "sd_affinity_kcal_mol": "0.024",
+      "best_affinity_kcal_mol": "-9.171",
+      "worst_affinity_kcal_mol": "-9.124",
+      "stability": "stable"
+    },
+    {
+      "receptor": "SRC",
+      "ligand": "Miquelianin",
+      "kind": "core",
+      "n": "3",
+      "mean_affinity_kcal_mol": "-9.8",
+      "sd_affinity_kcal_mol": "0.024",
+      "best_affinity_kcal_mol": "-9.825",
+      "worst_affinity_kcal_mol": "-9.778",
+      "stability": "stable"
+    },
+    {
+      "receptor": "SRC",
+      "ligand": "Procyanidin_B1",
+      "kind": "core",
+      "n": "3",
+      "mean_affinity_kcal_mol": "-8.32",
+      "sd_affinity_kcal_mol": "0.016",
+      "best_affinity_kcal_mol": "-8.331",
+      "worst_affinity_kcal_mol": "-8.302",
+      "stability": "stable"
+    },
+    {
+      "receptor": "STAT3",
+      "ligand": "Catechin",
+      "kind": "core",
+      "n": "3",
+      "mean_affinity_kcal_mol": "-6.289",
+      "sd_affinity_kcal_mol": "0.013",
+      "best_affinity_kcal_mol": "-6.303",
+      "worst_affinity_kcal_mol": "-6.277",
+      "stability": "stable"
+    },
+    {
+      "receptor": "STAT3",
+      "ligand": "Miquelianin",
+      "kind": "core",
+      "n": "3",
+      "mean_affinity_kcal_mol": "-7.219",
+      "sd_affinity_kcal_mol": "0.011",
+      "best_affinity_kcal_mol": "-7.23",
+      "worst_affinity_kcal_mol": "-7.209",
+      "stability": "stable"
+    },
+    {
+      "receptor": "STAT3",
+      "ligand": "Procyanidin_B1",
+      "kind": "core",
+      "n": "3",
+      "mean_affinity_kcal_mol": "-7.033",
+      "sd_affinity_kcal_mol": "0.008",
+      "best_affinity_kcal_mol": "-7.038",
+      "worst_affinity_kcal_mol": "-7.024",
+      "stability": "stable"
+    }
+  ]
+}
