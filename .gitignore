@@ -6,6 +6,8 @@ __pycache__/
 *.egg
 tmp_*.py
 .env
+.venv/
+.uv-cache/
 *.bak
 tests/_test_cache/
 src/outputs/sensitivity/mvp*.csv

@@ -1,0 +1,4 @@
+Gene,in_286_candidate,in_raw_string_nodes,in_target_filtered_ppi,source_compound,probability,raw_string_degree,handling
+VEGFA,TRUE,FALSE,FALSE,Procyanidin_B1,0.352489063696,0,"Candidate target retained in the 286-gene background and PubMed analysis, but no retained STRING edge was present in the current combined_score >= 0.40 interaction cache; excluded from PPI topology and hub ranking."
+ERAP2,TRUE,FALSE,FALSE,DL-Tryptophan,0.0428942118511,0,"Candidate target retained in the 286-gene background and PubMed analysis, but no retained STRING edge was present in the current combined_score >= 0.40 interaction cache; excluded from PPI topology and hub ranking."
+COL18A1,FALSE,TRUE,FALSE,,,23,"STRING returned this interacting node in the raw edge cache, but it was not part of the 286 positive-probability disease-related candidate targets; excluded by target-set filtering before parameter analysis."

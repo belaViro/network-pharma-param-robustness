@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools>=64"]
-build-backend = "setuptools.backends._legacy:_Backend"
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "network-pharmacology-sensitivity"
@@ -23,6 +23,7 @@ dependencies = [
 [project.optional-dependencies]
 acquisition = [
     "playwright>=1.40,<2.0",
+    "playwright-stealth>=2.0,<3.0",
     "selenium>=4.0,<5.0",
 ]
 dev = [

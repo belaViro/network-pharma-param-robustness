@@ -1,0 +1,1597 @@
+{
+  "(\"ABCB1\"[Title/Abstract] OR \"ABCB1 gene\"[Title/Abstract] OR \"ABCB1 protein\"[Title/Abstract] OR \"ATP Binding Cassette Subfamily B Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 98,
+    "timestamp": "2026-05-03T23:53:42",
+    "query": "(\"ABCB1\"[Title/Abstract] OR \"ABCB1 gene\"[Title/Abstract] OR \"ABCB1 protein\"[Title/Abstract] OR \"ATP Binding Cassette Subfamily B Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ABCC1\"[Title/Abstract] OR \"ABCC1 gene\"[Title/Abstract] OR \"ABCC1 protein\"[Title/Abstract] OR \"ATP Binding Cassette Subfamily C Member 1 (ABCC1 Blood Group)\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 66,
+    "timestamp": "2026-05-03T23:53:43",
+    "query": "(\"ABCC1\"[Title/Abstract] OR \"ABCC1 gene\"[Title/Abstract] OR \"ABCC1 protein\"[Title/Abstract] OR \"ATP Binding Cassette Subfamily C Member 1 (ABCC1 Blood Group)\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ABCG2\"[Title/Abstract] OR \"ABCG2 gene\"[Title/Abstract] OR \"ABCG2 protein\"[Title/Abstract] OR \"ATP Binding Cassette Subfamily G Member 2 (JR Blood Group)\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 133,
+    "timestamp": "2026-05-03T23:53:44",
+    "query": "(\"ABCG2\"[Title/Abstract] OR \"ABCG2 gene\"[Title/Abstract] OR \"ABCG2 protein\"[Title/Abstract] OR \"ATP Binding Cassette Subfamily G Member 2 (JR Blood Group)\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ACACB\"[Title/Abstract] OR \"ACACB gene\"[Title/Abstract] OR \"ACACB protein\"[Title/Abstract] OR \"Acetyl-CoA Carboxylase Beta\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 12,
+    "timestamp": "2026-05-03T23:53:46",
+    "query": "(\"ACACB\"[Title/Abstract] OR \"ACACB gene\"[Title/Abstract] OR \"ACACB protein\"[Title/Abstract] OR \"Acetyl-CoA Carboxylase Beta\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ACHE\"[Title/Abstract] OR \"ACHE gene\"[Title/Abstract] OR \"ACHE protein\"[Title/Abstract] OR \"Acetylcholinesterase (Yt Blood Group)\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2828,
+    "timestamp": "2026-05-03T23:53:47",
+    "query": "(\"ACHE\"[Title/Abstract] OR \"ACHE gene\"[Title/Abstract] OR \"ACHE protein\"[Title/Abstract] OR \"Acetylcholinesterase (Yt Blood Group)\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ACLY\"[Title/Abstract] OR \"ACLY gene\"[Title/Abstract] OR \"ACLY protein\"[Title/Abstract] OR \"ATP Citrate Lyase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 46,
+    "timestamp": "2026-05-03T23:53:48",
+    "query": "(\"ACLY\"[Title/Abstract] OR \"ACLY gene\"[Title/Abstract] OR \"ACLY protein\"[Title/Abstract] OR \"ATP Citrate Lyase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ADK\"[Title/Abstract] OR \"ADK gene\"[Title/Abstract] OR \"ADK protein\"[Title/Abstract] OR \"Adenosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 17,
+    "timestamp": "2026-05-03T23:53:49",
+    "query": "(\"ADK\"[Title/Abstract] OR \"ADK gene\"[Title/Abstract] OR \"ADK protein\"[Title/Abstract] OR \"Adenosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ADORA1\"[Title/Abstract] OR \"ADORA1 gene\"[Title/Abstract] OR \"ADORA1 protein\"[Title/Abstract] OR \"Adenosine A1 Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 30,
+    "timestamp": "2026-05-03T23:53:50",
+    "query": "(\"ADORA1\"[Title/Abstract] OR \"ADORA1 gene\"[Title/Abstract] OR \"ADORA1 protein\"[Title/Abstract] OR \"Adenosine A1 Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ADORA2A\"[Title/Abstract] OR \"ADORA2A gene\"[Title/Abstract] OR \"ADORA2A protein\"[Title/Abstract] OR \"Adenosine A2a Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 40,
+    "timestamp": "2026-05-03T23:53:51",
+    "query": "(\"ADORA2A\"[Title/Abstract] OR \"ADORA2A gene\"[Title/Abstract] OR \"ADORA2A protein\"[Title/Abstract] OR \"Adenosine A2a Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ADORA3\"[Title/Abstract] OR \"ADORA3 gene\"[Title/Abstract] OR \"ADORA3 protein\"[Title/Abstract] OR \"Adenosine A3 Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 13,
+    "timestamp": "2026-05-03T23:53:52",
+    "query": "(\"ADORA3\"[Title/Abstract] OR \"ADORA3 gene\"[Title/Abstract] OR \"ADORA3 protein\"[Title/Abstract] OR \"Adenosine A3 Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ADRA1A\"[Title/Abstract] OR \"ADRA1A gene\"[Title/Abstract] OR \"ADRA1A protein\"[Title/Abstract] OR \"Adrenoceptor Alpha 1A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-03T23:53:53",
+    "query": "(\"ADRA1A\"[Title/Abstract] OR \"ADRA1A gene\"[Title/Abstract] OR \"ADRA1A protein\"[Title/Abstract] OR \"Adrenoceptor Alpha 1A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ADRA1D\"[Title/Abstract] OR \"ADRA1D gene\"[Title/Abstract] OR \"ADRA1D protein\"[Title/Abstract] OR \"Adrenoceptor Alpha 1D\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:53:53",
+    "query": "(\"ADRA1D\"[Title/Abstract] OR \"ADRA1D gene\"[Title/Abstract] OR \"ADRA1D protein\"[Title/Abstract] OR \"Adrenoceptor Alpha 1D\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ADRA2A\"[Title/Abstract] OR \"ADRA2A gene\"[Title/Abstract] OR \"ADRA2A protein\"[Title/Abstract] OR \"Adrenoceptor Alpha 2A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-03T23:53:54",
+    "query": "(\"ADRA2A\"[Title/Abstract] OR \"ADRA2A gene\"[Title/Abstract] OR \"ADRA2A protein\"[Title/Abstract] OR \"Adrenoceptor Alpha 2A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ADRA2B\"[Title/Abstract] OR \"ADRA2B gene\"[Title/Abstract] OR \"ADRA2B protein\"[Title/Abstract] OR \"Adrenoceptor Alpha 2B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 3,
+    "timestamp": "2026-05-03T23:53:55",
+    "query": "(\"ADRA2B\"[Title/Abstract] OR \"ADRA2B gene\"[Title/Abstract] OR \"ADRA2B protein\"[Title/Abstract] OR \"Adrenoceptor Alpha 2B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ADRA2C\"[Title/Abstract] OR \"ADRA2C gene\"[Title/Abstract] OR \"ADRA2C protein\"[Title/Abstract] OR \"Adrenoceptor Alpha 2C\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:53:56",
+    "query": "(\"ADRA2C\"[Title/Abstract] OR \"ADRA2C gene\"[Title/Abstract] OR \"ADRA2C protein\"[Title/Abstract] OR \"Adrenoceptor Alpha 2C\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ADRB1\"[Title/Abstract] OR \"ADRB1 gene\"[Title/Abstract] OR \"ADRB1 protein\"[Title/Abstract] OR \"Adrenoceptor Beta 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 8,
+    "timestamp": "2026-05-03T23:53:56",
+    "query": "(\"ADRB1\"[Title/Abstract] OR \"ADRB1 gene\"[Title/Abstract] OR \"ADRB1 protein\"[Title/Abstract] OR \"Adrenoceptor Beta 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"AKR1B1\"[Title/Abstract] OR \"AKR1B1 gene\"[Title/Abstract] OR \"AKR1B1 protein\"[Title/Abstract] OR \"Aldo-Keto Reductase Family 1 Member B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 49,
+    "timestamp": "2026-05-03T23:53:58",
+    "query": "(\"AKR1B1\"[Title/Abstract] OR \"AKR1B1 gene\"[Title/Abstract] OR \"AKR1B1 protein\"[Title/Abstract] OR \"Aldo-Keto Reductase Family 1 Member B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ALOX5\"[Title/Abstract] OR \"ALOX5 gene\"[Title/Abstract] OR \"ALOX5 protein\"[Title/Abstract] OR \"Arachidonate 5-Lipoxygenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 61,
+    "timestamp": "2026-05-03T23:53:59",
+    "query": "(\"ALOX5\"[Title/Abstract] OR \"ALOX5 gene\"[Title/Abstract] OR \"ALOX5 protein\"[Title/Abstract] OR \"Arachidonate 5-Lipoxygenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ALOX5AP\"[Title/Abstract] OR \"ALOX5AP gene\"[Title/Abstract] OR \"ALOX5AP protein\"[Title/Abstract] OR \"Arachidonate 5-Lipoxygenase Activating Protein\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 9,
+    "timestamp": "2026-05-03T23:54:00",
+    "query": "(\"ALOX5AP\"[Title/Abstract] OR \"ALOX5AP gene\"[Title/Abstract] OR \"ALOX5AP protein\"[Title/Abstract] OR \"Arachidonate 5-Lipoxygenase Activating Protein\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ALPL\"[Title/Abstract] OR \"ALPL gene\"[Title/Abstract] OR \"ALPL protein\"[Title/Abstract] OR \"Alkaline Phosphatase, Biomineralization Associated\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 13,
+    "timestamp": "2026-05-03T23:54:01",
+    "query": "(\"ALPL\"[Title/Abstract] OR \"ALPL gene\"[Title/Abstract] OR \"ALPL protein\"[Title/Abstract] OR \"Alkaline Phosphatase, Biomineralization Associated\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"AMPD1\"[Title/Abstract] OR \"AMPD1 gene\"[Title/Abstract] OR \"AMPD1 protein\"[Title/Abstract] OR \"Adenosine Monophosphate Deaminase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:54:01",
+    "query": "(\"AMPD1\"[Title/Abstract] OR \"AMPD1 gene\"[Title/Abstract] OR \"AMPD1 protein\"[Title/Abstract] OR \"Adenosine Monophosphate Deaminase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"AMPD3\"[Title/Abstract] OR \"AMPD3 gene\"[Title/Abstract] OR \"AMPD3 protein\"[Title/Abstract] OR \"Adenosine Monophosphate Deaminase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:54:02",
+    "query": "(\"AMPD3\"[Title/Abstract] OR \"AMPD3 gene\"[Title/Abstract] OR \"AMPD3 protein\"[Title/Abstract] OR \"Adenosine Monophosphate Deaminase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ANPEP\"[Title/Abstract] OR \"ANPEP gene\"[Title/Abstract] OR \"ANPEP protein\"[Title/Abstract] OR \"Alanyl Aminopeptidase, Membrane\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-03T23:54:03",
+    "query": "(\"ANPEP\"[Title/Abstract] OR \"ANPEP gene\"[Title/Abstract] OR \"ANPEP protein\"[Title/Abstract] OR \"Alanyl Aminopeptidase, Membrane\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"APH1A\"[Title/Abstract] OR \"APH1A gene\"[Title/Abstract] OR \"APH1A protein\"[Title/Abstract] OR \"Aph-1A Gamma-Secretase Subunit\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-03T23:54:05",
+    "query": "(\"APH1A\"[Title/Abstract] OR \"APH1A gene\"[Title/Abstract] OR \"APH1A protein\"[Title/Abstract] OR \"Aph-1A Gamma-Secretase Subunit\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"APP\"[Title/Abstract] OR \"APP gene\"[Title/Abstract] OR \"APP protein\"[Title/Abstract] OR \"Amyloid Beta Precursor Protein\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1285,
+    "timestamp": "2026-05-03T23:54:06",
+    "query": "(\"APP\"[Title/Abstract] OR \"APP gene\"[Title/Abstract] OR \"APP protein\"[Title/Abstract] OR \"Amyloid Beta Precursor Protein\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ASAH1\"[Title/Abstract] OR \"ASAH1 gene\"[Title/Abstract] OR \"ASAH1 protein\"[Title/Abstract] OR \"N-Acylsphingosine Amidohydrolase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 8,
+    "timestamp": "2026-05-03T23:54:06",
+    "query": "(\"ASAH1\"[Title/Abstract] OR \"ASAH1 gene\"[Title/Abstract] OR \"ASAH1 protein\"[Title/Abstract] OR \"N-Acylsphingosine Amidohydrolase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ATP12A\"[Title/Abstract] OR \"ATP12A gene\"[Title/Abstract] OR \"ATP12A protein\"[Title/Abstract] OR \"ATPase H+/K+ Transporting Non-Gastric Alpha2 Subunit\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:54:07",
+    "query": "(\"ATP12A\"[Title/Abstract] OR \"ATP12A gene\"[Title/Abstract] OR \"ATP12A protein\"[Title/Abstract] OR \"ATPase H+/K+ Transporting Non-Gastric Alpha2 Subunit\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ATP1A1\"[Title/Abstract] OR \"ATP1A1 gene\"[Title/Abstract] OR \"ATP1A1 protein\"[Title/Abstract] OR \"ATPase Na+/K+ Transporting Subunit Alpha 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 15,
+    "timestamp": "2026-05-03T23:54:08",
+    "query": "(\"ATP1A1\"[Title/Abstract] OR \"ATP1A1 gene\"[Title/Abstract] OR \"ATP1A1 protein\"[Title/Abstract] OR \"ATPase Na+/K+ Transporting Subunit Alpha 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"BACE1\"[Title/Abstract] OR \"BACE1 gene\"[Title/Abstract] OR \"BACE1 protein\"[Title/Abstract] OR \"Beta-Secretase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 385,
+    "timestamp": "2026-05-03T23:54:09",
+    "query": "(\"BACE1\"[Title/Abstract] OR \"BACE1 gene\"[Title/Abstract] OR \"BACE1 protein\"[Title/Abstract] OR \"Beta-Secretase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"BCL2\"[Title/Abstract] OR \"BCL2 gene\"[Title/Abstract] OR \"BCL2 protein\"[Title/Abstract] OR \"BCL2 Apoptosis Regulator\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 9594,
+    "timestamp": "2026-05-03T23:54:10",
+    "query": "(\"BCL2\"[Title/Abstract] OR \"BCL2 gene\"[Title/Abstract] OR \"BCL2 protein\"[Title/Abstract] OR \"BCL2 Apoptosis Regulator\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"BCL2L1\"[Title/Abstract] OR \"BCL2L1 gene\"[Title/Abstract] OR \"BCL2L1 protein\"[Title/Abstract] OR \"BCL2 Like 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 70,
+    "timestamp": "2026-05-03T23:54:11",
+    "query": "(\"BCL2L1\"[Title/Abstract] OR \"BCL2L1 gene\"[Title/Abstract] OR \"BCL2L1 protein\"[Title/Abstract] OR \"BCL2 Like 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA1\"[Title/Abstract] OR \"CA1 gene\"[Title/Abstract] OR \"CA1 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 996,
+    "timestamp": "2026-05-03T23:54:11",
+    "query": "(\"CA1\"[Title/Abstract] OR \"CA1 gene\"[Title/Abstract] OR \"CA1 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA12\"[Title/Abstract] OR \"CA12 gene\"[Title/Abstract] OR \"CA12 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 12\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 6,
+    "timestamp": "2026-05-03T23:54:12",
+    "query": "(\"CA12\"[Title/Abstract] OR \"CA12 gene\"[Title/Abstract] OR \"CA12 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 12\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA13\"[Title/Abstract] OR \"CA13 gene\"[Title/Abstract] OR \"CA13 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 13\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 9,
+    "timestamp": "2026-05-03T23:54:13",
+    "query": "(\"CA13\"[Title/Abstract] OR \"CA13 gene\"[Title/Abstract] OR \"CA13 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 13\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA2\"[Title/Abstract] OR \"CA2 gene\"[Title/Abstract] OR \"CA2 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 6131,
+    "timestamp": "2026-05-03T23:54:14",
+    "query": "(\"CA2\"[Title/Abstract] OR \"CA2 gene\"[Title/Abstract] OR \"CA2 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA3\"[Title/Abstract] OR \"CA3 gene\"[Title/Abstract] OR \"CA3 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 403,
+    "timestamp": "2026-05-03T23:54:15",
+    "query": "(\"CA3\"[Title/Abstract] OR \"CA3 gene\"[Title/Abstract] OR \"CA3 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA4\"[Title/Abstract] OR \"CA4 gene\"[Title/Abstract] OR \"CA4 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 34,
+    "timestamp": "2026-05-03T23:54:16",
+    "query": "(\"CA4\"[Title/Abstract] OR \"CA4 gene\"[Title/Abstract] OR \"CA4 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA5A\"[Title/Abstract] OR \"CA5A gene\"[Title/Abstract] OR \"CA5A protein\"[Title/Abstract] OR \"Carbonic Anhydrase 5A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-03T23:54:17",
+    "query": "(\"CA5A\"[Title/Abstract] OR \"CA5A gene\"[Title/Abstract] OR \"CA5A protein\"[Title/Abstract] OR \"Carbonic Anhydrase 5A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA5B\"[Title/Abstract] OR \"CA5B gene\"[Title/Abstract] OR \"CA5B protein\"[Title/Abstract] OR \"Carbonic Anhydrase 5B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-03T23:54:17",
+    "query": "(\"CA5B\"[Title/Abstract] OR \"CA5B gene\"[Title/Abstract] OR \"CA5B protein\"[Title/Abstract] OR \"Carbonic Anhydrase 5B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA6\"[Title/Abstract] OR \"CA6 gene\"[Title/Abstract] OR \"CA6 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 6\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:54:18",
+    "query": "(\"CA6\"[Title/Abstract] OR \"CA6 gene\"[Title/Abstract] OR \"CA6 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 6\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA7\"[Title/Abstract] OR \"CA7 gene\"[Title/Abstract] OR \"CA7 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:54:19",
+    "query": "(\"CA7\"[Title/Abstract] OR \"CA7 gene\"[Title/Abstract] OR \"CA7 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA9\"[Title/Abstract] OR \"CA9 gene\"[Title/Abstract] OR \"CA9 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 9\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 63,
+    "timestamp": "2026-05-03T23:54:21",
+    "query": "(\"CA9\"[Title/Abstract] OR \"CA9 gene\"[Title/Abstract] OR \"CA9 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 9\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CACNA2D1\"[Title/Abstract] OR \"CACNA2D1 gene\"[Title/Abstract] OR \"CACNA2D1 protein\"[Title/Abstract] OR \"Calcium Voltage-Gated Channel Auxiliary Subunit Alpha2delta 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:54:21",
+    "query": "(\"CACNA2D1\"[Title/Abstract] OR \"CACNA2D1 gene\"[Title/Abstract] OR \"CACNA2D1 protein\"[Title/Abstract] OR \"Calcium Voltage-Gated Channel Auxiliary Subunit Alpha2delta 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CAPN1\"[Title/Abstract] OR \"CAPN1 gene\"[Title/Abstract] OR \"CAPN1 protein\"[Title/Abstract] OR \"Calpain 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 81,
+    "timestamp": "2026-05-03T23:54:22",
+    "query": "(\"CAPN1\"[Title/Abstract] OR \"CAPN1 gene\"[Title/Abstract] OR \"CAPN1 protein\"[Title/Abstract] OR \"Calpain 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CAPN2\"[Title/Abstract] OR \"CAPN2 gene\"[Title/Abstract] OR \"CAPN2 protein\"[Title/Abstract] OR \"Calpain 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 34,
+    "timestamp": "2026-05-03T23:54:23",
+    "query": "(\"CAPN2\"[Title/Abstract] OR \"CAPN2 gene\"[Title/Abstract] OR \"CAPN2 protein\"[Title/Abstract] OR \"Calpain 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CASP3\"[Title/Abstract] OR \"CASP3 gene\"[Title/Abstract] OR \"CASP3 protein\"[Title/Abstract] OR \"Caspase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 14630,
+    "timestamp": "2026-05-03T23:54:23",
+    "query": "(\"CASP3\"[Title/Abstract] OR \"CASP3 gene\"[Title/Abstract] OR \"CASP3 protein\"[Title/Abstract] OR \"Caspase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CASP7\"[Title/Abstract] OR \"CASP7 gene\"[Title/Abstract] OR \"CASP7 protein\"[Title/Abstract] OR \"Caspase 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 129,
+    "timestamp": "2026-05-03T23:54:24",
+    "query": "(\"CASP7\"[Title/Abstract] OR \"CASP7 gene\"[Title/Abstract] OR \"CASP7 protein\"[Title/Abstract] OR \"Caspase 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CCNA1\"[Title/Abstract] OR \"CCNA1 gene\"[Title/Abstract] OR \"CCNA1 protein\"[Title/Abstract] OR \"Cyclin A1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 8,
+    "timestamp": "2026-05-03T23:54:25",
+    "query": "(\"CCNA1\"[Title/Abstract] OR \"CCNA1 gene\"[Title/Abstract] OR \"CCNA1 protein\"[Title/Abstract] OR \"Cyclin A1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CCNA2\"[Title/Abstract] OR \"CCNA2 gene\"[Title/Abstract] OR \"CCNA2 protein\"[Title/Abstract] OR \"Cyclin A2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 30,
+    "timestamp": "2026-05-03T23:54:26",
+    "query": "(\"CCNA2\"[Title/Abstract] OR \"CCNA2 gene\"[Title/Abstract] OR \"CCNA2 protein\"[Title/Abstract] OR \"Cyclin A2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CCNE1\"[Title/Abstract] OR \"CCNE1 gene\"[Title/Abstract] OR \"CCNE1 protein\"[Title/Abstract] OR \"Cyclin E1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 28,
+    "timestamp": "2026-05-03T23:54:26",
+    "query": "(\"CCNE1\"[Title/Abstract] OR \"CCNE1 gene\"[Title/Abstract] OR \"CCNE1 protein\"[Title/Abstract] OR \"Cyclin E1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CD38\"[Title/Abstract] OR \"CD38 gene\"[Title/Abstract] OR \"CD38 protein\"[Title/Abstract] OR \"CD38 Molecule\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 110,
+    "timestamp": "2026-05-03T23:54:27",
+    "query": "(\"CD38\"[Title/Abstract] OR \"CD38 gene\"[Title/Abstract] OR \"CD38 protein\"[Title/Abstract] OR \"CD38 Molecule\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CDC25A\"[Title/Abstract] OR \"CDC25A gene\"[Title/Abstract] OR \"CDC25A protein\"[Title/Abstract] OR \"Cell Division Cycle 25A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 21,
+    "timestamp": "2026-05-03T23:54:28",
+    "query": "(\"CDC25A\"[Title/Abstract] OR \"CDC25A gene\"[Title/Abstract] OR \"CDC25A protein\"[Title/Abstract] OR \"Cell Division Cycle 25A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CDC25B\"[Title/Abstract] OR \"CDC25B gene\"[Title/Abstract] OR \"CDC25B protein\"[Title/Abstract] OR \"Cell Division Cycle 25B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 8,
+    "timestamp": "2026-05-03T23:54:28",
+    "query": "(\"CDC25B\"[Title/Abstract] OR \"CDC25B gene\"[Title/Abstract] OR \"CDC25B protein\"[Title/Abstract] OR \"Cell Division Cycle 25B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CDK1\"[Title/Abstract] OR \"CDK1 gene\"[Title/Abstract] OR \"CDK1 protein\"[Title/Abstract] OR \"Cyclin Dependent Kinase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 124,
+    "timestamp": "2026-05-03T23:54:29",
+    "query": "(\"CDK1\"[Title/Abstract] OR \"CDK1 gene\"[Title/Abstract] OR \"CDK1 protein\"[Title/Abstract] OR \"Cyclin Dependent Kinase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CDK2\"[Title/Abstract] OR \"CDK2 gene\"[Title/Abstract] OR \"CDK2 protein\"[Title/Abstract] OR \"Cyclin Dependent Kinase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 171,
+    "timestamp": "2026-05-03T23:54:30",
+    "query": "(\"CDK2\"[Title/Abstract] OR \"CDK2 gene\"[Title/Abstract] OR \"CDK2 protein\"[Title/Abstract] OR \"Cyclin Dependent Kinase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CDK9\"[Title/Abstract] OR \"CDK9 gene\"[Title/Abstract] OR \"CDK9 protein\"[Title/Abstract] OR \"Cyclin Dependent Kinase 9\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 8,
+    "timestamp": "2026-05-03T23:54:31",
+    "query": "(\"CDK9\"[Title/Abstract] OR \"CDK9 gene\"[Title/Abstract] OR \"CDK9 protein\"[Title/Abstract] OR \"Cyclin Dependent Kinase 9\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CES1\"[Title/Abstract] OR \"CES1 gene\"[Title/Abstract] OR \"CES1 protein\"[Title/Abstract] OR \"Carboxylesterase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 13,
+    "timestamp": "2026-05-03T23:54:32",
+    "query": "(\"CES1\"[Title/Abstract] OR \"CES1 gene\"[Title/Abstract] OR \"CES1 protein\"[Title/Abstract] OR \"Carboxylesterase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CHRNA4\"[Title/Abstract] OR \"CHRNA4 gene\"[Title/Abstract] OR \"CHRNA4 protein\"[Title/Abstract] OR \"Cholinergic Receptor Nicotinic Alpha 4 Subunit\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-03T23:54:33",
+    "query": "(\"CHRNA4\"[Title/Abstract] OR \"CHRNA4 gene\"[Title/Abstract] OR \"CHRNA4 protein\"[Title/Abstract] OR \"Cholinergic Receptor Nicotinic Alpha 4 Subunit\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CHRNA7\"[Title/Abstract] OR \"CHRNA7 gene\"[Title/Abstract] OR \"CHRNA7 protein\"[Title/Abstract] OR \"Cholinergic Receptor Nicotinic Alpha 7 Subunit\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 9,
+    "timestamp": "2026-05-03T23:54:34",
+    "query": "(\"CHRNA7\"[Title/Abstract] OR \"CHRNA7 gene\"[Title/Abstract] OR \"CHRNA7 protein\"[Title/Abstract] OR \"Cholinergic Receptor Nicotinic Alpha 7 Subunit\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CLK1\"[Title/Abstract] OR \"CLK1 gene\"[Title/Abstract] OR \"CLK1 protein\"[Title/Abstract] OR \"CDC Like Kinase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 31,
+    "timestamp": "2026-05-03T23:54:35",
+    "query": "(\"CLK1\"[Title/Abstract] OR \"CLK1 gene\"[Title/Abstract] OR \"CLK1 protein\"[Title/Abstract] OR \"CDC Like Kinase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CLK4\"[Title/Abstract] OR \"CLK4 gene\"[Title/Abstract] OR \"CLK4 protein\"[Title/Abstract] OR \"CDC Like Kinase 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:54:35",
+    "query": "(\"CLK4\"[Title/Abstract] OR \"CLK4 gene\"[Title/Abstract] OR \"CLK4 protein\"[Title/Abstract] OR \"CDC Like Kinase 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CNR1\"[Title/Abstract] OR \"CNR1 gene\"[Title/Abstract] OR \"CNR1 protein\"[Title/Abstract] OR \"Cannabinoid Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 48,
+    "timestamp": "2026-05-03T23:54:36",
+    "query": "(\"CNR1\"[Title/Abstract] OR \"CNR1 gene\"[Title/Abstract] OR \"CNR1 protein\"[Title/Abstract] OR \"Cannabinoid Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CNR2\"[Title/Abstract] OR \"CNR2 gene\"[Title/Abstract] OR \"CNR2 protein\"[Title/Abstract] OR \"Cannabinoid Receptor 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 46,
+    "timestamp": "2026-05-03T23:54:37",
+    "query": "(\"CNR2\"[Title/Abstract] OR \"CNR2 gene\"[Title/Abstract] OR \"CNR2 protein\"[Title/Abstract] OR \"Cannabinoid Receptor 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CSF1R\"[Title/Abstract] OR \"CSF1R gene\"[Title/Abstract] OR \"CSF1R protein\"[Title/Abstract] OR \"Colony Stimulating Factor 1 Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 34,
+    "timestamp": "2026-05-03T23:54:38",
+    "query": "(\"CSF1R\"[Title/Abstract] OR \"CSF1R gene\"[Title/Abstract] OR \"CSF1R protein\"[Title/Abstract] OR \"Colony Stimulating Factor 1 Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CSNK2A1\"[Title/Abstract] OR \"CSNK2A1 gene\"[Title/Abstract] OR \"CSNK2A1 protein\"[Title/Abstract] OR \"Casein Kinase 2 Alpha 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:54:38",
+    "query": "(\"CSNK2A1\"[Title/Abstract] OR \"CSNK2A1 gene\"[Title/Abstract] OR \"CSNK2A1 protein\"[Title/Abstract] OR \"Casein Kinase 2 Alpha 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CTSC\"[Title/Abstract] OR \"CTSC gene\"[Title/Abstract] OR \"CTSC protein\"[Title/Abstract] OR \"Cathepsin C\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 11,
+    "timestamp": "2026-05-03T23:54:39",
+    "query": "(\"CTSC\"[Title/Abstract] OR \"CTSC gene\"[Title/Abstract] OR \"CTSC protein\"[Title/Abstract] OR \"Cathepsin C\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CTSL\"[Title/Abstract] OR \"CTSL gene\"[Title/Abstract] OR \"CTSL protein\"[Title/Abstract] OR \"Cathepsin L\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 64,
+    "timestamp": "2026-05-03T23:54:41",
+    "query": "(\"CTSL\"[Title/Abstract] OR \"CTSL gene\"[Title/Abstract] OR \"CTSL protein\"[Title/Abstract] OR \"Cathepsin L\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CYP19A1\"[Title/Abstract] OR \"CYP19A1 gene\"[Title/Abstract] OR \"CYP19A1 protein\"[Title/Abstract] OR \"Cytochrome P450 Family 19 Subfamily A Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 84,
+    "timestamp": "2026-05-03T23:54:41",
+    "query": "(\"CYP19A1\"[Title/Abstract] OR \"CYP19A1 gene\"[Title/Abstract] OR \"CYP19A1 protein\"[Title/Abstract] OR \"Cytochrome P450 Family 19 Subfamily A Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CYP1B1\"[Title/Abstract] OR \"CYP1B1 gene\"[Title/Abstract] OR \"CYP1B1 protein\"[Title/Abstract] OR \"Cytochrome P450 Family 1 Subfamily B Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 215,
+    "timestamp": "2026-05-03T23:54:42",
+    "query": "(\"CYP1B1\"[Title/Abstract] OR \"CYP1B1 gene\"[Title/Abstract] OR \"CYP1B1 protein\"[Title/Abstract] OR \"Cytochrome P450 Family 1 Subfamily B Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CYP2D6\"[Title/Abstract] OR \"CYP2D6 gene\"[Title/Abstract] OR \"CYP2D6 protein\"[Title/Abstract] OR \"Cytochrome P450 Family 2 Subfamily D Member 6 (Gene/Pseudogene)\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 62,
+    "timestamp": "2026-05-03T23:54:43",
+    "query": "(\"CYP2D6\"[Title/Abstract] OR \"CYP2D6 gene\"[Title/Abstract] OR \"CYP2D6 protein\"[Title/Abstract] OR \"Cytochrome P450 Family 2 Subfamily D Member 6 (Gene/Pseudogene)\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"DAO\"[Title/Abstract] OR \"DAO gene\"[Title/Abstract] OR \"DAO protein\"[Title/Abstract] OR \"D-Amino Acid Oxidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 195,
+    "timestamp": "2026-05-03T23:54:43",
+    "query": "(\"DAO\"[Title/Abstract] OR \"DAO gene\"[Title/Abstract] OR \"DAO protein\"[Title/Abstract] OR \"D-Amino Acid Oxidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"DNM1\"[Title/Abstract] OR \"DNM1 gene\"[Title/Abstract] OR \"DNM1 protein\"[Title/Abstract] OR \"Dynamin 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 43,
+    "timestamp": "2026-05-03T23:54:44",
+    "query": "(\"DNM1\"[Title/Abstract] OR \"DNM1 gene\"[Title/Abstract] OR \"DNM1 protein\"[Title/Abstract] OR \"Dynamin 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"DNMT1\"[Title/Abstract] OR \"DNMT1 gene\"[Title/Abstract] OR \"DNMT1 protein\"[Title/Abstract] OR \"DNA Methyltransferase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 193,
+    "timestamp": "2026-05-03T23:54:45",
+    "query": "(\"DNMT1\"[Title/Abstract] OR \"DNMT1 gene\"[Title/Abstract] OR \"DNMT1 protein\"[Title/Abstract] OR \"DNA Methyltransferase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"DRD1\"[Title/Abstract] OR \"DRD1 gene\"[Title/Abstract] OR \"DRD1 protein\"[Title/Abstract] OR \"Dopamine Receptor D1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 18,
+    "timestamp": "2026-05-03T23:54:46",
+    "query": "(\"DRD1\"[Title/Abstract] OR \"DRD1 gene\"[Title/Abstract] OR \"DRD1 protein\"[Title/Abstract] OR \"Dopamine Receptor D1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"DRD2\"[Title/Abstract] OR \"DRD2 gene\"[Title/Abstract] OR \"DRD2 protein\"[Title/Abstract] OR \"Dopamine Receptor D2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 40,
+    "timestamp": "2026-05-03T23:54:47",
+    "query": "(\"DRD2\"[Title/Abstract] OR \"DRD2 gene\"[Title/Abstract] OR \"DRD2 protein\"[Title/Abstract] OR \"Dopamine Receptor D2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"DRD3\"[Title/Abstract] OR \"DRD3 gene\"[Title/Abstract] OR \"DRD3 protein\"[Title/Abstract] OR \"Dopamine Receptor D3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 6,
+    "timestamp": "2026-05-03T23:54:47",
+    "query": "(\"DRD3\"[Title/Abstract] OR \"DRD3 gene\"[Title/Abstract] OR \"DRD3 protein\"[Title/Abstract] OR \"Dopamine Receptor D3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"DUT\"[Title/Abstract] OR \"DUT gene\"[Title/Abstract] OR \"DUT protein\"[Title/Abstract] OR \"Deoxyuridine Triphosphatase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-03T23:54:48",
+    "query": "(\"DUT\"[Title/Abstract] OR \"DUT gene\"[Title/Abstract] OR \"DUT protein\"[Title/Abstract] OR \"Deoxyuridine Triphosphatase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"DYRK1A\"[Title/Abstract] OR \"DYRK1A gene\"[Title/Abstract] OR \"DYRK1A protein\"[Title/Abstract] OR \"Dual Specificity Tyrosine Phosphorylation Regulated Kinase 1A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 22,
+    "timestamp": "2026-05-03T23:54:49",
+    "query": "(\"DYRK1A\"[Title/Abstract] OR \"DYRK1A gene\"[Title/Abstract] OR \"DYRK1A protein\"[Title/Abstract] OR \"Dual Specificity Tyrosine Phosphorylation Regulated Kinase 1A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ECE1\"[Title/Abstract] OR \"ECE1 gene\"[Title/Abstract] OR \"ECE1 protein\"[Title/Abstract] OR \"Endothelin Converting Enzyme 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 16,
+    "timestamp": "2026-05-03T23:54:50",
+    "query": "(\"ECE1\"[Title/Abstract] OR \"ECE1 gene\"[Title/Abstract] OR \"ECE1 protein\"[Title/Abstract] OR \"Endothelin Converting Enzyme 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"EGFR\"[Title/Abstract] OR \"EGFR gene\"[Title/Abstract] OR \"EGFR protein\"[Title/Abstract] OR \"Epidermal Growth Factor Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1385,
+    "timestamp": "2026-05-03T23:54:51",
+    "query": "(\"EGFR\"[Title/Abstract] OR \"EGFR gene\"[Title/Abstract] OR \"EGFR protein\"[Title/Abstract] OR \"Epidermal Growth Factor Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"EGLN1\"[Title/Abstract] OR \"EGLN1 gene\"[Title/Abstract] OR \"EGLN1 protein\"[Title/Abstract] OR \"Egl-9 Family Hypoxia Inducible Factor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 9,
+    "timestamp": "2026-05-03T23:54:52",
+    "query": "(\"EGLN1\"[Title/Abstract] OR \"EGLN1 gene\"[Title/Abstract] OR \"EGLN1 protein\"[Title/Abstract] OR \"Egl-9 Family Hypoxia Inducible Factor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ENPEP\"[Title/Abstract] OR \"ENPEP gene\"[Title/Abstract] OR \"ENPEP protein\"[Title/Abstract] OR \"Glutamyl Aminopeptidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:54:52",
+    "query": "(\"ENPEP\"[Title/Abstract] OR \"ENPEP gene\"[Title/Abstract] OR \"ENPEP protein\"[Title/Abstract] OR \"Glutamyl Aminopeptidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"EPHA1\"[Title/Abstract] OR \"EPHA1 gene\"[Title/Abstract] OR \"EPHA1 protein\"[Title/Abstract] OR \"EPH Receptor A1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:54:54",
+    "query": "(\"EPHA1\"[Title/Abstract] OR \"EPHA1 gene\"[Title/Abstract] OR \"EPHA1 protein\"[Title/Abstract] OR \"EPH Receptor A1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"EPHA2\"[Title/Abstract] OR \"EPHA2 gene\"[Title/Abstract] OR \"EPHA2 protein\"[Title/Abstract] OR \"EPH Receptor A2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 9,
+    "timestamp": "2026-05-03T23:54:54",
+    "query": "(\"EPHA2\"[Title/Abstract] OR \"EPHA2 gene\"[Title/Abstract] OR \"EPHA2 protein\"[Title/Abstract] OR \"EPH Receptor A2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"EPHA3\"[Title/Abstract] OR \"EPHA3 gene\"[Title/Abstract] OR \"EPHA3 protein\"[Title/Abstract] OR \"EPH Receptor A3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:54:55",
+    "query": "(\"EPHA3\"[Title/Abstract] OR \"EPHA3 gene\"[Title/Abstract] OR \"EPHA3 protein\"[Title/Abstract] OR \"EPH Receptor A3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"EPHA4\"[Title/Abstract] OR \"EPHA4 gene\"[Title/Abstract] OR \"EPHA4 protein\"[Title/Abstract] OR \"EPH Receptor A4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:54:56",
+    "query": "(\"EPHA4\"[Title/Abstract] OR \"EPHA4 gene\"[Title/Abstract] OR \"EPHA4 protein\"[Title/Abstract] OR \"EPH Receptor A4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"EPHA6\"[Title/Abstract] OR \"EPHA6 gene\"[Title/Abstract] OR \"EPHA6 protein\"[Title/Abstract] OR \"EPH Receptor A6\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:54:56",
+    "query": "(\"EPHA6\"[Title/Abstract] OR \"EPHA6 gene\"[Title/Abstract] OR \"EPHA6 protein\"[Title/Abstract] OR \"EPH Receptor A6\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"EPHB1\"[Title/Abstract] OR \"EPHB1 gene\"[Title/Abstract] OR \"EPHB1 protein\"[Title/Abstract] OR \"EPH Receptor B1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:54:57",
+    "query": "(\"EPHB1\"[Title/Abstract] OR \"EPHB1 gene\"[Title/Abstract] OR \"EPHB1 protein\"[Title/Abstract] OR \"EPH Receptor B1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"EPHB2\"[Title/Abstract] OR \"EPHB2 gene\"[Title/Abstract] OR \"EPHB2 protein\"[Title/Abstract] OR \"EPH Receptor B2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 7,
+    "timestamp": "2026-05-03T23:54:58",
+    "query": "(\"EPHB2\"[Title/Abstract] OR \"EPHB2 gene\"[Title/Abstract] OR \"EPHB2 protein\"[Title/Abstract] OR \"EPH Receptor B2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"EPHB4\"[Title/Abstract] OR \"EPHB4 gene\"[Title/Abstract] OR \"EPHB4 protein\"[Title/Abstract] OR \"EPH Receptor B4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 5,
+    "timestamp": "2026-05-03T23:54:58",
+    "query": "(\"EPHB4\"[Title/Abstract] OR \"EPHB4 gene\"[Title/Abstract] OR \"EPHB4 protein\"[Title/Abstract] OR \"EPH Receptor B4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ERAP2\"[Title/Abstract] OR \"ERAP2 gene\"[Title/Abstract] OR \"ERAP2 protein\"[Title/Abstract] OR \"Endoplasmic Reticulum Aminopeptidase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:54:59",
+    "query": "(\"ERAP2\"[Title/Abstract] OR \"ERAP2 gene\"[Title/Abstract] OR \"ERAP2 protein\"[Title/Abstract] OR \"Endoplasmic Reticulum Aminopeptidase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ERBB2\"[Title/Abstract] OR \"ERBB2 gene\"[Title/Abstract] OR \"ERBB2 protein\"[Title/Abstract] OR \"Erb-B2 Receptor Tyrosine Kinase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 91,
+    "timestamp": "2026-05-03T23:55:00",
+    "query": "(\"ERBB2\"[Title/Abstract] OR \"ERBB2 gene\"[Title/Abstract] OR \"ERBB2 protein\"[Title/Abstract] OR \"Erb-B2 Receptor Tyrosine Kinase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ESR1\"[Title/Abstract] OR \"ESR1 gene\"[Title/Abstract] OR \"ESR1 protein\"[Title/Abstract] OR \"Estrogen Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 226,
+    "timestamp": "2026-05-03T23:55:01",
+    "query": "(\"ESR1\"[Title/Abstract] OR \"ESR1 gene\"[Title/Abstract] OR \"ESR1 protein\"[Title/Abstract] OR \"Estrogen Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ESR2\"[Title/Abstract] OR \"ESR2 gene\"[Title/Abstract] OR \"ESR2 protein\"[Title/Abstract] OR \"Estrogen Receptor 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 41,
+    "timestamp": "2026-05-03T23:55:02",
+    "query": "(\"ESR2\"[Title/Abstract] OR \"ESR2 gene\"[Title/Abstract] OR \"ESR2 protein\"[Title/Abstract] OR \"Estrogen Receptor 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"F10\"[Title/Abstract] OR \"F10 gene\"[Title/Abstract] OR \"F10 protein\"[Title/Abstract] OR \"Coagulation Factor X\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 83,
+    "timestamp": "2026-05-03T23:55:02",
+    "query": "(\"F10\"[Title/Abstract] OR \"F10 gene\"[Title/Abstract] OR \"F10 protein\"[Title/Abstract] OR \"Coagulation Factor X\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"F2\"[Title/Abstract] OR \"F2 gene\"[Title/Abstract] OR \"F2 protein\"[Title/Abstract] OR \"Coagulation Factor II, Thrombin\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1273,
+    "timestamp": "2026-05-03T23:55:03",
+    "query": "(\"F2\"[Title/Abstract] OR \"F2 gene\"[Title/Abstract] OR \"F2 protein\"[Title/Abstract] OR \"Coagulation Factor II, Thrombin\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"F2RL1\"[Title/Abstract] OR \"F2RL1 gene\"[Title/Abstract] OR \"F2RL1 protein\"[Title/Abstract] OR \"F2R Like Trypsin Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:55:04",
+    "query": "(\"F2RL1\"[Title/Abstract] OR \"F2RL1 gene\"[Title/Abstract] OR \"F2RL1 protein\"[Title/Abstract] OR \"F2R Like Trypsin Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FAAH\"[Title/Abstract] OR \"FAAH gene\"[Title/Abstract] OR \"FAAH protein\"[Title/Abstract] OR \"Fatty Acid Amide Hydrolase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 55,
+    "timestamp": "2026-05-03T23:55:05",
+    "query": "(\"FAAH\"[Title/Abstract] OR \"FAAH gene\"[Title/Abstract] OR \"FAAH protein\"[Title/Abstract] OR \"Fatty Acid Amide Hydrolase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FABP2\"[Title/Abstract] OR \"FABP2 gene\"[Title/Abstract] OR \"FABP2 protein\"[Title/Abstract] OR \"Fatty Acid Binding Protein 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 17,
+    "timestamp": "2026-05-03T23:55:06",
+    "query": "(\"FABP2\"[Title/Abstract] OR \"FABP2 gene\"[Title/Abstract] OR \"FABP2 protein\"[Title/Abstract] OR \"Fatty Acid Binding Protein 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FABP3\"[Title/Abstract] OR \"FABP3 gene\"[Title/Abstract] OR \"FABP3 protein\"[Title/Abstract] OR \"Fatty Acid Binding Protein 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 42,
+    "timestamp": "2026-05-03T23:55:06",
+    "query": "(\"FABP3\"[Title/Abstract] OR \"FABP3 gene\"[Title/Abstract] OR \"FABP3 protein\"[Title/Abstract] OR \"Fatty Acid Binding Protein 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FABP4\"[Title/Abstract] OR \"FABP4 gene\"[Title/Abstract] OR \"FABP4 protein\"[Title/Abstract] OR \"Fatty Acid Binding Protein 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 107,
+    "timestamp": "2026-05-03T23:55:07",
+    "query": "(\"FABP4\"[Title/Abstract] OR \"FABP4 gene\"[Title/Abstract] OR \"FABP4 protein\"[Title/Abstract] OR \"Fatty Acid Binding Protein 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FABP5\"[Title/Abstract] OR \"FABP5 gene\"[Title/Abstract] OR \"FABP5 protein\"[Title/Abstract] OR \"Fatty Acid Binding Protein 5\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 36,
+    "timestamp": "2026-05-03T23:55:08",
+    "query": "(\"FABP5\"[Title/Abstract] OR \"FABP5 gene\"[Title/Abstract] OR \"FABP5 protein\"[Title/Abstract] OR \"Fatty Acid Binding Protein 5\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FBP1\"[Title/Abstract] OR \"FBP1 gene\"[Title/Abstract] OR \"FBP1 protein\"[Title/Abstract] OR \"Fructose-Bisphosphatase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 20,
+    "timestamp": "2026-05-03T23:55:08",
+    "query": "(\"FBP1\"[Title/Abstract] OR \"FBP1 gene\"[Title/Abstract] OR \"FBP1 protein\"[Title/Abstract] OR \"Fructose-Bisphosphatase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FDFT1\"[Title/Abstract] OR \"FDFT1 gene\"[Title/Abstract] OR \"FDFT1 protein\"[Title/Abstract] OR \"Farnesyl-Diphosphate Farnesyltransferase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 6,
+    "timestamp": "2026-05-03T23:55:09",
+    "query": "(\"FDFT1\"[Title/Abstract] OR \"FDFT1 gene\"[Title/Abstract] OR \"FDFT1 protein\"[Title/Abstract] OR \"Farnesyl-Diphosphate Farnesyltransferase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FDPS\"[Title/Abstract] OR \"FDPS gene\"[Title/Abstract] OR \"FDPS protein\"[Title/Abstract] OR \"Farnesyl Diphosphate Synthase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 21,
+    "timestamp": "2026-05-03T23:55:10",
+    "query": "(\"FDPS\"[Title/Abstract] OR \"FDPS gene\"[Title/Abstract] OR \"FDPS protein\"[Title/Abstract] OR \"Farnesyl Diphosphate Synthase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FFAR1\"[Title/Abstract] OR \"FFAR1 gene\"[Title/Abstract] OR \"FFAR1 protein\"[Title/Abstract] OR \"Free Fatty Acid Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 12,
+    "timestamp": "2026-05-03T23:55:11",
+    "query": "(\"FFAR1\"[Title/Abstract] OR \"FFAR1 gene\"[Title/Abstract] OR \"FFAR1 protein\"[Title/Abstract] OR \"Free Fatty Acid Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FGF1\"[Title/Abstract] OR \"FGF1 gene\"[Title/Abstract] OR \"FGF1 protein\"[Title/Abstract] OR \"Fibroblast Growth Factor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 56,
+    "timestamp": "2026-05-03T23:55:13",
+    "query": "(\"FGF1\"[Title/Abstract] OR \"FGF1 gene\"[Title/Abstract] OR \"FGF1 protein\"[Title/Abstract] OR \"Fibroblast Growth Factor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FGF2\"[Title/Abstract] OR \"FGF2 gene\"[Title/Abstract] OR \"FGF2 protein\"[Title/Abstract] OR \"Fibroblast Growth Factor 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 157,
+    "timestamp": "2026-05-03T23:55:13",
+    "query": "(\"FGF2\"[Title/Abstract] OR \"FGF2 gene\"[Title/Abstract] OR \"FGF2 protein\"[Title/Abstract] OR \"Fibroblast Growth Factor 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FGFR1\"[Title/Abstract] OR \"FGFR1 gene\"[Title/Abstract] OR \"FGFR1 protein\"[Title/Abstract] OR \"Fibroblast Growth Factor Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 46,
+    "timestamp": "2026-05-03T23:55:14",
+    "query": "(\"FGFR1\"[Title/Abstract] OR \"FGFR1 gene\"[Title/Abstract] OR \"FGFR1 protein\"[Title/Abstract] OR \"Fibroblast Growth Factor Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FLT1\"[Title/Abstract] OR \"FLT1 gene\"[Title/Abstract] OR \"FLT1 protein\"[Title/Abstract] OR \"Fms Related Receptor Tyrosine Kinase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 55,
+    "timestamp": "2026-05-03T23:55:15",
+    "query": "(\"FLT1\"[Title/Abstract] OR \"FLT1 gene\"[Title/Abstract] OR \"FLT1 protein\"[Title/Abstract] OR \"Fms Related Receptor Tyrosine Kinase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FNTA\"[Title/Abstract] OR \"FNTA gene\"[Title/Abstract] OR \"FNTA protein\"[Title/Abstract] OR \"Farnesyltransferase, CAAX Box, Subunit Alpha\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:55:16",
+    "query": "(\"FNTA\"[Title/Abstract] OR \"FNTA gene\"[Title/Abstract] OR \"FNTA protein\"[Title/Abstract] OR \"Farnesyltransferase, CAAX Box, Subunit Alpha\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FNTB\"[Title/Abstract] OR \"FNTB gene\"[Title/Abstract] OR \"FNTB protein\"[Title/Abstract] OR \"Farnesyltransferase, CAAX Box, Subunit Beta\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-03T23:55:17",
+    "query": "(\"FNTB\"[Title/Abstract] OR \"FNTB gene\"[Title/Abstract] OR \"FNTB protein\"[Title/Abstract] OR \"Farnesyltransferase, CAAX Box, Subunit Beta\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FOLH1\"[Title/Abstract] OR \"FOLH1 gene\"[Title/Abstract] OR \"FOLH1 protein\"[Title/Abstract] OR \"Folate Hydrolase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 3,
+    "timestamp": "2026-05-03T23:55:18",
+    "query": "(\"FOLH1\"[Title/Abstract] OR \"FOLH1 gene\"[Title/Abstract] OR \"FOLH1 protein\"[Title/Abstract] OR \"Folate Hydrolase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FUT4\"[Title/Abstract] OR \"FUT4 gene\"[Title/Abstract] OR \"FUT4 protein\"[Title/Abstract] OR \"Fucosyltransferase 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:55:18",
+    "query": "(\"FUT4\"[Title/Abstract] OR \"FUT4 gene\"[Title/Abstract] OR \"FUT4 protein\"[Title/Abstract] OR \"Fucosyltransferase 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FUT7\"[Title/Abstract] OR \"FUT7 gene\"[Title/Abstract] OR \"FUT7 protein\"[Title/Abstract] OR \"Fucosyltransferase 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-03T23:55:19",
+    "query": "(\"FUT7\"[Title/Abstract] OR \"FUT7 gene\"[Title/Abstract] OR \"FUT7 protein\"[Title/Abstract] OR \"Fucosyltransferase 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FYN\"[Title/Abstract] OR \"FYN gene\"[Title/Abstract] OR \"FYN protein\"[Title/Abstract] OR \"FYN Proto-Oncogene, Src Family Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 119,
+    "timestamp": "2026-05-03T23:55:20",
+    "query": "(\"FYN\"[Title/Abstract] OR \"FYN gene\"[Title/Abstract] OR \"FYN protein\"[Title/Abstract] OR \"FYN Proto-Oncogene, Src Family Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GABBR1\"[Title/Abstract] OR \"GABBR1 gene\"[Title/Abstract] OR \"GABBR1 protein\"[Title/Abstract] OR \"Gamma-Aminobutyric Acid Type B Receptor Subunit 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-03T23:55:21",
+    "query": "(\"GABBR1\"[Title/Abstract] OR \"GABBR1 gene\"[Title/Abstract] OR \"GABBR1 protein\"[Title/Abstract] OR \"Gamma-Aminobutyric Acid Type B Receptor Subunit 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GABBR2\"[Title/Abstract] OR \"GABBR2 gene\"[Title/Abstract] OR \"GABBR2 protein\"[Title/Abstract] OR \"Gamma-Aminobutyric Acid Type B Receptor Subunit 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 3,
+    "timestamp": "2026-05-03T23:55:21",
+    "query": "(\"GABBR2\"[Title/Abstract] OR \"GABBR2 gene\"[Title/Abstract] OR \"GABBR2 protein\"[Title/Abstract] OR \"Gamma-Aminobutyric Acid Type B Receptor Subunit 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GABRA1\"[Title/Abstract] OR \"GABRA1 gene\"[Title/Abstract] OR \"GABRA1 protein\"[Title/Abstract] OR \"Gamma-Aminobutyric Acid Type A Receptor Subunit Alpha1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 11,
+    "timestamp": "2026-05-03T23:55:22",
+    "query": "(\"GABRA1\"[Title/Abstract] OR \"GABRA1 gene\"[Title/Abstract] OR \"GABRA1 protein\"[Title/Abstract] OR \"Gamma-Aminobutyric Acid Type A Receptor Subunit Alpha1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GABRB2\"[Title/Abstract] OR \"GABRB2 gene\"[Title/Abstract] OR \"GABRB2 protein\"[Title/Abstract] OR \"Gamma-Aminobutyric Acid Type A Receptor Subunit Beta2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 3,
+    "timestamp": "2026-05-03T23:55:23",
+    "query": "(\"GABRB2\"[Title/Abstract] OR \"GABRB2 gene\"[Title/Abstract] OR \"GABRB2 protein\"[Title/Abstract] OR \"Gamma-Aminobutyric Acid Type A Receptor Subunit Beta2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GABRG2\"[Title/Abstract] OR \"GABRG2 gene\"[Title/Abstract] OR \"GABRG2 protein\"[Title/Abstract] OR \"Gamma-Aminobutyric Acid Type A Receptor Subunit Gamma2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:55:24",
+    "query": "(\"GABRG2\"[Title/Abstract] OR \"GABRG2 gene\"[Title/Abstract] OR \"GABRG2 protein\"[Title/Abstract] OR \"Gamma-Aminobutyric Acid Type A Receptor Subunit Gamma2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GABRR1\"[Title/Abstract] OR \"GABRR1 gene\"[Title/Abstract] OR \"GABRR1 protein\"[Title/Abstract] OR \"Gamma-Aminobutyric Acid Type A Receptor Subunit Rho1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:55:25",
+    "query": "(\"GABRR1\"[Title/Abstract] OR \"GABRR1 gene\"[Title/Abstract] OR \"GABRR1 protein\"[Title/Abstract] OR \"Gamma-Aminobutyric Acid Type A Receptor Subunit Rho1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GLRA1\"[Title/Abstract] OR \"GLRA1 gene\"[Title/Abstract] OR \"GLRA1 protein\"[Title/Abstract] OR \"Glycine Receptor Alpha 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:55:25",
+    "query": "(\"GLRA1\"[Title/Abstract] OR \"GLRA1 gene\"[Title/Abstract] OR \"GLRA1 protein\"[Title/Abstract] OR \"Glycine Receptor Alpha 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GPBAR1\"[Title/Abstract] OR \"GPBAR1 gene\"[Title/Abstract] OR \"GPBAR1 protein\"[Title/Abstract] OR \"G Protein-Coupled Bile Acid Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 7,
+    "timestamp": "2026-05-03T23:55:26",
+    "query": "(\"GPBAR1\"[Title/Abstract] OR \"GPBAR1 gene\"[Title/Abstract] OR \"GPBAR1 protein\"[Title/Abstract] OR \"G Protein-Coupled Bile Acid Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GRIA1\"[Title/Abstract] OR \"GRIA1 gene\"[Title/Abstract] OR \"GRIA1 protein\"[Title/Abstract] OR \"Glutamate Ionotropic Receptor AMPA Type Subunit 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 10,
+    "timestamp": "2026-05-03T23:55:27",
+    "query": "(\"GRIA1\"[Title/Abstract] OR \"GRIA1 gene\"[Title/Abstract] OR \"GRIA1 protein\"[Title/Abstract] OR \"Glutamate Ionotropic Receptor AMPA Type Subunit 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GRIA2\"[Title/Abstract] OR \"GRIA2 gene\"[Title/Abstract] OR \"GRIA2 protein\"[Title/Abstract] OR \"Glutamate Ionotropic Receptor AMPA Type Subunit 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 12,
+    "timestamp": "2026-05-03T23:55:28",
+    "query": "(\"GRIA2\"[Title/Abstract] OR \"GRIA2 gene\"[Title/Abstract] OR \"GRIA2 protein\"[Title/Abstract] OR \"Glutamate Ionotropic Receptor AMPA Type Subunit 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GRIA4\"[Title/Abstract] OR \"GRIA4 gene\"[Title/Abstract] OR \"GRIA4 protein\"[Title/Abstract] OR \"Glutamate Ionotropic Receptor AMPA Type Subunit 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:55:28",
+    "query": "(\"GRIA4\"[Title/Abstract] OR \"GRIA4 gene\"[Title/Abstract] OR \"GRIA4 protein\"[Title/Abstract] OR \"Glutamate Ionotropic Receptor AMPA Type Subunit 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GRIK2\"[Title/Abstract] OR \"GRIK2 gene\"[Title/Abstract] OR \"GRIK2 protein\"[Title/Abstract] OR \"Glutamate Ionotropic Receptor Kainate Type Subunit 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:55:30",
+    "query": "(\"GRIK2\"[Title/Abstract] OR \"GRIK2 gene\"[Title/Abstract] OR \"GRIK2 protein\"[Title/Abstract] OR \"Glutamate Ionotropic Receptor Kainate Type Subunit 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GRIK3\"[Title/Abstract] OR \"GRIK3 gene\"[Title/Abstract] OR \"GRIK3 protein\"[Title/Abstract] OR \"Glutamate Ionotropic Receptor Kainate Type Subunit 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:55:31",
+    "query": "(\"GRIK3\"[Title/Abstract] OR \"GRIK3 gene\"[Title/Abstract] OR \"GRIK3 protein\"[Title/Abstract] OR \"Glutamate Ionotropic Receptor Kainate Type Subunit 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GRK2\"[Title/Abstract] OR \"GRK2 gene\"[Title/Abstract] OR \"GRK2 protein\"[Title/Abstract] OR \"G Protein-Coupled Receptor Kinase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 55,
+    "timestamp": "2026-05-03T23:55:31",
+    "query": "(\"GRK2\"[Title/Abstract] OR \"GRK2 gene\"[Title/Abstract] OR \"GRK2 protein\"[Title/Abstract] OR \"G Protein-Coupled Receptor Kinase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GRM1\"[Title/Abstract] OR \"GRM1 gene\"[Title/Abstract] OR \"GRM1 protein\"[Title/Abstract] OR \"Glutamate Metabotropic Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-03T23:55:32",
+    "query": "(\"GRM1\"[Title/Abstract] OR \"GRM1 gene\"[Title/Abstract] OR \"GRM1 protein\"[Title/Abstract] OR \"Glutamate Metabotropic Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GRM2\"[Title/Abstract] OR \"GRM2 gene\"[Title/Abstract] OR \"GRM2 protein\"[Title/Abstract] OR \"Glutamate Metabotropic Receptor 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:55:33",
+    "query": "(\"GRM2\"[Title/Abstract] OR \"GRM2 gene\"[Title/Abstract] OR \"GRM2 protein\"[Title/Abstract] OR \"Glutamate Metabotropic Receptor 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GRM3\"[Title/Abstract] OR \"GRM3 gene\"[Title/Abstract] OR \"GRM3 protein\"[Title/Abstract] OR \"Glutamate Metabotropic Receptor 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-03T23:55:33",
+    "query": "(\"GRM3\"[Title/Abstract] OR \"GRM3 gene\"[Title/Abstract] OR \"GRM3 protein\"[Title/Abstract] OR \"Glutamate Metabotropic Receptor 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GRM4\"[Title/Abstract] OR \"GRM4 gene\"[Title/Abstract] OR \"GRM4 protein\"[Title/Abstract] OR \"Glutamate Metabotropic Receptor 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-03T23:55:34",
+    "query": "(\"GRM4\"[Title/Abstract] OR \"GRM4 gene\"[Title/Abstract] OR \"GRM4 protein\"[Title/Abstract] OR \"Glutamate Metabotropic Receptor 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GRM5\"[Title/Abstract] OR \"GRM5 gene\"[Title/Abstract] OR \"GRM5 protein\"[Title/Abstract] OR \"Glutamate Metabotropic Receptor 5\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 3,
+    "timestamp": "2026-05-03T23:55:35",
+    "query": "(\"GRM5\"[Title/Abstract] OR \"GRM5 gene\"[Title/Abstract] OR \"GRM5 protein\"[Title/Abstract] OR \"Glutamate Metabotropic Receptor 5\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GRM7\"[Title/Abstract] OR \"GRM7 gene\"[Title/Abstract] OR \"GRM7 protein\"[Title/Abstract] OR \"Glutamate Metabotropic Receptor 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-03T23:55:36",
+    "query": "(\"GRM7\"[Title/Abstract] OR \"GRM7 gene\"[Title/Abstract] OR \"GRM7 protein\"[Title/Abstract] OR \"Glutamate Metabotropic Receptor 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GSTM2\"[Title/Abstract] OR \"GSTM2 gene\"[Title/Abstract] OR \"GSTM2 protein\"[Title/Abstract] OR \"Glutathione S-Transferase Mu 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 51,
+    "timestamp": "2026-05-03T23:55:37",
+    "query": "(\"GSTM2\"[Title/Abstract] OR \"GSTM2 gene\"[Title/Abstract] OR \"GSTM2 protein\"[Title/Abstract] OR \"Glutathione S-Transferase Mu 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"GSTP1\"[Title/Abstract] OR \"GSTP1 gene\"[Title/Abstract] OR \"GSTP1 protein\"[Title/Abstract] OR \"Glutathione S-Transferase Pi 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 572,
+    "timestamp": "2026-05-03T23:55:37",
+    "query": "(\"GSTP1\"[Title/Abstract] OR \"GSTP1 gene\"[Title/Abstract] OR \"GSTP1 protein\"[Title/Abstract] OR \"Glutathione S-Transferase Pi 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HAO1\"[Title/Abstract] OR \"HAO1 gene\"[Title/Abstract] OR \"HAO1 protein\"[Title/Abstract] OR \"Hydroxyacid Oxidase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 7,
+    "timestamp": "2026-05-03T23:55:38",
+    "query": "(\"HAO1\"[Title/Abstract] OR \"HAO1 gene\"[Title/Abstract] OR \"HAO1 protein\"[Title/Abstract] OR \"Hydroxyacid Oxidase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HDAC1\"[Title/Abstract] OR \"HDAC1 gene\"[Title/Abstract] OR \"HDAC1 protein\"[Title/Abstract] OR \"Histone Deacetylase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 148,
+    "timestamp": "2026-05-03T23:55:39",
+    "query": "(\"HDAC1\"[Title/Abstract] OR \"HDAC1 gene\"[Title/Abstract] OR \"HDAC1 protein\"[Title/Abstract] OR \"Histone Deacetylase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HDAC2\"[Title/Abstract] OR \"HDAC2 gene\"[Title/Abstract] OR \"HDAC2 protein\"[Title/Abstract] OR \"Histone Deacetylase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 167,
+    "timestamp": "2026-05-03T23:55:40",
+    "query": "(\"HDAC2\"[Title/Abstract] OR \"HDAC2 gene\"[Title/Abstract] OR \"HDAC2 protein\"[Title/Abstract] OR \"Histone Deacetylase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HDAC3\"[Title/Abstract] OR \"HDAC3 gene\"[Title/Abstract] OR \"HDAC3 protein\"[Title/Abstract] OR \"Histone Deacetylase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 75,
+    "timestamp": "2026-05-03T23:55:41",
+    "query": "(\"HDAC3\"[Title/Abstract] OR \"HDAC3 gene\"[Title/Abstract] OR \"HDAC3 protein\"[Title/Abstract] OR \"Histone Deacetylase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HDAC5\"[Title/Abstract] OR \"HDAC5 gene\"[Title/Abstract] OR \"HDAC5 protein\"[Title/Abstract] OR \"Histone Deacetylase 5\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 22,
+    "timestamp": "2026-05-03T23:55:42",
+    "query": "(\"HDAC5\"[Title/Abstract] OR \"HDAC5 gene\"[Title/Abstract] OR \"HDAC5 protein\"[Title/Abstract] OR \"Histone Deacetylase 5\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HDAC6\"[Title/Abstract] OR \"HDAC6 gene\"[Title/Abstract] OR \"HDAC6 protein\"[Title/Abstract] OR \"Histone Deacetylase 6\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 106,
+    "timestamp": "2026-05-03T23:55:43",
+    "query": "(\"HDAC6\"[Title/Abstract] OR \"HDAC6 gene\"[Title/Abstract] OR \"HDAC6 protein\"[Title/Abstract] OR \"Histone Deacetylase 6\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HDAC8\"[Title/Abstract] OR \"HDAC8 gene\"[Title/Abstract] OR \"HDAC8 protein\"[Title/Abstract] OR \"Histone Deacetylase 8\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 12,
+    "timestamp": "2026-05-03T23:55:44",
+    "query": "(\"HDAC8\"[Title/Abstract] OR \"HDAC8 gene\"[Title/Abstract] OR \"HDAC8 protein\"[Title/Abstract] OR \"Histone Deacetylase 8\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HIF1A\"[Title/Abstract] OR \"HIF1A gene\"[Title/Abstract] OR \"HIF1A protein\"[Title/Abstract] OR \"Hypoxia Inducible Factor 1 Subunit Alpha\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 246,
+    "timestamp": "2026-05-03T23:55:45",
+    "query": "(\"HIF1A\"[Title/Abstract] OR \"HIF1A gene\"[Title/Abstract] OR \"HIF1A protein\"[Title/Abstract] OR \"Hypoxia Inducible Factor 1 Subunit Alpha\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HMGCR\"[Title/Abstract] OR \"HMGCR gene\"[Title/Abstract] OR \"HMGCR protein\"[Title/Abstract] OR \"3-Hydroxy-3-Methylglutaryl-CoA Reductase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 153,
+    "timestamp": "2026-05-03T23:55:45",
+    "query": "(\"HMGCR\"[Title/Abstract] OR \"HMGCR gene\"[Title/Abstract] OR \"HMGCR protein\"[Title/Abstract] OR \"3-Hydroxy-3-Methylglutaryl-CoA Reductase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HPSE\"[Title/Abstract] OR \"HPSE gene\"[Title/Abstract] OR \"HPSE protein\"[Title/Abstract] OR \"Heparanase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 27,
+    "timestamp": "2026-05-03T23:55:46",
+    "query": "(\"HPSE\"[Title/Abstract] OR \"HPSE gene\"[Title/Abstract] OR \"HPSE protein\"[Title/Abstract] OR \"Heparanase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HSD11B1\"[Title/Abstract] OR \"HSD11B1 gene\"[Title/Abstract] OR \"HSD11B1 protein\"[Title/Abstract] OR \"Hydroxysteroid 11-Beta Dehydrogenase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 10,
+    "timestamp": "2026-05-03T23:55:47",
+    "query": "(\"HSD11B1\"[Title/Abstract] OR \"HSD11B1 gene\"[Title/Abstract] OR \"HSD11B1 protein\"[Title/Abstract] OR \"Hydroxysteroid 11-Beta Dehydrogenase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HSD11B2\"[Title/Abstract] OR \"HSD11B2 gene\"[Title/Abstract] OR \"HSD11B2 protein\"[Title/Abstract] OR \"Hydroxysteroid 11-Beta Dehydrogenase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 7,
+    "timestamp": "2026-05-03T23:55:47",
+    "query": "(\"HSD11B2\"[Title/Abstract] OR \"HSD11B2 gene\"[Title/Abstract] OR \"HSD11B2 protein\"[Title/Abstract] OR \"Hydroxysteroid 11-Beta Dehydrogenase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HSP90AA1\"[Title/Abstract] OR \"HSP90AA1 gene\"[Title/Abstract] OR \"HSP90AA1 protein\"[Title/Abstract] OR \"Heat Shock Protein 90 Alpha Family Class A Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 143,
+    "timestamp": "2026-05-03T23:55:49",
+    "query": "(\"HSP90AA1\"[Title/Abstract] OR \"HSP90AA1 gene\"[Title/Abstract] OR \"HSP90AA1 protein\"[Title/Abstract] OR \"Heat Shock Protein 90 Alpha Family Class A Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HTR1A\"[Title/Abstract] OR \"HTR1A gene\"[Title/Abstract] OR \"HTR1A protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 1A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 11,
+    "timestamp": "2026-05-03T23:55:49",
+    "query": "(\"HTR1A\"[Title/Abstract] OR \"HTR1A gene\"[Title/Abstract] OR \"HTR1A protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 1A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HTR1B\"[Title/Abstract] OR \"HTR1B gene\"[Title/Abstract] OR \"HTR1B protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 1B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 3,
+    "timestamp": "2026-05-03T23:55:50",
+    "query": "(\"HTR1B\"[Title/Abstract] OR \"HTR1B gene\"[Title/Abstract] OR \"HTR1B protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 1B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HTR1D\"[Title/Abstract] OR \"HTR1D gene\"[Title/Abstract] OR \"HTR1D protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 1D\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:55:51",
+    "query": "(\"HTR1D\"[Title/Abstract] OR \"HTR1D gene\"[Title/Abstract] OR \"HTR1D protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 1D\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HTR1E\"[Title/Abstract] OR \"HTR1E gene\"[Title/Abstract] OR \"HTR1E protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 1E\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-03T23:55:52",
+    "query": "(\"HTR1E\"[Title/Abstract] OR \"HTR1E gene\"[Title/Abstract] OR \"HTR1E protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 1E\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HTR2A\"[Title/Abstract] OR \"HTR2A gene\"[Title/Abstract] OR \"HTR2A protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 2A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 13,
+    "timestamp": "2026-05-03T23:55:54",
+    "query": "(\"HTR2A\"[Title/Abstract] OR \"HTR2A gene\"[Title/Abstract] OR \"HTR2A protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 2A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HTR2B\"[Title/Abstract] OR \"HTR2B gene\"[Title/Abstract] OR \"HTR2B protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 2B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 3,
+    "timestamp": "2026-05-03T23:55:54",
+    "query": "(\"HTR2B\"[Title/Abstract] OR \"HTR2B gene\"[Title/Abstract] OR \"HTR2B protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 2B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HTR2C\"[Title/Abstract] OR \"HTR2C gene\"[Title/Abstract] OR \"HTR2C protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 2C\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-03T23:55:55",
+    "query": "(\"HTR2C\"[Title/Abstract] OR \"HTR2C gene\"[Title/Abstract] OR \"HTR2C protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 2C\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HTR6\"[Title/Abstract] OR \"HTR6 gene\"[Title/Abstract] OR \"HTR6 protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 6\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-03T23:55:56",
+    "query": "(\"HTR6\"[Title/Abstract] OR \"HTR6 gene\"[Title/Abstract] OR \"HTR6 protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 6\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"HTR7\"[Title/Abstract] OR \"HTR7 gene\"[Title/Abstract] OR \"HTR7 protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:55:56",
+    "query": "(\"HTR7\"[Title/Abstract] OR \"HTR7 gene\"[Title/Abstract] OR \"HTR7 protein\"[Title/Abstract] OR \"5-Hydroxytryptamine Receptor 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ICAM1\"[Title/Abstract] OR \"ICAM1 gene\"[Title/Abstract] OR \"ICAM1 protein\"[Title/Abstract] OR \"Intercellular Adhesion Molecule 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1686,
+    "timestamp": "2026-05-03T23:55:57",
+    "query": "(\"ICAM1\"[Title/Abstract] OR \"ICAM1 gene\"[Title/Abstract] OR \"ICAM1 protein\"[Title/Abstract] OR \"Intercellular Adhesion Molecule 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"IDO1\"[Title/Abstract] OR \"IDO1 gene\"[Title/Abstract] OR \"IDO1 protein\"[Title/Abstract] OR \"Indoleamine 2,3-Dioxygenase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 61,
+    "timestamp": "2026-05-03T23:55:58",
+    "query": "(\"IDO1\"[Title/Abstract] OR \"IDO1 gene\"[Title/Abstract] OR \"IDO1 protein\"[Title/Abstract] OR \"Indoleamine 2,3-Dioxygenase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"IL2\"[Title/Abstract] OR \"IL2 gene\"[Title/Abstract] OR \"IL2 protein\"[Title/Abstract] OR \"Interleukin 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 802,
+    "timestamp": "2026-05-03T23:55:59",
+    "query": "(\"IL2\"[Title/Abstract] OR \"IL2 gene\"[Title/Abstract] OR \"IL2 protein\"[Title/Abstract] OR \"Interleukin 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ITGAL\"[Title/Abstract] OR \"ITGAL gene\"[Title/Abstract] OR \"ITGAL protein\"[Title/Abstract] OR \"Integrin Subunit Alpha L\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 9,
+    "timestamp": "2026-05-03T23:56:00",
+    "query": "(\"ITGAL\"[Title/Abstract] OR \"ITGAL gene\"[Title/Abstract] OR \"ITGAL protein\"[Title/Abstract] OR \"Integrin Subunit Alpha L\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ITGB2\"[Title/Abstract] OR \"ITGB2 gene\"[Title/Abstract] OR \"ITGB2 protein\"[Title/Abstract] OR \"Integrin Subunit Beta 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 18,
+    "timestamp": "2026-05-03T23:56:00",
+    "query": "(\"ITGB2\"[Title/Abstract] OR \"ITGB2 gene\"[Title/Abstract] OR \"ITGB2 protein\"[Title/Abstract] OR \"Integrin Subunit Beta 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"KCNH2\"[Title/Abstract] OR \"KCNH2 gene\"[Title/Abstract] OR \"KCNH2 protein\"[Title/Abstract] OR \"Potassium Voltage-Gated Channel Subfamily H Member 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 5,
+    "timestamp": "2026-05-03T23:56:01",
+    "query": "(\"KCNH2\"[Title/Abstract] OR \"KCNH2 gene\"[Title/Abstract] OR \"KCNH2 protein\"[Title/Abstract] OR \"Potassium Voltage-Gated Channel Subfamily H Member 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"KDM4C\"[Title/Abstract] OR \"KDM4C gene\"[Title/Abstract] OR \"KDM4C protein\"[Title/Abstract] OR \"Lysine Demethylase 4C\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 9,
+    "timestamp": "2026-05-03T23:56:02",
+    "query": "(\"KDM4C\"[Title/Abstract] OR \"KDM4C gene\"[Title/Abstract] OR \"KDM4C protein\"[Title/Abstract] OR \"Lysine Demethylase 4C\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"KDR\"[Title/Abstract] OR \"KDR gene\"[Title/Abstract] OR \"KDR protein\"[Title/Abstract] OR \"Kinase Insert Domain Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 69,
+    "timestamp": "2026-05-03T23:56:02",
+    "query": "(\"KDR\"[Title/Abstract] OR \"KDR gene\"[Title/Abstract] OR \"KDR protein\"[Title/Abstract] OR \"Kinase Insert Domain Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"KISS1R\"[Title/Abstract] OR \"KISS1R gene\"[Title/Abstract] OR \"KISS1R protein\"[Title/Abstract] OR \"KISS1 Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 8,
+    "timestamp": "2026-05-03T23:56:03",
+    "query": "(\"KISS1R\"[Title/Abstract] OR \"KISS1R gene\"[Title/Abstract] OR \"KISS1R protein\"[Title/Abstract] OR \"KISS1 Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"KIT\"[Title/Abstract] OR \"KIT gene\"[Title/Abstract] OR \"KIT protein\"[Title/Abstract] OR \"KIT Proto-Oncogene, Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2796,
+    "timestamp": "2026-05-03T23:56:04",
+    "query": "(\"KIT\"[Title/Abstract] OR \"KIT gene\"[Title/Abstract] OR \"KIT protein\"[Title/Abstract] OR \"KIT Proto-Oncogene, Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"KLK1\"[Title/Abstract] OR \"KLK1 gene\"[Title/Abstract] OR \"KLK1 protein\"[Title/Abstract] OR \"Kallikrein 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 17,
+    "timestamp": "2026-05-03T23:56:05",
+    "query": "(\"KLK1\"[Title/Abstract] OR \"KLK1 gene\"[Title/Abstract] OR \"KLK1 protein\"[Title/Abstract] OR \"Kallikrein 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"KLK2\"[Title/Abstract] OR \"KLK2 gene\"[Title/Abstract] OR \"KLK2 protein\"[Title/Abstract] OR \"Kallikrein Related Peptidase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-03T23:56:06",
+    "query": "(\"KLK2\"[Title/Abstract] OR \"KLK2 gene\"[Title/Abstract] OR \"KLK2 protein\"[Title/Abstract] OR \"Kallikrein Related Peptidase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"KMO\"[Title/Abstract] OR \"KMO gene\"[Title/Abstract] OR \"KMO protein\"[Title/Abstract] OR \"Kynurenine 3-Monooxygenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 24,
+    "timestamp": "2026-05-03T23:56:06",
+    "query": "(\"KMO\"[Title/Abstract] OR \"KMO gene\"[Title/Abstract] OR \"KMO protein\"[Title/Abstract] OR \"Kynurenine 3-Monooxygenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"LAP3\"[Title/Abstract] OR \"LAP3 gene\"[Title/Abstract] OR \"LAP3 protein\"[Title/Abstract] OR \"Leucine Aminopeptidase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-03T23:56:07",
+    "query": "(\"LAP3\"[Title/Abstract] OR \"LAP3 gene\"[Title/Abstract] OR \"LAP3 protein\"[Title/Abstract] OR \"Leucine Aminopeptidase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"LCK\"[Title/Abstract] OR \"LCK gene\"[Title/Abstract] OR \"LCK protein\"[Title/Abstract] OR \"LCK Proto-Oncogene, Src Family Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 29,
+    "timestamp": "2026-05-03T23:56:08",
+    "query": "(\"LCK\"[Title/Abstract] OR \"LCK gene\"[Title/Abstract] OR \"LCK protein\"[Title/Abstract] OR \"LCK Proto-Oncogene, Src Family Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"LGALS3\"[Title/Abstract] OR \"LGALS3 gene\"[Title/Abstract] OR \"LGALS3 protein\"[Title/Abstract] OR \"Galectin 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 220,
+    "timestamp": "2026-05-03T23:56:09",
+    "query": "(\"LGALS3\"[Title/Abstract] OR \"LGALS3 gene\"[Title/Abstract] OR \"LGALS3 protein\"[Title/Abstract] OR \"Galectin 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"LGALS4\"[Title/Abstract] OR \"LGALS4 gene\"[Title/Abstract] OR \"LGALS4 protein\"[Title/Abstract] OR \"Galectin 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 3,
+    "timestamp": "2026-05-03T23:56:09",
+    "query": "(\"LGALS4\"[Title/Abstract] OR \"LGALS4 gene\"[Title/Abstract] OR \"LGALS4 protein\"[Title/Abstract] OR \"Galectin 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"LGALS8\"[Title/Abstract] OR \"LGALS8 gene\"[Title/Abstract] OR \"LGALS8 protein\"[Title/Abstract] OR \"Galectin 8\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-03T23:56:10",
+    "query": "(\"LGALS8\"[Title/Abstract] OR \"LGALS8 gene\"[Title/Abstract] OR \"LGALS8 protein\"[Title/Abstract] OR \"Galectin 8\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"LTA4H\"[Title/Abstract] OR \"LTA4H gene\"[Title/Abstract] OR \"LTA4H protein\"[Title/Abstract] OR \"Leukotriene A4 Hydrolase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 9,
+    "timestamp": "2026-05-03T23:56:11",
+    "query": "(\"LTA4H\"[Title/Abstract] OR \"LTA4H gene\"[Title/Abstract] OR \"LTA4H protein\"[Title/Abstract] OR \"Leukotriene A4 Hydrolase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MAOB\"[Title/Abstract] OR \"MAOB gene\"[Title/Abstract] OR \"MAOB protein\"[Title/Abstract] OR \"Monoamine Oxidase B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 396,
+    "timestamp": "2026-05-03T23:56:11",
+    "query": "(\"MAOB\"[Title/Abstract] OR \"MAOB gene\"[Title/Abstract] OR \"MAOB protein\"[Title/Abstract] OR \"Monoamine Oxidase B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MAP2K1\"[Title/Abstract] OR \"MAP2K1 gene\"[Title/Abstract] OR \"MAP2K1 protein\"[Title/Abstract] OR \"Mitogen-Activated Protein Kinase Kinase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 37,
+    "timestamp": "2026-05-03T23:56:13",
+    "query": "(\"MAP2K1\"[Title/Abstract] OR \"MAP2K1 gene\"[Title/Abstract] OR \"MAP2K1 protein\"[Title/Abstract] OR \"Mitogen-Activated Protein Kinase Kinase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MAPK1\"[Title/Abstract] OR \"MAPK1 gene\"[Title/Abstract] OR \"MAPK1 protein\"[Title/Abstract] OR \"Mitogen-Activated Protein Kinase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 216,
+    "timestamp": "2026-05-03T23:56:14",
+    "query": "(\"MAPK1\"[Title/Abstract] OR \"MAPK1 gene\"[Title/Abstract] OR \"MAPK1 protein\"[Title/Abstract] OR \"Mitogen-Activated Protein Kinase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MAPK14\"[Title/Abstract] OR \"MAPK14 gene\"[Title/Abstract] OR \"MAPK14 protein\"[Title/Abstract] OR \"Mitogen-Activated Protein Kinase 14\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 128,
+    "timestamp": "2026-05-03T23:56:14",
+    "query": "(\"MAPK14\"[Title/Abstract] OR \"MAPK14 gene\"[Title/Abstract] OR \"MAPK14 protein\"[Title/Abstract] OR \"Mitogen-Activated Protein Kinase 14\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MAPK8\"[Title/Abstract] OR \"MAPK8 gene\"[Title/Abstract] OR \"MAPK8 protein\"[Title/Abstract] OR \"Mitogen-Activated Protein Kinase 8\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 88,
+    "timestamp": "2026-05-03T23:56:15",
+    "query": "(\"MAPK8\"[Title/Abstract] OR \"MAPK8 gene\"[Title/Abstract] OR \"MAPK8 protein\"[Title/Abstract] OR \"Mitogen-Activated Protein Kinase 8\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MAPK9\"[Title/Abstract] OR \"MAPK9 gene\"[Title/Abstract] OR \"MAPK9 protein\"[Title/Abstract] OR \"Mitogen-Activated Protein Kinase 9\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 15,
+    "timestamp": "2026-05-03T23:56:16",
+    "query": "(\"MAPK9\"[Title/Abstract] OR \"MAPK9 gene\"[Title/Abstract] OR \"MAPK9 protein\"[Title/Abstract] OR \"Mitogen-Activated Protein Kinase 9\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MAPKAPK2\"[Title/Abstract] OR \"MAPKAPK2 gene\"[Title/Abstract] OR \"MAPKAPK2 protein\"[Title/Abstract] OR \"MAPK Activated Protein Kinase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 26,
+    "timestamp": "2026-05-03T23:56:17",
+    "query": "(\"MAPKAPK2\"[Title/Abstract] OR \"MAPKAPK2 gene\"[Title/Abstract] OR \"MAPKAPK2 protein\"[Title/Abstract] OR \"MAPK Activated Protein Kinase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MAPT\"[Title/Abstract] OR \"MAPT gene\"[Title/Abstract] OR \"MAPT protein\"[Title/Abstract] OR \"Microtubule Associated Protein Tau\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 120,
+    "timestamp": "2026-05-03T23:56:18",
+    "query": "(\"MAPT\"[Title/Abstract] OR \"MAPT gene\"[Title/Abstract] OR \"MAPT protein\"[Title/Abstract] OR \"Microtubule Associated Protein Tau\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MC1R\"[Title/Abstract] OR \"MC1R gene\"[Title/Abstract] OR \"MC1R protein\"[Title/Abstract] OR \"Melanocortin 1 Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 53,
+    "timestamp": "2026-05-03T23:56:18",
+    "query": "(\"MC1R\"[Title/Abstract] OR \"MC1R gene\"[Title/Abstract] OR \"MC1R protein\"[Title/Abstract] OR \"Melanocortin 1 Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MET\"[Title/Abstract] OR \"MET gene\"[Title/Abstract] OR \"MET protein\"[Title/Abstract] OR \"MET Proto-Oncogene, Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1830,
+    "timestamp": "2026-05-03T23:56:20",
+    "query": "(\"MET\"[Title/Abstract] OR \"MET gene\"[Title/Abstract] OR \"MET protein\"[Title/Abstract] OR \"MET Proto-Oncogene, Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MGLL\"[Title/Abstract] OR \"MGLL gene\"[Title/Abstract] OR \"MGLL protein\"[Title/Abstract] OR \"Monoglyceride Lipase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 5,
+    "timestamp": "2026-05-03T23:56:21",
+    "query": "(\"MGLL\"[Title/Abstract] OR \"MGLL gene\"[Title/Abstract] OR \"MGLL protein\"[Title/Abstract] OR \"Monoglyceride Lipase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MIF\"[Title/Abstract] OR \"MIF gene\"[Title/Abstract] OR \"MIF protein\"[Title/Abstract] OR \"Macrophage Migration Inhibitory Factor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 202,
+    "timestamp": "2026-05-03T23:56:22",
+    "query": "(\"MIF\"[Title/Abstract] OR \"MIF gene\"[Title/Abstract] OR \"MIF protein\"[Title/Abstract] OR \"Macrophage Migration Inhibitory Factor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MME\"[Title/Abstract] OR \"MME gene\"[Title/Abstract] OR \"MME protein\"[Title/Abstract] OR \"Membrane Metalloendopeptidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 16,
+    "timestamp": "2026-05-03T23:56:23",
+    "query": "(\"MME\"[Title/Abstract] OR \"MME gene\"[Title/Abstract] OR \"MME protein\"[Title/Abstract] OR \"Membrane Metalloendopeptidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MMP1\"[Title/Abstract] OR \"MMP1 gene\"[Title/Abstract] OR \"MMP1 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 437,
+    "timestamp": "2026-05-03T23:56:24",
+    "query": "(\"MMP1\"[Title/Abstract] OR \"MMP1 gene\"[Title/Abstract] OR \"MMP1 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MMP12\"[Title/Abstract] OR \"MMP12 gene\"[Title/Abstract] OR \"MMP12 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 12\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 86,
+    "timestamp": "2026-05-03T23:56:25",
+    "query": "(\"MMP12\"[Title/Abstract] OR \"MMP12 gene\"[Title/Abstract] OR \"MMP12 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 12\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MMP13\"[Title/Abstract] OR \"MMP13 gene\"[Title/Abstract] OR \"MMP13 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 13\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 353,
+    "timestamp": "2026-05-03T23:56:26",
+    "query": "(\"MMP13\"[Title/Abstract] OR \"MMP13 gene\"[Title/Abstract] OR \"MMP13 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 13\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MMP14\"[Title/Abstract] OR \"MMP14 gene\"[Title/Abstract] OR \"MMP14 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 14\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 34,
+    "timestamp": "2026-05-03T23:56:26",
+    "query": "(\"MMP14\"[Title/Abstract] OR \"MMP14 gene\"[Title/Abstract] OR \"MMP14 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 14\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MMP2\"[Title/Abstract] OR \"MMP2 gene\"[Title/Abstract] OR \"MMP2 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1123,
+    "timestamp": "2026-05-03T23:56:27",
+    "query": "(\"MMP2\"[Title/Abstract] OR \"MMP2 gene\"[Title/Abstract] OR \"MMP2 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MMP3\"[Title/Abstract] OR \"MMP3 gene\"[Title/Abstract] OR \"MMP3 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 337,
+    "timestamp": "2026-05-03T23:56:28",
+    "query": "(\"MMP3\"[Title/Abstract] OR \"MMP3 gene\"[Title/Abstract] OR \"MMP3 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MMP7\"[Title/Abstract] OR \"MMP7 gene\"[Title/Abstract] OR \"MMP7 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 51,
+    "timestamp": "2026-05-03T23:56:29",
+    "query": "(\"MMP7\"[Title/Abstract] OR \"MMP7 gene\"[Title/Abstract] OR \"MMP7 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MMP8\"[Title/Abstract] OR \"MMP8 gene\"[Title/Abstract] OR \"MMP8 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 8\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 63,
+    "timestamp": "2026-05-03T23:56:30",
+    "query": "(\"MMP8\"[Title/Abstract] OR \"MMP8 gene\"[Title/Abstract] OR \"MMP8 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 8\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MMP9\"[Title/Abstract] OR \"MMP9 gene\"[Title/Abstract] OR \"MMP9 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 9\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1804,
+    "timestamp": "2026-05-03T23:56:30",
+    "query": "(\"MMP9\"[Title/Abstract] OR \"MMP9 gene\"[Title/Abstract] OR \"MMP9 protein\"[Title/Abstract] OR \"Matrix Metallopeptidase 9\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MPO\"[Title/Abstract] OR \"MPO gene\"[Title/Abstract] OR \"MPO protein\"[Title/Abstract] OR \"Myeloperoxidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 5010,
+    "timestamp": "2026-05-03T23:56:31",
+    "query": "(\"MPO\"[Title/Abstract] OR \"MPO gene\"[Title/Abstract] OR \"MPO protein\"[Title/Abstract] OR \"Myeloperoxidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MTNR1A\"[Title/Abstract] OR \"MTNR1A gene\"[Title/Abstract] OR \"MTNR1A protein\"[Title/Abstract] OR \"Melatonin Receptor 1A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 20,
+    "timestamp": "2026-05-03T23:56:32",
+    "query": "(\"MTNR1A\"[Title/Abstract] OR \"MTNR1A gene\"[Title/Abstract] OR \"MTNR1A protein\"[Title/Abstract] OR \"Melatonin Receptor 1A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MTNR1B\"[Title/Abstract] OR \"MTNR1B gene\"[Title/Abstract] OR \"MTNR1B protein\"[Title/Abstract] OR \"Melatonin Receptor 1B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 10,
+    "timestamp": "2026-05-03T23:56:33",
+    "query": "(\"MTNR1B\"[Title/Abstract] OR \"MTNR1B gene\"[Title/Abstract] OR \"MTNR1B protein\"[Title/Abstract] OR \"Melatonin Receptor 1B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MTOR\"[Title/Abstract] OR \"MTOR gene\"[Title/Abstract] OR \"MTOR protein\"[Title/Abstract] OR \"Mechanistic Target Of Rapamycin Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 3497,
+    "timestamp": "2026-05-03T23:56:34",
+    "query": "(\"MTOR\"[Title/Abstract] OR \"MTOR gene\"[Title/Abstract] OR \"MTOR protein\"[Title/Abstract] OR \"Mechanistic Target Of Rapamycin Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"NCSTN\"[Title/Abstract] OR \"NCSTN gene\"[Title/Abstract] OR \"NCSTN protein\"[Title/Abstract] OR \"Nicastrin\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 10,
+    "timestamp": "2026-05-03T23:56:35",
+    "query": "(\"NCSTN\"[Title/Abstract] OR \"NCSTN gene\"[Title/Abstract] OR \"NCSTN protein\"[Title/Abstract] OR \"Nicastrin\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"NEU2\"[Title/Abstract] OR \"NEU2 gene\"[Title/Abstract] OR \"NEU2 protein\"[Title/Abstract] OR \"Neuraminidase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:56:36",
+    "query": "(\"NEU2\"[Title/Abstract] OR \"NEU2 gene\"[Title/Abstract] OR \"NEU2 protein\"[Title/Abstract] OR \"Neuraminidase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"NMUR2\"[Title/Abstract] OR \"NMUR2 gene\"[Title/Abstract] OR \"NMUR2 protein\"[Title/Abstract] OR \"Neuromedin U Receptor 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:56:37",
+    "query": "(\"NMUR2\"[Title/Abstract] OR \"NMUR2 gene\"[Title/Abstract] OR \"NMUR2 protein\"[Title/Abstract] OR \"Neuromedin U Receptor 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"NOD1\"[Title/Abstract] OR \"NOD1 gene\"[Title/Abstract] OR \"NOD1 protein\"[Title/Abstract] OR \"Nucleotide Binding Oligomerization Domain Containing 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 13,
+    "timestamp": "2026-05-03T23:56:38",
+    "query": "(\"NOD1\"[Title/Abstract] OR \"NOD1 gene\"[Title/Abstract] OR \"NOD1 protein\"[Title/Abstract] OR \"Nucleotide Binding Oligomerization Domain Containing 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"NOD2\"[Title/Abstract] OR \"NOD2 gene\"[Title/Abstract] OR \"NOD2 protein\"[Title/Abstract] OR \"Nucleotide Binding Oligomerization Domain Containing 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 37,
+    "timestamp": "2026-05-03T23:56:39",
+    "query": "(\"NOD2\"[Title/Abstract] OR \"NOD2 gene\"[Title/Abstract] OR \"NOD2 protein\"[Title/Abstract] OR \"Nucleotide Binding Oligomerization Domain Containing 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"NOX4\"[Title/Abstract] OR \"NOX4 gene\"[Title/Abstract] OR \"NOX4 protein\"[Title/Abstract] OR \"NADPH Oxidase 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2166,
+    "timestamp": "2026-05-03T23:56:39",
+    "query": "(\"NOX4\"[Title/Abstract] OR \"NOX4 gene\"[Title/Abstract] OR \"NOX4 protein\"[Title/Abstract] OR \"NADPH Oxidase 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"NQO2\"[Title/Abstract] OR \"NQO2 gene\"[Title/Abstract] OR \"NQO2 protein\"[Title/Abstract] OR \"N-Ribosyldihydronicotinamide:Quinone Dehydrogenase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 36,
+    "timestamp": "2026-05-03T23:56:40",
+    "query": "(\"NQO2\"[Title/Abstract] OR \"NQO2 gene\"[Title/Abstract] OR \"NQO2 protein\"[Title/Abstract] OR \"N-Ribosyldihydronicotinamide:Quinone Dehydrogenase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"NR1H4\"[Title/Abstract] OR \"NR1H4 gene\"[Title/Abstract] OR \"NR1H4 protein\"[Title/Abstract] OR \"Nuclear Receptor Subfamily 1 Group H Member 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 14,
+    "timestamp": "2026-05-03T23:56:41",
+    "query": "(\"NR1H4\"[Title/Abstract] OR \"NR1H4 gene\"[Title/Abstract] OR \"NR1H4 protein\"[Title/Abstract] OR \"Nuclear Receptor Subfamily 1 Group H Member 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"NTRK1\"[Title/Abstract] OR \"NTRK1 gene\"[Title/Abstract] OR \"NTRK1 protein\"[Title/Abstract] OR \"Neurotrophic Receptor Tyrosine Kinase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 6,
+    "timestamp": "2026-05-03T23:56:42",
+    "query": "(\"NTRK1\"[Title/Abstract] OR \"NTRK1 gene\"[Title/Abstract] OR \"NTRK1 protein\"[Title/Abstract] OR \"Neurotrophic Receptor Tyrosine Kinase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"OAT\"[Title/Abstract] OR \"OAT gene\"[Title/Abstract] OR \"OAT protein\"[Title/Abstract] OR \"Ornithine Aminotransferase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 188,
+    "timestamp": "2026-05-03T23:56:43",
+    "query": "(\"OAT\"[Title/Abstract] OR \"OAT gene\"[Title/Abstract] OR \"OAT protein\"[Title/Abstract] OR \"Ornithine Aminotransferase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PAOX\"[Title/Abstract] OR \"PAOX gene\"[Title/Abstract] OR \"PAOX protein\"[Title/Abstract] OR \"Polyamine Oxidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 38,
+    "timestamp": "2026-05-03T23:56:44",
+    "query": "(\"PAOX\"[Title/Abstract] OR \"PAOX gene\"[Title/Abstract] OR \"PAOX protein\"[Title/Abstract] OR \"Polyamine Oxidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PARP1\"[Title/Abstract] OR \"PARP1 gene\"[Title/Abstract] OR \"PARP1 protein\"[Title/Abstract] OR \"Poly(ADP-Ribose) Polymerase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 990,
+    "timestamp": "2026-05-03T23:56:45",
+    "query": "(\"PARP1\"[Title/Abstract] OR \"PARP1 gene\"[Title/Abstract] OR \"PARP1 protein\"[Title/Abstract] OR \"Poly(ADP-Ribose) Polymerase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PARP2\"[Title/Abstract] OR \"PARP2 gene\"[Title/Abstract] OR \"PARP2 protein\"[Title/Abstract] OR \"Poly(ADP-Ribose) Polymerase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 29,
+    "timestamp": "2026-05-03T23:56:45",
+    "query": "(\"PARP2\"[Title/Abstract] OR \"PARP2 gene\"[Title/Abstract] OR \"PARP2 protein\"[Title/Abstract] OR \"Poly(ADP-Ribose) Polymerase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PDE3A\"[Title/Abstract] OR \"PDE3A gene\"[Title/Abstract] OR \"PDE3A protein\"[Title/Abstract] OR \"Phosphodiesterase 3A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 7,
+    "timestamp": "2026-05-03T23:56:46",
+    "query": "(\"PDE3A\"[Title/Abstract] OR \"PDE3A gene\"[Title/Abstract] OR \"PDE3A protein\"[Title/Abstract] OR \"Phosphodiesterase 3A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PDE3B\"[Title/Abstract] OR \"PDE3B gene\"[Title/Abstract] OR \"PDE3B protein\"[Title/Abstract] OR \"Phosphodiesterase 3B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 8,
+    "timestamp": "2026-05-03T23:56:47",
+    "query": "(\"PDE3B\"[Title/Abstract] OR \"PDE3B gene\"[Title/Abstract] OR \"PDE3B protein\"[Title/Abstract] OR \"Phosphodiesterase 3B\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PDE5A\"[Title/Abstract] OR \"PDE5A gene\"[Title/Abstract] OR \"PDE5A protein\"[Title/Abstract] OR \"Phosphodiesterase 5A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 9,
+    "timestamp": "2026-05-03T23:56:47",
+    "query": "(\"PDE5A\"[Title/Abstract] OR \"PDE5A gene\"[Title/Abstract] OR \"PDE5A protein\"[Title/Abstract] OR \"Phosphodiesterase 5A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PDGFRA\"[Title/Abstract] OR \"PDGFRA gene\"[Title/Abstract] OR \"PDGFRA protein\"[Title/Abstract] OR \"Platelet Derived Growth Factor Receptor Alpha\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 24,
+    "timestamp": "2026-05-03T23:56:48",
+    "query": "(\"PDGFRA\"[Title/Abstract] OR \"PDGFRA gene\"[Title/Abstract] OR \"PDGFRA protein\"[Title/Abstract] OR \"Platelet Derived Growth Factor Receptor Alpha\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PDGFRB\"[Title/Abstract] OR \"PDGFRB gene\"[Title/Abstract] OR \"PDGFRB protein\"[Title/Abstract] OR \"Platelet Derived Growth Factor Receptor Beta\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 39,
+    "timestamp": "2026-05-03T23:56:49",
+    "query": "(\"PDGFRB\"[Title/Abstract] OR \"PDGFRB gene\"[Title/Abstract] OR \"PDGFRB protein\"[Title/Abstract] OR \"Platelet Derived Growth Factor Receptor Beta\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PFKFB3\"[Title/Abstract] OR \"PFKFB3 gene\"[Title/Abstract] OR \"PFKFB3 protein\"[Title/Abstract] OR \"6-Phosphofructo-2-Kinase/Fructose-2,6-Biphosphatase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 44,
+    "timestamp": "2026-05-03T23:56:49",
+    "query": "(\"PFKFB3\"[Title/Abstract] OR \"PFKFB3 gene\"[Title/Abstract] OR \"PFKFB3 protein\"[Title/Abstract] OR \"6-Phosphofructo-2-Kinase/Fructose-2,6-Biphosphatase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PGD\"[Title/Abstract] OR \"PGD gene\"[Title/Abstract] OR \"PGD protein\"[Title/Abstract] OR \"Phosphogluconate Dehydrogenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 121,
+    "timestamp": "2026-05-03T23:56:50",
+    "query": "(\"PGD\"[Title/Abstract] OR \"PGD gene\"[Title/Abstract] OR \"PGD protein\"[Title/Abstract] OR \"Phosphogluconate Dehydrogenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PGF\"[Title/Abstract] OR \"PGF gene\"[Title/Abstract] OR \"PGF protein\"[Title/Abstract] OR \"Placental Growth Factor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 570,
+    "timestamp": "2026-05-03T23:56:51",
+    "query": "(\"PGF\"[Title/Abstract] OR \"PGF gene\"[Title/Abstract] OR \"PGF protein\"[Title/Abstract] OR \"Placental Growth Factor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PIK3CA\"[Title/Abstract] OR \"PIK3CA gene\"[Title/Abstract] OR \"PIK3CA protein\"[Title/Abstract] OR \"Phosphatidylinositol-4,5-Bisphosphate 3-Kinase Catalytic Subunit Alpha\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 94,
+    "timestamp": "2026-05-03T23:56:52",
+    "query": "(\"PIK3CA\"[Title/Abstract] OR \"PIK3CA gene\"[Title/Abstract] OR \"PIK3CA protein\"[Title/Abstract] OR \"Phosphatidylinositol-4,5-Bisphosphate 3-Kinase Catalytic Subunit Alpha\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PIM1\"[Title/Abstract] OR \"PIM1 gene\"[Title/Abstract] OR \"PIM1 protein\"[Title/Abstract] OR \"Pim-1 Proto-Oncogene, Serine/Threonine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 35,
+    "timestamp": "2026-05-03T23:56:53",
+    "query": "(\"PIM1\"[Title/Abstract] OR \"PIM1 gene\"[Title/Abstract] OR \"PIM1 protein\"[Title/Abstract] OR \"Pim-1 Proto-Oncogene, Serine/Threonine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PIM2\"[Title/Abstract] OR \"PIM2 gene\"[Title/Abstract] OR \"PIM2 protein\"[Title/Abstract] OR \"Pim-2 Proto-Oncogene, Serine/Threonine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 7,
+    "timestamp": "2026-05-03T23:56:54",
+    "query": "(\"PIM2\"[Title/Abstract] OR \"PIM2 gene\"[Title/Abstract] OR \"PIM2 protein\"[Title/Abstract] OR \"Pim-2 Proto-Oncogene, Serine/Threonine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PLA2G10\"[Title/Abstract] OR \"PLA2G10 gene\"[Title/Abstract] OR \"PLA2G10 protein\"[Title/Abstract] OR \"Phospholipase A2 Group X\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-03T23:56:55",
+    "query": "(\"PLA2G10\"[Title/Abstract] OR \"PLA2G10 gene\"[Title/Abstract] OR \"PLA2G10 protein\"[Title/Abstract] OR \"Phospholipase A2 Group X\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PLA2G2A\"[Title/Abstract] OR \"PLA2G2A gene\"[Title/Abstract] OR \"PLA2G2A protein\"[Title/Abstract] OR \"Phospholipase A2 Group IIA\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 14,
+    "timestamp": "2026-05-03T23:56:56",
+    "query": "(\"PLA2G2A\"[Title/Abstract] OR \"PLA2G2A gene\"[Title/Abstract] OR \"PLA2G2A protein\"[Title/Abstract] OR \"Phospholipase A2 Group IIA\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PLA2G5\"[Title/Abstract] OR \"PLA2G5 gene\"[Title/Abstract] OR \"PLA2G5 protein\"[Title/Abstract] OR \"Phospholipase A2 Group V\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 3,
+    "timestamp": "2026-05-03T23:56:57",
+    "query": "(\"PLA2G5\"[Title/Abstract] OR \"PLA2G5 gene\"[Title/Abstract] OR \"PLA2G5 protein\"[Title/Abstract] OR \"Phospholipase A2 Group V\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PLA2G7\"[Title/Abstract] OR \"PLA2G7 gene\"[Title/Abstract] OR \"PLA2G7 protein\"[Title/Abstract] OR \"Phospholipase A2 Group VII\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 16,
+    "timestamp": "2026-05-03T23:56:58",
+    "query": "(\"PLA2G7\"[Title/Abstract] OR \"PLA2G7 gene\"[Title/Abstract] OR \"PLA2G7 protein\"[Title/Abstract] OR \"Phospholipase A2 Group VII\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PLAU\"[Title/Abstract] OR \"PLAU gene\"[Title/Abstract] OR \"PLAU protein\"[Title/Abstract] OR \"Plasminogen Activator, Urokinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 17,
+    "timestamp": "2026-05-03T23:56:59",
+    "query": "(\"PLAU\"[Title/Abstract] OR \"PLAU gene\"[Title/Abstract] OR \"PLAU protein\"[Title/Abstract] OR \"Plasminogen Activator, Urokinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PLEC\"[Title/Abstract] OR \"PLEC gene\"[Title/Abstract] OR \"PLEC protein\"[Title/Abstract] OR \"Plectin\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 10,
+    "timestamp": "2026-05-03T23:56:59",
+    "query": "(\"PLEC\"[Title/Abstract] OR \"PLEC gene\"[Title/Abstract] OR \"PLEC protein\"[Title/Abstract] OR \"Plectin\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PLG\"[Title/Abstract] OR \"PLG gene\"[Title/Abstract] OR \"PLG protein\"[Title/Abstract] OR \"Plasminogen\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 676,
+    "timestamp": "2026-05-03T23:57:00",
+    "query": "(\"PLG\"[Title/Abstract] OR \"PLG gene\"[Title/Abstract] OR \"PLG protein\"[Title/Abstract] OR \"Plasminogen\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"POLB\"[Title/Abstract] OR \"POLB gene\"[Title/Abstract] OR \"POLB protein\"[Title/Abstract] OR \"DNA Polymerase Beta\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 83,
+    "timestamp": "2026-05-03T23:57:01",
+    "query": "(\"POLB\"[Title/Abstract] OR \"POLB gene\"[Title/Abstract] OR \"POLB protein\"[Title/Abstract] OR \"DNA Polymerase Beta\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PPARA\"[Title/Abstract] OR \"PPARA gene\"[Title/Abstract] OR \"PPARA protein\"[Title/Abstract] OR \"Peroxisome Proliferator Activated Receptor Alpha\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 657,
+    "timestamp": "2026-05-03T23:57:02",
+    "query": "(\"PPARA\"[Title/Abstract] OR \"PPARA gene\"[Title/Abstract] OR \"PPARA protein\"[Title/Abstract] OR \"Peroxisome Proliferator Activated Receptor Alpha\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PPARD\"[Title/Abstract] OR \"PPARD gene\"[Title/Abstract] OR \"PPARD protein\"[Title/Abstract] OR \"Peroxisome Proliferator Activated Receptor Delta\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 61,
+    "timestamp": "2026-05-03T23:57:03",
+    "query": "(\"PPARD\"[Title/Abstract] OR \"PPARD gene\"[Title/Abstract] OR \"PPARD protein\"[Title/Abstract] OR \"Peroxisome Proliferator Activated Receptor Delta\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PRF1\"[Title/Abstract] OR \"PRF1 gene\"[Title/Abstract] OR \"PRF1 protein\"[Title/Abstract] OR \"Perforin 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 5,
+    "timestamp": "2026-05-03T23:57:04",
+    "query": "(\"PRF1\"[Title/Abstract] OR \"PRF1 gene\"[Title/Abstract] OR \"PRF1 protein\"[Title/Abstract] OR \"Perforin 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PRKCA\"[Title/Abstract] OR \"PRKCA gene\"[Title/Abstract] OR \"PRKCA protein\"[Title/Abstract] OR \"Protein Kinase C Alpha\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 69,
+    "timestamp": "2026-05-03T23:57:05",
+    "query": "(\"PRKCA\"[Title/Abstract] OR \"PRKCA gene\"[Title/Abstract] OR \"PRKCA protein\"[Title/Abstract] OR \"Protein Kinase C Alpha\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PRKCE\"[Title/Abstract] OR \"PRKCE gene\"[Title/Abstract] OR \"PRKCE protein\"[Title/Abstract] OR \"Protein Kinase C Epsilon\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 26,
+    "timestamp": "2026-05-03T23:57:06",
+    "query": "(\"PRKCE\"[Title/Abstract] OR \"PRKCE gene\"[Title/Abstract] OR \"PRKCE protein\"[Title/Abstract] OR \"Protein Kinase C Epsilon\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PSEN1\"[Title/Abstract] OR \"PSEN1 gene\"[Title/Abstract] OR \"PSEN1 protein\"[Title/Abstract] OR \"Presenilin 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 234,
+    "timestamp": "2026-05-03T23:57:07",
+    "query": "(\"PSEN1\"[Title/Abstract] OR \"PSEN1 gene\"[Title/Abstract] OR \"PSEN1 protein\"[Title/Abstract] OR \"Presenilin 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PSEN2\"[Title/Abstract] OR \"PSEN2 gene\"[Title/Abstract] OR \"PSEN2 protein\"[Title/Abstract] OR \"Presenilin 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 52,
+    "timestamp": "2026-05-03T23:57:08",
+    "query": "(\"PSEN2\"[Title/Abstract] OR \"PSEN2 gene\"[Title/Abstract] OR \"PSEN2 protein\"[Title/Abstract] OR \"Presenilin 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PSENEN\"[Title/Abstract] OR \"PSENEN gene\"[Title/Abstract] OR \"PSENEN protein\"[Title/Abstract] OR \"Presenilin Enhancer, Gamma-Secretase Subunit\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-03T23:57:09",
+    "query": "(\"PSENEN\"[Title/Abstract] OR \"PSENEN gene\"[Title/Abstract] OR \"PSENEN protein\"[Title/Abstract] OR \"Presenilin Enhancer, Gamma-Secretase Subunit\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PTGS1\"[Title/Abstract] OR \"PTGS1 gene\"[Title/Abstract] OR \"PTGS1 protein\"[Title/Abstract] OR \"Prostaglandin-Endoperoxide Synthase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 37,
+    "timestamp": "2026-05-03T23:57:10",
+    "query": "(\"PTGS1\"[Title/Abstract] OR \"PTGS1 gene\"[Title/Abstract] OR \"PTGS1 protein\"[Title/Abstract] OR \"Prostaglandin-Endoperoxide Synthase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PTGS2\"[Title/Abstract] OR \"PTGS2 gene\"[Title/Abstract] OR \"PTGS2 protein\"[Title/Abstract] OR \"Prostaglandin-Endoperoxide Synthase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 433,
+    "timestamp": "2026-05-03T23:57:11",
+    "query": "(\"PTGS2\"[Title/Abstract] OR \"PTGS2 gene\"[Title/Abstract] OR \"PTGS2 protein\"[Title/Abstract] OR \"Prostaglandin-Endoperoxide Synthase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PTPN1\"[Title/Abstract] OR \"PTPN1 gene\"[Title/Abstract] OR \"PTPN1 protein\"[Title/Abstract] OR \"Protein Tyrosine Phosphatase Non-Receptor Type 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 12,
+    "timestamp": "2026-05-03T23:57:12",
+    "query": "(\"PTPN1\"[Title/Abstract] OR \"PTPN1 gene\"[Title/Abstract] OR \"PTPN1 protein\"[Title/Abstract] OR \"Protein Tyrosine Phosphatase Non-Receptor Type 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ROCK2\"[Title/Abstract] OR \"ROCK2 gene\"[Title/Abstract] OR \"ROCK2 protein\"[Title/Abstract] OR \"Rho Associated Coiled-Coil Containing Protein Kinase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 69,
+    "timestamp": "2026-05-03T23:57:13",
+    "query": "(\"ROCK2\"[Title/Abstract] OR \"ROCK2 gene\"[Title/Abstract] OR \"ROCK2 protein\"[Title/Abstract] OR \"Rho Associated Coiled-Coil Containing Protein Kinase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"RORC\"[Title/Abstract] OR \"RORC gene\"[Title/Abstract] OR \"RORC protein\"[Title/Abstract] OR \"RAR Related Orphan Receptor C\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-03T23:57:14",
+    "query": "(\"RORC\"[Title/Abstract] OR \"RORC gene\"[Title/Abstract] OR \"RORC protein\"[Title/Abstract] OR \"RAR Related Orphan Receptor C\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"RPS6KA3\"[Title/Abstract] OR \"RPS6KA3 gene\"[Title/Abstract] OR \"RPS6KA3 protein\"[Title/Abstract] OR \"Ribosomal Protein S6 Kinase A3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:57:15",
+    "query": "(\"RPS6KA3\"[Title/Abstract] OR \"RPS6KA3 gene\"[Title/Abstract] OR \"RPS6KA3 protein\"[Title/Abstract] OR \"Ribosomal Protein S6 Kinase A3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"S1PR1\"[Title/Abstract] OR \"S1PR1 gene\"[Title/Abstract] OR \"S1PR1 protein\"[Title/Abstract] OR \"Sphingosine-1-Phosphate Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 29,
+    "timestamp": "2026-05-03T23:57:16",
+    "query": "(\"S1PR1\"[Title/Abstract] OR \"S1PR1 gene\"[Title/Abstract] OR \"S1PR1 protein\"[Title/Abstract] OR \"Sphingosine-1-Phosphate Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"S1PR3\"[Title/Abstract] OR \"S1PR3 gene\"[Title/Abstract] OR \"S1PR3 protein\"[Title/Abstract] OR \"Sphingosine-1-Phosphate Receptor 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 12,
+    "timestamp": "2026-05-03T23:57:17",
+    "query": "(\"S1PR3\"[Title/Abstract] OR \"S1PR3 gene\"[Title/Abstract] OR \"S1PR3 protein\"[Title/Abstract] OR \"Sphingosine-1-Phosphate Receptor 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SCD\"[Title/Abstract] OR \"SCD gene\"[Title/Abstract] OR \"SCD protein\"[Title/Abstract] OR \"Stearoyl-CoA Desaturase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 541,
+    "timestamp": "2026-05-03T23:57:17",
+    "query": "(\"SCD\"[Title/Abstract] OR \"SCD gene\"[Title/Abstract] OR \"SCD protein\"[Title/Abstract] OR \"Stearoyl-CoA Desaturase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SHBG\"[Title/Abstract] OR \"SHBG gene\"[Title/Abstract] OR \"SHBG protein\"[Title/Abstract] OR \"Sex Hormone Binding Globulin\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 107,
+    "timestamp": "2026-05-03T23:57:18",
+    "query": "(\"SHBG\"[Title/Abstract] OR \"SHBG gene\"[Title/Abstract] OR \"SHBG protein\"[Title/Abstract] OR \"Sex Hormone Binding Globulin\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SIRT2\"[Title/Abstract] OR \"SIRT2 gene\"[Title/Abstract] OR \"SIRT2 protein\"[Title/Abstract] OR \"Sirtuin 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 182,
+    "timestamp": "2026-05-03T23:57:20",
+    "query": "(\"SIRT2\"[Title/Abstract] OR \"SIRT2 gene\"[Title/Abstract] OR \"SIRT2 protein\"[Title/Abstract] OR \"Sirtuin 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SLC10A2\"[Title/Abstract] OR \"SLC10A2 gene\"[Title/Abstract] OR \"SLC10A2 protein\"[Title/Abstract] OR \"Solute Carrier Family 10 Member 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:57:21",
+    "query": "(\"SLC10A2\"[Title/Abstract] OR \"SLC10A2 gene\"[Title/Abstract] OR \"SLC10A2 protein\"[Title/Abstract] OR \"Solute Carrier Family 10 Member 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SLC15A1\"[Title/Abstract] OR \"SLC15A1 gene\"[Title/Abstract] OR \"SLC15A1 protein\"[Title/Abstract] OR \"Solute Carrier Family 15 Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-03T23:57:21",
+    "query": "(\"SLC15A1\"[Title/Abstract] OR \"SLC15A1 gene\"[Title/Abstract] OR \"SLC15A1 protein\"[Title/Abstract] OR \"Solute Carrier Family 15 Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SLC1A1\"[Title/Abstract] OR \"SLC1A1 gene\"[Title/Abstract] OR \"SLC1A1 protein\"[Title/Abstract] OR \"Solute Carrier Family 1 Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 11,
+    "timestamp": "2026-05-03T23:57:22",
+    "query": "(\"SLC1A1\"[Title/Abstract] OR \"SLC1A1 gene\"[Title/Abstract] OR \"SLC1A1 protein\"[Title/Abstract] OR \"Solute Carrier Family 1 Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SLC1A2\"[Title/Abstract] OR \"SLC1A2 gene\"[Title/Abstract] OR \"SLC1A2 protein\"[Title/Abstract] OR \"Solute Carrier Family 1 Member 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 6,
+    "timestamp": "2026-05-03T23:57:23",
+    "query": "(\"SLC1A2\"[Title/Abstract] OR \"SLC1A2 gene\"[Title/Abstract] OR \"SLC1A2 protein\"[Title/Abstract] OR \"Solute Carrier Family 1 Member 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SLC22A6\"[Title/Abstract] OR \"SLC22A6 gene\"[Title/Abstract] OR \"SLC22A6 protein\"[Title/Abstract] OR \"Solute Carrier Family 22 Member 6\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 7,
+    "timestamp": "2026-05-03T23:57:24",
+    "query": "(\"SLC22A6\"[Title/Abstract] OR \"SLC22A6 gene\"[Title/Abstract] OR \"SLC22A6 protein\"[Title/Abstract] OR \"Solute Carrier Family 22 Member 6\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SLC29A1\"[Title/Abstract] OR \"SLC29A1 gene\"[Title/Abstract] OR \"SLC29A1 protein\"[Title/Abstract] OR \"Solute Carrier Family 29 Member 1 (Augustine Blood Group)\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-03T23:57:25",
+    "query": "(\"SLC29A1\"[Title/Abstract] OR \"SLC29A1 gene\"[Title/Abstract] OR \"SLC29A1 protein\"[Title/Abstract] OR \"Solute Carrier Family 29 Member 1 (Augustine Blood Group)\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SLC5A1\"[Title/Abstract] OR \"SLC5A1 gene\"[Title/Abstract] OR \"SLC5A1 protein\"[Title/Abstract] OR \"Solute Carrier Family 5 Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-03T23:57:26",
+    "query": "(\"SLC5A1\"[Title/Abstract] OR \"SLC5A1 gene\"[Title/Abstract] OR \"SLC5A1 protein\"[Title/Abstract] OR \"Solute Carrier Family 5 Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SLC5A2\"[Title/Abstract] OR \"SLC5A2 gene\"[Title/Abstract] OR \"SLC5A2 protein\"[Title/Abstract] OR \"Solute Carrier Family 5 Member 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-03T23:57:27",
+    "query": "(\"SLC5A2\"[Title/Abstract] OR \"SLC5A2 gene\"[Title/Abstract] OR \"SLC5A2 protein\"[Title/Abstract] OR \"Solute Carrier Family 5 Member 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SLC5A7\"[Title/Abstract] OR \"SLC5A7 gene\"[Title/Abstract] OR \"SLC5A7 protein\"[Title/Abstract] OR \"Solute Carrier Family 5 Member 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:57:27",
+    "query": "(\"SLC5A7\"[Title/Abstract] OR \"SLC5A7 gene\"[Title/Abstract] OR \"SLC5A7 protein\"[Title/Abstract] OR \"Solute Carrier Family 5 Member 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SLC6A13\"[Title/Abstract] OR \"SLC6A13 gene\"[Title/Abstract] OR \"SLC6A13 protein\"[Title/Abstract] OR \"Solute Carrier Family 6 Member 13\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:57:28",
+    "query": "(\"SLC6A13\"[Title/Abstract] OR \"SLC6A13 gene\"[Title/Abstract] OR \"SLC6A13 protein\"[Title/Abstract] OR \"Solute Carrier Family 6 Member 13\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SLC6A2\"[Title/Abstract] OR \"SLC6A2 gene\"[Title/Abstract] OR \"SLC6A2 protein\"[Title/Abstract] OR \"Solute Carrier Family 6 Member 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:57:29",
+    "query": "(\"SLC6A2\"[Title/Abstract] OR \"SLC6A2 gene\"[Title/Abstract] OR \"SLC6A2 protein\"[Title/Abstract] OR \"Solute Carrier Family 6 Member 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SLC6A3\"[Title/Abstract] OR \"SLC6A3 gene\"[Title/Abstract] OR \"SLC6A3 protein\"[Title/Abstract] OR \"Solute Carrier Family 6 Member 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 16,
+    "timestamp": "2026-05-03T23:57:30",
+    "query": "(\"SLC6A3\"[Title/Abstract] OR \"SLC6A3 gene\"[Title/Abstract] OR \"SLC6A3 protein\"[Title/Abstract] OR \"Solute Carrier Family 6 Member 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SLC6A4\"[Title/Abstract] OR \"SLC6A4 gene\"[Title/Abstract] OR \"SLC6A4 protein\"[Title/Abstract] OR \"Solute Carrier Family 6 Member 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 18,
+    "timestamp": "2026-05-03T23:57:30",
+    "query": "(\"SLC6A4\"[Title/Abstract] OR \"SLC6A4 gene\"[Title/Abstract] OR \"SLC6A4 protein\"[Title/Abstract] OR \"Solute Carrier Family 6 Member 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SQLE\"[Title/Abstract] OR \"SQLE gene\"[Title/Abstract] OR \"SQLE protein\"[Title/Abstract] OR \"Squalene Epoxidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 25,
+    "timestamp": "2026-05-03T23:57:31",
+    "query": "(\"SQLE\"[Title/Abstract] OR \"SQLE gene\"[Title/Abstract] OR \"SQLE protein\"[Title/Abstract] OR \"Squalene Epoxidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SRC\"[Title/Abstract] OR \"SRC gene\"[Title/Abstract] OR \"SRC protein\"[Title/Abstract] OR \"SRC Proto-Oncogene, Non-Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 733,
+    "timestamp": "2026-05-03T23:57:32",
+    "query": "(\"SRC\"[Title/Abstract] OR \"SRC gene\"[Title/Abstract] OR \"SRC protein\"[Title/Abstract] OR \"SRC Proto-Oncogene, Non-Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SRD5A2\"[Title/Abstract] OR \"SRD5A2 gene\"[Title/Abstract] OR \"SRD5A2 protein\"[Title/Abstract] OR \"Steroid 5 Alpha-Reductase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 11,
+    "timestamp": "2026-05-03T23:57:33",
+    "query": "(\"SRD5A2\"[Title/Abstract] OR \"SRD5A2 gene\"[Title/Abstract] OR \"SRD5A2 protein\"[Title/Abstract] OR \"Steroid 5 Alpha-Reductase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ST3GAL3\"[Title/Abstract] OR \"ST3GAL3 gene\"[Title/Abstract] OR \"ST3GAL3 protein\"[Title/Abstract] OR \"ST3 Beta-Galactoside Alpha-2,3-Sialyltransferase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-03T23:57:33",
+    "query": "(\"ST3GAL3\"[Title/Abstract] OR \"ST3GAL3 gene\"[Title/Abstract] OR \"ST3GAL3 protein\"[Title/Abstract] OR \"ST3 Beta-Galactoside Alpha-2,3-Sialyltransferase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"STAT1\"[Title/Abstract] OR \"STAT1 gene\"[Title/Abstract] OR \"STAT1 protein\"[Title/Abstract] OR \"Signal Transducer And Activator Of Transcription 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 325,
+    "timestamp": "2026-05-03T23:57:34",
+    "query": "(\"STAT1\"[Title/Abstract] OR \"STAT1 gene\"[Title/Abstract] OR \"STAT1 protein\"[Title/Abstract] OR \"Signal Transducer And Activator Of Transcription 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"STAT3\"[Title/Abstract] OR \"STAT3 gene\"[Title/Abstract] OR \"STAT3 protein\"[Title/Abstract] OR \"Signal Transducer And Activator Of Transcription 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2003,
+    "timestamp": "2026-05-03T23:57:35",
+    "query": "(\"STAT3\"[Title/Abstract] OR \"STAT3 gene\"[Title/Abstract] OR \"STAT3 protein\"[Title/Abstract] OR \"Signal Transducer And Activator Of Transcription 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SYK\"[Title/Abstract] OR \"SYK gene\"[Title/Abstract] OR \"SYK protein\"[Title/Abstract] OR \"Spleen Associated Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 78,
+    "timestamp": "2026-05-03T23:57:36",
+    "query": "(\"SYK\"[Title/Abstract] OR \"SYK gene\"[Title/Abstract] OR \"SYK protein\"[Title/Abstract] OR \"Spleen Associated Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"TACR1\"[Title/Abstract] OR \"TACR1 gene\"[Title/Abstract] OR \"TACR1 protein\"[Title/Abstract] OR \"Tachykinin Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-03T23:57:37",
+    "query": "(\"TACR1\"[Title/Abstract] OR \"TACR1 gene\"[Title/Abstract] OR \"TACR1 protein\"[Title/Abstract] OR \"Tachykinin Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"TDO2\"[Title/Abstract] OR \"TDO2 gene\"[Title/Abstract] OR \"TDO2 protein\"[Title/Abstract] OR \"Tryptophan 2,3-Dioxygenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 28,
+    "timestamp": "2026-05-03T23:57:38",
+    "query": "(\"TDO2\"[Title/Abstract] OR \"TDO2 gene\"[Title/Abstract] OR \"TDO2 protein\"[Title/Abstract] OR \"Tryptophan 2,3-Dioxygenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"TEK\"[Title/Abstract] OR \"TEK gene\"[Title/Abstract] OR \"TEK protein\"[Title/Abstract] OR \"TEK Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 10,
+    "timestamp": "2026-05-03T23:57:39",
+    "query": "(\"TEK\"[Title/Abstract] OR \"TEK gene\"[Title/Abstract] OR \"TEK protein\"[Title/Abstract] OR \"TEK Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"TERT\"[Title/Abstract] OR \"TERT gene\"[Title/Abstract] OR \"TERT protein\"[Title/Abstract] OR \"Telomerase Reverse Transcriptase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2319,
+    "timestamp": "2026-05-03T23:57:40",
+    "query": "(\"TERT\"[Title/Abstract] OR \"TERT gene\"[Title/Abstract] OR \"TERT protein\"[Title/Abstract] OR \"Telomerase Reverse Transcriptase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"TGFBR1\"[Title/Abstract] OR \"TGFBR1 gene\"[Title/Abstract] OR \"TGFBR1 protein\"[Title/Abstract] OR \"Transforming Growth Factor Beta Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 20,
+    "timestamp": "2026-05-03T23:57:40",
+    "query": "(\"TGFBR1\"[Title/Abstract] OR \"TGFBR1 gene\"[Title/Abstract] OR \"TGFBR1 protein\"[Title/Abstract] OR \"Transforming Growth Factor Beta Receptor 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"TNF\"[Title/Abstract] OR \"TNF gene\"[Title/Abstract] OR \"TNF protein\"[Title/Abstract] OR \"Tumor Necrosis Factor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 25479,
+    "timestamp": "2026-05-03T23:57:41",
+    "query": "(\"TNF\"[Title/Abstract] OR \"TNF gene\"[Title/Abstract] OR \"TNF protein\"[Title/Abstract] OR \"Tumor Necrosis Factor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"TRPV1\"[Title/Abstract] OR \"TRPV1 gene\"[Title/Abstract] OR \"TRPV1 protein\"[Title/Abstract] OR \"Transient Receptor Potential Cation Channel Subfamily V Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 337,
+    "timestamp": "2026-05-03T23:57:43",
+    "query": "(\"TRPV1\"[Title/Abstract] OR \"TRPV1 gene\"[Title/Abstract] OR \"TRPV1 protein\"[Title/Abstract] OR \"Transient Receptor Potential Cation Channel Subfamily V Member 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"TYMS\"[Title/Abstract] OR \"TYMS gene\"[Title/Abstract] OR \"TYMS protein\"[Title/Abstract] OR \"Thymidylate Synthetase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 17,
+    "timestamp": "2026-05-03T23:57:43",
+    "query": "(\"TYMS\"[Title/Abstract] OR \"TYMS gene\"[Title/Abstract] OR \"TYMS protein\"[Title/Abstract] OR \"Thymidylate Synthetase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"VEGFA\"[Title/Abstract] OR \"VEGFA gene\"[Title/Abstract] OR \"VEGFA protein\"[Title/Abstract] OR \"Vascular Endothelial Growth Factor A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 532,
+    "timestamp": "2026-05-03T23:57:44",
+    "query": "(\"VEGFA\"[Title/Abstract] OR \"VEGFA gene\"[Title/Abstract] OR \"VEGFA protein\"[Title/Abstract] OR \"Vascular Endothelial Growth Factor A\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"XDH\"[Title/Abstract] OR \"XDH gene\"[Title/Abstract] OR \"XDH protein\"[Title/Abstract] OR \"Xanthine Dehydrogenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 164,
+    "timestamp": "2026-05-03T23:57:45",
+    "query": "(\"XDH\"[Title/Abstract] OR \"XDH gene\"[Title/Abstract] OR \"XDH protein\"[Title/Abstract] OR \"Xanthine Dehydrogenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"ADK gene\"[Title/Abstract] OR \"ADK protein\"[Title/Abstract] OR \"Adenosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 11,
+    "timestamp": "2026-05-04T00:09:01",
+    "query": "(\"ADK gene\"[Title/Abstract] OR \"ADK protein\"[Title/Abstract] OR \"Adenosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"APP gene\"[Title/Abstract] OR \"APP protein\"[Title/Abstract] OR \"Amyloid Beta Precursor Protein\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 91,
+    "timestamp": "2026-05-04T00:09:02",
+    "query": "(\"APP gene\"[Title/Abstract] OR \"APP protein\"[Title/Abstract] OR \"Amyloid Beta Precursor Protein\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA1 gene\"[Title/Abstract] OR \"CA1 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 5,
+    "timestamp": "2026-05-04T00:09:03",
+    "query": "(\"CA1 gene\"[Title/Abstract] OR \"CA1 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 1\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA2 gene\"[Title/Abstract] OR \"CA2 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 9,
+    "timestamp": "2026-05-04T00:09:03",
+    "query": "(\"CA2 gene\"[Title/Abstract] OR \"CA2 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA3 gene\"[Title/Abstract] OR \"CA3 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 9,
+    "timestamp": "2026-05-04T00:09:04",
+    "query": "(\"CA3 gene\"[Title/Abstract] OR \"CA3 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 3\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA4 gene\"[Title/Abstract] OR \"CA4 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-04T00:09:05",
+    "query": "(\"CA4 gene\"[Title/Abstract] OR \"CA4 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 4\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA6 gene\"[Title/Abstract] OR \"CA6 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 6\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-04T00:09:06",
+    "query": "(\"CA6 gene\"[Title/Abstract] OR \"CA6 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 6\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA7 gene\"[Title/Abstract] OR \"CA7 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-04T00:09:07",
+    "query": "(\"CA7 gene\"[Title/Abstract] OR \"CA7 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 7\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"CA9 gene\"[Title/Abstract] OR \"CA9 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 9\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 5,
+    "timestamp": "2026-05-04T00:09:07",
+    "query": "(\"CA9 gene\"[Title/Abstract] OR \"CA9 protein\"[Title/Abstract] OR \"Carbonic Anhydrase 9\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"DAO gene\"[Title/Abstract] OR \"DAO protein\"[Title/Abstract] OR \"D-Amino Acid Oxidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 67,
+    "timestamp": "2026-05-04T00:09:08",
+    "query": "(\"DAO gene\"[Title/Abstract] OR \"DAO protein\"[Title/Abstract] OR \"D-Amino Acid Oxidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"DUT gene\"[Title/Abstract] OR \"DUT protein\"[Title/Abstract] OR \"Deoxyuridine Triphosphatase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 1,
+    "timestamp": "2026-05-04T00:09:09",
+    "query": "(\"DUT gene\"[Title/Abstract] OR \"DUT protein\"[Title/Abstract] OR \"Deoxyuridine Triphosphatase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"F10 gene\"[Title/Abstract] OR \"F10 protein\"[Title/Abstract] OR \"Coagulation Factor X\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 2,
+    "timestamp": "2026-05-04T00:09:10",
+    "query": "(\"F10 gene\"[Title/Abstract] OR \"F10 protein\"[Title/Abstract] OR \"Coagulation Factor X\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"F2 gene\"[Title/Abstract] OR \"F2 protein\"[Title/Abstract] OR \"Coagulation Factor II, Thrombin\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 5,
+    "timestamp": "2026-05-04T00:09:12",
+    "query": "(\"F2 gene\"[Title/Abstract] OR \"F2 protein\"[Title/Abstract] OR \"Coagulation Factor II, Thrombin\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"FYN gene\"[Title/Abstract] OR \"FYN protein\"[Title/Abstract] OR \"FYN Proto-Oncogene, Src Family Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 5,
+    "timestamp": "2026-05-04T00:09:12",
+    "query": "(\"FYN gene\"[Title/Abstract] OR \"FYN protein\"[Title/Abstract] OR \"FYN Proto-Oncogene, Src Family Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"IL2 gene\"[Title/Abstract] OR \"IL2 protein\"[Title/Abstract] OR \"Interleukin 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 207,
+    "timestamp": "2026-05-04T00:09:13",
+    "query": "(\"IL2 gene\"[Title/Abstract] OR \"IL2 protein\"[Title/Abstract] OR \"Interleukin 2\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"KDR gene\"[Title/Abstract] OR \"KDR protein\"[Title/Abstract] OR \"Kinase Insert Domain Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 7,
+    "timestamp": "2026-05-04T00:09:14",
+    "query": "(\"KDR gene\"[Title/Abstract] OR \"KDR protein\"[Title/Abstract] OR \"Kinase Insert Domain Receptor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"KIT gene\"[Title/Abstract] OR \"KIT protein\"[Title/Abstract] OR \"KIT Proto-Oncogene, Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 10,
+    "timestamp": "2026-05-04T00:09:15",
+    "query": "(\"KIT gene\"[Title/Abstract] OR \"KIT protein\"[Title/Abstract] OR \"KIT Proto-Oncogene, Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"KMO gene\"[Title/Abstract] OR \"KMO protein\"[Title/Abstract] OR \"Kynurenine 3-Monooxygenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 16,
+    "timestamp": "2026-05-04T00:09:16",
+    "query": "(\"KMO gene\"[Title/Abstract] OR \"KMO protein\"[Title/Abstract] OR \"Kynurenine 3-Monooxygenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"LCK gene\"[Title/Abstract] OR \"LCK protein\"[Title/Abstract] OR \"LCK Proto-Oncogene, Src Family Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-04T00:09:16",
+    "query": "(\"LCK gene\"[Title/Abstract] OR \"LCK protein\"[Title/Abstract] OR \"LCK Proto-Oncogene, Src Family Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MET gene\"[Title/Abstract] OR \"MET protein\"[Title/Abstract] OR \"MET Proto-Oncogene, Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-04T00:09:17",
+    "query": "(\"MET gene\"[Title/Abstract] OR \"MET protein\"[Title/Abstract] OR \"MET Proto-Oncogene, Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MIF gene\"[Title/Abstract] OR \"MIF protein\"[Title/Abstract] OR \"Macrophage Migration Inhibitory Factor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 122,
+    "timestamp": "2026-05-04T00:09:18",
+    "query": "(\"MIF gene\"[Title/Abstract] OR \"MIF protein\"[Title/Abstract] OR \"Macrophage Migration Inhibitory Factor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MME gene\"[Title/Abstract] OR \"MME protein\"[Title/Abstract] OR \"Membrane Metalloendopeptidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4,
+    "timestamp": "2026-05-04T00:09:19",
+    "query": "(\"MME gene\"[Title/Abstract] OR \"MME protein\"[Title/Abstract] OR \"Membrane Metalloendopeptidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"MPO gene\"[Title/Abstract] OR \"MPO protein\"[Title/Abstract] OR \"Myeloperoxidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 4264,
+    "timestamp": "2026-05-04T00:09:19",
+    "query": "(\"MPO gene\"[Title/Abstract] OR \"MPO protein\"[Title/Abstract] OR \"Myeloperoxidase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"OAT gene\"[Title/Abstract] OR \"OAT protein\"[Title/Abstract] OR \"Ornithine Aminotransferase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 23,
+    "timestamp": "2026-05-04T00:09:20",
+    "query": "(\"OAT gene\"[Title/Abstract] OR \"OAT protein\"[Title/Abstract] OR \"Ornithine Aminotransferase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PGD gene\"[Title/Abstract] OR \"PGD protein\"[Title/Abstract] OR \"Phosphogluconate Dehydrogenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 77,
+    "timestamp": "2026-05-04T00:09:21",
+    "query": "(\"PGD gene\"[Title/Abstract] OR \"PGD protein\"[Title/Abstract] OR \"Phosphogluconate Dehydrogenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PGF gene\"[Title/Abstract] OR \"PGF protein\"[Title/Abstract] OR \"Placental Growth Factor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 121,
+    "timestamp": "2026-05-04T00:09:22",
+    "query": "(\"PGF gene\"[Title/Abstract] OR \"PGF protein\"[Title/Abstract] OR \"Placental Growth Factor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"PLG gene\"[Title/Abstract] OR \"PLG protein\"[Title/Abstract] OR \"Plasminogen\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 660,
+    "timestamp": "2026-05-04T00:09:22",
+    "query": "(\"PLG gene\"[Title/Abstract] OR \"PLG protein\"[Title/Abstract] OR \"Plasminogen\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SCD gene\"[Title/Abstract] OR \"SCD protein\"[Title/Abstract] OR \"Stearoyl-CoA Desaturase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 101,
+    "timestamp": "2026-05-04T00:09:23",
+    "query": "(\"SCD gene\"[Title/Abstract] OR \"SCD protein\"[Title/Abstract] OR \"Stearoyl-CoA Desaturase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SRC gene\"[Title/Abstract] OR \"SRC protein\"[Title/Abstract] OR \"SRC Proto-Oncogene, Non-Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 13,
+    "timestamp": "2026-05-04T00:09:24",
+    "query": "(\"SRC gene\"[Title/Abstract] OR \"SRC protein\"[Title/Abstract] OR \"SRC Proto-Oncogene, Non-Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"SYK gene\"[Title/Abstract] OR \"SYK protein\"[Title/Abstract] OR \"Spleen Associated Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 6,
+    "timestamp": "2026-05-04T00:09:24",
+    "query": "(\"SYK gene\"[Title/Abstract] OR \"SYK protein\"[Title/Abstract] OR \"Spleen Associated Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"TEK gene\"[Title/Abstract] OR \"TEK protein\"[Title/Abstract] OR \"TEK Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 0,
+    "timestamp": "2026-05-04T00:09:25",
+    "query": "(\"TEK gene\"[Title/Abstract] OR \"TEK protein\"[Title/Abstract] OR \"TEK Receptor Tyrosine Kinase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"TNF gene\"[Title/Abstract] OR \"TNF protein\"[Title/Abstract] OR \"Tumor Necrosis Factor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 11536,
+    "timestamp": "2026-05-04T00:09:26",
+    "query": "(\"TNF gene\"[Title/Abstract] OR \"TNF protein\"[Title/Abstract] OR \"Tumor Necrosis Factor\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  },
+  "(\"XDH gene\"[Title/Abstract] OR \"XDH protein\"[Title/Abstract] OR \"Xanthine Dehydrogenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])": {
+    "count": 128,
+    "timestamp": "2026-05-04T00:09:27",
+    "query": "(\"XDH gene\"[Title/Abstract] OR \"XDH protein\"[Title/Abstract] OR \"Xanthine Dehydrogenase\"[Title/Abstract]) AND (\"oxidative stress\"[Title/Abstract])"
+  }
+}
