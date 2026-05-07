@@ -25,6 +25,7 @@ from statistics import mean, stdev
 
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
+from matplotlib.font_manager import FontProperties
 import numpy as np
 
 
@@ -795,62 +796,202 @@ def write_reports() -> None:
 
 
 def figure_1_workflow() -> list[str]:
-    fig, ax = plt.subplots(figsize=(12.4, 6.2))
-    ax.set_xlim(0, 12)
-    ax.set_ylim(0, 6)
+    font = FontProperties(family=["Microsoft YaHei", "SimHei", "Arial"], size=9)
+    font_small = FontProperties(family=["Microsoft YaHei", "SimHei", "Arial"], size=7.6)
+    font_title = FontProperties(family=["Microsoft YaHei", "SimHei", "Arial"], size=15, weight="bold")
+    font_block = FontProperties(family=["Microsoft YaHei", "SimHei", "Arial"], size=8.2, weight="bold")
+
+    fig, ax = plt.subplots(figsize=(15.8, 8.8))
+    ax.set_xlim(0, 16)
+    ax.set_ylim(0, 9.4)
     ax.axis("off")
 
-    boxes = [
-        (0.4, 4.1, 2.1, 0.95, "LC-MS/MS\n18 compounds", COLORS["pale_blue"], COLORS["blue"]),
-        (0.4, 2.4, 2.1, 0.95, "Oxidative stress\ndisease genes", COLORS["pale_green"], COLORS["green"]),
-        (3.1, 3.25, 2.0, 0.95, "SwissTarget\nintersection", "#F7FAFC", COLORS["gray"]),
-        (5.8, 4.35, 2.1, 0.95, "Parameter\nperturbation\n112 settings", COLORS["pale_orange"], COLORS["orange"]),
-        (5.8, 2.15, 2.1, 0.95, "Compound LOO\nperturbation\n18 x 112 runs", "#FAF5FF", COLORS["purple"]),
-        (8.55, 3.25, 2.0, 0.95, "Dual-robust\nclassification", COLORS["pale_green"], COLORS["green"]),
-        (10.85, 3.25, 0.9, 0.95, "Docking\nvalidation", "#FFF5F5", COLORS["red"]),
+    lane_specs = [
+        (0.25, 3.25, "输入数据", "#F5FAFF", COLORS["blue"]),
+        (3.8, 3.25, "候选靶点网络", "#F8FAFC", COLORS["gray"]),
+        (7.35, 3.85, "双扰动鲁棒性分析", "#FFFBF5", COLORS["orange"]),
+        (11.55, 4.15, "优先级输出与验证", "#F5FFF8", COLORS["green"]),
     ]
+    for x, w, title, face, edge in lane_specs:
+        lane = patches.FancyBboxPatch(
+            (x, 0.65),
+            w,
+            7.85,
+            boxstyle="round,pad=0.025,rounding_size=0.11",
+            linewidth=1.0,
+            edgecolor=edge,
+            facecolor=face,
+            alpha=0.72,
+        )
+        ax.add_patch(lane)
+        ax.text(x + 0.18, 8.18, title, fontproperties=font_block, color=edge, va="center")
 
-    for x, y, w, h, label, face, edge in boxes:
+    def draw_block(
+        x: float,
+        y: float,
+        w: float,
+        h: float,
+        title: str,
+        lines: list[str],
+        edge: str,
+        face: str,
+        badge: str | None = None,
+    ) -> None:
+        shadow = patches.FancyBboxPatch(
+            (x + 0.045, y - 0.045),
+            w,
+            h,
+            boxstyle="round,pad=0.035,rounding_size=0.10",
+            linewidth=0,
+            facecolor="#CBD5E1",
+            alpha=0.35,
+            zorder=1,
+        )
         box = patches.FancyBboxPatch(
             (x, y),
             w,
             h,
-            boxstyle="round,pad=0.02,rounding_size=0.06",
-            linewidth=1.4,
+            boxstyle="round,pad=0.035,rounding_size=0.10",
+            linewidth=1.45,
             edgecolor=edge,
             facecolor=face,
+            zorder=2,
         )
+        ax.add_patch(shadow)
         ax.add_patch(box)
-        ax.text(x + w / 2, y + h / 2, label, ha="center", va="center", fontsize=9, weight="bold", color="#1A202C")
+        ax.text(x + 0.18, y + h - 0.28, title, fontproperties=font_block, color="#172033", va="top", zorder=3)
+        ax.text(
+            x + 0.18,
+            y + h - 0.72,
+            "\n".join(lines),
+            fontproperties=font_small,
+            color="#374151",
+            va="top",
+            linespacing=1.22,
+            zorder=3,
+        )
+        if badge:
+            badge_w = max(0.72, 0.18 * len(badge) + 0.28)
+            badge_patch = patches.FancyBboxPatch(
+                (x + w - badge_w - 0.14, y + h - 0.48),
+                badge_w,
+                0.34,
+                boxstyle="round,pad=0.025,rounding_size=0.07",
+                linewidth=0,
+                facecolor=edge,
+                zorder=4,
+            )
+            ax.add_patch(badge_patch)
+            ax.text(
+                x + w - badge_w / 2 - 0.14,
+                y + h - 0.31,
+                badge,
+                fontproperties=font_small,
+                color="white",
+                ha="center",
+                va="center",
+                zorder=5,
+            )
 
-    arrow = dict(arrowstyle="->", lw=1.4, color="#2D3748", shrinkA=4, shrinkB=4)
-    links = [
-        ((2.5, 4.55), (3.1, 3.95)),
-        ((2.5, 2.85), (3.1, 3.55)),
-        ((5.1, 3.75), (5.8, 4.7)),
-        ((5.1, 3.75), (5.8, 2.55)),
-        ((7.9, 4.7), (8.55, 3.9)),
-        ((7.9, 2.55), (8.55, 3.55)),
-        ((10.55, 3.72), (10.85, 3.72)),
-    ]
-    for start, end in links:
-        ax.annotate("", xy=end, xytext=start, arrowprops=arrow)
+    blocks = {
+        "lcms": (0.55, 6.65, 2.62, 1.15),
+        "disease": (0.55, 4.92, 2.62, 1.15),
+        "standard": (0.55, 3.18, 2.62, 1.15),
+        "swiss": (4.1, 6.25, 2.62, 1.28),
+        "intersection": (4.1, 4.45, 2.62, 1.28),
+        "ppi": (4.1, 2.65, 2.62, 1.30),
+        "param": (7.7, 5.95, 3.18, 1.68),
+        "loo": (7.7, 3.62, 3.18, 1.68),
+        "enrich": (7.7, 1.45, 3.18, 1.46),
+        "prqi": (11.9, 6.30, 3.45, 1.30),
+        "dual": (11.9, 4.52, 3.45, 1.30),
+        "validation": (11.9, 2.36, 3.45, 1.58),
+        "final": (11.9, 0.95, 3.45, 0.88),
+    }
+
+    draw_block(*blocks["lcms"], "草莓叶 LC-MS/MS 成分", ["19 条鉴定记录", "canonical 去重", "PubChem CID / SMILES"], COLORS["blue"], COLORS["pale_blue"], "18")
+    draw_block(*blocks["disease"], "氧化应激相关基因", ["GeneCards + OMIM + TTD", "统一基因符号", "构建疾病背景集合"], COLORS["green"], COLORS["pale_green"])
+    draw_block(*blocks["standard"], "结构与名称标准化", ["Trehalose 条目合并", "SwissTargetPrediction", "物种：Homo sapiens"], COLORS["teal"], "#ECFEFF")
+
+    draw_block(*blocks["swiss"], "靶点预测并集", ["按化合物预测潜在靶点", "多基因条目拆分", "同一基因保留最高 probability"], COLORS["blue"], "#EFF6FF", "684")
+    draw_block(*blocks["intersection"], "疾病交集候选靶点", ["预测靶点 ∩ 氧化应激基因", "保留正 probability 靶点", "进入 PPI 与富集分析"], COLORS["gray"], "#F8FAFC", "286")
+    draw_block(*blocks["ppi"], "STRING PPI 网络", ["combined score 过滤边", "degree / betweenness", "归一化 degree 比较"], COLORS["gray"], "#F8FAFC")
+
+    draw_block(*blocks["param"], "参数扰动轴", ["Swiss probability: 0-0.20，共 7 档", "STRING score: 0.40/0.50/0.70/0.90", "Hub TopK: 10/20/30/50", "全因子网格：7 x 4 x 4"], COLORS["orange"], COLORS["pale_orange"], "112")
+    draw_block(*blocks["loo"], "成分扰动轴", ["leave-one-compound-out", "每次剔除 1 个 canonical 化合物", "重新运行完整 112 组参数", "计算 retention 与 influence score"], COLORS["purple"], "#FAF5FF", "2016")
+    draw_block(*blocks["enrich"], "功能富集鲁棒性", ["GO Biological Process + KEGG", "adjusted P < 0.01", "频率 + 平均 -log10 FDR"], COLORS["teal"], "#F0FDFA")
+
+    draw_block(*blocks["prqi"], "PR-QI 自适应分层", ["靶点：参数频率 + 平均归一化 degree", "通路：出现频率 + 富集强度", "中位数分界，连续指标保留"], COLORS["green"], COLORS["pale_green"])
+    draw_block(*blocks["dual"], "双重稳健候选集", ["LOO PR-QI retention >= 0.80", "minimum LOO frequency > 0", "50 -> 29 targets；70 -> 58 terms"], COLORS["green"], COLORS["pale_green"], "29/58")
+    draw_block(*blocks["validation"], "外部证据与结构验证", ["PubMed 共现 + 数据库证据", "超几何检验 + BH-FDR", "degree-matched permutation", "Vina docking: 3 靶点 x 3 成分 x 3 seeds"], COLORS["red"], "#FFF5F5")
+    draw_block(*blocks["final"], "核心输出", ["Tier 1: STAT3；核心：EGFR / SRC / TNF / HSP90AA1 / BCL2 / PTGS2 / MMP9"], COLORS["green"], "#F0FFF4")
+
+    def center_right(key: str) -> tuple[float, float]:
+        x, y, w, h = blocks[key]
+        return x + w, y + h / 2
+
+    def center_left(key: str) -> tuple[float, float]:
+        x, y, _w, h = blocks[key]
+        return x, y + h / 2
+
+    def arrow(start: tuple[float, float], end: tuple[float, float], color: str = "#334155", rad: float = 0.0) -> None:
+        ax.annotate(
+            "",
+            xy=end,
+            xytext=start,
+            arrowprops=dict(
+                arrowstyle="-|>",
+                lw=1.35,
+                color=color,
+                shrinkA=5,
+                shrinkB=5,
+                mutation_scale=13,
+                connectionstyle=f"arc3,rad={rad}",
+            ),
+            zorder=10,
+        )
+
+    arrow(center_right("lcms"), center_left("swiss"), COLORS["blue"], -0.08)
+    arrow(center_right("standard"), center_left("swiss"), COLORS["teal"], 0.07)
+    arrow(center_right("disease"), center_left("intersection"), COLORS["green"], 0.0)
+    arrow(center_right("swiss"), center_left("intersection"), COLORS["gray"], 0.0)
+    arrow(center_right("intersection"), center_left("ppi"), COLORS["gray"], 0.0)
+    arrow(center_right("ppi"), center_left("param"), COLORS["orange"], -0.10)
+    arrow(center_right("ppi"), center_left("loo"), COLORS["purple"], 0.0)
+    arrow(center_right("ppi"), center_left("enrich"), COLORS["teal"], 0.12)
+    arrow(center_right("param"), center_left("prqi"), COLORS["orange"], -0.05)
+    arrow(center_right("loo"), center_left("dual"), COLORS["purple"], 0.0)
+    arrow(center_right("enrich"), center_left("dual"), COLORS["teal"], 0.10)
+    arrow(center_right("prqi"), center_left("dual"), COLORS["green"], 0.0)
+    arrow(center_right("dual"), center_left("validation"), COLORS["red"], 0.0)
+    arrow(center_right("validation"), center_left("final"), COLORS["green"], 0.0)
 
     ax.text(
-        3.0,
-        1.0,
-        "Output evidence: robust targets/pathways under parameter sensitivity and compound perturbation",
-        fontsize=9,
-        color=COLORS["gray"],
+        8.0,
+        8.82,
+        "双扰动鲁棒性网络药理学靶点优先级识别框架",
+        fontproperties=font_title,
+        ha="center",
+        va="center",
+        color="#111827",
     )
     ax.text(
-        8.5,
-        1.0,
-        "Docking is used as structural support for selected target-compound pairs",
-        fontsize=9,
-        color=COLORS["gray"],
+        8.0,
+        8.48,
+        "Parameter grid + compound leave-one-out reruns convert fixed-threshold screening into robustness-based prioritization.",
+        fontproperties=font,
+        ha="center",
+        va="center",
+        color="#4B5563",
     )
-    ax.set_title("Dual-perturbation network pharmacology and docking workflow", fontsize=13, weight="bold")
+    ax.text(
+        0.34,
+        0.30,
+        "注：PR-QI 为参数空间内的相对稳健优先级分类，不等同于独立因果验证；对接用于代表性靶点-成分组合的结构可行性支持。",
+        fontproperties=font_small,
+        color="#64748B",
+    )
+
     return save_figure(fig, "fig1_dual_perturbation_workflow")
 
 
