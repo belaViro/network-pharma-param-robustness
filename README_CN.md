@@ -1,22 +1,23 @@
-# 网络药理学参数敏感性分析
+# 网络药理学参数与成分双扰动鲁棒性框架
 
 [English](./README.md) | **中文**
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-> **网络药理学鲁棒靶点识别的双扰动框架：** 参数网格敏感性分析与逐化合物留一法验证，应用于草莓叶活性成分抗氧化的靶点识别。
+> **网络药理学靶点优先级识别的双扰动框架：** 参数扰动用于改良固定阈值筛选流程，成分留一扰动用于解析多成分体系中的机制依赖性，并以草莓叶抗氧化活性成分为应用案例。
 
 ## 概述
 
-本仓库包含一项系统性网络药理学管道鲁棒性分析的完整可复现包。我们关注一个关键但常被忽视的问题：**参数敏感性**——同一组学数据在不同阈值设定下可能产生截然不同的靶点和通路结果。
+本仓库包含一项网络药理学双扰动鲁棒性分析的可复现包。项目同时关注两类不确定性：**参数敏感性**，即人为阈值变化可能改变靶点和 GO BP/KEGG 功能富集结果；**成分输入依赖性**，即候选机制可能由某一个或少数输入成分驱动，而不一定代表整体多成分体系。
 
 ### 核心贡献
 
-- **双扰动框架（Dual-perturbation）**：同时扰动 (1) 分析参数 与 (2) 输入化合物，识别对两类变异均稳健的靶点。
-- **112 组参数组合**：穷举概率阈值（7）× STRING 置信度（4）× Hub 基因截断（4）的全因子网格。
-- **2,016 组化合物敏感性运行**：18 种草莓叶活性成分的逐化合物留一法（Leave-One-Out, LOO）分析。
-- **三层靶点分类体系**：核心双稳健靶点（29 个）vs. 化合物特异性靶点 vs. 参数条件性靶点。
+- **参数扰动作为方法改良**：将单一固定阈值下的 TopK 靶点列表，改造为参数空间中的复现频率和网络位置优先级排序。
+- **成分扰动作为机制分析**：通过逐化合物留一运行，识别不依赖单一输入成分的靶点和 GO BP/KEGG 功能富集条目。
+- **112 组参数组合**：穷举 SwissTargetPrediction probability 阈值（7）× STRING 置信度阈值（4）× Hub 基因截断（4）的全因子网格。
+- **2,016 组成分扰动运行**：18 个结构规范化后的草莓叶化合物 × 112 组参数组合。
+- **可审计证据链**：PR-QI 靶点/功能条目优先级、Top30 消融、PubMed 共现审计、degree-matched permutation 和分子对接 seed 稳定性输出。
 
 ### 关键发现
 
@@ -25,13 +26,13 @@
 | 参数组合总数 | **112**（7 × 4 × 4） |
 | 化合物 LOO 组合总数 | **2,016**（18 × 112） |
 | SwissTarget 并集靶点 | 684 |
-| 疾病过滤预测靶点 | 639 |
 | 正概率疾病靶点 | 286 |
 | 主报告阈值靶点（Probability > 0.05） | 219 |
-| Q1 高置信候选靶点 | 50 |
+| PR-QI 参数稳健候选靶点 | 50 |
+| PR-QI GO BP/KEGG 功能条目 | 70 |
 | **双稳健靶点** | **29**（Q1 保留率 58%） |
 | **Tier 1 靶点** | **STAT3**（参数频率 100%，LOO 频率 100%） |
-| 双稳健功能富集条目 | 58 |
+| 双稳健 GO BP/KEGG 功能条目 | 58 |
 | 最高化合物影响度 | Cardiac glycoside（得分 0.306） |
 
 ---
@@ -65,6 +66,12 @@ python scripts/analysis/run_sensitivity_analysis.py
 
 # 化合物留一法敏感性分析（2,016 组组合）
 python scripts/analysis/run_compound_sensitivity_analysis.py
+
+# 外部证据审计与 Top30 消融分析
+python scripts/analysis/robustness_validation_bundle.py
+
+# 论文图表重生成
+python scripts/analysis/generate_paper_figures.py
 ```
 
 ### 4. 一键复现
@@ -73,7 +80,7 @@ python scripts/analysis/run_compound_sensitivity_analysis.py
 bash reproduce.sh
 ```
 
-该脚本依次执行：参数网格分析 → 稳健 vs. 参数化对比 → 通路象限增强 → 论文图表重生成。
+该脚本依次执行核心参数鲁棒性复现流程：参数网格分析 → 稳健 vs. 参数化对比 → GO BP/KEGG 功能条目象限增强 → 图表重生成。若需要完整论文结果集，可另行运行上方的成分 LOO 和外部证据审计脚本。
 
 ---
 
@@ -86,9 +93,10 @@ bash reproduce.sh
 │   │   ├── run_sensitivity_analysis.py           # 主程序：112 组参数网格
 │   │   ├── run_compound_sensitivity_analysis.py  # 主程序：18 化合物 LOO
 │   │   ├── compare_robust_vs_parametric.py       # 稳健 vs. 参数化对比
-│   │   ├── augment_pathway_robustness.py         # 通路稳健性象限增强
-│   │   ├── plot_sensitivity_figures.py           # 论文图表生成
-│   │   ├── validate_with_pubmed.py               # 外部验证（PubMed）
+│   │   ├── augment_pathway_robustness.py         # GO BP/KEGG 鲁棒性象限增强
+│   │   ├── robustness_validation_bundle.py        # Top30 消融与外部证据审计
+│   │   ├── generate_paper_figures.py             # 论文图表生成
+│   │   ├── validate_with_pubmed.py               # PubMed 共现审计
 │   │   └── ...                                   # 其他诊断脚本
 │   ├── run_full_pipeline.py                      # 端到端流水线
 │   └── run_traditional_pipeline.py               # 基线方法对比
@@ -99,7 +107,7 @@ bash reproduce.sh
 │   │   ├── swiss_target.py                       # SwissTargetPrediction
 │   │   ├── string_connector.py                   # STRING PPI
 │   │   ├── pubchem.py                            # PubChem
-│   │   └── pubmed_connector.py                   # PubMed 验证
+│   │   └── pubmed_connector.py                   # PubMed 共现审计
 │   ├── enrichment/
 │   │   ├── enrichment_analysis.py                # GO/KEGG 富集（gseapy）
 │   │   └── plotting.py                           # 富集可视化
@@ -108,6 +116,7 @@ bash reproduce.sh
 │   │   ├── go-basic.obo                          # Gene Ontology 本体
 │   │   └── kegg_pathway_classes.json             # KEGG 通路分类
 │   └── outputs/                                  # 全部分析输出
+│       ├── paper_figures/                        # 论文成图
 │       ├── sensitivity/                          # 参数敏感性结果
 │       │   ├── target_robustness.csv
 │       │   ├── pathway_robustness.csv
@@ -118,6 +127,7 @@ bash reproduce.sh
 │
 ├── tests/                                        # 单元与集成测试
 ├── docs/                                         # 项目文档
+├── 分子对接/                                      # 分子对接拼图与结果图
 ├── requirements.txt
 ├── pyproject.toml
 └── reproduce.sh                                  # 一键复现脚本
@@ -127,23 +137,31 @@ bash reproduce.sh
 
 ## 输出文件
 
-### 核心结果（参数敏感性）
+### 核心结果（参数扰动）
 
 | 文件 | 说明 |
 |------|------|
 | `src/outputs/sensitivity/target_robustness.csv` | 112 组组合下各靶点的频率与度统计 |
-| `src/outputs/sensitivity/pathway_robustness.csv` | 通路稳健性指标（信号主干、直接氧化、交叉调控） |
+| `src/outputs/sensitivity/pathway_robustness.csv` | GO BP/KEGG 功能富集条目鲁棒性指标 |
 | `src/outputs/sensitivity/param_grid_results.csv` | 每组组合的富集汇总 |
-| `src/outputs/sensitivity/pathway_rank_stability.csv` | 通路排名在参数空间中的一致性 |
+| `src/outputs/sensitivity/pathway_rank_stability.csv` | 功能富集条目排名在参数空间中的一致性 |
 
-### 核心结果（化合物敏感性）
+### 核心结果（成分扰动）
 
 | 文件 | 说明 |
 |------|------|
 | `src/outputs/sensitivity/compound_sensitivity/compound_influence_scores.csv` | 各化合物的影响度评分（0–1） |
 | `src/outputs/sensitivity/compound_sensitivity/dual_robust_targets.csv` | 29 个双稳健靶点及其 LOO 保留率 |
-| `src/outputs/sensitivity/compound_sensitivity/dual_robust_pathways.csv` | 58 个双稳健功能富集条目及其 LOO 保留率 |
+| `src/outputs/sensitivity/compound_sensitivity/dual_robust_pathways.csv` | 58 个双稳健 GO BP/KEGG 功能条目及其 LOO 保留率 |
 | `src/outputs/sensitivity/compound_sensitivity/leave_one_out_pathway_robustness.csv` | 各化合物剔除后的功能富集条目稳健性 |
+
+### 外部证据与论文图表
+
+| 文件 | 说明 |
+|------|------|
+| `src/outputs/sensitivity/robustness_validation/` | Top30 消融、PubMed 共现审计和 degree-matched permutation 输出 |
+| `src/outputs/paper_figures/` | 论文成图，包括工作流、参数热图、成分 LOO 热图、PubMed 阈值审计和分子对接图 |
+| `src/outputs/paper_figures/figure-catalog.md` | 图件用途、数据来源与解释提示 |
 
 ### 检查点
 
@@ -179,7 +197,7 @@ python scripts/analysis/export_supplementary_tables.py
 
 ## 草莓叶活性成分（n = 18）
 
-LC-MS/MS 共鉴定 19 条原始记录；去重后（Trehalose ≡ alpha,alpha-Trehalose）得到 18 个 canonical 化合物：
+LC-MS/MS 共鉴定 19 条原始记录；经结构规范化去重后（Trehalose ≡ alpha,alpha-Trehalose）得到 18 个化合物：
 
 1. Miquelianin（槲皮素-3-O-葡萄糖苷酸）
 2. Sucrose（蔗糖）
@@ -255,7 +273,7 @@ LC-MS/MS 共鉴定 19 条原始记录；去重后（Trehalose ≡ alpha,alpha-Tr
 
 若使用本代码或框架，请引用：
 
-> *Parameter robustness analysis for network pharmacology target identification: a dual-perturbation framework applied to strawberry leaf compounds against oxidative stress.*
+> *Parameter and compound dual-perturbation robustness framework for network pharmacology target prioritization: strawberry leaf antioxidant compounds as a case study.*
 
 ---
 

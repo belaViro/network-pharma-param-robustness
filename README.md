@@ -1,22 +1,23 @@
-# Network Pharmacology Parameter Robustness Analysis
+# Network Pharmacology Dual-Perturbation Robustness Framework
 
 **English** | [中文](./README_CN.md)
 
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-> **Dual-perturbation framework for robust target identification in network pharmacology:** parameter-grid sensitivity analysis combined with leave-one-compound-out validation, applied to strawberry leaf compounds against oxidative stress.
+> **Dual-perturbation framework for robust target prioritization in network pharmacology:** parameter-grid perturbation improves fixed-threshold target selection, while leave-one-compound-out perturbation probes multi-compound mechanism dependence in strawberry leaf antioxidant analysis.
 
 ## Overview
 
-This repository contains the complete reproducibility package for a systematic robustness analysis of network pharmacology pipelines. We address a critical but often overlooked problem: **parameter sensitivity**—the same dataset can yield vastly different targets and pathways depending on arbitrary threshold choices.
+This repository contains the reproducibility package for a dual-perturbation robustness analysis of network pharmacology pipelines. The project addresses two linked sources of uncertainty: **parameter sensitivity**, where arbitrary thresholds can change targets and GO BP/KEGG functional enrichment results, and **compound-input dependence**, where a candidate mechanism may be driven by one or a few input compounds rather than the whole multi-compound system.
 
 ### Key Contributions
 
-- **Dual-perturbation framework**: Simultaneously perturbs (1) analytical parameters and (2) input compounds to identify targets robust against both sources of variation.
-- **112 parameter combinations**: Exhaustive grid over probability thresholds (7) × STRING confidence (4) × hub-gene cutoffs (4).
-- **2,016 compound-sensitivity runs**: Leave-one-out analysis across 18 strawberry leaf compounds.
-- **Three-tier target classification**: Core dual-robust (29 targets) vs. compound-specific vs. parameter-conditional.
+- **Parameter perturbation as method improvement**: replaces a single fixed-threshold TopK list with parameter-space recurrence and network-position statistics.
+- **Compound perturbation as mechanism analysis**: uses leave-one-compound-out runs to identify targets and GO BP/KEGG functional enrichment terms that do not depend on one specific input compound.
+- **112 parameter combinations**: exhaustive grid over SwissTargetPrediction probability thresholds (7) × STRING confidence thresholds (4) × hub-gene cutoffs (4).
+- **2,016 compound-perturbation runs**: 18 structure-normalized strawberry leaf compounds × 112 parameter combinations.
+- **Auditable evidence chain**: PR-QI target/term prioritization, Top30 ablation, PubMed co-occurrence audit, degree-matched permutation, and docking seed-stability outputs.
 
 ### Key Findings
 
@@ -25,13 +26,13 @@ This repository contains the complete reproducibility package for a systematic r
 | Total parameter combinations | **112** (7 × 4 × 4) |
 | Total compound LOO combinations | **2,016** (18 × 112) |
 | SwissTarget union targets | 684 |
-| Disease-filtered predicted targets | 639 |
 | Positive-probability disease targets | 286 |
 | Main reporting threshold targets (Probability > 0.05) | 219 |
-| Q1 high-confidence candidates | 50 |
+| PR-QI parameter-robust targets | 50 |
+| PR-QI GO BP/KEGG functional terms | 70 |
 | **Dual-robust targets** | **29** (58% retention) |
 | **Tier 1 target** | **STAT3** (freq = 100%, LOO = 100%) |
-| Dual-robust functional enrichment terms | 58 |
+| Dual-robust GO BP/KEGG functional terms | 58 |
 | Top compound influence | Cardiac glycoside (score = 0.306) |
 
 ---
@@ -63,8 +64,14 @@ Requires Python ≥ 3.10.
 # Parameter grid sensitivity (112 combinations)
 python scripts/analysis/run_sensitivity_analysis.py
 
-# Compound leave-one-out sensitivity (2,016 combinations)
+# Compound leave-one-out perturbation (2,016 combinations)
 python scripts/analysis/run_compound_sensitivity_analysis.py
+
+# External evidence audit and Top30 ablation bundle
+python scripts/analysis/robustness_validation_bundle.py
+
+# Manuscript figure regeneration
+python scripts/analysis/generate_paper_figures.py
 ```
 
 ### 4. One-click reproduction
@@ -73,7 +80,7 @@ python scripts/analysis/run_compound_sensitivity_analysis.py
 bash reproduce.sh
 ```
 
-This executes the full pipeline: parameter grid → robust-vs-parametric comparison → pathway quadrant augmentation → figure regeneration.
+This executes the core parameter-robustness reproduction path: parameter grid → robust-vs-parametric comparison → GO BP/KEGG term quadrant augmentation → figure regeneration. The compound LOO and external-audit scripts above can be run separately when the full manuscript result set is needed.
 
 ---
 
@@ -86,9 +93,10 @@ This executes the full pipeline: parameter grid → robust-vs-parametric compari
 │   │   ├── run_sensitivity_analysis.py           # Main: 112-combo parameter grid
 │   │   ├── run_compound_sensitivity_analysis.py  # Main: 18-compound LOO
 │   │   ├── compare_robust_vs_parametric.py       # Robust vs. parametric comparison
-│   │   ├── augment_pathway_robustness.py         # Pathway quadrant enhancement
-│   │   ├── plot_sensitivity_figures.py           # Publication figures
-│   │   ├── validate_with_pubmed.py               # External validation (PubMed)
+│   │   ├── augment_pathway_robustness.py         # GO BP/KEGG robustness quadrant enhancement
+│   │   ├── robustness_validation_bundle.py        # Top30 ablation and external evidence audit
+│   │   ├── generate_paper_figures.py             # Manuscript figure generation
+│   │   ├── validate_with_pubmed.py               # PubMed co-occurrence audit
 │   │   └── ...                                   # Additional diagnostic scripts
 │   ├── run_full_pipeline.py                      # End-to-end pipeline
 │   └── run_traditional_pipeline.py               # Baseline comparison
@@ -99,7 +107,7 @@ This executes the full pipeline: parameter grid → robust-vs-parametric compari
 │   │   ├── swiss_target.py                       # SwissTargetPrediction
 │   │   ├── string_connector.py                   # STRING PPI
 │   │   ├── pubchem.py                            # PubChem
-│   │   └── pubmed_connector.py                   # PubMed validation
+│   │   └── pubmed_connector.py                   # PubMed co-occurrence audit
 │   ├── enrichment/
 │   │   ├── enrichment_analysis.py                # GO/KEGG enrichment (gseapy)
 │   │   └── plotting.py                           # Enrichment visualization
@@ -108,6 +116,7 @@ This executes the full pipeline: parameter grid → robust-vs-parametric compari
 │   │   ├── go-basic.obo                          # Gene Ontology ontology
 │   │   └── kegg_pathway_classes.json             # KEGG pathway taxonomy
 │   └── outputs/                                  # All analysis outputs
+│       ├── paper_figures/                        # Manuscript-ready figures
 │       ├── sensitivity/                          # Parameter sensitivity results
 │       │   ├── target_robustness.csv
 │       │   ├── pathway_robustness.csv
@@ -118,6 +127,7 @@ This executes the full pipeline: parameter grid → robust-vs-parametric compari
 │
 ├── tests/                                        # Unit & integration tests
 ├── docs/                                         # Project documentation
+├── 分子对接/                                      # Docking panel composition assets
 ├── requirements.txt
 ├── pyproject.toml
 └── reproduce.sh                                  # One-click reproduction
@@ -127,23 +137,31 @@ This executes the full pipeline: parameter grid → robust-vs-parametric compari
 
 ## Output Files
 
-### Core Results (Parameter Sensitivity)
+### Core Results (Parameter Perturbation)
 
 | File | Description |
 |------|-------------|
 | `src/outputs/sensitivity/target_robustness.csv` | Target frequency & degree statistics across 112 combos |
-| `src/outputs/sensitivity/pathway_robustness.csv` | Pathway robustness metrics (signaling backbone, direct OX, cross-regulation) |
+| `src/outputs/sensitivity/pathway_robustness.csv` | GO BP/KEGG functional-term robustness metrics |
 | `src/outputs/sensitivity/param_grid_results.csv` | Per-combo enrichment summary |
-| `src/outputs/sensitivity/pathway_rank_stability.csv` | Pathway rank consistency across parameter space |
+| `src/outputs/sensitivity/pathway_rank_stability.csv` | Functional-term rank consistency across parameter space |
 
-### Core Results (Compound Sensitivity)
+### Core Results (Compound Perturbation)
 
 | File | Description |
 |------|-------------|
 | `src/outputs/sensitivity/compound_sensitivity/compound_influence_scores.csv` | Influence score per compound (0–1) |
 | `src/outputs/sensitivity/compound_sensitivity/dual_robust_targets.csv` | 29 dual-robust targets with LOO retention rates |
-| `src/outputs/sensitivity/compound_sensitivity/dual_robust_pathways.csv` | 58 dual-robust functional enrichment terms with LOO retention rates |
+| `src/outputs/sensitivity/compound_sensitivity/dual_robust_pathways.csv` | 58 dual-robust GO BP/KEGG functional terms with LOO retention rates |
 | `src/outputs/sensitivity/compound_sensitivity/leave_one_out_pathway_robustness.csv` | Functional-term robustness under compound dropout |
+
+### External Evidence and Manuscript Figures
+
+| File | Description |
+|------|-------------|
+| `src/outputs/sensitivity/robustness_validation/` | Top30 ablation, PubMed co-occurrence audit, and degree-matched permutation outputs |
+| `src/outputs/paper_figures/` | Manuscript-ready figures including workflow, parameter heatmap, compound LOO heatmap, PubMed threshold audit, and docking panels |
+| `src/outputs/paper_figures/figure-catalog.md` | Figure purpose, source data, and interpretation notes |
 
 ### Checkpoints
 
@@ -179,7 +197,7 @@ python scripts/analysis/export_supplementary_tables.py
 
 ## Strawberry Leaf Compounds (n = 18)
 
-LC-MS/MS identified 19 raw records; after deduplication (Trehalose ≡ alpha,alpha-Trehalose), 18 canonical compounds:
+LC-MS/MS identified 19 raw records; after structure-normalized deduplication (Trehalose ≡ alpha,alpha-Trehalose), 18 compounds were retained:
 
 1. Miquelianin
 2. Sucrose
@@ -255,7 +273,7 @@ External databases used:
 
 If you use this code or framework, please cite:
 
-> *Parameter robustness analysis for network pharmacology target identification: a dual-perturbation framework applied to strawberry leaf compounds against oxidative stress.*
+> *Parameter and compound dual-perturbation robustness framework for network pharmacology target prioritization: strawberry leaf antioxidant compounds as a case study.*
 
 ---
 
