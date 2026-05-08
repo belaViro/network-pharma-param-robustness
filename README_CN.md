@@ -54,13 +54,19 @@ pip install -r requirements.txt
 
 # 方式 B：可编辑安装（推荐）
 pip install -e .
+
+# 可选：重新获取 PubChem/SwissTargetPrediction 原始数据
+pip install -e ".[acquisition]"
 ```
 
 需要 Python ≥ 3.10。
 
-### 3. 运行主分析
+### 3. 手动运行主分析
 
 ```bash
+# 传统固定阈值基线
+python scripts/run_traditional_pipeline.py
+
 # 参数网格敏感性分析（112 组组合）
 python scripts/analysis/run_sensitivity_analysis.py
 
@@ -72,15 +78,40 @@ python scripts/analysis/robustness_validation_bundle.py
 
 # 论文图表重生成
 python scripts/analysis/generate_paper_figures.py
+
+# 论文补充表导出
+python scripts/analysis/export_supplementary_tables.py
 ```
 
 ### 4. 一键复现
 
 ```bash
+# 从仓库内置输入文件复现完整论文工作流（默认）
+python reproduce.py
+
+# 通过 Bash 包装脚本运行同一流程
 bash reproduce.sh
+
+# Windows PowerShell 包装脚本
+.\reproduce.ps1
+
+# 只快速复现参数鲁棒性核心流程
+python reproduce.py --core
 ```
 
-该脚本依次执行核心参数鲁棒性复现流程：参数网格分析 → 稳健 vs. 参数化对比 → GO BP/KEGG 功能条目象限增强 → 图表重生成。若需要完整论文结果集，可另行运行上方的成分 LOO 和外部证据审计脚本。
+默认复现入口会从仓库内置输入文件开始，依次运行论文级结果工作流：传统固定阈值基线 → 112 组参数网格 → 稳健 vs. 参数化对比 → GO BP/KEGG 功能条目象限增强 → 化合物 LOO 扰动 → 外部证据与 degree-matched validation bundle → 最终论文图件 → 补充表。
+
+常用模式：
+
+| 命令 | 用途 |
+|------|------|
+| `python reproduce.py` | 从内置输入和缓存复现完整论文工作流 |
+| `python reproduce.py --core` | 只快速复现参数鲁棒性核心流程 |
+| `python reproduce.py --skip-install` | 复用当前环境，不重新安装本包 |
+| `python reproduce.py --pubmed-mode query` | 通过 NCBI E-utilities 重新获取 PubMed 共现计数 |
+| `python reproduce.py --full --include-acquisition` | 同时重新运行 PubChem/SwissTargetPrediction 获取阶段 |
+
+PubMed 验证默认使用缓存计数，不主动联网查询。重新查询 PubMed 或重新获取原始预测数据都需要网络，并且耗时会明显增加。
 
 ---
 
@@ -96,9 +127,11 @@ bash reproduce.sh
 │   │   ├── augment_pathway_robustness.py         # GO BP/KEGG 鲁棒性象限增强
 │   │   ├── robustness_validation_bundle.py        # Top30 消融与外部证据审计
 │   │   ├── generate_paper_figures.py             # 论文图表生成
-│   │   ├── validate_with_pubmed.py               # PubMed 共现审计
+│   │   ├── export_supplementary_tables.py        # 论文补充表导出
+│   │   ├── validate_with_pubmed.py               # 独立 PubMed 诊断脚本
 │   │   └── ...                                   # 其他诊断脚本
-│   ├── run_full_pipeline.py                      # 端到端流水线
+│   ├── run_pipeline.py                           # 可选 PubChem/SwissTarget 获取
+│   ├── run_full_pipeline.py                      # 旧版分阶段获取与基线流水线
 │   └── run_traditional_pipeline.py               # 基线方法对比
 │
 ├── src/
@@ -113,7 +146,7 @@ bash reproduce.sh
 │   │   └── plotting.py                           # 富集可视化
 │   ├── visualization/                            # 绘图工具
 │   ├── data/                                     # 参考数据
-│   │   ├── go-basic.obo                          # Gene Ontology 本体
+│   │   ├── oxidative_stress_go_terms.txt         # 氧化应激相关 GO 条目
 │   │   └── kegg_pathway_classes.json             # KEGG 通路分类
 │   └── outputs/                                  # 全部分析输出
 │       ├── paper_figures/                        # 论文成图
@@ -125,12 +158,13 @@ bash reproduce.sh
 │       ├── shared/                               # 跨阶段共享数据
 │       └── traditional/                          # 基线方法输出
 │
-├── tests/                                        # 单元与集成测试
 ├── docs/                                         # 项目文档
 ├── 分子对接/                                      # 分子对接拼图与结果图
 ├── requirements.txt
 ├── pyproject.toml
-└── reproduce.sh                                  # 一键复现脚本
+├── reproduce.py                                  # 跨平台复现总控脚本
+├── reproduce.ps1                                 # Windows PowerShell 包装脚本
+└── reproduce.sh                                  # Bash 包装脚本
 ```
 
 ---
@@ -157,11 +191,14 @@ bash reproduce.sh
 
 ### 外部证据与论文图表
 
+兼容说明：历史文件名和部分 CSV 字段仍保留 `pathway_*`，但本仓库中这些字段实际表示 **KEGG 通路 + GO BP 生物过程条目** 的混合功能富集条目；GO BP 条目不是通路。
+
 | 文件 | 说明 |
 |------|------|
 | `src/outputs/sensitivity/robustness_validation/` | Top30 消融、PubMed 共现审计和 degree-matched permutation 输出 |
 | `src/outputs/paper_figures/` | 论文成图，包括工作流、参数热图、成分 LOO 热图、PubMed 阈值审计和分子对接图 |
 | `src/outputs/paper_figures/figure-catalog.md` | 图件用途、数据来源与解释提示 |
+| `src/outputs/reproduction_manifest.json` | `reproduce.py` 生成的运行清单；已被 Git 忽略 |
 
 ### 检查点
 
@@ -259,7 +296,7 @@ LC-MS/MS 共鉴定 19 条原始记录；经结构规范化去重后（Trehalose 
 本仓库已包含全部源代码、原始预测数据、中间检查点及最终结果。
 
 - **仓库地址**：https://github.com/belaViro/network-pharma-param-robustness
-- **完整可复现包**（约 33 MB）：可通过 GitHub Release [v1.0.0](https://github.com/belaViro/network-pharma-param-robustness/releases) 下载
+- **可复现包**：仓库克隆本身已包含 `reproduce.py` 所需的内置输入、缓存中间文件、检查点和论文级输出。
 
 使用的外部数据库：
 - SwissTargetPrediction（http://www.swisstargetprediction.ch/）

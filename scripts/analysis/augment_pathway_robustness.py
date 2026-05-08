@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """
-通路稳健性象限分类增强脚本（P0）
+GO BP/KEGG 功能富集条目稳健性象限分类增强脚本（P0）
 
 直接读取现有的 pathway_rank_stability.csv，
 追加二维象限分类（频率 × 显著性强度），输出增强版结果。
+
+兼容说明：历史文件名中的 pathway 指 KEGG pathway + GO BP biological process term。
+GO BP 是生物过程条目，不是通路。
 
 用法:
     cd code && python scripts/analysis/augment_pathway_robustness.py
@@ -26,11 +29,11 @@ OUTPUT_JSON = OUTPUTS_DIR / "pathway_robustness_quadrant.json"
 
 # ── Load ───────────────────────────────────────────────────────────────
 print("=" * 70)
-print("通路稳健性象限分类增强")
+print("GO BP/KEGG 功能富集条目稳健性象限分类增强")
 print("=" * 70)
 
 df = pd.read_csv(INPUT_CSV)
-print(f"加载 {len(df)} 条通路记录")
+print(f"加载 {len(df)} 条功能富集条目记录")
 
 # ── Data-driven median splits ──────────────────────────────────────────
 freq_median = df["frequency"].median()
@@ -45,7 +48,7 @@ def classify_pathway_quadrant(row):
     freq_high = row["frequency"] >= freq_median
     sig_high = row["avg_logp"] >= logp_median
     if freq_high and sig_high:
-        return "Q1: 候选稳健通路"
+        return "Q1: 候选稳健功能条目"
     elif not freq_high and sig_high:
         return "Q2: 低频高显著"
     elif freq_high and not sig_high:
@@ -60,7 +63,7 @@ print(f"\n{'象限':<20} {'数量':<6} {'占比':<8} {'平均频率':<10} {'平�
 print("-" * 60)
 
 quadrant_summary = {}
-for q in ["Q1: 候选稳健通路", "Q2: 低频高显著", "Q3: 稳健但效应弱", "Q4: 可忽略"]:
+for q in ["Q1: 候选稳健功能条目", "Q2: 低频高显著", "Q3: 稳健但效应弱", "Q4: 可忽略"]:
     sub = df[df["robustness_quadrant"] == q]
     if len(sub) > 0:
         pct = len(sub) / len(df) * 100
@@ -74,11 +77,11 @@ for q in ["Q1: 候选稳健通路", "Q2: 低频高显著", "Q3: 稳健但效应�
             "avg_logp": round(float(avg_logp), 4),
         }
 
-# ── Q1 candidate robust pathways detail ────────────────────────────────
-q1_df = df[df["robustness_quadrant"] == "Q1: 候选稳健通路"].sort_values("avg_rank")
+# ── Q1 candidate robust functional terms detail ───────────────────────
+q1_df = df[df["robustness_quadrant"] == "Q1: 候选稳健功能条目"].sort_values("avg_rank")
 
-print(f"\nQ1 候选稳健通路详情 (n={len(q1_df)}):")
-print(f"{'通路名称':<55} {'来源':<8} {'类别':<18} {'频率':<8} {'排名':<6} {'-log10P':<8}")
+print(f"\nQ1 候选稳健功能条目详情 (n={len(q1_df)}):")
+print(f"{'功能条目名称':<55} {'来源':<8} {'类别':<18} {'频率':<8} {'排名':<6} {'-log10P':<8}")
 print("-" * 105)
 
 CATEGORY_LABELS = {
@@ -100,6 +103,7 @@ print(f"\n[OK] 增强版CSV已保存: {OUTPUT_CSV}")
 # ── Save JSON summary ──────────────────────────────────────────────────
 output_json = {
     "method": "二维象限分类（频率 × 显著性强度）",
+    "compatibility_note": "pathway_* 历史文件名指 KEGG pathway + GO BP biological process term；GO BP 不是通路。",
     "thresholds": {
         "frequency_median": round(float(freq_median), 4),
         "avg_logp_median": round(float(logp_median), 4),

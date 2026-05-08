@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fig.9b: 通路稳健性象限散点图（按来源分面 + KEGG/GO_BP 高亮版）
+Fig.9b: GO BP/KEGG 功能富集条目稳健性象限散点图（按来源分面 + KEGG/GO_BP 高亮版）
 
 用法:
     cd code && python scripts/analysis/plot_pathway_quadrant_by_source.py
@@ -23,6 +23,8 @@ BASE_DIR = Path(__file__).resolve().parents[2]
 OUTPUTS_DIR = BASE_DIR / "src" / "outputs" / "sensitivity"
 FIGURES_DIR = OUTPUTS_DIR / "figures"
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+Q1_LABEL = "Q1: 候选稳健功能条目"
+Q1_OLD_LABEL = "Q1: 候选稳健通路"
 
 # ── Style ──────────────────────────────────────────────────────────────
 dpi = 300
@@ -88,7 +90,8 @@ def save_fig(fig, name):
 # ── Load data ──────────────────────────────────────────────────────────
 print("Loading data...")
 df = pd.read_csv(OUTPUTS_DIR / "pathway_rank_stability_augmented.csv")
-print(f"  {len(df)} pathways")
+df["robustness_quadrant"] = df["robustness_quadrant"].replace({Q1_OLD_LABEL: Q1_LABEL})
+print(f"  {len(df)} GO BP/KEGG functional terms")
 
 # ── Compute medians ────────────────────────────────────────────────────
 freq_med = df["frequency"].median()
@@ -100,7 +103,7 @@ print(f"  Avg_logp median: {logp_med:.4f}")
 source_q1_rates = {}
 for src in df["source"].unique():
     sub = df[df["source"] == src]
-    q1_count = len(sub[sub["robustness_quadrant"] == "Q1: 候选稳健通路"])
+    q1_count = len(sub[sub["robustness_quadrant"] == Q1_LABEL])
     source_q1_rates[src] = q1_count / len(sub) * 100 if len(sub) > 0 else 0
 
 # ── Figure 1: All sources combined with shape coding ───────────────────
@@ -216,13 +219,13 @@ ax.legend(handles=legend_elements, frameon=True, fancybox=False, loc="upper cent
 
 ax.grid(alpha=0.2, linestyle="--", linewidth=0.3)
 
-fig.suptitle("通路稳健性象限（按数据库来源区分）",
+fig.suptitle("GO BP/KEGG 功能富集条目稳健性象限（按数据库来源区分）",
              fontproperties=FontProperties(family="SimHei", size=12), y=1.03)
 
 save_fig(fig, "fig9b_pathway_quadrant_by_source")
 plt.close(fig)
 
-# ── Figure 2: KEGG + GO_BP only (system pathways) ─────────────────────
+# ── Figure 2: KEGG + GO_BP only (system functional terms) ─────────────
 fig2, ax2 = plt.subplots(figsize=(8.6, 5.9), constrained_layout=True)
 
 system_df = df[df["source"].isin(["KEGG", "GO_BP"])]
@@ -262,7 +265,7 @@ ax2.axhline(y=logp_med, color="#555555", linestyle="--", linewidth=0.8, zorder=1
 # Keep labels off the dense point cluster; list representative KEGG pathways instead.
 kegg_q1 = system_df[
     (system_df["source"] == "KEGG")
-    & (system_df["robustness_quadrant"] == "Q1: 候选稳健通路")
+    & (system_df["robustness_quadrant"] == Q1_LABEL)
 ].sort_values("avg_rank")
 if len(kegg_q1):
     import re
@@ -285,10 +288,10 @@ if len(kegg_q1):
         bbox=dict(boxstyle="round,pad=0.35", facecolor="white", edgecolor="#cccccc", alpha=0.90),
     )
 
-system_q1_count = int((system_df["robustness_quadrant"] == "Q1: 候选稳健通路").sum())
+system_q1_count = int((system_df["robustness_quadrant"] == Q1_LABEL).sum())
 system_total = len(system_df)
 system_q1_rate = system_q1_count / system_total * 100 if system_total else 0
-ax2.text(0.98, 0.98, f"KEGG + GO_BP\nQ1候选比例: {system_q1_rate:.1f}%\n({system_q1_count}/{system_total} 条通路)",
+ax2.text(0.98, 0.98, f"KEGG + GO_BP\nQ1候选比例: {system_q1_rate:.1f}%\n({system_q1_count}/{system_total} 条功能条目)",
          transform=ax2.transAxes, fontsize=10, fontweight="bold",
          verticalalignment="top", horizontalalignment="right",
          fontproperties=FontProperties(family="SimHei", size=10),
@@ -309,7 +312,7 @@ ax2.legend(frameon=True, fancybox=False, loc="upper center",
            edgecolor="#cccccc", prop=FontProperties(family="SimHei", size=7))
 ax2.grid(alpha=0.2, linestyle="--", linewidth=0.3)
 
-fig2.suptitle("系统级通路稳健性（KEGG + GO_BP）",
+fig2.suptitle("系统级功能富集条目稳健性（KEGG + GO_BP）",
               fontproperties=FontProperties(family="SimHei", size=12), y=1.03)
 
 save_fig(fig2, "fig9c_system_pathways_quadrant")

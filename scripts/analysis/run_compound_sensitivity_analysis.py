@@ -3,7 +3,7 @@ Leave-one-compound-out sensitivity analysis with resumable checkpoints.
 
 This script extends the parameter robustness workflow to compound perturbation:
 for each canonical strawberry leaf compound, remove that compound, rerun the
-full parameter grid, and compare targets/pathways against the full-set
+full parameter grid, and compare targets/GO BP-KEGG functional terms against the full-set
 reference results.
 
 Checkpoint policy:
@@ -1074,7 +1074,7 @@ def main() -> None:
     print(f"OK combinations: {summary['ok_combinations']}")
     print(f"Skipped combinations: {summary['skipped_combinations']}")
     print(f"Dual-robust targets: {summary['dual_robust_target_count']}")
-    print(f"Dual-robust pathways: {summary['dual_robust_pathway_count']}")
+    print(f"Dual-robust GO BP/KEGG functional terms: {summary['dual_robust_pathway_count']}")
     print(f"Summary: {OUT_DIR / 'compound_sensitivity_summary.json'}")
 
 

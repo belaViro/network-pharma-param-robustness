@@ -347,10 +347,10 @@ def main() -> None:
     target_stats_df.to_csv("src/outputs/sensitivity/target_robustness.csv", index=False)
     
     # ============================================================================
-    # 通路排名稳定性分析
+    # GO BP/KEGG 功能富集条目排名稳定性分析
     # ============================================================================
     print("\n" + "=" * 70)
-    print("通路排名稳定性分析")
+    print("GO BP/KEGG 功能富集条目排名稳定性分析")
     print("=" * 70)
     
     pathway_df = pd.DataFrame(all_pathway_records)
@@ -401,22 +401,22 @@ def main() -> None:
         json.dump(pathway_robustness_summary, f, indent=2, ensure_ascii=False)
     
     CATEGORY_LABELS = {
-        "direct_ox": "直接OX", "cross_talk": "交叉调控",
+        "direct_ox": "直接氧化应激GO BP", "cross_talk": "交叉调控",
         "signaling_backbone": "信号主干", "other": "其他",
     }
     
-    print(f"\n{'通路':<50} {'类别':<12} {'频率':<8} {'平均排名':<10} {'排名波动':<10} {'平均EF':<8}")
+    print(f"\n{'功能条目':<50} {'类别':<18} {'频率':<8} {'平均排名':<10} {'排名波动':<10} {'平均EF':<8}")
     print("-" * 100)
     for _, row in rank_stats_df.head(25).iterrows():
         cat_label = CATEGORY_LABELS.get(row["pathway_category"], row["pathway_category"])
         print(f"{row['pathway']:<48} {cat_label:<12} {row['frequency']:<8.2f} "
               f"{row['avg_rank']:<10.1f} {row['rank_std']:<10.1f} {row['avg_ef']:<8.1f}")
 
-    print("\n通路稳健性筛选（频率 × 平均 -log10(adjusted p-value)）")
+    print("\n功能富集条目稳健性筛选（频率 × 平均 -log10(adjusted p-value)）")
     print(f"  频率中位数: {pathway_robustness_summary['thresholds']['frequency_median']:.4f}")
     print(f"  平均-log10P 中位数: {pathway_robustness_summary['thresholds']['avg_logp_median']:.4f}")
-    print(f"  绝对稳健通路: {pathway_robustness_summary['absolute_robust_count']} 条")
-    print(f"  候选稳健通路: {pathway_robustness_summary['candidate_robust_count']} 条")
+    print(f"  绝对稳健功能条目: {pathway_robustness_summary['absolute_robust_count']} 条")
+    print(f"  候选稳健功能条目: {pathway_robustness_summary['candidate_robust_count']} 条")
     print(f"  已保存: {pathway_robustness_csv}")
     
     # ============================================================================
@@ -435,7 +435,7 @@ def main() -> None:
         enrichment = cached_enrichment(q1_genes, pval, BACKGROUND_GENES)
         metrics = analyze_enrichment(enrichment, include_sources=["KEGG", "GO_BP"])
         pval_results[pval] = metrics
-        print(f"  显著通路总数: {metrics['total_significant']}")
+        print(f"  显著功能条目总数: {metrics['total_significant']}")
         print(f"  信号主干道:   {metrics['backbone']}")
         print(f"  交叉调控:     {metrics['cross_talk']}")
         print(f"  直接OX:       {metrics['direct_ox']}")
@@ -446,14 +446,14 @@ def main() -> None:
     m01 = pval_results[0.01]
     m05 = pval_results[0.05]
     print(f"\n--- 对比 ---")
-    print(f"  P=0.01 → 显著 {m01['total_significant']} 条通路")
-    print(f"  P=0.05 → 显著 {m05['total_significant']} 条通路")
+    print(f"  P=0.01 → 显著 {m01['total_significant']} 条功能条目")
+    print(f"  P=0.05 → 显著 {m05['total_significant']} 条功能条目")
     print(f"  主干道:     P=0.01={m01['backbone']}, P=0.05={m05['backbone']}")
     print(f"  交叉调控:   P=0.01={m01['cross_talk']}, P=0.05={m05['cross_talk']}")
     print(f"  直接OX:     P=0.01={m01['direct_ox']}, P=0.05={m05['direct_ox']}")
     shared = set(p["pathway"] for p in m01["pathway_details"]) & set(p["pathway"] for p in m05["pathway_details"])
     if shared:
-        print(f"  共有通路: {len(shared)} 条")
+        print(f"  共有功能条目: {len(shared)} 条")
     pval_stable = m01["backbone"] == m05["backbone"] and m01["cross_talk"] == m05["cross_talk"]
     print(f"  分类分布一致: {'是 (Pvalue 稳健)' if pval_stable else '否 (Pvalue 敏感)'}")
     
@@ -475,13 +475,13 @@ def main() -> None:
     stable_pathways = rank_stats_df[
         (rank_stats_df["frequency"] >= 0.5) & (rank_stats_df["avg_rank"] <= 10)
     ]
-    checks.append(("排名稳定通路数>=3", len(stable_pathways) >= 3, f"{len(stable_pathways)}"))
+    checks.append(("排名稳定功能条目数>=3", len(stable_pathways) >= 3, f"{len(stable_pathways)}"))
     
     backbone_stable = stable_pathways[stable_pathways["pathway_category"] == "signaling_backbone"]
     checks.append(("信号网络主干道排名稳定", len(backbone_stable) >= 1, f"{len(backbone_stable)}个"))
 
     n_candidate_pathways = pathway_robustness_summary["candidate_robust_count"]
-    checks.append(("Q1候选稳健通路数>=5", n_candidate_pathways >= 5, f"{n_candidate_pathways}"))
+    checks.append(("Q1候选稳健功能条目数>=5", n_candidate_pathways >= 5, f"{n_candidate_pathways}"))
     
     print(f"\n{'检查项':<40} {'结果':<30} {'判定'}")
     print("-" * 90)
@@ -506,7 +506,7 @@ def main() -> None:
     CATEGORY_LABELS_MD = {
         "direct_ox": "直接氧化应激",
         "cross_talk": "交叉调控",
-        "signaling_backbone": "信号主干通路",
+        "signaling_backbone": "信号主干",
         "other": "其他",
     }
     
@@ -547,7 +547,7 @@ def main() -> None:
     # 每组合的富集详情
     md_lines.append(f"## 4. 每组参数富集分析详情")
     md_lines.append(f"")
-    md_lines.append(f"| 组合 | 靶点数 | PPI节点 | PPI边 | 显著通路 | 主干道 | 交叉调控 | 直接OX | 其他 | 平均EF | 最小P |")
+    md_lines.append(f"| 组合 | 靶点数 | PPI节点 | PPI边 | 显著功能条目 | 主干道 | 交叉调控 | 直接OX GO BP | 其他 | 平均EF | 最小P |")
     md_lines.append(f"|------|--------|--------|-------|---------|-------|---------|--------|-------|--------|-------|")
     for _, row in results_df.iterrows():
         md_lines.append(
@@ -557,8 +557,8 @@ def main() -> None:
         )
     md_lines.append(f"")
     
-    # 各组合的富集通路明细
-    md_lines.append(f"### 4.1 各组合富集通路明细")
+    # 各组合的富集条目明细
+    md_lines.append(f"### 4.1 各组合富集条目明细")
     md_lines.append(f"")
     pathway_details_by_combo = {}
     for combo_rec in all_pathway_records:
@@ -570,16 +570,16 @@ def main() -> None:
     for combo, pathways in sorted(pathway_details_by_combo.items()):
         row = results_df[results_df["combo"] == combo].iloc[0]
         md_lines.append(f"<details>")
-        md_lines.append(f"<summary><b>{combo}</b> — 显著{row['significant_pathways']}条, 主干{row['backbone_count']}, 交叉{row['cross_talk_count']}, 直接OX{row['direct_ox_count']}, EF={row['avg_ef']:.1f}</summary>")
+        md_lines.append(f"<summary><b>{combo}</b> — 显著功能条目{row['significant_pathways']}条, 主干{row['backbone_count']}, 交叉{row['cross_talk_count']}, 直接OX GO BP{row['direct_ox_count']}, EF={row['avg_ef']:.1f}</summary>")
         md_lines.append(f"")
-        md_lines.append(f"| 通路名 | 类别 | P-value | EF |")
+        md_lines.append(f"| 功能条目名 | 类别 | P-value | EF |")
         md_lines.append(f"|--------|------|--------|----|")
         sorted_pathways = sorted(pathways, key=lambda x: x["pvalue"])
         for pdet in sorted_pathways[:20]:
             cat = CATEGORY_LABELS_MD.get(pdet["pathway_category"], pdet["pathway_category"])
             md_lines.append(f"| {pdet['pathway'][:55]} | {cat} | {pdet['pvalue']:.2e} | {pdet['ef']:.1f} |")
         if len(sorted_pathways) > 20:
-            md_lines.append(f"| ... 还有 {len(sorted_pathways) - 20} 条通路 ... | | | |")
+            md_lines.append(f"| ... 还有 {len(sorted_pathways) - 20} 条功能条目 ... | | | |")
         md_lines.append(f"")
         md_lines.append(f"</details>")
         md_lines.append(f"")
@@ -607,32 +607,33 @@ def main() -> None:
         md_lines.append(f"| {rank} | {r['gene']} | {r['frequency']:.1%} | {int(r['count'])} | {r['avg_degree']:.1f} | {r['avg_degree_norm']:.3f} | {r['avg_degree_rank']:.1f} | {r['avg_betweenness']:.4f} |")
     md_lines.append(f"")
     
-    # 通路排名稳定性
-    md_lines.append(f"## 6. 通路排名稳定性 (Top 25)")
+    # 功能条目排名稳定性
+    md_lines.append(f"## 6. GO BP/KEGG 功能富集条目排名稳定性 (Top 25)")
     md_lines.append(f"")
-    md_lines.append(f"| 排名 | 通路 | 类别 | 频率 | 平均排名 | 排名波动 | 平均logP | 平均EF |")
-    md_lines.append(f"|------|------|------|------|---------|---------|---------|-------|")
+    md_lines.append(f"| 排名 | 功能条目 | 来源 | 类别 | 频率 | 平均排名 | 排名波动 | 平均logP | 平均EF |")
+    md_lines.append(f"|------|----------|------|------|------|---------|---------|---------|-------|")
     for _, r in rank_stats_df.head(25).iterrows():
         cat = CATEGORY_LABELS_MD.get(r["pathway_category"], r["pathway_category"])
-        md_lines.append(f"| {int(r['avg_rank'])} | {r['pathway'][:50]} | {cat} | {r['frequency']:.1%} | {r['avg_rank']:.1f} | {r['rank_std']:.1f} | {r['avg_logp']:.1f} | {r['avg_ef']:.1f} |")
+        md_lines.append(f"| {int(r['avg_rank'])} | {r['pathway'][:50]} | {r['source']} | {cat} | {r['frequency']:.1%} | {r['avg_rank']:.1f} | {r['rank_std']:.1f} | {r['avg_logp']:.1f} | {r['avg_ef']:.1f} |")
     md_lines.append(f"")
 
-    md_lines.append(f"### 6.1 通路稳健性筛选")
+    md_lines.append(f"### 6.1 功能富集条目稳健性筛选")
     md_lines.append(f"")
     md_lines.append(
-        "通路稳健性采用与靶点层同构的二维筛选逻辑：跨参数组合出现频率表示稳健性，"
+        "功能富集条目稳健性采用与靶点层同构的二维筛选逻辑：跨参数组合出现频率表示稳健性，"
         "平均 -log10(adjusted p-value) 表示富集强度。"
     )
+    md_lines.append("历史文件名和字段中的 pathway 为兼容保留；这里的分析对象为 KEGG 通路 + GO BP 生物过程条目，GO BP 不等同于通路。")
     md_lines.append(f"")
     md_lines.append(f"- 频率中位数: {pathway_robustness_summary['thresholds']['frequency_median']:.4f}")
     md_lines.append(f"- 平均 -log10(adjusted p-value) 中位数: {pathway_robustness_summary['thresholds']['avg_logp_median']:.4f}")
-    md_lines.append(f"- 绝对稳健通路: {pathway_robustness_summary['absolute_robust_count']} 条")
-    md_lines.append(f"- Q1 候选稳健通路: {pathway_robustness_summary['candidate_robust_count']} 条")
+    md_lines.append(f"- 绝对稳健功能条目: {pathway_robustness_summary['absolute_robust_count']} 条")
+    md_lines.append(f"- Q1 候选稳健功能条目: {pathway_robustness_summary['candidate_robust_count']} 条")
     md_lines.append(f"")
-    md_lines.append(f"| 象限 | 说明 | 通路数 | 平均频率 | 平均-log10P |")
+    md_lines.append(f"| 象限 | 说明 | 功能条目数 | 平均频率 | 平均-log10P |")
     md_lines.append(f"|------|------|-------:|---------:|-----------:|")
     quadrant_labels = {
-        "Q1: 候选稳健通路": "高频率 + 高富集强度",
+        "Q1: 候选稳健功能条目": "高频率 + 高富集强度",
         "Q2: 低频高显著": "低频率 + 高富集强度",
         "Q3: 稳健但效应弱": "高频率 + 低富集强度",
         "Q4: 可忽略": "低频率 + 低富集强度",
@@ -647,9 +648,9 @@ def main() -> None:
 
     absolute_pathways = pathway_robustness_summary["absolute_robust_pathways"]
     if absolute_pathways:
-        md_lines.append(f"### 6.2 绝对稳健通路")
+        md_lines.append(f"### 6.2 绝对稳健功能条目")
         md_lines.append(f"")
-        md_lines.append(f"| 通路 | 来源 | 类别 | 频率 | 平均-log10P | 平均排名 |")
+        md_lines.append(f"| 功能条目 | 来源 | 类别 | 频率 | 平均-log10P | 平均排名 |")
         md_lines.append(f"|------|------|------|------|-------------|---------|")
         for r in absolute_pathways:
             cat = CATEGORY_LABELS_MD.get(r["pathway_category"], r["pathway_category"])
@@ -659,9 +660,9 @@ def main() -> None:
             )
         md_lines.append(f"")
 
-    md_lines.append(f"### 6.3 Q1 候选稳健通路 Top 20")
+    md_lines.append(f"### 6.3 Q1 候选稳健功能条目 Top 20")
     md_lines.append(f"")
-    md_lines.append(f"| 排名 | 通路 | 来源 | 类别 | 频率 | 平均-log10P | 平均排名 | 平均EF |")
+    md_lines.append(f"| 排名 | 功能条目 | 来源 | 类别 | 频率 | 平均-log10P | 平均排名 | 平均EF |")
     md_lines.append(f"|------|------|------|------|------|-------------|---------|-------|")
     q1_pathways = pathway_robustness_df[pathway_robustness_df["is_candidate_robust"]].sort_values("candidate_rank")
     for _, r in q1_pathways.head(20).iterrows():
@@ -677,13 +678,13 @@ def main() -> None:
     md_lines.append(f"")
     md_lines.append(f"| 指标 | P=0.01 | P=0.05 |")
     md_lines.append(f"|------|--------|--------|")
-    md_lines.append(f"| 显著通路总数 | {m01['total_significant']} | {m05['total_significant']} |")
+    md_lines.append(f"| 显著功能条目总数 | {m01['total_significant']} | {m05['total_significant']} |")
     md_lines.append(f"| 主干道 | {m01['backbone']} | {m05['backbone']} |")
     md_lines.append(f"| 交叉调控 | {m01['cross_talk']} | {m05['cross_talk']} |")
     md_lines.append(f"| 直接OX | {m01['direct_ox']} | {m05['direct_ox']} |")
     md_lines.append(f"| 其他 | {m01['other']} | {m05['other']} |")
     md_lines.append(f"| 平均EF | {m01['avg_ef']:.2f} | {m05['avg_ef']:.2f} |")
-    md_lines.append(f"| 共有通路 | {len(shared)} | {len(shared)} |")
+    md_lines.append(f"| 共有功能条目 | {len(shared)} | {len(shared)} |")
     stable = "是（Pvalue 稳健）" if pval_stable else "否（Pvalue 敏感）"
     md_lines.append(f"| 分类分布一致 | {stable} | {stable} |")
     md_lines.append(f"")

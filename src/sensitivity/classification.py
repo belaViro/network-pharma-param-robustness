@@ -1,10 +1,16 @@
 """
-三级通路分类体系（论文方法学核心）— GO 层级追溯 + KEGG 官方分类 + 关键词版
+GO BP/KEGG 功能富集条目分类体系（论文方法学核心）— GO 层级追溯 + KEGG 官方分类 + 关键词版
+
+兼容说明
+--------
+历史函数名和字段名仍保留 pathway，以兼容既有 CSV/JSON 与绘图脚本。
+实际分类对象是 GO BP/KEGG functional enrichment terms；其中 GO BP 是
+biological process term，不是 pathway。只有 KEGG 条目可严格称为 pathway。
 
 分类逻辑（优先级从高到低）：
 1. direct_ox: GO 层级追溯（种子节点 + 祖先链匹配）
 2. cross_talk / signaling_backbone: KEGG BRITE 官方分类自动映射
-3. cross_talk: 人工精选的已知与氧化应激有功能交叉的 KEGG 通路
+3. cross_talk: 人工精选的已知与氧化应激有功能交叉的 KEGG 通路/机制条目
 4. signaling_backbone: 核心信号转导 + 氧化应激相关关键词（正则单词边界匹配）
 5. other: 以上都不是
 
@@ -12,8 +18,8 @@
 --------
 2026-04-26: direct_ox 层从"扁平 GO ID 查表"升级为"GO DAG 向上追溯祖先"。
 2026-04-26: 新增 KEGG BRITE 官方分类层。基于 KEGG 官方 CLASS（Human Diseases /
-           Signal transduction / Immune system 等）自动判定通路类型，解决
-           "Pathways in cancer" 等大量通路被误归为 other 的问题。
+           Signal transduction / Immune system 等）自动判定 KEGG 条目类型，解决
+           "Pathways in cancer" 等大量 KEGG 条目被误归为 other 的问题。
 2026-04-26: 大幅扩展 BACKBONE_KEYWORDS（从 12 个扩展到 25+ 个），覆盖 cancer、
            apoptosis、HIF-1、inflammation 等氧化应激相关语义域。
 2026-04-26 (P0): 修复 " Hedgehog" 前导空格 bug；补充 "MAP kinase", "phosphorylation",
@@ -110,7 +116,7 @@ if _KEGG_CLASS_FILE.exists():
         KEGG_PATHWAY_CLASSES = json.load(f)
 
 # KEGG CLASS → 分类标签映射规则
-# 基于 KEGG BRITE 官方层级分类，将通路自动映射为 cross_talk / signaling_backbone / other
+# 基于 KEGG BRITE 官方层级分类，将 KEGG 条目自动映射为 cross_talk / signaling_backbone / other
 KEGG_CLASS_CATEGORY_MAP = {
     # 疾病大类（含传染病）→ cross_talk
     "Human Diseases; Cancer:": "cross_talk",
@@ -139,7 +145,7 @@ def _classify_by_kegg_class(term: str, source: Optional[str] = None) -> Optional
     """
     基于 KEGG 官方 BRITE CLASS 自动分类。
 
-    仅对 KEGG 来源通路生效，GO 来源返回 None（由 GO 层级和关键词处理）。
+    仅对 KEGG 来源条目生效，GO 来源返回 None（由 GO 层级和关键词处理）。
     """
     if source != "KEGG" or not KEGG_PATHWAY_CLASSES:
         return None
@@ -156,10 +162,10 @@ def _classify_by_kegg_class(term: str, source: Optional[str] = None) -> Optional
 
 
 # ---------------------------------------------------------------------------
-# 交叉调控通路（已知与氧化应激存在功能交叉）
+# 交叉调控条目（已知与氧化应激存在功能交叉）
 # ---------------------------------------------------------------------------
 CROSS_TALK_PATHWAYS: set = {
-    # 精确已知与氧化应激存在功能交叉的通路
+    # 精确已知与氧化应激存在功能交叉的 KEGG 通路/机制条目
     # （KEGG BRITE 官方分类未覆盖或需要明确确认的边缘 case）
     "AGE-RAGE signaling pathway in diabetic complications",
     "IL-17 signaling pathway",
@@ -185,7 +191,7 @@ CROSS_TALK_PATHWAYS: set = {
 }
 
 # ---------------------------------------------------------------------------
-# 信号网络主干道关键词（核心信号转导通路）
+# 信号网络主干关键词（核心信号转导和相关 GO BP 过程）
 # 依据：KEGG BRITE "Signal Transduction" 类别 (hsa04000–hsa04999)
 # 匹配方式：正则单词边界 \bkeyword\b
 # ---------------------------------------------------------------------------
@@ -239,12 +245,14 @@ BACKBONE_KEYWORDS: List[str] = [
 
 
 def classify_pathway(term: str, source: Optional[str] = None) -> str:
-    """三级通路分类（GO 层级追溯版）。
+    """GO BP/KEGG 功能富集条目分类（GO 层级追溯版）。
+
+    函数名保留 pathway 是为了兼容历史调用；GO BP 条目不是通路。
 
     参数
     ----------
     term : str
-        通路名称（如 "MAPK signaling pathway" 或
+        富集条目名称（如 "MAPK signaling pathway" 或
         "positive regulation of phosphorylation (GO:0042327)"）。
     source : str, optional
         来源数据库（"KEGG", "GO_BP", "GO_MF" 等）。
@@ -269,12 +277,12 @@ def classify_pathway(term: str, source: Optional[str] = None) -> str:
     if kegg_cat is not None:
         return kegg_cat
 
-    # 3. 交叉调控通路（固定列表精确匹配）
+    # 3. 交叉调控条目（固定列表精确匹配）
     if term in CROSS_TALK_PATHWAYS:
         return "cross_talk"
 
-    # 4. 信号网络主干道（单词边界匹配）
-    #    注意：GO_MF（分子功能）条目不算通路，排除
+    # 4. 信号网络主干条目（单词边界匹配）
+    #    注意：GO_MF（分子功能）条目不进入此类
     if source == "GO_MF":
         return "other"
 

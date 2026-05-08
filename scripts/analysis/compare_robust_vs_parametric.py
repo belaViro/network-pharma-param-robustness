@@ -40,9 +40,9 @@ for idx, row in combo_df.iterrows():
           f"minP={row['min_pvalue']:.2e}")
 
 print(f"\n--- 各参数组合指标汇总 ---")
-for metric, label in [("significant_pathways", "总显著通路数"),
-                       ("backbone_count", "信号主干道数"),
-                       ("cross_talk_count", "交叉调控通路数"),
+for metric, label in [("significant_pathways", "总显著功能条目数"),
+                       ("backbone_count", "信号主干条目数"),
+                       ("cross_talk_count", "交叉调控条目数"),
                        ("avg_ef", "平均EF"),
                        ("min_pvalue", "最小P-value")]:
     vals = combo_df[metric]
@@ -73,19 +73,19 @@ for label, genes in [(q1_label, q1_genes), (tier1_label, tier1_genes)]:
     metrics = analyze_enrichment(enrichment, include_sources=["KEGG", "GO_BP"])
     results[label] = metrics
 
-    print(f"  显著通路总数: {metrics['total_significant']}")
-    print(f"  信号主干道: {metrics['backbone']}")
+    print(f"  显著功能条目总数: {metrics['total_significant']}")
+    print(f"  信号主干条目: {metrics['backbone']}")
     print(f"  交叉调控: {metrics['cross_talk']}")
-    print(f"  直接OX: {metrics['direct_ox']}")
+    print(f"  直接OX GO BP: {metrics['direct_ox']}")
     print(f"  平均EF: {metrics['avg_ef']}")
     print(f"  最小P-value: {metrics['min_pvalue']:.2e}")
 
-    print(f"\n  富集到的具体通路 (按分类):")
+    print(f"\n  富集到的具体功能条目 (按分类):")
     for cat_name in ["signaling_backbone", "cross_talk", "direct_ox", "other"]:
         cat_pathways = [p for p in metrics["pathway_details"] if p["pathway_category"] == cat_name]
         if cat_pathways:
-            cat_label = {"signaling_backbone": "信号主干道", "cross_talk": "交叉调控",
-                         "direct_ox": "直接OX", "other": "其他"}[cat_name]
+            cat_label = {"signaling_backbone": "信号主干", "cross_talk": "交叉调控",
+                         "direct_ox": "直接OX GO BP", "other": "其他"}[cat_name]
             print(f"  [{cat_label}] {len(cat_pathways)} 条:")
             for p in sorted(cat_pathways, key=lambda x: x["pvalue"])[:10]:
                 print(f"    - {p['pathway'][:60]:<60} EF={p['ef']:.1f} P={p['pvalue']:.2e}")
@@ -98,9 +98,9 @@ print("对比分析：稳健靶点富集效果是否优于各参数组合？")
 print("=" * 80)
 
 comparisons = [
-    ("总显著通路数 (越多越好)", "significant_pathways", "higher"),
-    ("信号主干道通路数 (越多越好)", "backbone_count", "higher"),
-    ("交叉调控通路数 (越多越好)", "cross_talk_count", "higher"),
+    ("总显著功能条目数 (越多越好)", "significant_pathways", "higher"),
+    ("信号主干条目数 (越多越好)", "backbone_count", "higher"),
+    ("交叉调控条目数 (越多越好)", "cross_talk_count", "higher"),
     ("平均Enrichment Factor (越高越好)", "avg_ef", "higher"),
     ("最小P-value (越小越好)", "min_pvalue", "lower"),
 ]
@@ -161,8 +161,8 @@ q1_pval_better = q1_metrics["min_pvalue"] <= combo_df["min_pvalue"].min()
 q1_score = sum([q1_total_better, q1_backbone_better, q1_ef_better, q1_pval_better])
 
 print(f"\nQ1 候选稳健靶点 ({len(q1_genes)}个):")
-print(check(q1_metrics['total_significant'], q1_total_better, combo_df['significant_pathways'], '总显著通路', True))
-print(check(q1_metrics['backbone'], q1_backbone_better, combo_df['backbone_count'], '主干道数', True))
+print(check(q1_metrics['total_significant'], q1_total_better, combo_df['significant_pathways'], '总显著功能条目', True))
+print(check(q1_metrics['backbone'], q1_backbone_better, combo_df['backbone_count'], '主干条目数', True))
 print(check(q1_metrics['avg_ef'], q1_ef_better, combo_df['avg_ef'], '平均EF', True))
 print(check(q1_metrics['min_pvalue'], q1_pval_better, combo_df['min_pvalue'], '最小P-value', False))
 print(f"  => 通过 {q1_score}/4 项")
@@ -175,8 +175,8 @@ t1_pval_better = t1_metrics["min_pvalue"] <= combo_df["min_pvalue"].min()
 t1_score = sum([t1_total_better, t1_backbone_better, t1_ef_better, t1_pval_better])
 
 print(f"\nTier 1 绝对稳健靶点 ({len(tier1_genes)}个):")
-print(check(t1_metrics['total_significant'], t1_total_better, combo_df['significant_pathways'], '总显著通路', True))
-print(check(t1_metrics['backbone'], t1_backbone_better, combo_df['backbone_count'], '主干道数', True))
+print(check(t1_metrics['total_significant'], t1_total_better, combo_df['significant_pathways'], '总显著功能条目', True))
+print(check(t1_metrics['backbone'], t1_backbone_better, combo_df['backbone_count'], '主干条目数', True))
 print(check(t1_metrics['avg_ef'], t1_ef_better, combo_df['avg_ef'], '平均EF', True))
 print(check(t1_metrics['min_pvalue'], t1_pval_better, combo_df['min_pvalue'], '最小P-value', False))
 print(f"  => 通过 {t1_score}/4 项")

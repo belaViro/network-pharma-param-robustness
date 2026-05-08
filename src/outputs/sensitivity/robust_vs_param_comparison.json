@@ -1,0 +1,53 @@
+{
+  "dataset": "\u7a33\u5065\u9776\u70b9 vs \u5404\u53c2\u6570\u7ec4\u5408 \u5bcc\u96c6\u6548\u679c\u5bf9\u6bd4",
+  "n_param_combos": 112,
+  "n_q1_targets": 50,
+  "n_tier1_targets": 1,
+  "combo_stats": {
+    "significant_pathways": {
+      "min": 7,
+      "max": 40,
+      "mean": 36.2
+    },
+    "backbone_count": {
+      "min": 0,
+      "max": 17,
+      "mean": 9.8
+    },
+    "avg_ef": {
+      "min": 27.7,
+      "max": 143.7,
+      "mean": 69.5
+    }
+  },
+  "q1_metrics": {
+    "total_significant": 40,
+    "direct_ox": 1,
+    "cross_talk": 13,
+    "backbone": 14,
+    "other": 12,
+    "avg_ef": 33.92,
+    "min_pvalue": 7.339000580455216e-31
+  },
+  "tier1_metrics": {
+    "total_significant": 0,
+    "direct_ox": 0,
+    "cross_talk": 0,
+    "backbone": 0,
+    "other": 0,
+    "avg_ef": 0.0,
+    "min_pvalue": 1.0
+  },
+  "q1_beats_all": {
+    "total_significant": "True",
+    "backbone": "False",
+    "avg_ef": "False",
+    "min_pvalue": "False"
+  },
+  "tier1_beats_all": {
+    "total_significant": "False",
+    "backbone": "False",
+    "avg_ef": "False",
+    "min_pvalue": "False"
+  }
+}

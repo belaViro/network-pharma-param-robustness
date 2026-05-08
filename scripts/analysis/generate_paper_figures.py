@@ -9,7 +9,7 @@ Figures:
 2. Parameter sensitivity heatmap
 3. Compound influence ranking
 4. Dual-robust target evidence matrix
-5. Dual-robust pathway bubble plot
+5. Dual-robust functional-term bubble plot
 6. Molecular docking seed-stability summary
 """
 from __future__ import annotations
@@ -756,7 +756,7 @@ def write_reports() -> None:
         "",
         "## Main Questions",
         "",
-        "- Which targets and pathways remain robust under parameter and compound perturbation?",
+        "- Which targets and GO BP/KEGG functional terms remain robust under parameter and compound perturbation?",
         "- Which compounds drive network-level instability?",
         "- Are the selected docking pairs stable across fixed Vina seeds?",
         "",
@@ -816,15 +816,16 @@ def figure_1_workflow() -> list[str]:
         lane = patches.FancyBboxPatch(
             (x, 0.65),
             w,
-            7.85,
+            7.38,
             boxstyle="round,pad=0.025,rounding_size=0.11",
             linewidth=1.0,
             edgecolor=edge,
             facecolor=face,
             alpha=0.72,
+            zorder=0,
         )
         ax.add_patch(lane)
-        ax.text(x + 0.18, 8.18, title, fontproperties=font_block, color=edge, va="center")
+        ax.text(x + 0.18, 7.92, title, fontproperties=font_block, color=edge, va="center")
 
     def draw_block(
         x: float,
@@ -894,9 +895,9 @@ def figure_1_workflow() -> list[str]:
             )
 
     blocks = {
-        "lcms": (0.55, 6.65, 2.62, 1.15),
-        "disease": (0.55, 4.92, 2.62, 1.15),
-        "standard": (0.55, 3.18, 2.62, 1.15),
+        "lcms": (0.55, 6.38, 2.62, 1.36),
+        "disease": (0.55, 4.66, 2.62, 1.36),
+        "standard": (0.55, 2.94, 2.62, 1.36),
         "swiss": (4.1, 6.25, 2.62, 1.28),
         "intersection": (4.1, 4.45, 2.62, 1.28),
         "ppi": (4.1, 2.65, 2.62, 1.30),
@@ -905,26 +906,32 @@ def figure_1_workflow() -> list[str]:
         "enrich": (7.7, 1.45, 3.18, 1.46),
         "prqi": (11.9, 6.30, 3.45, 1.30),
         "dual": (11.9, 4.52, 3.45, 1.30),
-        "validation": (11.9, 2.36, 3.45, 1.58),
-        "final": (11.9, 0.95, 3.45, 0.88),
+        "validation": (11.9, 2.28, 3.45, 1.72),
+        "final": (11.9, 0.82, 3.45, 1.28),
     }
 
-    draw_block(*blocks["lcms"], "草莓叶 LC-MS/MS 成分", ["19 条鉴定记录", "canonical 去重", "PubChem CID / SMILES"], COLORS["blue"], COLORS["pale_blue"], "18")
+    draw_block(*blocks["lcms"], "LC-MS/MS 成分输入", ["19 条鉴定记录 -> 18 个化合物", "结构规范化去重", "PubChem CID / SMILES"], COLORS["blue"], COLORS["pale_blue"], "18")
     draw_block(*blocks["disease"], "氧化应激相关基因", ["GeneCards + OMIM + TTD", "统一基因符号", "构建疾病背景集合"], COLORS["green"], COLORS["pale_green"])
-    draw_block(*blocks["standard"], "结构与名称标准化", ["Trehalose 条目合并", "SwissTargetPrediction", "物种：Homo sapiens"], COLORS["teal"], "#ECFEFF")
+    draw_block(*blocks["standard"], "结构与名称标准化", ["Trehalose 条目合并", "SwissTargetPrediction", "物种：H. sapiens"], COLORS["teal"], "#ECFEFF")
 
     draw_block(*blocks["swiss"], "靶点预测并集", ["按化合物预测潜在靶点", "多基因条目拆分", "同一基因保留最高 probability"], COLORS["blue"], "#EFF6FF", "684")
     draw_block(*blocks["intersection"], "疾病交集候选靶点", ["预测靶点 ∩ 氧化应激基因", "保留正 probability 靶点", "进入 PPI 与富集分析"], COLORS["gray"], "#F8FAFC", "286")
     draw_block(*blocks["ppi"], "STRING PPI 网络", ["combined score 过滤边", "degree / betweenness", "归一化 degree 比较"], COLORS["gray"], "#F8FAFC")
 
     draw_block(*blocks["param"], "参数扰动轴", ["Swiss probability: 0-0.20，共 7 档", "STRING score: 0.40/0.50/0.70/0.90", "Hub TopK: 10/20/30/50", "全因子网格：7 x 4 x 4"], COLORS["orange"], COLORS["pale_orange"], "112")
-    draw_block(*blocks["loo"], "成分扰动轴", ["leave-one-compound-out", "每次剔除 1 个 canonical 化合物", "重新运行完整 112 组参数", "计算 retention 与 influence score"], COLORS["purple"], "#FAF5FF", "2016")
-    draw_block(*blocks["enrich"], "功能富集鲁棒性", ["GO Biological Process + KEGG", "adjusted P < 0.01", "频率 + 平均 -log10 FDR"], COLORS["teal"], "#F0FDFA")
+    draw_block(*blocks["loo"], "成分扰动轴", ["leave-one-compound-out", "每次剔除 1 个结构规范化化合物", "重跑 112 组并重建 PPI/富集", "计算 retention 与 influence score"], COLORS["purple"], "#FAF5FF", "2016")
+    draw_block(*blocks["enrich"], "功能富集条目鲁棒性", ["GO BP 生物过程 + KEGG 通路", "统一称功能富集条目", "频率 + 平均 -log10 adjusted P"], COLORS["teal"], "#F0FDFA")
 
-    draw_block(*blocks["prqi"], "PR-QI 自适应分层", ["靶点：参数频率 + 平均归一化 degree", "通路：出现频率 + 富集强度", "中位数分界，连续指标保留"], COLORS["green"], COLORS["pale_green"])
+    draw_block(*blocks["prqi"], "PR-QI 自适应分层", ["靶点：参数频率 + 平均归一化 degree", "功能条目：出现频率 + 富集强度", "中位数分界，连续指标保留"], COLORS["green"], COLORS["pale_green"])
     draw_block(*blocks["dual"], "双重稳健候选集", ["LOO PR-QI retention >= 0.80", "minimum LOO frequency > 0", "50 -> 29 targets；70 -> 58 terms"], COLORS["green"], COLORS["pale_green"], "29/58")
-    draw_block(*blocks["validation"], "外部证据与结构验证", ["PubMed 共现 + 数据库证据", "超几何检验 + BH-FDR", "degree-matched permutation", "Vina docking: 3 靶点 x 3 成分 x 3 seeds"], COLORS["red"], "#FFF5F5")
-    draw_block(*blocks["final"], "核心输出", ["Tier 1: STAT3；核心：EGFR / SRC / TNF / HSP90AA1 / BCL2 / PTGS2 / MMP9"], COLORS["green"], "#F0FFF4")
+    draw_block(*blocks["validation"], "外部证据审计与结构支持", ["Top30 策略消融比较", "PubMed 共现 + 数据库证据", "超几何检验 + BH-FDR", "degree-matched permutation", "Vina docking: 3 靶点 x 3 成分 x 3 seeds"], COLORS["red"], "#FFF5F5")
+    draw_block(
+        *blocks["final"],
+        "核心输出",
+        ["Tier 1: STAT3", "核心靶点：EGFR / SRC / TNF", "HSP90AA1 / BCL2 / PTGS2 / MMP9"],
+        COLORS["green"],
+        "#F0FFF4",
+    )
 
     def center_right(key: str) -> tuple[float, float]:
         x, y, w, h = blocks[key]
@@ -934,37 +941,67 @@ def figure_1_workflow() -> list[str]:
         x, y, _w, h = blocks[key]
         return x, y + h / 2
 
-    def arrow(start: tuple[float, float], end: tuple[float, float], color: str = "#334155", rad: float = 0.0) -> None:
+    def port(key: str, side: str, frac: float = 0.5) -> tuple[float, float]:
+        x, y, w, h = blocks[key]
+        pad = 0.04
+        if side == "left":
+            return x - pad, y + h * frac
+        if side == "right":
+            return x + w + pad, y + h * frac
+        if side == "top":
+            return x + w * frac, y + h + pad
+        if side == "bottom":
+            return x + w * frac, y - pad
+        raise ValueError(f"Unknown port side: {side}")
+
+    def routed_arrow(points: list[tuple[float, float]], color: str = "#334155") -> None:
+        # Keep connectors below the cards so they cannot cross visible text.
+        for p0, p1 in zip(points[:-2], points[1:-1]):
+            ax.plot(
+                [p0[0], p1[0]],
+                [p0[1], p1[1]],
+                color=color,
+                lw=1.35,
+                solid_capstyle="round",
+                zorder=1.6,
+            )
         ax.annotate(
             "",
-            xy=end,
-            xytext=start,
+            xy=points[-1],
+            xytext=points[-2],
             arrowprops=dict(
                 arrowstyle="-|>",
                 lw=1.35,
                 color=color,
-                shrinkA=5,
-                shrinkB=5,
+                shrinkA=0,
+                shrinkB=0,
                 mutation_scale=13,
-                connectionstyle=f"arc3,rad={rad}",
             ),
-            zorder=10,
+            zorder=1.6,
         )
 
-    arrow(center_right("lcms"), center_left("swiss"), COLORS["blue"], -0.08)
-    arrow(center_right("standard"), center_left("swiss"), COLORS["teal"], 0.07)
-    arrow(center_right("disease"), center_left("intersection"), COLORS["green"], 0.0)
-    arrow(center_right("swiss"), center_left("intersection"), COLORS["gray"], 0.0)
-    arrow(center_right("intersection"), center_left("ppi"), COLORS["gray"], 0.0)
-    arrow(center_right("ppi"), center_left("param"), COLORS["orange"], -0.10)
-    arrow(center_right("ppi"), center_left("loo"), COLORS["purple"], 0.0)
-    arrow(center_right("ppi"), center_left("enrich"), COLORS["teal"], 0.12)
-    arrow(center_right("param"), center_left("prqi"), COLORS["orange"], -0.05)
-    arrow(center_right("loo"), center_left("dual"), COLORS["purple"], 0.0)
-    arrow(center_right("enrich"), center_left("dual"), COLORS["teal"], 0.10)
-    arrow(center_right("prqi"), center_left("dual"), COLORS["green"], 0.0)
-    arrow(center_right("dual"), center_left("validation"), COLORS["red"], 0.0)
-    arrow(center_right("validation"), center_left("final"), COLORS["green"], 0.0)
+    x_input_gap = 3.50
+    x_analysis_bus = 7.08
+    x_output_bus = 11.28
+
+    routed_arrow([port("lcms", "right"), (x_input_gap, port("lcms", "right")[1]), (x_input_gap, port("swiss", "left")[1]), port("swiss", "left")], COLORS["blue"])
+    routed_arrow([port("standard", "right"), (x_input_gap, port("standard", "right")[1]), (x_input_gap, port("swiss", "left")[1]), port("swiss", "left")], COLORS["teal"])
+    routed_arrow([port("disease", "right"), (x_input_gap, port("disease", "right")[1]), (x_input_gap, port("intersection", "left")[1]), port("intersection", "left")], COLORS["green"])
+
+    routed_arrow([port("swiss", "bottom"), port("intersection", "top")], COLORS["gray"])
+    routed_arrow([port("intersection", "bottom"), port("ppi", "top")], COLORS["gray"])
+
+    routed_arrow([port("ppi", "right"), (x_analysis_bus, port("ppi", "right")[1]), (x_analysis_bus, port("param", "left")[1]), port("param", "left")], COLORS["orange"])
+    routed_arrow([port("ppi", "right"), (x_analysis_bus, port("ppi", "right")[1]), (x_analysis_bus, port("loo", "left")[1]), port("loo", "left")], COLORS["purple"])
+    routed_arrow([port("ppi", "right"), (x_analysis_bus, port("ppi", "right")[1]), (x_analysis_bus, port("enrich", "left")[1]), port("enrich", "left")], COLORS["teal"])
+
+    routed_arrow([port("param", "right"), (x_output_bus, port("param", "right")[1]), (x_output_bus, port("prqi", "left")[1]), port("prqi", "left")], COLORS["orange"])
+    routed_arrow([port("enrich", "right"), (x_output_bus, port("enrich", "right")[1]), (x_output_bus, port("prqi", "left")[1]), port("prqi", "left")], COLORS["teal"])
+    routed_arrow([port("loo", "right"), (x_output_bus, port("loo", "right")[1]), (x_output_bus, port("dual", "left")[1]), port("dual", "left")], COLORS["purple"])
+
+    routed_arrow([port("prqi", "bottom"), port("dual", "top")], COLORS["green"])
+    routed_arrow([port("dual", "bottom"), port("validation", "top")], COLORS["red"])
+    routed_arrow([port("validation", "bottom"), port("final", "top")], COLORS["green"])
 
     ax.text(
         8.0,

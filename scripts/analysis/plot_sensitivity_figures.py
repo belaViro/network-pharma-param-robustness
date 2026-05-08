@@ -2,11 +2,11 @@
 Generate publication-quality figures for network pharmacology sensitivity analysis.
 
 Figures:
-1. Heatmap: STRING × TopK matrix by significant pathway count, faceted by Prob
+1. Heatmap: STRING × TopK matrix by significant functional-term count, faceted by Prob
 2. Target robustness quadrant scatter plot (frequency vs avg_degree)
-3. Pathway rank stability (top pathways with rank ranges)
+3. GO BP/KEGG functional-term rank stability
 4. Pvalue threshold comparison bar chart
-5. Robust vs parametric comparison (Q1 / Tier1 vs 72 combos)
+5. Robust vs parametric comparison (Q1 / Tier1 vs parameter combos)
 
 Output: PNG (300 DPI) + SVG to src/outputs/sensitivity/figures/
 """
@@ -187,9 +187,9 @@ def fig1_heatmap(df: pd.DataFrame):
 
     # Single colorbar (use last panel's im)
     cbar = fig.colorbar(im, ax=axes_flat[:n_probs].tolist(), shrink=0.6, pad=0.02)
-    cbar.set_label("显著通路数（每面板独立刻度）", fontsize=9)
+    cbar.set_label("显著功能条目数（每面板独立刻度）", fontsize=9)
 
-    fig.suptitle("参数敏感性：显著通路数", fontsize=12, y=0.98)
+    fig.suptitle("参数敏感性：显著功能富集条目数", fontsize=12, y=0.98)
     save_fig(fig, "fig1_heatmap_significant_pathways")
     plt.close(fig)
 
@@ -312,13 +312,13 @@ def fig2_target_robustness(df: pd.DataFrame):
 
 
 # ══════════════════════════════════════════════════════════════════════
-# FIGURE 3 — Pathway Rank Stability (lollipop / dumbbell)
+# FIGURE 3 — GO BP/KEGG Functional-Term Rank Stability (lollipop / dumbbell)
 # ══════════════════════════════════════════════════════════════════════
 
 
 def fig3_pathway_rank_stability(df: pd.DataFrame):
-    """Horizontal lollipop: top pathways with min/max rank range, colored by category."""
-    # Filter to pathways appearing in >= 50% of combos for stability focus
+    """Horizontal lollipop: top functional terms with min/max rank range, colored by category."""
+    # Filter to functional terms appearing in >= 50% of combos for stability focus
     df_filt = df[df["frequency"] >= 0.5].copy()
     # Sort by median rank
     df_filt = df_filt.sort_values("avg_rank", ascending=True).head(25)
@@ -387,7 +387,7 @@ def fig3_pathway_rank_stability(df: pd.DataFrame):
                 va="center",
             )
 
-    fig.suptitle("通路排名稳定性", fontsize=12, y=0.99)
+    fig.suptitle("GO BP/KEGG 功能富集条目排名稳定性", fontsize=12, y=0.99)
     save_fig(fig, "fig3_pathway_rank_stability")
     plt.close(fig)
 
@@ -412,10 +412,10 @@ def fig4_pvalue_comparison(df_full_pathway=None):
     # These values are derived from the sensitivity analysis report (section 7)
     # which runs cached_enrichment(q1_genes, pval=0.01) and cached_enrichment(q1_genes, pval=0.05)
     # separately.
-    metrics_count = ["总通路数", "信号主干", "交叉调控", "直接氧化应激", "其他"]
+    metrics_count = ["总功能条目数", "信号主干", "交叉调控", "直接氧化应激", "其他"]
     metrics_ef = ["Avg EF"]
 
-    # Values from the sensitivity analysis MD report — the actual Q1 enrichment results
+    # Values from the sensitivity analysis MD report: actual Q1 enrichment results.
     p001_counts = [64, 8, 3, 0, 53]
     p005_counts = [77, 8, 3, 0, 66]
     p001_ef = 39.84
@@ -454,7 +454,7 @@ def fig4_pvalue_comparison(df_full_pathway=None):
 
     # Right: stacked bar for shared vs unique pathways
     ax2 = axes[1]
-    shared = p001_counts[0]  # Shared = all P=0.01 pathways (P=0.05 is a strict superset)
+    shared = p001_counts[0]  # Shared = all P=0.01 functional terms (P=0.05 is a strict superset)
     unique_005 = p005_counts[0] - p001_counts[0]
 
     ax2.barh(0, shared, left=0, color="#4393C3", edgecolor="white", linewidth=0.3,
@@ -462,7 +462,7 @@ def fig4_pvalue_comparison(df_full_pathway=None):
     ax2.barh(0, unique_005, left=shared, color="#F4A582", edgecolor="white", linewidth=0.3,
              label=f"P=0.05独有(n={unique_005})")
     ax2.set_yticks([])
-    ax2.set_xlabel("通路数", fontsize=10)
+    ax2.set_xlabel("功能条目数", fontsize=10)
     ax2.legend(frameon=True, fancybox=False, fontsize=7, loc="upper right",
                edgecolor="#cccccc")
     ax2.grid(axis="x", alpha=0.3, linestyle="--", linewidth=0.4)
@@ -487,7 +487,7 @@ def fig5_robust_vs_param(df_grid: pd.DataFrame, comp_path: Path):
     tier1 = comp["tier1_metrics"]
 
     # Metrics to compare
-    labels = ["显著通路数", "信号主干", "平均EF"]
+    labels = ["显著功能条目数", "信号主干", "平均EF"]
     # Convert EF to comparable scale (divide by 10 for chart)
     ef_div = 10
 
@@ -678,7 +678,7 @@ def main():
 
     print(f"  Grid results: {len(df_grid)} combos")
     print(f"  Target robustness: {len(df_robust)} genes")
-    print(f"  Pathway stability: {len(df_pathway)} pathways")
+    print(f"  Functional-term stability: {len(df_pathway)} GO BP/KEGG terms")
 
     print("\nGenerating Figure 1: Heatmap — STRING × TopK faceted by Prob...")
     fig1_heatmap(df_grid)
@@ -686,7 +686,7 @@ def main():
     print("\nGenerating Figure 2: Target robustness quadrant scatter...")
     fig2_target_robustness(df_robust)
 
-    print("\nGenerating Figure 3: Pathway rank stability (top 25)...")
+    print("\nGenerating Figure 3: GO BP/KEGG functional-term rank stability (top 25)...")
     fig3_pathway_rank_stability(df_pathway)
 
     print("\nGenerating Figure 4: Pvalue threshold comparison...")

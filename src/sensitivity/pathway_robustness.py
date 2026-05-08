@@ -1,10 +1,13 @@
 """
-Pathway-level robustness classification utilities.
+Functional enrichment-term robustness classification utilities.
 
 The target-level robustness analysis uses occurrence frequency and relative
-network importance. For pathways, we use the same structure:
+network importance. For GO BP/KEGG functional enrichment terms, we use the same structure:
 occurrence frequency for robustness and average -log10(adjusted p-value) for
 enrichment strength.
+
+Historical column and file names use "pathway" for compatibility. In this
+project that name means KEGG pathways plus GO BP biological-process terms.
 """
 
 from __future__ import annotations
@@ -14,19 +17,19 @@ from typing import Any
 import pandas as pd
 
 
-QUADRANT_CANDIDATE = "Q1: 候选稳健通路"
+QUADRANT_CANDIDATE = "Q1: 候选稳健功能条目"
 QUADRANT_LOW_FREQ_HIGH_SIG = "Q2: 低频高显著"
 QUADRANT_STABLE_WEAK_EFFECT = "Q3: 稳健但效应弱"
 QUADRANT_LOW_PRIORITY = "Q4: 可忽略"
 
 
 def classify_pathway_robustness(rank_stats_df: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, Any]]:
-    """Add pathway robustness labels to pathway rank-stability statistics.
+    """Add robustness labels to GO BP/KEGG functional-term rank-stability statistics.
 
     Parameters
     ----------
     rank_stats_df:
-        DataFrame produced by the pathway rank stability step. Required
+        DataFrame produced by the functional-term rank stability step. Required
         columns: frequency, avg_logp, avg_rank, avg_ef.
 
     Returns
@@ -117,7 +120,11 @@ def classify_pathway_robustness(rank_stats_df: pd.DataFrame) -> tuple[pd.DataFra
     )
 
     summary = {
-        "method": "Pathway robustness = occurrence frequency x average -log10(adjusted p-value)",
+        "method": "Functional-term robustness = occurrence frequency x average -log10(adjusted p-value)",
+        "compatibility_note": (
+            "Historical pathway_* names refer to mixed KEGG pathways and GO BP biological-process terms; "
+            "GO BP terms are not pathways."
+        ),
         "thresholds": {
             "frequency_median": round(frequency_median, 4),
             "avg_logp_median": round(avg_logp_median, 4),

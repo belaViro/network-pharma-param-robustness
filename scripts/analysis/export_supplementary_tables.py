@@ -191,7 +191,7 @@ def build_tables() -> dict[str, pd.DataFrame]:
             {
                 "sheet": "S1_compounds",
                 "table": "Table S1",
-                "description": "Canonical strawberry leaf compounds and SwissTargetPrediction summary.",
+                "description": "Structure-normalized strawberry leaf compounds and SwissTargetPrediction summary.",
                 "source": "src/outputs/shared/swiss_targets/*_targets.csv",
                 "rows": len(table_s1),
             },

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-靶点-通路一致性验证脚本（P0）
+靶点-功能富集条目一致性验证脚本（P0）
 
 双重验证策略：
-1. 视角A（靶点驱动）: Q1候选稳健靶点 → 富集分析 → 具体通路列表
-2. 视角B（独立扫描）: 参数扫描中高频高显著通路
+1. 视角A（靶点驱动）: Q1候选稳健靶点 → 富集分析 → 具体功能条目列表
+2. 视角B（独立扫描）: 参数扫描中高频高显著功能条目
 3. 一致性: 两个视角的交集比例
 
 用法:
@@ -34,7 +34,7 @@ PVALUE_CUTOFF = 0.01
 
 # ── Load Q1 targets ────────────────────────────────────────────────────
 print("=" * 70)
-print("靶点-通路一致性验证（双重验证策略）")
+print("靶点-功能富集条目一致性验证（双重验证策略）")
 print("=" * 70)
 
 target_df = pd.read_csv(TARGET_CSV)
@@ -50,28 +50,28 @@ print("=" * 70)
 enrichment = cached_enrichment(q1_genes, PVALUE_CUTOFF, BACKGROUND_GENES)
 metrics = analyze_enrichment(enrichment, include_sources=["KEGG", "GO_BP"])
 
-print(f"  显著通路总数: {metrics['total_significant']}")
+print(f"  显著功能条目总数: {metrics['total_significant']}")
 print(f"  信号主干:     {metrics['backbone']}")
 print(f"  交叉调控:     {metrics['cross_talk']}")
 print(f"  直接OX:       {metrics['direct_ox']}")
 print(f"  其他:         {metrics['other']}")
 print(f"  平均EF:       {metrics['avg_ef']:.2f}")
 
-# 提取相关通路（cross_talk + signaling_backbone）
+# 提取相关功能条目（cross_talk + signaling_backbone）
 a_driver_pathways = set(
     p["pathway"] for p in metrics["pathway_details"]
     if p["pathway_category"] in ("cross_talk", "signaling_backbone")
 )
-print(f"\n  靶点驱动的相关通路 (cross_talk + signaling_backbone): {len(a_driver_pathways)} 条")
+print(f"\n  靶点驱动的相关功能条目 (cross_talk + signaling_backbone): {len(a_driver_pathways)} 条")
 
 # ── Perspective B: Independent scan validation ─────────────────────────
 print(f"\n{'='*70}")
-print("[视角B] 独立扫描验证：参数空间高频高显著通路")
+print("[视角B] 独立扫描验证：参数空间高频高显著功能条目")
 print("=" * 70)
 
 pathway_df = pd.read_csv(PATHWAY_CSV)
 
-# 高频高显著通路：frequency >= 0.5 且 avg_rank <= 15，且分类为相关
+# 高频高显著功能条目：frequency >= 0.5 且 avg_rank <= 15，且分类为相关
 scan_robust = pathway_df[
     (pathway_df["frequency"] >= 0.5) &
     (pathway_df["avg_rank"] <= 15) &
@@ -79,7 +79,7 @@ scan_robust = pathway_df[
 ].sort_values("avg_rank")
 
 b_scan_pathways = set(scan_robust["pathway"])
-print(f"  参数扫描高频稳健通路 (freq>=50%, rank<=15): {len(b_scan_pathways)} 条")
+print(f"  参数扫描高频稳健功能条目 (freq>=50%, rank<=15): {len(b_scan_pathways)} 条")
 
 # 也统计一个更严格的版本（freq>=0.6）
 scan_strict = pathway_df[
@@ -101,9 +101,9 @@ only_in_scan = b_scan_pathways - a_driver_pathways
 
 consistency_rate = len(overlap) / len(a_driver_pathways) if a_driver_pathways else 0
 
-print(f"\n  靶点驱动通路总数:     {len(a_driver_pathways)}")
-print(f"  扫描高频通路总数:     {len(b_scan_pathways)}")
-print(f"  交集通路数:           {len(overlap)}")
+print(f"\n  靶点驱动功能条目总数: {len(a_driver_pathways)}")
+print(f"  扫描高频功能条目总数: {len(b_scan_pathways)}")
+print(f"  交集功能条目数:       {len(overlap)}")
 print(f"  仅靶点驱动:           {len(only_in_driver)}")
 print(f"  仅扫描高频:           {len(only_in_scan)}")
 print(f"\n  >>> 双重验证一致性: {consistency_rate:.1%} <<<")
@@ -163,9 +163,9 @@ output = {
     "interpretation": {
         "high_consistency": consistency_rate >= 0.7,
         "narrative": (
-            "双重验证高度一致，通路稳健性是靶点稳健性的可靠推论。"
+            "双重验证高度一致，功能条目稳健性是靶点稳健性的可靠推论。"
             if consistency_rate >= 0.7 else
-            "一致性中等，部分靶点驱动通路在参数扫描中波动较大，需单独讨论。"
+            "一致性中等，部分靶点驱动功能条目在参数扫描中波动较大，需单独讨论。"
         ),
     },
 }

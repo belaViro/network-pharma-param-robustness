@@ -2,35 +2,35 @@
   "method": "Pathway robustness = occurrence frequency x average -log10(adjusted p-value)",
   "thresholds": {
     "frequency_median": 0.0804,
-    "avg_logp_median": 7.5159
+    "avg_logp_median": 7.3744
   },
-  "total_pathways": 213,
+  "total_pathways": 214,
   "absolute_robust_count": 1,
-  "candidate_robust_count": 70,
+  "candidate_robust_count": 71,
   "quadrant_summary": {
     "Q1: 候选稳健通路": {
-      "count": 70,
-      "percentage": 32.86,
-      "avg_frequency": 0.3703,
-      "avg_logp": 10.8708
+      "count": 71,
+      "percentage": 33.18,
+      "avg_frequency": 0.3712,
+      "avg_logp": 10.8375
     },
     "Q2: 低频高显著": {
-      "count": 37,
-      "percentage": 17.37,
-      "avg_frequency": 0.0304,
-      "avg_logp": 10.7622
+      "count": 36,
+      "percentage": 16.82,
+      "avg_frequency": 0.031,
+      "avg_logp": 10.8027
     },
     "Q3: 稳健但效应弱": {
-      "count": 45,
-      "percentage": 21.13,
-      "avg_frequency": 0.1554,
-      "avg_logp": 4.4906
+      "count": 43,
+      "percentage": 20.09,
+      "avg_frequency": 0.1493,
+      "avg_logp": 4.4036
     },
     "Q4: 可忽略": {
-      "count": 61,
-      "percentage": 28.64,
-      "avg_frequency": 0.0367,
-      "avg_logp": 3.6467
+      "count": 64,
+      "percentage": 29.91,
+      "avg_frequency": 0.0363,
+      "avg_logp": 3.6321
     }
   },
   "absolute_robust_pathways": [
@@ -40,9 +40,9 @@
       "pathway_category": "cross_talk",
       "frequency": 1.0,
       "count": 112,
-      "avg_logp": 16.33320134377788,
-      "avg_rank": 3.767857142857143,
-      "avg_ef": 23.454948588169135
+      "avg_logp": 16.37343874261416,
+      "avg_rank": 3.580357142857143,
+      "avg_ef": 23.546868595343387
     }
   ],
   "candidate_robust_pathways_top20": [
@@ -53,31 +53,31 @@
       "pathway_category": "cross_talk",
       "frequency": 1.0,
       "count": 112,
-      "avg_logp": 16.33320134377788,
-      "avg_rank": 3.767857142857143,
-      "avg_ef": 23.454948588169135
+      "avg_logp": 16.37343874261416,
+      "avg_rank": 3.580357142857143,
+      "avg_ef": 23.546868595343387
     },
     {
       "candidate_rank": 2,
       "pathway": "AGE-RAGE signaling pathway in diabetic complications",
       "source": "KEGG",
       "pathway_category": "cross_talk",
-      "frequency": 0.9375,
-      "count": 105,
-      "avg_logp": 10.785479973772356,
-      "avg_rank": 11.19047619047619,
-      "avg_ef": 67.01213397070539
+      "frequency": 0.9464285714285714,
+      "count": 106,
+      "avg_logp": 10.728195550115052,
+      "avg_rank": 10.584905660377359,
+      "avg_ef": 66.7345037760132
     },
     {
       "candidate_rank": 3,
       "pathway": "Proteoglycans in cancer",
       "source": "KEGG",
       "pathway_category": "cross_talk",
-      "frequency": 0.8660714285714286,
-      "count": 97,
-      "avg_logp": 16.44838510214122,
-      "avg_rank": 5.597938144329897,
-      "avg_ef": 52.18033666701815
+      "frequency": 0.875,
+      "count": 98,
+      "avg_logp": 16.301604691237152,
+      "avg_rank": 5.438775510204081,
+      "avg_ef": 51.78393867381728
     },
     {
       "candidate_rank": 4,
@@ -86,8 +86,8 @@
       "pathway_category": "cross_talk",
       "frequency": 0.8035714285714286,
       "count": 90,
-      "avg_logp": 13.499646810155054,
-      "avg_rank": 8.533333333333333,
+      "avg_logp": 13.497045905839245,
+      "avg_rank": 8.277777777777779,
       "avg_ef": 54.310470964791946
     },
     {
@@ -97,9 +97,9 @@
       "pathway_category": "signaling_backbone",
       "frequency": 0.8035714285714286,
       "count": 90,
-      "avg_logp": 11.536201846679882,
-      "avg_rank": 13.11111111111111,
-      "avg_ef": 24.985735163152164
+      "avg_logp": 11.53819559007195,
+      "avg_rank": 13.0,
+      "avg_ef": 25.098496439279778
     },
     {
       "candidate_rank": 6,
@@ -108,9 +108,9 @@
       "pathway_category": "signaling_backbone",
       "frequency": 0.7946428571428571,
       "count": 89,
-      "avg_logp": 10.350880532433663,
-      "avg_rank": 16.02247191011236,
-      "avg_ef": 21.93140317341912
+      "avg_logp": 10.344511288551928,
+      "avg_rank": 15.96629213483146,
+      "avg_ef": 21.931403173419117
     },
     {
       "candidate_rank": 7,
@@ -119,8 +119,8 @@
       "pathway_category": "cross_talk",
       "frequency": 0.7857142857142857,
       "count": 88,
-      "avg_logp": 13.355253839306028,
-      "avg_rank": 8.090909090909092,
+      "avg_logp": 13.352800562219697,
+      "avg_rank": 7.8977272727272725,
       "avg_ef": 44.94397463002113
     },
     {
@@ -130,8 +130,8 @@
       "pathway_category": "signaling_backbone",
       "frequency": 0.7857142857142857,
       "count": 88,
-      "avg_logp": 9.69685209887812,
-      "avg_rank": 17.704545454545453,
+      "avg_logp": 9.690951461963,
+      "avg_rank": 17.65909090909091,
       "avg_ef": 17.997395452105597
     },
     {
@@ -139,11 +139,11 @@
       "pathway": "Chemical carcinogenesis",
       "source": "KEGG",
       "pathway_category": "cross_talk",
-      "frequency": 0.75,
-      "count": 84,
-      "avg_logp": 11.553002684999438,
-      "avg_rank": 13.30952380952381,
-      "avg_ef": 38.22051205419406
+      "frequency": 0.7410714285714286,
+      "count": 83,
+      "avg_logp": 11.666915737423196,
+      "avg_rank": 12.939759036144578,
+      "avg_ef": 38.52598679235771
     },
     {
       "candidate_rank": 10,
@@ -152,9 +152,9 @@
       "pathway_category": "cross_talk",
       "frequency": 0.7053571428571429,
       "count": 79,
-      "avg_logp": 10.021983200007412,
-      "avg_rank": 15.848101265822784,
-      "avg_ef": 51.264001457062186
+      "avg_logp": 10.01920993447898,
+      "avg_rank": 15.620253164556962,
+      "avg_ef": 51.07731536289955
     },
     {
       "candidate_rank": 11,
@@ -163,8 +163,8 @@
       "pathway_category": "cross_talk",
       "frequency": 0.6964285714285714,
       "count": 78,
-      "avg_logp": 12.709900844330456,
-      "avg_rank": 11.653846153846152,
+      "avg_logp": 12.709900844330457,
+      "avg_rank": 11.653846153846153,
       "avg_ef": 44.67494796510341
     },
     {
@@ -174,8 +174,8 @@
       "pathway_category": "cross_talk",
       "frequency": 0.6964285714285714,
       "count": 78,
-      "avg_logp": 9.766685852241586,
-      "avg_rank": 16.17948717948718,
+      "avg_logp": 9.763140857896556,
+      "avg_rank": 16.05128205128205,
       "avg_ef": 24.692766898412057
     },
     {
@@ -187,7 +187,7 @@
       "count": 77,
       "avg_logp": 9.766797483620955,
       "avg_rank": 25.01298701298701,
-      "avg_ef": 20.1312982550096
+      "avg_ef": 20.131298255009597
     },
     {
       "candidate_rank": 14,
@@ -230,7 +230,7 @@
       "frequency": 0.5892857142857143,
       "count": 66,
       "avg_logp": 9.548807493110186,
-      "avg_rank": 26.75757575757576,
+      "avg_rank": 26.757575757575758,
       "avg_ef": 35.367076562728734
     },
     {
@@ -240,9 +240,9 @@
       "pathway_category": "cross_talk",
       "frequency": 0.5803571428571429,
       "count": 65,
-      "avg_logp": 8.53952287864096,
-      "avg_rank": 16.153846153846153,
-      "avg_ef": 57.50589556428972
+      "avg_logp": 8.536152294383326,
+      "avg_rank": 15.876923076923077,
+      "avg_ef": 57.2756878158338
     },
     {
       "candidate_rank": 19,
@@ -252,7 +252,7 @@
       "frequency": 0.5625,
       "count": 63,
       "avg_logp": 10.215519818005651,
-      "avg_rank": 24.63492063492064,
+      "avg_rank": 24.634920634920636,
       "avg_ef": 30.01024740155174
     },
     {
@@ -262,8 +262,8 @@
       "pathway_category": "cross_talk",
       "frequency": 0.5267857142857143,
       "count": 59,
-      "avg_logp": 11.413163933044146,
-      "avg_rank": 15.389830508474576,
+      "avg_logp": 11.411669541028594,
+      "avg_rank": 15.305084745762711,
       "avg_ef": 67.47364435901916
     }
   ]

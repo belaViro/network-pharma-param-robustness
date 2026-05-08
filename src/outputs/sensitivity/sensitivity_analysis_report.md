@@ -1,6 +1,6 @@
 # 参数网格敏感性分析报告
 
-**生成时间**: 2026-05-01 20:29:22
+**生成时间**: 2026-05-07 14:56:35
 
 ## 1. 参数网格设置
 
@@ -117,34 +117,34 @@
 | P0.1_S0.9_K30 | 156 | 110 | 170 | 40 | 16 | 10 | 0 | 14 | 42.8 | 2.35e-26 |
 | P0.1_S0.9_K50 | 156 | 110 | 170 | 40 | 15 | 12 | 0 | 13 | 45.8 | 3.63e-29 |
 | P0.15_S0.4_K10 | 42 | 41 | 98 | 40 | 6 | 15 | 0 | 19 | 89.4 | 5.30e-06 |
-| P0.15_S0.4_K20 | 42 | 41 | 98 | 31 | 2 | 10 | 0 | 19 | 90.0 | 5.04e-13 |
-| P0.15_S0.4_K30 | 42 | 41 | 98 | 33 | 4 | 7 | 0 | 22 | 85.6 | 2.64e-20 |
+| P0.15_S0.4_K20 | 42 | 41 | 98 | 25 | 2 | 10 | 0 | 13 | 91.4 | 5.61e-16 |
+| P0.15_S0.4_K30 | 42 | 41 | 98 | 30 | 3 | 5 | 0 | 22 | 96.1 | 2.64e-20 |
 | P0.15_S0.4_K50 | 42 | 41 | 98 | 31 | 3 | 6 | 0 | 22 | 75.4 | 9.80e-22 |
 | P0.15_S0.5_K10 | 42 | 40 | 65 | 40 | 6 | 15 | 0 | 19 | 98.0 | 6.43e-09 |
-| P0.15_S0.5_K20 | 42 | 40 | 65 | 37 | 5 | 12 | 0 | 20 | 98.8 | 3.32e-10 |
-| P0.15_S0.5_K30 | 42 | 40 | 65 | 30 | 3 | 5 | 0 | 22 | 95.0 | 2.18e-23 |
+| P0.15_S0.5_K20 | 42 | 40 | 65 | 32 | 3 | 10 | 0 | 19 | 102.4 | 4.99e-13 |
+| P0.15_S0.5_K30 | 42 | 40 | 65 | 33 | 4 | 7 | 0 | 22 | 85.9 | 2.62e-20 |
 | P0.15_S0.5_K50 | 42 | 40 | 65 | 31 | 2 | 6 | 0 | 23 | 78.7 | 7.36e-22 |
-| P0.15_S0.7_K10 | 42 | 37 | 29 | 40 | 6 | 15 | 0 | 19 | 154.5 | 3.17e-07 |
-| P0.15_S0.7_K20 | 42 | 37 | 29 | 37 | 4 | 12 | 0 | 21 | 95.4 | 3.29e-10 |
-| P0.15_S0.7_K30 | 42 | 37 | 29 | 30 | 3 | 5 | 0 | 22 | 100.1 | 2.59e-20 |
+| P0.15_S0.7_K10 | 42 | 37 | 29 | 40 | 6 | 16 | 0 | 18 | 132.9 | 3.75e-06 |
+| P0.15_S0.7_K20 | 42 | 37 | 29 | 39 | 4 | 12 | 0 | 23 | 105.7 | 5.61e-16 |
+| P0.15_S0.7_K30 | 42 | 37 | 29 | 32 | 3 | 7 | 0 | 22 | 94.9 | 2.50e-20 |
 | P0.15_S0.7_K50 | 42 | 37 | 29 | 31 | 3 | 5 | 0 | 23 | 84.8 | 2.65e-19 |
-| P0.15_S0.9_K10 | 42 | 25 | 12 | 40 | 7 | 15 | 0 | 18 | 149.4 | 3.31e-07 |
-| P0.15_S0.9_K20 | 42 | 25 | 12 | 40 | 6 | 12 | 0 | 22 | 91.1 | 1.32e-09 |
+| P0.15_S0.9_K10 | 42 | 25 | 12 | 40 | 7 | 15 | 0 | 18 | 143.7 | 2.36e-09 |
+| P0.15_S0.9_K20 | 42 | 25 | 12 | 40 | 4 | 12 | 0 | 24 | 103.8 | 8.09e-08 |
 | P0.15_S0.9_K30 | 42 | 25 | 12 | 33 | 4 | 8 | 0 | 21 | 91.7 | 8.28e-09 |
 | P0.15_S0.9_K50 | 42 | 25 | 12 | 33 | 4 | 8 | 0 | 21 | 91.7 | 8.28e-09 |
-| P0.2_S0.4_K10 | 33 | 32 | 58 | 31 | 2 | 10 | 0 | 19 | 123.3 | 1.81e-15 |
-| P0.2_S0.4_K20 | 33 | 32 | 58 | 21 | 2 | 2 | 0 | 17 | 114.5 | 2.28e-22 |
+| P0.2_S0.4_K10 | 33 | 32 | 58 | 31 | 2 | 10 | 0 | 19 | 117.5 | 3.62e-12 |
+| P0.2_S0.4_K20 | 33 | 32 | 58 | 20 | 3 | 2 | 0 | 15 | 116.1 | 2.31e-22 |
 | P0.2_S0.4_K30 | 33 | 32 | 58 | 12 | 0 | 3 | 0 | 9 | 97.6 | 2.20e-23 |
 | P0.2_S0.4_K50 | 33 | 32 | 58 | 7 | 0 | 2 | 0 | 5 | 112.1 | 4.82e-23 |
 | P0.2_S0.5_K10 | 33 | 31 | 36 | 33 | 2 | 10 | 0 | 21 | 123.2 | 1.81e-15 |
-| P0.2_S0.5_K20 | 33 | 31 | 36 | 12 | 1 | 2 | 0 | 9 | 146.7 | 1.08e-25 |
-| P0.2_S0.5_K30 | 33 | 31 | 36 | 10 | 0 | 1 | 0 | 9 | 114.4 | 2.20e-23 |
+| P0.2_S0.5_K20 | 33 | 31 | 36 | 13 | 1 | 2 | 0 | 10 | 129.5 | 2.39e-22 |
+| P0.2_S0.5_K30 | 33 | 31 | 36 | 12 | 0 | 3 | 0 | 9 | 97.6 | 2.22e-23 |
 | P0.2_S0.5_K50 | 33 | 31 | 36 | 11 | 0 | 2 | 0 | 9 | 101.8 | 3.28e-23 |
-| P0.2_S0.7_K10 | 33 | 28 | 15 | 32 | 2 | 10 | 0 | 20 | 112.1 | 3.33e-12 |
-| P0.2_S0.7_K20 | 33 | 28 | 15 | 21 | 2 | 1 | 0 | 18 | 116.1 | 2.74e-22 |
+| P0.2_S0.7_K10 | 33 | 28 | 15 | 24 | 3 | 4 | 0 | 17 | 125.8 | 5.16e-09 |
+| P0.2_S0.7_K20 | 33 | 28 | 15 | 26 | 3 | 3 | 0 | 20 | 100.3 | 2.08e-22 |
 | P0.2_S0.7_K30 | 33 | 28 | 15 | 15 | 1 | 2 | 0 | 12 | 99.0 | 1.24e-20 |
 | P0.2_S0.7_K50 | 33 | 28 | 15 | 15 | 1 | 2 | 0 | 12 | 99.0 | 1.24e-20 |
-| P0.2_S0.9_K10 | 33 | 17 | 5 | 35 | 3 | 11 | 0 | 21 | 106.9 | 1.93e-04 |
+| P0.2_S0.9_K10 | 33 | 17 | 5 | 36 | 4 | 11 | 0 | 21 | 102.0 | 4.64e-06 |
 | P0.2_S0.9_K20 | 33 | 17 | 5 | 17 | 2 | 1 | 0 | 14 | 103.6 | 1.44e-05 |
 | P0.2_S0.9_K30 | 33 | 17 | 5 | 17 | 2 | 1 | 0 | 14 | 103.6 | 1.44e-05 |
 | P0.2_S0.9_K50 | 33 | 17 | 5 | 17 | 2 | 1 | 0 | 14 | 103.6 | 1.44e-05 |
@@ -2037,60 +2037,60 @@
 </details>
 
 <details>
-<summary><b>P0.15_S0.4_K20</b> — 显著31条, 主干2, 交叉10, 直接OX0, EF=90.0</summary>
+<summary><b>P0.15_S0.4_K20</b> — 显著25条, 主干2, 交叉10, 直接OX0, EF=91.4</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| Nitrogen metabolism | 其他 | 5.04e-13 | 361.8 |
-| bicarbonate transport (GO:0015701) | 其他 | 2.86e-10 | 175.7 |
-| organic anion transport (GO:0015711) | 其他 | 9.50e-08 | 62.1 |
-| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 1.26e-04 | 41.0 |
-| Serotonergic synapse | 交叉调控 | 1.37e-04 | 36.3 |
-| MicroRNAs in cancer | 交叉调控 | 2.61e-04 | 16.5 |
-| response to peptide (GO:1901652) | 其他 | 1.05e-03 | 78.8 |
-| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 1.56e-03 | 9.9 |
-| arachidonic acid metabolic process (GO:0019369) | 其他 | 1.56e-03 | 53.9 |
-| icosanoid metabolic process (GO:0006690) | 其他 | 1.56e-03 | 53.9 |
-| regulation of anion transport (GO:0044070) | 其他 | 1.56e-03 | 256.2 |
-| cyclooxygenase pathway (GO:0019371) | 其他 | 2.14e-03 | 186.4 |
-| cellular response to UV-A (GO:0071492) | 其他 | 2.14e-03 | 186.4 |
-| G protein-coupled serotonin receptor signaling pathway  | 其他 | 2.14e-03 | 205.0 |
-| Pathways in cancer | 交叉调控 | 2.71e-03 | 9.7 |
-| response to UV-A (GO:0070141) | 其他 | 3.13e-03 | 146.4 |
-| cellular response to cytokine stimulus (GO:0071345) | 信号主干通路 | 3.13e-03 | 10.6 |
-| prostanoid biosynthetic process (GO:0046457) | 其他 | 3.13e-03 | 136.7 |
-| Proximal tubule bicarbonate reclamation | 其他 | 3.72e-03 | 89.1 |
-| Estrogen signaling pathway | 交叉调控 | 4.04e-03 | 22.4 |
-| ... 还有 11 条通路 ... | | | |
+| Nitrogen metabolism | 其他 | 5.61e-16 | 422.1 |
+| bicarbonate transport (GO:0015701) | 其他 | 8.21e-13 | 205.0 |
+| organic anion transport (GO:0015711) | 其他 | 8.76e-10 | 72.5 |
+| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 1.27e-04 | 41.0 |
+| MicroRNAs in cancer | 交叉调控 | 3.51e-04 | 16.5 |
+| response to peptide (GO:1901652) | 其他 | 1.03e-03 | 78.8 |
+| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 2.15e-03 | 9.9 |
+| regulation of anion transport (GO:0044070) | 其他 | 2.15e-03 | 256.2 |
+| G protein-coupled receptor signaling pathway, coupled t | 其他 | 2.43e-03 | 47.3 |
+| G protein-coupled serotonin receptor signaling pathway  | 其他 | 2.47e-03 | 205.0 |
+| cellular response to UV-A (GO:0071492) | 其他 | 2.64e-03 | 186.4 |
+| Pathways in cancer | 交叉调控 | 3.42e-03 | 9.7 |
+| Serotonergic synapse | 交叉调控 | 3.55e-03 | 27.2 |
+| response to UV-A (GO:0070141) | 其他 | 3.71e-03 | 146.4 |
+| cellular response to cytokine stimulus (GO:0071345) | 信号主干通路 | 3.71e-03 | 10.6 |
+| Proximal tubule bicarbonate reclamation | 其他 | 3.76e-03 | 89.1 |
+| Estrogen signaling pathway | 交叉调控 | 4.08e-03 | 22.4 |
+| Fluid shear stress and atherosclerosis | 交叉调控 | 4.08e-03 | 22.1 |
+| amyloid precursor protein metabolic process (GO:0042982 | 其他 | 5.31e-03 | 113.9 |
+| regulation of neuroinflammatory response (GO:0150077) | 其他 | 5.44e-03 | 107.9 |
+| ... 还有 5 条通路 ... | | | |
 
 </details>
 
 <details>
-<summary><b>P0.15_S0.4_K30</b> — 显著33条, 主干4, 交叉7, 直接OX0, EF=85.6</summary>
+<summary><b>P0.15_S0.4_K30</b> — 显著30条, 主干3, 交叉5, 直接OX0, EF=96.1</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
 | Nitrogen metabolism | 其他 | 2.64e-20 | 361.8 |
-| bicarbonate transport (GO:0015701) | 其他 | 3.63e-16 | 175.7 |
-| organic anion transport (GO:0015711) | 其他 | 4.19e-12 | 62.1 |
-| G protein-coupled serotonin receptor signaling pathway  | 其他 | 1.48e-07 | 273.3 |
+| bicarbonate transport (GO:0015701) | 其他 | 3.84e-16 | 175.7 |
+| organic anion transport (GO:0015711) | 其他 | 4.43e-12 | 62.1 |
+| G protein-coupled serotonin receptor signaling pathway  | 其他 | 1.57e-07 | 273.3 |
 | Serotonergic synapse | 交叉调控 | 8.17e-07 | 36.3 |
-| regulation of phosphatidylinositol biosynthetic process | 其他 | 3.94e-06 | 410.0 |
-| G protein-coupled receptor signaling pathway, coupled t | 其他 | 4.31e-06 | 52.6 |
-| positive regulation of phospholipid biosynthetic proces | 其他 | 9.18e-06 | 292.9 |
-| Pathways in cancer | 交叉调控 | 2.95e-05 | 10.3 |
-| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 3.94e-04 | 27.3 |
-| negative regulation of sequestering of calcium ion (GO: | 其他 | 5.08e-04 | 82.0 |
-| release of sequestered calcium ion into cytosol (GO:005 | 其他 | 5.64e-04 | 75.9 |
-| response to peptide (GO:1901652) | 其他 | 1.55e-03 | 52.6 |
-| calcium ion transmembrane import into cytosol (GO:00975 | 其他 | 1.74e-03 | 48.8 |
-| MicroRNAs in cancer | 交叉调控 | 1.94e-03 | 11.0 |
-| cellular calcium ion homeostasis (GO:0006874) | 其他 | 2.31e-03 | 20.1 |
-| Neuroactive ligand-receptor interaction | 其他 | 2.53e-03 | 10.0 |
-| regulation of anion transport (GO:0044070) | 其他 | 2.62e-03 | 170.8 |
-| arachidonic acid metabolic process (GO:0019369) | 其他 | 3.13e-03 | 36.0 |
-| icosanoid metabolic process (GO:0006690) | 其他 | 3.13e-03 | 36.0 |
-| ... 还有 13 条通路 ... | | | |
+| regulation of phosphatidylinositol biosynthetic process | 其他 | 4.17e-06 | 410.0 |
+| G protein-coupled receptor signaling pathway, coupled t | 其他 | 4.55e-06 | 52.6 |
+| positive regulation of phospholipid biosynthetic proces | 其他 | 9.71e-06 | 292.9 |
+| Gap junction | 交叉调控 | 2.89e-04 | 31.1 |
+| Pathways in cancer | 交叉调控 | 2.89e-04 | 9.0 |
+| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 3.15e-04 | 27.3 |
+| negative regulation of sequestering of calcium ion (GO: | 其他 | 5.37e-04 | 82.0 |
+| release of sequestered calcium ion into cytosol (GO:005 | 其他 | 5.97e-04 | 75.9 |
+| MicroRNAs in cancer | 交叉调控 | 1.62e-03 | 11.0 |
+| response to peptide (GO:1901652) | 其他 | 1.64e-03 | 52.6 |
+| calcium ion transmembrane import into cytosol (GO:00975 | 其他 | 1.84e-03 | 48.8 |
+| Neuroactive ligand-receptor interaction | 其他 | 2.17e-03 | 10.0 |
+| cellular calcium ion homeostasis (GO:0006874) | 其他 | 2.44e-03 | 20.1 |
+| regulation of anion transport (GO:0044070) | 其他 | 2.77e-03 | 170.8 |
+| arachidonic acid metabolic process (GO:0019369) | 其他 | 3.31e-03 | 36.0 |
+| ... 还有 10 条通路 ... | | | |
 
 </details>
 
@@ -2153,60 +2153,60 @@
 </details>
 
 <details>
-<summary><b>P0.15_S0.5_K20</b> — 显著37条, 主干5, 交叉12, 直接OX0, EF=98.8</summary>
+<summary><b>P0.15_S0.5_K20</b> — 显著32条, 主干3, 交叉10, 直接OX0, EF=102.4</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| Nitrogen metabolism | 其他 | 3.32e-10 | 301.5 |
-| G protein-coupled serotonin receptor signaling pathway  | 其他 | 4.18e-08 | 410.0 |
-| bicarbonate transport (GO:0015701) | 其他 | 4.18e-08 | 146.4 |
-| regulation of phosphatidylinositol biosynthetic process | 其他 | 1.28e-06 | 615.0 |
-| positive regulation of phospholipid biosynthetic proces | 其他 | 3.37e-06 | 439.3 |
-| organic anion transport (GO:0015711) | 其他 | 3.54e-06 | 51.8 |
-| Serotonergic synapse | 交叉调控 | 3.55e-06 | 45.4 |
-| G protein-coupled receptor signaling pathway, coupled t | 其他 | 3.56e-05 | 63.1 |
-| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 8.31e-05 | 41.0 |
-| negative regulation of sequestering of calcium ion (GO: | 其他 | 1.25e-04 | 123.0 |
-| release of sequestered calcium ion into cytosol (GO:005 | 其他 | 1.39e-04 | 113.9 |
+| Nitrogen metabolism | 其他 | 4.99e-13 | 361.8 |
+| bicarbonate transport (GO:0015701) | 其他 | 3.10e-10 | 175.7 |
+| organic anion transport (GO:0015711) | 其他 | 1.03e-07 | 62.1 |
+| G protein-coupled serotonin receptor signaling pathway  | 其他 | 1.52e-05 | 307.5 |
+| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 1.25e-04 | 41.0 |
+| Serotonergic synapse | 交叉调控 | 1.35e-04 | 36.3 |
 | MicroRNAs in cancer | 交叉调控 | 2.58e-04 | 16.5 |
-| response to peptide (GO:1901652) | 其他 | 3.83e-04 | 78.8 |
-| calcium ion transmembrane import into cytosol (GO:00975 | 其他 | 3.93e-04 | 73.2 |
-| cellular calcium ion homeostasis (GO:0006874) | 其他 | 3.93e-04 | 30.1 |
-| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 8.64e-04 | 9.9 |
-| regulation of anion transport (GO:0044070) | 其他 | 8.64e-04 | 256.2 |
-| negative regulation of autophagy (GO:0010507) | 信号主干通路 | 8.64e-04 | 52.1 |
-| negative regulation of cellular catabolic process (GO:0 | 其他 | 1.29e-03 | 44.6 |
-| cellular response to UV-A (GO:0071492) | 其他 | 1.46e-03 | 186.4 |
-| ... 还有 17 条通路 ... | | | |
+| response to peptide (GO:1901652) | 其他 | 8.46e-04 | 78.8 |
+| regulation of phosphatidylinositol biosynthetic process | 其他 | 8.46e-04 | 410.0 |
+| positive regulation of phospholipid biosynthetic proces | 其他 | 1.33e-03 | 292.9 |
+| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 1.33e-03 | 9.9 |
+| regulation of anion transport (GO:0044070) | 其他 | 1.33e-03 | 256.2 |
+| negative regulation of autophagy (GO:0010507) | 信号主干通路 | 1.33e-03 | 52.1 |
+| G protein-coupled receptor signaling pathway, coupled t | 其他 | 1.60e-03 | 47.3 |
+| negative regulation of cellular catabolic process (GO:0 | 其他 | 1.74e-03 | 44.6 |
+| cellular response to UV-A (GO:0071492) | 其他 | 1.93e-03 | 186.4 |
+| Pathways in cancer | 交叉调控 | 2.68e-03 | 9.7 |
+| response to UV-A (GO:0070141) | 其他 | 2.91e-03 | 146.4 |
+| cellular response to cytokine stimulus (GO:0071345) | 信号主干通路 | 2.91e-03 | 10.6 |
+| Proximal tubule bicarbonate reclamation | 其他 | 3.68e-03 | 89.1 |
+| ... 还有 12 条通路 ... | | | |
 
 </details>
 
 <details>
-<summary><b>P0.15_S0.5_K30</b> — 显著30条, 主干3, 交叉5, 直接OX0, EF=95.0</summary>
+<summary><b>P0.15_S0.5_K30</b> — 显著33条, 主干4, 交叉7, 直接OX0, EF=85.9</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| Nitrogen metabolism | 其他 | 2.18e-23 | 402.0 |
-| bicarbonate transport (GO:0015701) | 其他 | 1.07e-18 | 195.2 |
-| organic anion transport (GO:0015711) | 其他 | 4.27e-14 | 69.0 |
-| G protein-coupled serotonin receptor signaling pathway  | 其他 | 1.59e-07 | 273.3 |
-| Serotonergic synapse | 交叉调控 | 8.02e-07 | 36.3 |
-| regulation of phosphatidylinositol biosynthetic process | 其他 | 4.23e-06 | 410.0 |
-| G protein-coupled receptor signaling pathway, coupled t | 其他 | 4.62e-06 | 52.6 |
-| positive regulation of phospholipid biosynthetic proces | 其他 | 9.85e-06 | 292.9 |
-| Gap junction | 交叉调控 | 2.84e-04 | 31.1 |
-| Pathways in cancer | 交叉调控 | 2.84e-04 | 9.0 |
-| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 3.09e-04 | 27.3 |
-| negative regulation of sequestering of calcium ion (GO: | 其他 | 5.45e-04 | 82.0 |
-| release of sequestered calcium ion into cytosol (GO:005 | 其他 | 6.05e-04 | 75.9 |
-| MicroRNAs in cancer | 交叉调控 | 1.59e-03 | 11.0 |
-| response to peptide (GO:1901652) | 其他 | 1.66e-03 | 52.6 |
-| calcium ion transmembrane import into cytosol (GO:00975 | 其他 | 1.87e-03 | 48.8 |
-| Neuroactive ligand-receptor interaction | 其他 | 2.13e-03 | 10.0 |
-| cellular calcium ion homeostasis (GO:0006874) | 其他 | 2.47e-03 | 20.1 |
-| regulation of anion transport (GO:0044070) | 其他 | 2.81e-03 | 170.8 |
-| arachidonic acid metabolic process (GO:0019369) | 其他 | 3.36e-03 | 36.0 |
-| ... 还有 10 条通路 ... | | | |
+| Nitrogen metabolism | 其他 | 2.62e-20 | 361.8 |
+| bicarbonate transport (GO:0015701) | 其他 | 3.96e-16 | 175.7 |
+| organic anion transport (GO:0015711) | 其他 | 4.58e-12 | 62.1 |
+| G protein-coupled serotonin receptor signaling pathway  | 其他 | 1.62e-07 | 273.3 |
+| Serotonergic synapse | 交叉调控 | 8.09e-07 | 36.3 |
+| regulation of phosphatidylinositol biosynthetic process | 其他 | 4.31e-06 | 410.0 |
+| G protein-coupled receptor signaling pathway, coupled t | 其他 | 4.70e-06 | 52.6 |
+| positive regulation of phospholipid biosynthetic proces | 其他 | 1.00e-05 | 292.9 |
+| Pathways in cancer | 交叉调控 | 2.92e-05 | 10.3 |
+| Gap junction | 交叉调控 | 2.35e-04 | 31.1 |
+| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 3.12e-04 | 27.3 |
+| negative regulation of sequestering of calcium ion (GO: | 其他 | 5.55e-04 | 82.0 |
+| release of sequestered calcium ion into cytosol (GO:005 | 其他 | 6.16e-04 | 75.9 |
+| MicroRNAs in cancer | 交叉调控 | 1.60e-03 | 11.0 |
+| response to peptide (GO:1901652) | 其他 | 1.69e-03 | 52.6 |
+| calcium ion transmembrane import into cytosol (GO:00975 | 其他 | 1.91e-03 | 48.8 |
+| Neuroactive ligand-receptor interaction | 其他 | 2.15e-03 | 10.0 |
+| cellular calcium ion homeostasis (GO:0006874) | 其他 | 2.52e-03 | 20.1 |
+| regulation of anion transport (GO:0044070) | 其他 | 2.86e-03 | 170.8 |
+| arachidonic acid metabolic process (GO:0019369) | 其他 | 3.42e-03 | 36.0 |
+| ... 还有 13 条通路 ... | | | |
 
 </details>
 
@@ -2240,89 +2240,89 @@
 </details>
 
 <details>
-<summary><b>P0.15_S0.7_K10</b> — 显著40条, 主干6, 交叉15, 直接OX0, EF=154.5</summary>
+<summary><b>P0.15_S0.7_K10</b> — 显著40条, 主干6, 交叉16, 直接OX0, EF=132.9</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| regulation of phosphatidylinositol biosynthetic process | 其他 | 3.17e-07 | 1230.0 |
-| positive regulation of phospholipid biosynthetic proces | 其他 | 5.54e-07 | 878.6 |
-| G protein-coupled serotonin receptor signaling pathway  | 其他 | 1.26e-06 | 615.0 |
-| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 1.45e-05 | 19.8 |
-| negative regulation of sequestering of calcium ion (GO: | 其他 | 1.45e-05 | 246.0 |
-| release of sequestered calcium ion into cytosol (GO:005 | 其他 | 1.53e-05 | 227.8 |
-| Serotonergic synapse | 交叉调控 | 1.62e-05 | 72.6 |
-| cellular calcium ion homeostasis (GO:0006874) | 其他 | 2.09e-05 | 60.3 |
-| response to peptide (GO:1901652) | 其他 | 3.59e-05 | 157.7 |
-| calcium ion transmembrane import into cytosol (GO:00975 | 其他 | 4.00e-05 | 146.4 |
-| cellular response to cytokine stimulus (GO:0071345) | 信号主干通路 | 6.39e-05 | 21.3 |
-| negative regulation of autophagy (GO:0010507) | 信号主干通路 | 9.23e-05 | 104.2 |
-| G protein-coupled receptor signaling pathway, coupled t | 其他 | 1.13e-04 | 94.6 |
-| Pathways in cancer | 交叉调控 | 1.20e-04 | 19.3 |
-| negative regulation of cellular catabolic process (GO:0 | 其他 | 1.25e-04 | 89.1 |
-| phospholipase C-activating G protein-coupled receptor s | 其他 | 1.89e-04 | 75.9 |
-| Gap junction | 交叉调控 | 1.94e-04 | 69.9 |
-| MicroRNAs in cancer | 交叉调控 | 1.94e-04 | 26.5 |
-| Inflammatory mediator regulation of TRP channels | 信号主干通路 | 1.94e-04 | 62.8 |
-| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 1.94e-04 | 61.5 |
+| G protein-coupled serotonin receptor signaling pathway  | 其他 | 3.75e-06 | 615.0 |
+| G protein-coupled receptor signaling pathway, coupled t | 其他 | 3.75e-06 | 126.2 |
+| Serotonergic synapse | 交叉调控 | 1.70e-05 | 72.6 |
+| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 1.97e-05 | 19.8 |
+| response to peptide (GO:1901652) | 其他 | 7.27e-05 | 157.7 |
+| Pathways in cancer | 交叉调控 | 1.26e-04 | 19.3 |
+| cellular response to cytokine stimulus (GO:0071345) | 信号主干通路 | 1.30e-04 | 21.3 |
+| regulation of phosphatidylinositol biosynthetic process | 其他 | 1.34e-04 | 820.0 |
+| negative regulation of autophagy (GO:0010507) | 信号主干通路 | 1.47e-04 | 104.2 |
+| negative regulation of cellular catabolic process (GO:0 | 其他 | 1.87e-04 | 89.1 |
+| positive regulation of phospholipid biosynthetic proces | 其他 | 1.87e-04 | 585.7 |
+| MicroRNAs in cancer | 交叉调控 | 2.77e-04 | 26.5 |
+| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 2.77e-04 | 61.5 |
+| Neuroactive ligand-receptor interaction | 其他 | 2.77e-04 | 24.0 |
+| cellular response to UV-A (GO:0071492) | 其他 | 4.41e-04 | 372.7 |
+| Estrogen signaling pathway | 交叉调控 | 4.67e-04 | 44.9 |
+| Fluid shear stress and atherosclerosis | 交叉调控 | 4.67e-04 | 44.2 |
+| Hepatitis B | 交叉调控 | 6.45e-04 | 38.0 |
+| response to UV-A (GO:0070141) | 其他 | 6.62e-04 | 292.9 |
+| cellular calcium ion homeostasis (GO:0006874) | 其他 | 1.05e-03 | 45.2 |
 | ... 还有 20 条通路 ... | | | |
 
 </details>
 
 <details>
-<summary><b>P0.15_S0.7_K20</b> — 显著37条, 主干4, 交叉12, 直接OX0, EF=95.4</summary>
+<summary><b>P0.15_S0.7_K20</b> — 显著39条, 主干4, 交叉12, 直接OX0, EF=105.7</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| Nitrogen metabolism | 其他 | 3.29e-10 | 301.5 |
-| G protein-coupled receptor signaling pathway, coupled t | 其他 | 1.46e-08 | 94.6 |
-| G protein-coupled serotonin receptor signaling pathway  | 其他 | 2.59e-08 | 410.0 |
-| bicarbonate transport (GO:0015701) | 其他 | 2.59e-08 | 146.4 |
-| Serotonergic synapse | 交叉调控 | 4.75e-08 | 54.4 |
-| regulation of phosphatidylinositol biosynthetic process | 其他 | 8.97e-07 | 615.0 |
-| positive regulation of phospholipid biosynthetic proces | 其他 | 2.51e-06 | 439.3 |
-| organic anion transport (GO:0015711) | 其他 | 2.75e-06 | 51.8 |
-| Neuroactive ligand-receptor interaction | 其他 | 2.28e-05 | 18.0 |
-| negative regulation of sequestering of calcium ion (GO: | 其他 | 1.16e-04 | 123.0 |
-| release of sequestered calcium ion into cytosol (GO:005 | 其他 | 1.29e-04 | 113.9 |
-| anterograde trans-synaptic signaling (GO:0098916) | 其他 | 1.62e-04 | 21.0 |
-| Pathways in cancer | 交叉调控 | 2.04e-04 | 11.6 |
-| MicroRNAs in cancer | 交叉调控 | 2.04e-04 | 16.5 |
-| response to peptide (GO:1901652) | 其他 | 3.21e-04 | 78.8 |
-| cellular calcium ion homeostasis (GO:0006874) | 其他 | 3.35e-04 | 30.1 |
-| calcium ion transmembrane import into cytosol (GO:00975 | 其他 | 3.35e-04 | 73.2 |
-| chemical synaptic transmission (GO:0007268) | 其他 | 3.37e-04 | 16.7 |
-| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 7.01e-04 | 9.9 |
-| negative regulation of autophagy (GO:0010507) | 信号主干通路 | 7.51e-04 | 52.1 |
-| ... 还有 17 条通路 ... | | | |
+| Nitrogen metabolism | 其他 | 5.61e-16 | 422.1 |
+| bicarbonate transport (GO:0015701) | 其他 | 8.19e-13 | 205.0 |
+| organic anion transport (GO:0015711) | 其他 | 8.74e-10 | 72.5 |
+| G protein-coupled serotonin receptor signaling pathway  | 其他 | 2.05e-08 | 410.0 |
+| Serotonergic synapse | 交叉调控 | 4.91e-08 | 54.4 |
+| G protein-coupled receptor signaling pathway, coupled t | 其他 | 4.68e-07 | 78.8 |
+| regulation of phosphatidylinositol biosynthetic process | 其他 | 6.92e-07 | 615.0 |
+| positive regulation of phospholipid biosynthetic proces | 其他 | 2.01e-06 | 439.3 |
+| negative regulation of sequestering of calcium ion (GO: | 其他 | 1.12e-04 | 123.0 |
+| release of sequestered calcium ion into cytosol (GO:005 | 其他 | 1.25e-04 | 113.9 |
+| Pathways in cancer | 交叉调控 | 2.63e-04 | 11.6 |
+| MicroRNAs in cancer | 交叉调控 | 2.63e-04 | 16.5 |
+| Neuroactive ligand-receptor interaction | 其他 | 3.34e-04 | 15.0 |
+| response to peptide (GO:1901652) | 其他 | 3.44e-04 | 78.8 |
+| calcium ion transmembrane import into cytosol (GO:00975 | 其他 | 3.53e-04 | 73.2 |
+| cellular calcium ion homeostasis (GO:0006874) | 其他 | 3.53e-04 | 30.1 |
+| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 7.76e-04 | 9.9 |
+| regulation of anion transport (GO:0044070) | 其他 | 7.76e-04 | 256.2 |
+| negative regulation of autophagy (GO:0010507) | 信号主干通路 | 7.76e-04 | 52.1 |
+| negative regulation of cellular catabolic process (GO:0 | 其他 | 1.16e-03 | 44.6 |
+| ... 还有 19 条通路 ... | | | |
 
 </details>
 
 <details>
-<summary><b>P0.15_S0.7_K30</b> — 显著30条, 主干3, 交叉5, 直接OX0, EF=100.1</summary>
+<summary><b>P0.15_S0.7_K30</b> — 显著32条, 主干3, 交叉7, 直接OX0, EF=94.9</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| Nitrogen metabolism | 其他 | 2.59e-20 | 361.8 |
-| bicarbonate transport (GO:0015701) | 其他 | 3.85e-16 | 175.7 |
-| organic anion transport (GO:0015711) | 其他 | 4.45e-12 | 62.1 |
-| Serotonergic synapse | 交叉调控 | 1.48e-08 | 42.3 |
-| G protein-coupled receptor signaling pathway, coupled t | 其他 | 9.54e-08 | 63.1 |
-| G protein-coupled serotonin receptor signaling pathway  | 其他 | 1.18e-07 | 273.3 |
-| regulation of phosphatidylinositol biosynthetic process | 其他 | 3.35e-06 | 410.0 |
-| positive regulation of phospholipid biosynthetic proces | 其他 | 9.75e-06 | 292.9 |
-| Gap junction | 交叉调控 | 2.27e-04 | 31.1 |
-| Neuroactive ligand-receptor interaction | 其他 | 2.27e-04 | 12.0 |
-| Pathways in cancer | 交叉调控 | 2.27e-04 | 9.0 |
-| Calcium signaling pathway | 信号主干通路 | 4.70e-04 | 14.2 |
-| negative regulation of sequestering of calcium ion (GO: | 其他 | 5.39e-04 | 82.0 |
-| release of sequestered calcium ion into cytosol (GO:005 | 其他 | 5.99e-04 | 75.9 |
-| tryptophan catabolic process to kynurenine (GO:0019441) | 其他 | 1.33e-03 | 273.3 |
-| MicroRNAs in cancer | 交叉调控 | 1.36e-03 | 11.0 |
-| anterograde trans-synaptic signaling (GO:0098916) | 其他 | 1.44e-03 | 14.0 |
-| response to peptide (GO:1901652) | 其他 | 1.44e-03 | 52.6 |
-| calcium ion transmembrane import into cytosol (GO:00975 | 其他 | 1.54e-03 | 48.8 |
-| cellular calcium ion homeostasis (GO:0006874) | 其他 | 2.07e-03 | 20.1 |
-| ... 还有 10 条通路 ... | | | |
+| Nitrogen metabolism | 其他 | 2.50e-20 | 361.8 |
+| bicarbonate transport (GO:0015701) | 其他 | 3.75e-16 | 175.7 |
+| organic anion transport (GO:0015711) | 其他 | 4.33e-12 | 62.1 |
+| Serotonergic synapse | 交叉调控 | 1.42e-08 | 42.3 |
+| G protein-coupled receptor signaling pathway, coupled t | 其他 | 9.28e-08 | 63.1 |
+| G protein-coupled serotonin receptor signaling pathway  | 其他 | 1.15e-07 | 273.3 |
+| regulation of phosphatidylinositol biosynthetic process | 其他 | 3.26e-06 | 410.0 |
+| positive regulation of phospholipid biosynthetic proces | 其他 | 9.48e-06 | 292.9 |
+| Gap junction | 交叉调控 | 2.52e-04 | 31.1 |
+| Neuroactive ligand-receptor interaction | 其他 | 2.52e-04 | 12.0 |
+| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 2.98e-04 | 27.3 |
+| negative regulation of sequestering of calcium ion (GO: | 其他 | 5.24e-04 | 82.0 |
+| release of sequestered calcium ion into cytosol (GO:005 | 其他 | 5.82e-04 | 75.9 |
+| tryptophan catabolic process to kynurenine (GO:0019441) | 其他 | 1.29e-03 | 273.3 |
+| response to peptide (GO:1901652) | 其他 | 1.40e-03 | 52.6 |
+| anterograde trans-synaptic signaling (GO:0098916) | 其他 | 1.40e-03 | 14.0 |
+| calcium ion transmembrane import into cytosol (GO:00975 | 其他 | 1.50e-03 | 48.8 |
+| MicroRNAs in cancer | 交叉调控 | 1.53e-03 | 11.0 |
+| Pathways in cancer | 交叉调控 | 1.71e-03 | 7.7 |
+| cellular calcium ion homeostasis (GO:0006874) | 其他 | 2.01e-03 | 20.1 |
+| ... 还有 12 条通路 ... | | | |
 
 </details>
 
@@ -2356,59 +2356,59 @@
 </details>
 
 <details>
-<summary><b>P0.15_S0.9_K10</b> — 显著40条, 主干7, 交叉15, 直接OX0, EF=149.4</summary>
+<summary><b>P0.15_S0.9_K10</b> — 显著40条, 主干7, 交叉15, 直接OX0, EF=143.7</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| regulation of phosphatidylinositol biosynthetic process | 其他 | 3.31e-07 | 1230.0 |
-| positive regulation of phospholipid biosynthetic proces | 其他 | 5.79e-07 | 878.6 |
-| G protein-coupled serotonin receptor signaling pathway  | 其他 | 1.32e-06 | 615.0 |
-| Serotonergic synapse | 交叉调控 | 1.64e-05 | 72.6 |
-| negative regulation of sequestering of calcium ion (GO: | 其他 | 1.89e-05 | 246.0 |
-| release of sequestered calcium ion into cytosol (GO:005 | 其他 | 1.93e-05 | 227.8 |
-| cellular calcium ion homeostasis (GO:0006874) | 其他 | 2.55e-05 | 60.3 |
-| response to peptide (GO:1901652) | 其他 | 4.28e-05 | 157.7 |
-| calcium ion transmembrane import into cytosol (GO:00975 | 其他 | 4.70e-05 | 146.4 |
-| cellular response to cytokine stimulus (GO:0071345) | 信号主干通路 | 7.42e-05 | 21.3 |
-| negative regulation of autophagy (GO:0010507) | 信号主干通路 | 1.06e-04 | 104.2 |
-| Pathways in cancer | 交叉调控 | 1.21e-04 | 19.3 |
-| G protein-coupled receptor signaling pathway, coupled t | 其他 | 1.29e-04 | 94.6 |
-| negative regulation of cellular catabolic process (GO:0 | 其他 | 1.42e-04 | 89.1 |
-| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 1.78e-04 | 16.5 |
-| Gap junction | 交叉调控 | 1.96e-04 | 69.9 |
-| MicroRNAs in cancer | 交叉调控 | 1.96e-04 | 26.5 |
-| Inflammatory mediator regulation of TRP channels | 信号主干通路 | 1.96e-04 | 62.8 |
-| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 1.96e-04 | 61.5 |
-| phospholipase C-activating G protein-coupled receptor s | 其他 | 1.98e-04 | 75.9 |
+| G protein-coupled serotonin receptor signaling pathway  | 其他 | 2.36e-09 | 820.0 |
+| G protein-coupled receptor signaling pathway, coupled t | 其他 | 1.38e-08 | 157.7 |
+| regulation of phosphatidylinositol biosynthetic process | 其他 | 1.07e-07 | 1230.0 |
+| Serotonergic synapse | 交叉调控 | 1.10e-07 | 90.7 |
+| positive regulation of phospholipid biosynthetic proces | 其他 | 2.82e-07 | 878.6 |
+| Neuroactive ligand-receptor interaction | 其他 | 1.40e-05 | 30.1 |
+| negative regulation of sequestering of calcium ion (GO: | 其他 | 1.47e-05 | 246.0 |
+| release of sequestered calcium ion into cytosol (GO:005 | 其他 | 1.56e-05 | 227.8 |
+| cellular calcium ion homeostasis (GO:0006874) | 其他 | 2.13e-05 | 60.3 |
+| response to peptide (GO:1901652) | 其他 | 3.65e-05 | 157.7 |
+| calcium ion transmembrane import into cytosol (GO:00975 | 其他 | 4.07e-05 | 146.4 |
+| cellular response to cytokine stimulus (GO:0071345) | 信号主干通路 | 6.50e-05 | 21.3 |
+| Pathways in cancer | 交叉调控 | 8.28e-05 | 19.3 |
+| negative regulation of autophagy (GO:0010507) | 信号主干通路 | 9.38e-05 | 104.2 |
+| negative regulation of cellular catabolic process (GO:0 | 其他 | 1.28e-04 | 89.1 |
+| anterograde trans-synaptic signaling (GO:0098916) | 其他 | 1.28e-04 | 33.6 |
+| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 1.61e-04 | 16.5 |
+| Gap junction | 交叉调控 | 1.72e-04 | 69.9 |
+| MicroRNAs in cancer | 交叉调控 | 1.72e-04 | 26.5 |
+| Inflammatory mediator regulation of TRP channels | 信号主干通路 | 1.72e-04 | 62.8 |
 | ... 还有 20 条通路 ... | | | |
 
 </details>
 
 <details>
-<summary><b>P0.15_S0.9_K20</b> — 显著40条, 主干6, 交叉12, 直接OX0, EF=91.1</summary>
+<summary><b>P0.15_S0.9_K20</b> — 显著40条, 主干4, 交叉12, 直接OX0, EF=103.8</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| Serotonergic synapse | 交叉调控 | 1.32e-09 | 63.5 |
-| G protein-coupled receptor signaling pathway, coupled t | 其他 | 1.83e-08 | 94.6 |
-| G protein-coupled serotonin receptor signaling pathway  | 其他 | 4.01e-08 | 410.0 |
-| regulation of phosphatidylinositol biosynthetic process | 其他 | 1.50e-06 | 615.0 |
-| positive regulation of phospholipid biosynthetic proces | 其他 | 3.93e-06 | 439.3 |
-| Pathways in cancer | 交叉调控 | 2.95e-05 | 13.5 |
-| Neuroactive ligand-receptor interaction | 其他 | 2.95e-05 | 18.0 |
-| Gap junction | 交叉调控 | 4.78e-05 | 46.6 |
-| Calcium signaling pathway | 信号主干通路 | 7.60e-05 | 21.4 |
-| negative regulation of sequestering of calcium ion (GO: | 其他 | 2.04e-04 | 123.0 |
-| release of sequestered calcium ion into cytosol (GO:005 | 其他 | 2.16e-04 | 113.9 |
-| cellular metal ion homeostasis (GO:0006875) | 其他 | 2.28e-04 | 39.4 |
-| anterograde trans-synaptic signaling (GO:0098916) | 其他 | 2.28e-04 | 21.0 |
-| response to peptide (GO:1901652) | 其他 | 4.21e-04 | 78.8 |
-| cellular calcium ion homeostasis (GO:0006874) | 其他 | 4.21e-04 | 30.1 |
-| tryptophan catabolic process to kynurenine (GO:0019441) | 其他 | 4.21e-04 | 410.0 |
-| calcium ion transmembrane import into cytosol (GO:00975 | 其他 | 4.21e-04 | 73.2 |
-| chemical synaptic transmission (GO:0007268) | 其他 | 4.22e-04 | 16.7 |
-| icosanoid metabolic process (GO:0006690) | 其他 | 8.49e-04 | 53.9 |
-| arachidonic acid metabolic process (GO:0019369) | 其他 | 8.49e-04 | 53.9 |
+| G protein-coupled serotonin receptor signaling pathway  | 其他 | 8.09e-08 | 410.0 |
+| Serotonergic synapse | 交叉调控 | 1.16e-07 | 54.4 |
+| G protein-coupled receptor signaling pathway, coupled t | 其他 | 1.23e-06 | 78.8 |
+| regulation of phosphatidylinositol biosynthetic process | 其他 | 1.51e-06 | 615.0 |
+| positive regulation of phospholipid biosynthetic proces | 其他 | 3.97e-06 | 439.3 |
+| Pathways in cancer | 交叉调控 | 2.87e-05 | 13.5 |
+| Gap junction | 交叉调控 | 6.00e-05 | 46.6 |
+| negative regulation of sequestering of calcium ion (GO: | 其他 | 2.06e-04 | 123.0 |
+| release of sequestered calcium ion into cytosol (GO:005 | 其他 | 2.18e-04 | 113.9 |
+| cellular metal ion homeostasis (GO:0006875) | 其他 | 2.38e-04 | 39.4 |
+| response to peptide (GO:1901652) | 其他 | 4.63e-04 | 78.8 |
+| cellular calcium ion homeostasis (GO:0006874) | 其他 | 4.63e-04 | 30.1 |
+| tryptophan catabolic process to kynurenine (GO:0019441) | 其他 | 4.63e-04 | 410.0 |
+| calcium ion transmembrane import into cytosol (GO:00975 | 其他 | 4.63e-04 | 73.2 |
+| Neuroactive ligand-receptor interaction | 其他 | 4.92e-04 | 15.0 |
+| arachidonic acid metabolic process (GO:0019369) | 其他 | 9.89e-04 | 53.9 |
+| icosanoid metabolic process (GO:0006690) | 其他 | 9.89e-04 | 53.9 |
+| negative regulation of autophagy (GO:0010507) | 信号主干通路 | 1.02e-03 | 52.1 |
+| kynurenine metabolic process (GO:0070189) | 其他 | 1.21e-03 | 227.8 |
+| indolalkylamine catabolic process (GO:0046218) | 其他 | 1.32e-03 | 205.0 |
 | ... 还有 20 条通路 ... | | | |
 
 </details>
@@ -2936,60 +2936,59 @@
 </details>
 
 <details>
-<summary><b>P0.2_S0.4_K10</b> — 显著31条, 主干2, 交叉10, 直接OX0, EF=123.3</summary>
+<summary><b>P0.2_S0.4_K10</b> — 显著31条, 主干2, 交叉10, 直接OX0, EF=117.5</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| Nitrogen metabolism | 其他 | 1.81e-15 | 723.5 |
-| bicarbonate transport (GO:0015701) | 其他 | 8.89e-13 | 351.4 |
-| organic anion transport (GO:0015711) | 其他 | 3.04e-10 | 124.2 |
-| response to peptide (GO:1901652) | 其他 | 6.33e-05 | 157.7 |
-| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 3.66e-04 | 16.5 |
-| cellular response to UV-A (GO:0071492) | 其他 | 5.75e-04 | 372.7 |
-| response to UV-A (GO:0070141) | 其他 | 7.93e-04 | 292.9 |
-| regulation of neuroinflammatory response (GO:0150077) | 其他 | 1.27e-03 | 215.8 |
-| positive regulation of vascular associated smooth muscl | 其他 | 1.37e-03 | 195.2 |
-| cellular response to cytokine stimulus (GO:0071345) | 信号主干通路 | 1.61e-03 | 17.0 |
-| Proximal tubule bicarbonate reclamation | 其他 | 1.75e-03 | 178.3 |
-| Pathways in cancer | 交叉调控 | 1.87e-03 | 15.4 |
-| Proteoglycans in cancer | 交叉调控 | 1.87e-03 | 30.0 |
-| Bladder cancer | 交叉调控 | 2.26e-03 | 100.0 |
-| endodermal cell differentiation (GO:0035987) | 其他 | 2.58e-03 | 128.1 |
-| endoderm formation (GO:0001706) | 其他 | 2.88e-03 | 113.9 |
-| regulation of vascular associated smooth muscle cell pr | 其他 | 2.88e-03 | 110.8 |
-| response to amyloid-beta (GO:1904645) | 其他 | 3.77e-03 | 93.2 |
-| positive regulation of smooth muscle cell proliferation | 其他 | 3.83e-03 | 89.1 |
-| MicroRNAs in cancer | 交叉调控 | 4.22e-03 | 19.8 |
+| Nitrogen metabolism | 其他 | 3.62e-12 | 602.9 |
+| bicarbonate transport (GO:0015701) | 其他 | 7.50e-10 | 292.9 |
+| organic anion transport (GO:0015711) | 其他 | 8.15e-08 | 103.5 |
+| response to peptide (GO:1901652) | 其他 | 6.68e-05 | 157.7 |
+| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 3.87e-04 | 16.5 |
+| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 4.40e-04 | 61.5 |
+| cellular response to UV-A (GO:0071492) | 其他 | 6.07e-04 | 372.7 |
+| response to UV-A (GO:0070141) | 其他 | 8.37e-04 | 292.9 |
+| Proximal tubule bicarbonate reclamation | 其他 | 1.17e-03 | 178.3 |
+| regulation of neuroinflammatory response (GO:0150077) | 其他 | 1.35e-03 | 215.8 |
+| Pathways in cancer | 交叉调控 | 1.41e-03 | 15.4 |
+| positive regulation of vascular associated smooth muscl | 其他 | 1.45e-03 | 195.2 |
+| Proteoglycans in cancer | 交叉调控 | 1.50e-03 | 30.0 |
+| cellular response to cytokine stimulus (GO:0071345) | 信号主干通路 | 1.70e-03 | 17.0 |
+| Bladder cancer | 交叉调控 | 1.89e-03 | 100.0 |
+| endodermal cell differentiation (GO:0035987) | 其他 | 2.72e-03 | 128.1 |
+| endoderm formation (GO:0001706) | 其他 | 3.04e-03 | 113.9 |
+| regulation of vascular associated smooth muscle cell pr | 其他 | 3.04e-03 | 110.8 |
+| MicroRNAs in cancer | 交叉调控 | 3.62e-03 | 19.8 |
+| response to amyloid-beta (GO:1904645) | 其他 | 3.98e-03 | 93.2 |
 | ... 还有 11 条通路 ... | | | |
 
 </details>
 
 <details>
-<summary><b>P0.2_S0.4_K20</b> — 显著21条, 主干2, 交叉2, 直接OX0, EF=114.5</summary>
+<summary><b>P0.2_S0.4_K20</b> — 显著20条, 主干3, 交叉2, 直接OX0, EF=116.1</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| Nitrogen metabolism | 其他 | 2.28e-22 | 542.6 |
-| bicarbonate transport (GO:0015701) | 其他 | 2.77e-18 | 263.6 |
-| organic anion transport (GO:0015711) | 其他 | 3.29e-14 | 93.2 |
-| Pathways in cancer | 交叉调控 | 3.80e-04 | 11.6 |
-| response to peptide (GO:1901652) | 其他 | 8.50e-04 | 78.8 |
-| arachidonic acid metabolic process (GO:0019369) | 其他 | 1.61e-03 | 53.9 |
-| icosanoid metabolic process (GO:0006690) | 其他 | 1.61e-03 | 53.9 |
-| transmembrane receptor protein tyrosine kinase signalin | 信号主干通路 | 2.17e-03 | 12.7 |
-| cellular response to UV-A (GO:0071492) | 其他 | 2.17e-03 | 186.4 |
-| cyclooxygenase pathway (GO:0019371) | 其他 | 2.17e-03 | 186.4 |
-| response to UV-A (GO:0070141) | 其他 | 3.19e-03 | 146.4 |
-| prostanoid biosynthetic process (GO:0046457) | 其他 | 3.31e-03 | 136.7 |
-| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 3.42e-03 | 30.8 |
-| regulation of neuroinflammatory response (GO:0150077) | 其他 | 4.48e-03 | 107.9 |
-| prostaglandin biosynthetic process (GO:0001516) | 其他 | 4.48e-03 | 107.9 |
-| Proximal tubule bicarbonate reclamation | 其他 | 4.69e-03 | 89.1 |
-| positive regulation of vascular associated smooth muscl | 其他 | 5.07e-03 | 97.6 |
-| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 7.13e-03 | 8.3 |
-| regulation of cellular pH (GO:0030641) | 其他 | 9.06e-03 | 66.1 |
-| prostaglandin metabolic process (GO:0006693) | 其他 | 9.06e-03 | 66.1 |
-| ... 还有 1 条通路 ... | | | |
+| Nitrogen metabolism | 其他 | 2.31e-22 | 542.6 |
+| bicarbonate transport (GO:0015701) | 其他 | 2.81e-18 | 263.6 |
+| organic anion transport (GO:0015711) | 其他 | 3.33e-14 | 93.2 |
+| Pathways in cancer | 交叉调控 | 2.05e-05 | 13.5 |
+| response to peptide (GO:1901652) | 其他 | 8.60e-04 | 78.8 |
+| transmembrane receptor protein tyrosine kinase signalin | 信号主干通路 | 2.93e-03 | 12.7 |
+| cellular response to UV-A (GO:0071492) | 其他 | 2.93e-03 | 186.4 |
+| cyclooxygenase pathway (GO:0019371) | 其他 | 2.93e-03 | 186.4 |
+| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 3.47e-03 | 30.8 |
+| response to UV-A (GO:0070141) | 其他 | 4.14e-03 | 146.4 |
+| prostanoid biosynthetic process (GO:0046457) | 其他 | 4.18e-03 | 136.7 |
+| Proximal tubule bicarbonate reclamation | 其他 | 4.75e-03 | 89.1 |
+| regulation of neuroinflammatory response (GO:0150077) | 其他 | 5.44e-03 | 107.9 |
+| prostaglandin biosynthetic process (GO:0001516) | 其他 | 5.44e-03 | 107.9 |
+| positive regulation of vascular associated smooth muscl | 其他 | 6.06e-03 | 97.6 |
+| cellular response to hypoxia (GO:0071456) | 信号主干通路 | 7.77e-03 | 23.5 |
+| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 7.77e-03 | 8.3 |
+| regulation of cellular pH (GO:0030641) | 其他 | 9.78e-03 | 66.1 |
+| prostaglandin metabolic process (GO:0006693) | 其他 | 9.78e-03 | 66.1 |
+| endodermal cell differentiation (GO:0035987) | 其他 | 9.78e-03 | 64.1 |
 
 </details>
 
@@ -3058,40 +3057,43 @@
 </details>
 
 <details>
-<summary><b>P0.2_S0.5_K20</b> — 显著12条, 主干1, 交叉2, 直接OX0, EF=146.7</summary>
+<summary><b>P0.2_S0.5_K20</b> — 显著13条, 主干1, 交叉2, 直接OX0, EF=129.5</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| Nitrogen metabolism | 其他 | 1.08e-25 | 602.9 |
-| bicarbonate transport (GO:0015701) | 其他 | 4.52e-21 | 292.9 |
-| organic anion transport (GO:0015711) | 其他 | 1.86e-16 | 103.5 |
-| Pathways in cancer | 交叉调控 | 4.08e-04 | 11.6 |
-| response to peptide (GO:1901652) | 其他 | 9.67e-04 | 78.8 |
-| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 3.68e-03 | 30.8 |
-| transmembrane receptor protein tyrosine kinase signalin | 信号主干通路 | 3.76e-03 | 12.7 |
-| cellular response to UV-A (GO:0071492) | 其他 | 3.95e-03 | 186.4 |
-| Proximal tubule bicarbonate reclamation | 其他 | 5.04e-03 | 89.1 |
-| response to UV-A (GO:0070141) | 其他 | 5.44e-03 | 146.4 |
-| regulation of neuroinflammatory response (GO:0150077) | 其他 | 8.73e-03 | 107.9 |
-| positive regulation of vascular associated smooth muscl | 其他 | 9.37e-03 | 97.6 |
+| Nitrogen metabolism | 其他 | 2.39e-22 | 542.6 |
+| bicarbonate transport (GO:0015701) | 其他 | 3.20e-18 | 263.6 |
+| organic anion transport (GO:0015711) | 其他 | 3.80e-14 | 93.2 |
+| Pathways in cancer | 交叉调控 | 2.13e-05 | 13.5 |
+| response to peptide (GO:1901652) | 其他 | 9.80e-04 | 78.8 |
+| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 3.60e-03 | 30.8 |
+| transmembrane receptor protein tyrosine kinase signalin | 信号主干通路 | 3.81e-03 | 12.7 |
+| cellular response to UV-A (GO:0071492) | 其他 | 4.00e-03 | 186.4 |
+| Proximal tubule bicarbonate reclamation | 其他 | 4.92e-03 | 89.1 |
+| response to UV-A (GO:0070141) | 其他 | 5.51e-03 | 146.4 |
+| Retrograde endocannabinoid signaling | 其他 | 6.85e-03 | 20.8 |
+| regulation of neuroinflammatory response (GO:0150077) | 其他 | 8.84e-03 | 107.9 |
+| positive regulation of vascular associated smooth muscl | 其他 | 9.49e-03 | 97.6 |
 
 </details>
 
 <details>
-<summary><b>P0.2_S0.5_K30</b> — 显著10条, 主干0, 交叉1, 直接OX0, EF=114.4</summary>
+<summary><b>P0.2_S0.5_K30</b> — 显著12条, 主干0, 交叉3, 直接OX0, EF=97.6</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| Nitrogen metabolism | 其他 | 2.20e-23 | 402.0 |
-| bicarbonate transport (GO:0015701) | 其他 | 9.56e-19 | 195.2 |
-| organic anion transport (GO:0015711) | 其他 | 3.11e-16 | 75.9 |
-| Proximal tubule bicarbonate reclamation | 其他 | 2.83e-04 | 89.1 |
-| Pathways in cancer | 交叉调控 | 3.82e-04 | 9.0 |
-| response to peptide (GO:1901652) | 其他 | 4.47e-03 | 52.6 |
-| arachidonic acid metabolic process (GO:0019369) | 其他 | 8.44e-03 | 36.0 |
-| icosanoid metabolic process (GO:0006690) | 其他 | 8.44e-03 | 36.0 |
-| cellular response to UV-A (GO:0071492) | 其他 | 8.47e-03 | 124.2 |
-| cyclooxygenase pathway (GO:0019371) | 其他 | 8.47e-03 | 124.2 |
+| Nitrogen metabolism | 其他 | 2.22e-23 | 402.0 |
+| bicarbonate transport (GO:0015701) | 其他 | 9.77e-19 | 195.2 |
+| organic anion transport (GO:0015711) | 其他 | 3.91e-14 | 69.0 |
+| Proximal tubule bicarbonate reclamation | 其他 | 2.85e-04 | 89.1 |
+| Pathways in cancer | 交叉调控 | 3.85e-04 | 9.0 |
+| response to peptide (GO:1901652) | 其他 | 4.57e-03 | 52.6 |
+| Proteoglycans in cancer | 交叉调控 | 6.44e-03 | 13.3 |
+| arachidonic acid metabolic process (GO:0019369) | 其他 | 8.62e-03 | 36.0 |
+| icosanoid metabolic process (GO:0006690) | 其他 | 8.62e-03 | 36.0 |
+| cellular response to UV-A (GO:0071492) | 其他 | 8.66e-03 | 124.2 |
+| cyclooxygenase pathway (GO:0019371) | 其他 | 8.66e-03 | 124.2 |
+| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 9.64e-03 | 20.5 |
 
 </details>
 
@@ -3115,60 +3117,60 @@
 </details>
 
 <details>
-<summary><b>P0.2_S0.7_K10</b> — 显著32条, 主干2, 交叉10, 直接OX0, EF=112.1</summary>
+<summary><b>P0.2_S0.7_K10</b> — 显著24条, 主干3, 交叉4, 直接OX0, EF=125.8</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| Nitrogen metabolism | 其他 | 3.33e-12 | 602.9 |
-| bicarbonate transport (GO:0015701) | 其他 | 6.95e-10 | 292.9 |
-| organic anion transport (GO:0015711) | 其他 | 7.56e-08 | 103.5 |
-| response to peptide (GO:1901652) | 其他 | 6.19e-05 | 157.7 |
-| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 3.58e-04 | 16.5 |
-| cellular response to UV-A (GO:0071492) | 其他 | 5.63e-04 | 372.7 |
-| response to UV-A (GO:0070141) | 其他 | 7.76e-04 | 292.9 |
-| regulation of neuroinflammatory response (GO:0150077) | 其他 | 1.25e-03 | 215.8 |
-| positive regulation of vascular associated smooth muscl | 其他 | 1.34e-03 | 195.2 |
-| cellular response to cytokine stimulus (GO:0071345) | 信号主干通路 | 1.58e-03 | 17.0 |
-| Pathways in cancer | 交叉调控 | 2.29e-03 | 15.4 |
-| Proteoglycans in cancer | 交叉调控 | 2.29e-03 | 30.0 |
-| endodermal cell differentiation (GO:0035987) | 其他 | 2.52e-03 | 128.1 |
-| Bladder cancer | 交叉调控 | 2.60e-03 | 100.0 |
-| regulation of vascular associated smooth muscle cell pr | 其他 | 2.82e-03 | 110.8 |
-| endoderm formation (GO:0001706) | 其他 | 2.82e-03 | 113.9 |
-| response to amyloid-beta (GO:1904645) | 其他 | 3.69e-03 | 93.2 |
-| positive regulation of smooth muscle cell proliferation | 其他 | 3.75e-03 | 89.1 |
-| MicroRNAs in cancer | 交叉调控 | 4.65e-03 | 19.8 |
-| arachidonic acid metabolic process (GO:0019369) | 其他 | 5.04e-03 | 71.9 |
-| ... 还有 12 条通路 ... | | | |
+| Nitrogen metabolism | 其他 | 5.16e-09 | 482.4 |
+| bicarbonate transport (GO:0015701) | 其他 | 4.13e-07 | 234.3 |
+| organic anion transport (GO:0015711) | 其他 | 1.46e-05 | 82.8 |
+| response to peptide (GO:1901652) | 其他 | 6.84e-05 | 157.7 |
+| Pathways in cancer | 交叉调控 | 1.01e-04 | 19.3 |
+| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 3.96e-04 | 16.5 |
+| cellular response to UV-A (GO:0071492) | 其他 | 6.22e-04 | 372.7 |
+| response to UV-A (GO:0070141) | 其他 | 8.57e-04 | 292.9 |
+| transmembrane receptor protein tyrosine kinase signalin | 信号主干通路 | 1.13e-03 | 20.3 |
+| regulation of neuroinflammatory response (GO:0150077) | 其他 | 1.21e-03 | 215.8 |
+| positive regulation of vascular associated smooth muscl | 其他 | 1.32e-03 | 195.2 |
+| cellular response to cytokine stimulus (GO:0071345) | 信号主干通路 | 1.57e-03 | 17.0 |
+| endodermal cell differentiation (GO:0035987) | 其他 | 2.54e-03 | 128.1 |
+| Proteoglycans in cancer | 交叉调控 | 2.78e-03 | 30.0 |
+| endoderm formation (GO:0001706) | 其他 | 2.88e-03 | 113.9 |
+| regulation of vascular associated smooth muscle cell pr | 其他 | 2.88e-03 | 110.8 |
+| Bladder cancer | 交叉调控 | 3.15e-03 | 100.0 |
+| response to amyloid-beta (GO:1904645) | 其他 | 3.79e-03 | 93.2 |
+| positive regulation of smooth muscle cell proliferation | 其他 | 3.87e-03 | 89.1 |
+| MicroRNAs in cancer | 交叉调控 | 5.63e-03 | 19.8 |
+| ... 还有 4 条通路 ... | | | |
 
 </details>
 
 <details>
-<summary><b>P0.2_S0.7_K20</b> — 显著21条, 主干2, 交叉1, 直接OX0, EF=116.1</summary>
+<summary><b>P0.2_S0.7_K20</b> — 显著26条, 主干3, 交叉3, 直接OX0, EF=100.3</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| Nitrogen metabolism | 其他 | 2.74e-22 | 542.6 |
-| bicarbonate transport (GO:0015701) | 其他 | 2.81e-18 | 263.6 |
-| organic anion transport (GO:0015711) | 其他 | 3.33e-14 | 93.2 |
-| Proximal tubule bicarbonate reclamation | 其他 | 7.10e-05 | 133.7 |
-| Pathways in cancer | 交叉调控 | 3.04e-04 | 11.6 |
-| response to peptide (GO:1901652) | 其他 | 8.60e-04 | 78.8 |
-| arachidonic acid metabolic process (GO:0019369) | 其他 | 1.63e-03 | 53.9 |
-| icosanoid metabolic process (GO:0006690) | 其他 | 1.63e-03 | 53.9 |
-| transmembrane receptor protein tyrosine kinase signalin | 信号主干通路 | 2.20e-03 | 12.7 |
-| cellular response to UV-A (GO:0071492) | 其他 | 2.20e-03 | 186.4 |
-| cyclooxygenase pathway (GO:0019371) | 其他 | 2.20e-03 | 186.4 |
-| response to UV-A (GO:0070141) | 其他 | 3.22e-03 | 146.4 |
-| prostanoid biosynthetic process (GO:0046457) | 其他 | 3.35e-03 | 136.7 |
-| regulation of neuroinflammatory response (GO:0150077) | 其他 | 4.53e-03 | 107.9 |
-| prostaglandin biosynthetic process (GO:0001516) | 其他 | 4.53e-03 | 107.9 |
-| positive regulation of vascular associated smooth muscl | 其他 | 5.13e-03 | 97.6 |
-| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 7.21e-03 | 8.3 |
-| regulation of cellular pH (GO:0030641) | 其他 | 9.17e-03 | 66.1 |
-| prostaglandin metabolic process (GO:0006693) | 其他 | 9.17e-03 | 66.1 |
-| endodermal cell differentiation (GO:0035987) | 其他 | 9.20e-03 | 64.1 |
-| ... 还有 1 条通路 ... | | | |
+| Nitrogen metabolism | 其他 | 2.08e-22 | 542.6 |
+| bicarbonate transport (GO:0015701) | 其他 | 2.52e-18 | 263.6 |
+| organic anion transport (GO:0015711) | 其他 | 2.99e-14 | 93.2 |
+| Pathways in cancer | 交叉调控 | 3.46e-04 | 11.6 |
+| response to peptide (GO:1901652) | 其他 | 7.71e-04 | 78.8 |
+| arachidonic acid metabolic process (GO:0019369) | 其他 | 1.46e-03 | 53.9 |
+| icosanoid metabolic process (GO:0006690) | 其他 | 1.46e-03 | 53.9 |
+| cellular response to UV-A (GO:0071492) | 其他 | 2.25e-03 | 186.4 |
+| cyclooxygenase pathway (GO:0019371) | 其他 | 2.25e-03 | 186.4 |
+| AGE-RAGE signaling pathway in diabetic complications | 交叉调控 | 3.12e-03 | 30.8 |
+| response to UV-A (GO:0070141) | 其他 | 3.25e-03 | 146.4 |
+| prostanoid biosynthetic process (GO:0046457) | 其他 | 3.33e-03 | 136.7 |
+| Proximal tubule bicarbonate reclamation | 其他 | 4.27e-03 | 89.1 |
+| prostaglandin biosynthetic process (GO:0001516) | 其他 | 4.43e-03 | 107.9 |
+| regulation of neuroinflammatory response (GO:0150077) | 其他 | 4.43e-03 | 107.9 |
+| positive regulation of vascular associated smooth muscl | 其他 | 4.98e-03 | 97.6 |
+| Retrograde endocannabinoid signaling | 其他 | 5.94e-03 | 20.8 |
+| cellular response to hypoxia (GO:0071456) | 信号主干通路 | 6.47e-03 | 23.5 |
+| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 6.47e-03 | 8.3 |
+| regulation of cellular pH (GO:0030641) | 其他 | 8.22e-03 | 66.1 |
+| ... 还有 6 条通路 ... | | | |
 
 </details>
 
@@ -3219,31 +3221,31 @@
 </details>
 
 <details>
-<summary><b>P0.2_S0.9_K10</b> — 显著35条, 主干3, 交叉11, 直接OX0, EF=106.9</summary>
+<summary><b>P0.2_S0.9_K10</b> — 显著36条, 主干4, 交叉11, 直接OX0, EF=102.0</summary>
 
 | 通路名 | 类别 | P-value | EF |
 |--------|------|--------|----|
-| Pathways in cancer | 交叉调控 | 1.93e-04 | 19.3 |
-| response to peptide (GO:1901652) | 其他 | 2.12e-04 | 157.7 |
-| arachidonic acid metabolic process (GO:0019369) | 其他 | 2.25e-04 | 107.9 |
-| icosanoid metabolic process (GO:0006690) | 其他 | 2.25e-04 | 107.9 |
-| cellular response to UV-A (GO:0071492) | 其他 | 6.42e-04 | 372.7 |
-| cyclooxygenase pathway (GO:0019371) | 其他 | 6.42e-04 | 372.7 |
-| response to UV-A (GO:0070141) | 其他 | 8.74e-04 | 292.9 |
-| prostanoid biosynthetic process (GO:0046457) | 其他 | 8.74e-04 | 273.3 |
-| transmembrane receptor protein tyrosine kinase signalin | 信号主干通路 | 9.96e-04 | 20.3 |
-| regulation of neuroinflammatory response (GO:0150077) | 其他 | 9.96e-04 | 215.8 |
-| prostaglandin biosynthetic process (GO:0001516) | 其他 | 9.96e-04 | 215.8 |
-| positive regulation of vascular associated smooth muscl | 其他 | 1.11e-03 | 195.2 |
-| cellular response to cytokine stimulus (GO:0071345) | 信号主干通路 | 1.35e-03 | 17.0 |
-| Retrograde endocannabinoid signaling | 其他 | 1.51e-03 | 41.6 |
-| endodermal cell differentiation (GO:0035987) | 其他 | 2.06e-03 | 128.1 |
-| prostaglandin metabolic process (GO:0006693) | 其他 | 2.06e-03 | 132.3 |
-| endoderm formation (GO:0001706) | 其他 | 2.41e-03 | 113.9 |
-| regulation of vascular associated smooth muscle cell pr | 其他 | 2.41e-03 | 110.8 |
-| cytokine-mediated signaling pathway (GO:0019221) | 信号主干通路 | 2.55e-03 | 13.2 |
-| Proteoglycans in cancer | 交叉调控 | 2.66e-03 | 30.0 |
-| ... 还有 15 条通路 ... | | | |
+| Pathways in cancer | 交叉调控 | 4.64e-06 | 23.2 |
+| transmembrane receptor protein tyrosine kinase signalin | 信号主干通路 | 1.19e-04 | 25.4 |
+| response to peptide (GO:1901652) | 其他 | 1.19e-04 | 157.7 |
+| arachidonic acid metabolic process (GO:0019369) | 其他 | 1.90e-04 | 107.9 |
+| icosanoid metabolic process (GO:0006690) | 其他 | 1.90e-04 | 107.9 |
+| cellular response to UV-A (GO:0071492) | 其他 | 6.01e-04 | 372.7 |
+| cyclooxygenase pathway (GO:0019371) | 其他 | 6.01e-04 | 372.7 |
+| response to UV-A (GO:0070141) | 其他 | 8.51e-04 | 292.9 |
+| prostanoid biosynthetic process (GO:0046457) | 其他 | 8.59e-04 | 273.3 |
+| regulation of neuroinflammatory response (GO:0150077) | 其他 | 1.12e-03 | 215.8 |
+| prostaglandin biosynthetic process (GO:0001516) | 其他 | 1.12e-03 | 215.8 |
+| positive regulation of vascular associated smooth muscl | 其他 | 1.25e-03 | 195.2 |
+| cellular response to cytokine stimulus (GO:0071345) | 信号主干通路 | 1.52e-03 | 17.0 |
+| Retrograde endocannabinoid signaling | 其他 | 1.63e-03 | 41.6 |
+| Proteoglycans in cancer | 交叉调控 | 2.30e-03 | 30.0 |
+| Rap1 signaling pathway | 信号主干通路 | 2.30e-03 | 29.3 |
+| prostaglandin metabolic process (GO:0006693) | 其他 | 2.31e-03 | 132.3 |
+| endodermal cell differentiation (GO:0035987) | 其他 | 2.31e-03 | 128.1 |
+| positive regulation of cell motility (GO:2000147) | 其他 | 2.45e-03 | 27.8 |
+| regulation of vascular associated smooth muscle cell pr | 其他 | 2.45e-03 | 110.8 |
+| ... 还有 16 条通路 ... | | | |
 
 </details>
 
@@ -3333,14 +3335,12 @@
 
 ### 5.1 Q1 候选稳健靶点列表
 
-排序规则：`frequency` 降序、`avg_degree_norm` 降序、`avg_degree_rank` 升序、`avg_betweenness` 降序。
-
 | 排名 | 基因 | 频率 | 出现次数 | 平均Degree(原始) | 平均相对连接度 | 平均排名 | 平均中介中心性 |
 |------|------|------|---------|----------------|-------------------|---------|--------------|
 | 1 | STAT3 | 100.0% | 112 | 39.2 | 0.883 | 2.9 | 0.0582 |
-| 2 | BCL2 | 85.7% | 96 | 39.0 | 0.740 | 5.5 | 0.0433 |
+| 2 | BCL2 | 85.7% | 96 | 39.0 | 0.740 | 5.6 | 0.0433 |
 | 3 | MMP9 | 85.7% | 96 | 31.9 | 0.681 | 8.9 | 0.0523 |
-| 4 | PTGS2 | 79.5% | 89 | 30.3 | 0.690 | 9.7 | 0.0683 |
+| 4 | PTGS2 | 79.5% | 89 | 30.3 | 0.690 | 9.3 | 0.0683 |
 | 5 | SRC | 71.4% | 80 | 58.0 | 0.931 | 2.2 | 0.1301 |
 | 6 | EGFR | 71.4% | 80 | 52.5 | 0.852 | 3.1 | 0.0677 |
 | 7 | CASP3 | 71.4% | 80 | 42.8 | 0.657 | 7.5 | 0.0426 |
@@ -3351,8 +3351,8 @@
 | 12 | ESR1 | 57.1% | 64 | 46.5 | 0.696 | 6.9 | 0.0569 |
 | 13 | FGF2 | 55.4% | 62 | 28.9 | 0.513 | 13.4 | 0.0194 |
 | 14 | PIK3CA | 54.5% | 61 | 25.7 | 0.511 | 14.5 | 0.0241 |
-| 15 | HIF1A | 53.6% | 60 | 45.9 | 0.631 | 8.8 | 0.0330 |
-| 16 | CDK1 | 53.6% | 60 | 12.5 | 0.315 | 22.5 | 0.0143 |
+| 15 | CDK1 | 54.5% | 61 | 12.4 | 0.313 | 22.3 | 0.0140 |
+| 16 | HIF1A | 53.6% | 60 | 45.9 | 0.631 | 8.8 | 0.0330 |
 | 17 | KDR | 51.8% | 58 | 31.1 | 0.475 | 15.2 | 0.0171 |
 | 18 | MAPK14 | 47.3% | 53 | 24.5 | 0.421 | 18.9 | 0.0126 |
 | 19 | MAPK8 | 46.4% | 52 | 20.0 | 0.469 | 16.7 | 0.0202 |
@@ -3367,103 +3367,103 @@
 | 28 | MET | 29.5% | 33 | 19.8 | 0.363 | 26.4 | 0.0036 |
 | 29 | IL2 | 28.6% | 32 | 36.4 | 0.425 | 20.9 | 0.0153 |
 | 30 | KIT | 26.8% | 30 | 25.8 | 0.349 | 27.2 | 0.0131 |
-| 31 | CA9 | 25.9% | 29 | 5.0 | 0.420 | 11.6 | 0.0956 |
+| 31 | CA9 | 25.0% | 28 | 5.1 | 0.435 | 13.4 | 0.0990 |
 | 32 | CDK2 | 24.1% | 27 | 19.9 | 0.325 | 30.2 | 0.0040 |
-| 33 | FAAH | 24.1% | 27 | 1.8 | 0.296 | 11.4 | 0.0320 |
-| 34 | CCNA2 | 23.2% | 26 | 19.2 | 0.319 | 31.2 | 0.0032 |
-| 35 | CA1 | 21.4% | 24 | 5.7 | 0.658 | 4.7 | 0.0666 |
-| 36 | MAPT | 21.4% | 24 | 17.0 | 0.313 | 29.1 | 0.0195 |
-| 37 | HTR2A | 19.6% | 22 | 9.0 | 0.519 | 21.4 | 0.0178 |
-| 38 | CA3 | 19.6% | 22 | 3.3 | 0.414 | 10.1 | 0.0034 |
+| 33 | CCNA2 | 23.2% | 26 | 19.2 | 0.319 | 31.2 | 0.0032 |
+| 34 | CA1 | 21.4% | 24 | 5.7 | 0.658 | 5.3 | 0.0666 |
+| 35 | MAPT | 21.4% | 24 | 17.0 | 0.313 | 29.1 | 0.0195 |
+| 36 | CA2 | 20.5% | 23 | 4.5 | 0.463 | 7.4 | 0.0415 |
+| 37 | HTR1A | 20.5% | 23 | 7.0 | 0.371 | 20.6 | 0.0551 |
+| 38 | HTR2A | 19.6% | 22 | 9.0 | 0.519 | 20.8 | 0.0178 |
 | 39 | HDAC1 | 19.6% | 22 | 19.2 | 0.365 | 21.8 | 0.0139 |
 | 40 | MAPK9 | 19.6% | 22 | 9.6 | 0.357 | 22.5 | 0.0033 |
-| 41 | CA2 | 18.8% | 21 | 4.8 | 0.485 | 9.0 | 0.0454 |
-| 42 | HTR1A | 18.8% | 21 | 7.5 | 0.371 | 21.5 | 0.0600 |
-| 43 | CA4 | 17.9% | 20 | 4.7 | 0.485 | 11.7 | 0.0380 |
+| 41 | FAAH | 19.6% | 22 | 1.8 | 0.306 | 15.5 | 0.0382 |
+| 42 | CA4 | 18.8% | 21 | 4.5 | 0.471 | 10.5 | 0.0362 |
+| 43 | CA3 | 17.9% | 20 | 3.3 | 0.417 | 11.1 | 0.0034 |
 | 44 | ESR2 | 17.9% | 20 | 12.9 | 0.296 | 30.8 | 0.0046 |
-| 45 | CA12 | 17.0% | 19 | 2.7 | 0.297 | 13.5 | 0.0035 |
-| 46 | NTRK1 | 16.1% | 18 | 23.1 | 0.300 | 35.5 | 0.0119 |
-| 47 | IDO1 | 15.2% | 17 | 5.9 | 0.302 | 21.0 | 0.0185 |
-| 48 | CA7 | 14.3% | 16 | 2.7 | 0.307 | 16.1 | 0.0005 |
-| 49 | ABCB1 | 14.3% | 16 | 13.9 | 0.301 | 26.5 | 0.0237 |
-| 50 | CCNA1 | 14.3% | 16 | 11.3 | 0.294 | 32.9 | 0.0009 |
+| 45 | CA7 | 17.0% | 19 | 2.7 | 0.300 | 14.3 | 0.0005 |
+| 46 | CA12 | 17.0% | 19 | 2.7 | 0.297 | 13.1 | 0.0035 |
+| 47 | NTRK1 | 16.1% | 18 | 23.1 | 0.300 | 35.5 | 0.0119 |
+| 48 | ABCB1 | 14.3% | 16 | 13.9 | 0.301 | 27.8 | 0.0237 |
+| 49 | CCNA1 | 14.3% | 16 | 11.3 | 0.294 | 32.9 | 0.0009 |
+| 50 | IDO1 | 13.4% | 15 | 6.6 | 0.307 | 24.7 | 0.0210 |
 
 ## 6. 通路排名稳定性 (Top 25)
 
 | 排名 | 通路 | 类别 | 频率 | 平均排名 | 排名波动 | 平均logP | 平均EF |
 |------|------|------|------|---------|---------|---------|-------|
-| 2 | Nitrogen metabolism | 其他 | 21.4% | 2.0 | 5.1 | 17.1 | 422.8 |
-| 2 | bicarbonate transport (GO:0015701) | 其他 | 20.5% | 2.1 | 0.3 | 14.0 | 209.2 |
-| 3 | Pathways in cancer | 交叉调控 | 100.0% | 3.8 | 4.0 | 16.3 | 23.5 |
-| 3 | organic anion transport (GO:0015711) | 其他 | 20.5% | 3.8 | 2.3 | 11.2 | 76.2 |
-| 4 | G protein-coupled serotonin receptor signaling pat | 其他 | 12.5% | 4.6 | 3.0 | 6.4 | 340.5 |
-| 4 | regulation of phosphatidylinositol biosynthetic pr | 其他 | 11.6% | 4.9 | 2.1 | 5.6 | 573.8 |
-| 5 | Proteoglycans in cancer | 交叉调控 | 86.6% | 5.6 | 8.7 | 16.4 | 52.2 |
-| 6 | G protein-coupled receptor signaling pathway, coup | 其他 | 11.6% | 6.0 | 3.8 | 6.0 | 69.7 |
-| 6 | positive regulation of phospholipid biosynthetic p | 其他 | 11.6% | 6.1 | 2.3 | 5.2 | 409.8 |
-| 8 | Lipid and atherosclerosis | 交叉调控 | 78.6% | 8.1 | 8.4 | 13.4 | 44.9 |
-| 8 | Serotonergic synapse | 交叉调控 | 15.2% | 8.4 | 9.7 | 5.8 | 45.1 |
-| 8 | Hepatitis B | 交叉调控 | 80.4% | 8.5 | 8.3 | 13.5 | 54.3 |
+| 1 | Nitrogen metabolism | 其他 | 20.5% | 1.0 | 0.0 | 17.6 | 426.3 |
+| 2 | bicarbonate transport (GO:0015701) | 其他 | 20.5% | 2.0 | 0.2 | 13.9 | 207.1 |
+| 3 | organic anion transport (GO:0015711) | 其他 | 20.5% | 3.5 | 2.1 | 11.0 | 75.1 |
+| 3 | Pathways in cancer | 交叉调控 | 100.0% | 3.6 | 3.6 | 16.4 | 23.5 |
+| 4 | G protein-coupled serotonin receptor signaling pat | 其他 | 12.5% | 4.1 | 2.4 | 6.4 | 347.9 |
+| 5 | G protein-coupled receptor signaling pathway, coup | 其他 | 12.5% | 5.4 | 3.3 | 5.8 | 71.5 |
+| 5 | Proteoglycans in cancer | 交叉调控 | 87.5% | 5.4 | 8.2 | 16.3 | 51.8 |
+| 6 | regulation of phosphatidylinositol biosynthetic pr | 其他 | 11.6% | 6.0 | 1.7 | 5.2 | 526.5 |
+| 7 | positive regulation of phospholipid biosynthetic p | 其他 | 11.6% | 7.7 | 2.4 | 4.9 | 376.0 |
+| 7 | Lipid and atherosclerosis | 交叉调控 | 78.6% | 7.9 | 7.8 | 13.4 | 44.9 |
+| 8 | Hepatitis B | 交叉调控 | 80.4% | 8.3 | 7.7 | 13.5 | 54.3 |
+| 8 | response to peptide (GO:1901652) | 其他 | 28.6% | 8.5 | 5.5 | 3.1 | 87.9 |
+| 8 | Serotonergic synapse | 交叉调控 | 15.2% | 8.6 | 10.0 | 5.6 | 44.6 |
 | 8 | MAPK signaling pathway | 信号主干通路 | 34.8% | 8.7 | 5.1 | 16.5 | 28.0 |
-| 8 | response to peptide (GO:1901652) | 其他 | 28.6% | 8.8 | 5.6 | 3.1 | 87.9 |
 | 9 | PI3K-Akt signaling pathway | 信号主干通路 | 41.1% | 9.7 | 7.2 | 16.2 | 25.1 |
 | 10 | Progesterone-mediated oocyte maturation | 其他 | 13.4% | 10.5 | 6.6 | 15.6 | 66.3 |
+| 10 | AGE-RAGE signaling pathway in diabetic complicatio | 交叉调控 | 94.6% | 10.6 | 6.2 | 10.7 | 66.7 |
 | 10 | acetyl-CoA metabolic process (GO:0006084) | 其他 | 4.5% | 10.6 | 2.2 | 2.3 | 135.5 |
-| 10 | negative regulation of sequestering of calcium ion | 其他 | 11.6% | 10.7 | 3.1 | 3.5 | 114.8 |
-| 11 | AGE-RAGE signaling pathway in diabetic complicatio | 交叉调控 | 93.8% | 11.2 | 6.8 | 10.8 | 67.0 |
+| 11 | Neuroactive ligand-receptor interaction | 其他 | 10.7% | 11.1 | 3.7 | 3.6 | 14.8 |
+| 11 | prostanoid biosynthetic process (GO:0046457) | 其他 | 7.1% | 11.2 | 1.9 | 2.4 | 153.0 |
 | 11 | Kaposi sarcoma-associated herpesvirus infection | 交叉调控 | 69.6% | 11.7 | 8.3 | 12.7 | 44.7 |
-| 11 | release of sequestered calcium ion into cytosol (G | 其他 | 11.6% | 11.7 | 3.1 | 3.5 | 106.3 |
-| 12 | icosanoid metabolic process (GO:0006690) | 其他 | 17.0% | 12.0 | 7.1 | 2.6 | 50.7 |
 | 12 | Colorectal cancer | 信号主干通路 | 8.9% | 12.0 | 6.4 | 10.2 | 114.4 |
-| 12 | prostanoid biosynthetic process (GO:0046457) | 其他 | 8.0% | 12.0 | 2.8 | 2.4 | 151.2 |
-| 12 | Rap1 signaling pathway | 信号主干通路 | 25.9% | 12.7 | 7.0 | 15.2 | 31.2 |
+| 12 | Rap1 signaling pathway | 信号主干通路 | 25.9% | 12.0 | 5.4 | 15.3 | 31.7 |
+| 12 | icosanoid metabolic process (GO:0006690) | 其他 | 14.3% | 12.2 | 7.2 | 2.6 | 49.0 |
+| 12 | prostaglandin biosynthetic process (GO:0001516) | 其他 | 5.4% | 12.3 | 1.5 | 2.4 | 135.4 |
 
 ### 6.1 通路稳健性筛选
 
 通路稳健性采用与靶点层同构的二维筛选逻辑：跨参数组合出现频率表示稳健性，平均 -log10(adjusted p-value) 表示富集强度。
 
 - 频率中位数: 0.0804
-- 平均 -log10(adjusted p-value) 中位数: 7.5159
+- 平均 -log10(adjusted p-value) 中位数: 7.3744
 - 绝对稳健通路: 1 条
-- Q1 候选稳健通路: 70 条
+- Q1 候选稳健通路: 71 条
 
 | 象限 | 说明 | 通路数 | 平均频率 | 平均-log10P |
 |------|------|-------:|---------:|-----------:|
-| Q1: 候选稳健通路 | 高频率 + 高富集强度 | 70 | 0.370 | 10.87 |
-| Q2: 低频高显著 | 低频率 + 高富集强度 | 37 | 0.030 | 10.76 |
-| Q3: 稳健但效应弱 | 高频率 + 低富集强度 | 45 | 0.155 | 4.49 |
-| Q4: 可忽略 | 低频率 + 低富集强度 | 61 | 0.037 | 3.65 |
+| Q1: 候选稳健通路 | 高频率 + 高富集强度 | 71 | 0.371 | 10.84 |
+| Q2: 低频高显著 | 低频率 + 高富集强度 | 36 | 0.031 | 10.80 |
+| Q3: 稳健但效应弱 | 高频率 + 低富集强度 | 43 | 0.149 | 4.40 |
+| Q4: 可忽略 | 低频率 + 低富集强度 | 64 | 0.036 | 3.63 |
 
 ### 6.2 绝对稳健通路
 
 | 通路 | 来源 | 类别 | 频率 | 平均-log10P | 平均排名 |
 |------|------|------|------|-------------|---------|
-| Pathways in cancer | KEGG | 交叉调控 | 100.0% | 16.33 | 3.8 |
+| Pathways in cancer | KEGG | 交叉调控 | 100.0% | 16.37 | 3.6 |
 
 ### 6.3 Q1 候选稳健通路 Top 20
 
 | 排名 | 通路 | 来源 | 类别 | 频率 | 平均-log10P | 平均排名 | 平均EF |
 |------|------|------|------|------|-------------|---------|-------|
-| 1 | Pathways in cancer | KEGG | 交叉调控 | 100.0% | 16.33 | 3.8 | 23.5 |
-| 2 | AGE-RAGE signaling pathway in diabetic complications | KEGG | 交叉调控 | 93.8% | 10.79 | 11.2 | 67.0 |
-| 3 | Proteoglycans in cancer | KEGG | 交叉调控 | 86.6% | 16.45 | 5.6 | 52.2 |
-| 4 | Hepatitis B | KEGG | 交叉调控 | 80.4% | 13.50 | 8.5 | 54.3 |
-| 5 | transmembrane receptor protein tyrosine kinase signalin | GO_BP | 信号主干通路 | 80.4% | 11.54 | 13.1 | 25.0 |
-| 6 | cellular response to cytokine stimulus (GO:0071345) | GO_BP | 信号主干通路 | 79.5% | 10.35 | 16.0 | 21.9 |
-| 7 | Lipid and atherosclerosis | KEGG | 交叉调控 | 78.6% | 13.36 | 8.1 | 44.9 |
-| 8 | cytokine-mediated signaling pathway (GO:0019221) | GO_BP | 信号主干通路 | 78.6% | 9.70 | 17.7 | 18.0 |
-| 9 | Chemical carcinogenesis | KEGG | 交叉调控 | 75.0% | 11.55 | 13.3 | 38.2 |
-| 10 | Fluid shear stress and atherosclerosis | KEGG | 交叉调控 | 70.5% | 10.02 | 15.8 | 51.3 |
+| 1 | Pathways in cancer | KEGG | 交叉调控 | 100.0% | 16.37 | 3.6 | 23.5 |
+| 2 | AGE-RAGE signaling pathway in diabetic complications | KEGG | 交叉调控 | 94.6% | 10.73 | 10.6 | 66.7 |
+| 3 | Proteoglycans in cancer | KEGG | 交叉调控 | 87.5% | 16.30 | 5.4 | 51.8 |
+| 4 | Hepatitis B | KEGG | 交叉调控 | 80.4% | 13.50 | 8.3 | 54.3 |
+| 5 | transmembrane receptor protein tyrosine kinase signalin | GO_BP | 信号主干通路 | 80.4% | 11.54 | 13.0 | 25.1 |
+| 6 | cellular response to cytokine stimulus (GO:0071345) | GO_BP | 信号主干通路 | 79.5% | 10.34 | 16.0 | 21.9 |
+| 7 | Lipid and atherosclerosis | KEGG | 交叉调控 | 78.6% | 13.35 | 7.9 | 44.9 |
+| 8 | cytokine-mediated signaling pathway (GO:0019221) | GO_BP | 信号主干通路 | 78.6% | 9.69 | 17.7 | 18.0 |
+| 9 | Chemical carcinogenesis | KEGG | 交叉调控 | 74.1% | 11.67 | 12.9 | 38.5 |
+| 10 | Fluid shear stress and atherosclerosis | KEGG | 交叉调控 | 70.5% | 10.02 | 15.6 | 51.1 |
 | 11 | Kaposi sarcoma-associated herpesvirus infection | KEGG | 交叉调控 | 69.6% | 12.71 | 11.7 | 44.7 |
-| 12 | MicroRNAs in cancer | KEGG | 交叉调控 | 69.6% | 9.77 | 16.2 | 24.7 |
+| 12 | MicroRNAs in cancer | KEGG | 交叉调控 | 69.6% | 9.76 | 16.1 | 24.7 |
 | 13 | negative regulation of apoptotic process (GO:0043066) | GO_BP | 信号主干通路 | 68.8% | 9.77 | 25.0 | 20.1 |
 | 14 | positive regulation of protein kinase B signaling (GO:0 | GO_BP | 其他 | 66.1% | 9.14 | 26.7 | 44.1 |
 | 15 | positive regulation of intracellular signal transductio | GO_BP | 其他 | 64.3% | 9.41 | 25.4 | 17.7 |
 | 16 | regulation of phosphatidylinositol 3-kinase signaling ( | GO_BP | 其他 | 60.7% | 9.21 | 29.9 | 56.3 |
 | 17 | regulation of protein kinase B signaling (GO:0051896) | GO_BP | 其他 | 58.9% | 9.55 | 26.8 | 35.4 |
-| 18 | Estrogen signaling pathway | KEGG | 交叉调控 | 58.0% | 8.54 | 16.2 | 57.5 |
+| 18 | Estrogen signaling pathway | KEGG | 交叉调控 | 58.0% | 8.54 | 15.9 | 57.3 |
 | 19 | positive regulation of phosphorylation (GO:0042327) | GO_BP | 信号主干通路 | 56.2% | 10.22 | 24.6 | 30.0 |
-| 20 | Prostate cancer | KEGG | 交叉调控 | 52.7% | 11.41 | 15.4 | 67.5 |
+| 20 | Prostate cancer | KEGG | 交叉调控 | 52.7% | 11.41 | 15.3 | 67.5 |
 
 ## 7. Pvalue 阈值敏感性对比
 
@@ -3486,7 +3486,8 @@
 | 关键氧化应激靶点进入Q1 | 8个(TNF,SRC,EGFR,STAT3,BCL2,MMP9,HIF1A,PTGS2) | PASS |
 | 排名稳定通路数>=3 | 4 | PASS |
 | 信号网络主干道排名稳定 | 0个 | FAIL |
+| Q1候选稳健通路数>=5 | 71 | PASS |
 
-**通过: 3/4**
+**通过: 4/5**
 
-> ⚠️ **判定: 敏感性分析部分通过。**
+> ✅ **判定: 敏感性分析通过。结果支持故事成立。**

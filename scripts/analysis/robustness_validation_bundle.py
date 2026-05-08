@@ -1510,7 +1510,7 @@ def write_analysis_report(
             f"- Compound perturbation ablation ranks `{top_compound['drop_compound_name']}` as the largest "
             f"network driver (influence score={fmt(top_compound['compound_influence_score'])}; "
             f"mean target retention={fmt(top_compound['mean_target_retention_vs_full_combo'])}; "
-            f"mean pathway retention={fmt(top_compound['mean_pathway_retention_vs_full_combo'])})."
+            f"mean GO BP/KEGG functional-term retention={fmt(top_compound['mean_pathway_retention_vs_full_combo'])})."
         )
 
     report_lines.extend(
@@ -1759,7 +1759,7 @@ def write_figure_catalog(output_dir: Path) -> None:
         "| `figures/fig1_external_source_support.*` | Compare source-support overlap rates across target-selection strategies. | `external_target_validation.csv` | Robust sets should retain source support after filtering. | GeneCards/OMIM/TTD are support checks, not independent gold standards. |",
         "| `figures/fig2_degree_matched_support_permutation.*` | Compare observed dual-robust support to matched null target sets. | `degree_matched_support_metrics.csv` and `degree_matched_support_summary.csv` | Observed line relative to null distribution indicates whether support exceeds degree effects. | Exact degree matching is limited for high-degree hubs. |",
         "| `figures/fig3_parameter_top30_ablation.*` | Compare Top30 target-selection strategies under a controlled target-set size. | `parameter_top30_ablation.csv` | Q1 robust Top30 should improve parameter-frequency metrics relative to fixed or single-best settings. | This table evaluates parameter robustness, not compound contribution. |",
-        "| `figures/fig4_compound_perturbation_ablation.*` | Rank compounds by leave-one-compound-out impact on the antioxidant network. | `compound_perturbation_ablation.csv` | Higher influence scores indicate larger network/pathway retention loss after deleting the compound. | This is a computational network impact score, not a wet-lab activity assay. |",
+        "| `figures/fig4_compound_perturbation_ablation.*` | Rank compounds by leave-one-compound-out impact on the antioxidant network. | `compound_perturbation_ablation.csv` | Higher influence scores indicate larger network/functional-term retention loss after deleting the compound. | This is a computational network impact score, not a wet-lab activity assay. |",
         "| `figures/fig5_pubmed_cooccurrence_threshold_sensitivity.*` | Show PubMed co-occurrence support across literature thresholds. | `pubmed_cooccurrence_key_results.csv` | Q1 should be broadly supported; dual-robust targets should be interpreted at stricter high-literature thresholds. | PubMed co-occurrence is literature support and remains sensitive to hub-gene research attention. |",
         "| `figures/fig3_ablation_comparison.*` | Legacy contextual comparison of endpoint target sets. | `target_set_context_comparison.csv` | Use only as context; it mixes different target-set sizes and therefore is not the primary ablation. | Traditional Top30 can look better on literature coverage due to hub bias and equal-size mismatch. |",
     ]

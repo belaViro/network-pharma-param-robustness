@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-富集质量综合评估：比较 Q1 靶点富集通路 vs 全通路池的质量差异
+富集质量综合评估：比较 Q1 靶点富集功能条目 vs 全功能条目池的质量差异
 
 用法:
     cd code && python scripts/analysis/enrichment_quality_assessment.py
@@ -22,14 +22,17 @@ OUTPUTS_DIR = BASE_DIR / "src" / "outputs" / "sensitivity"
 PATHWAY_CSV = OUTPUTS_DIR / "pathway_rank_stability_augmented.csv"
 AUDIT_JSON = OUTPUTS_DIR / "q1_enrichment_audit.json"
 OUTPUT_JSON = OUTPUTS_DIR / "enrichment_quality_assessment.json"
+Q1_TERM_LABEL = "Q1: 候选稳健功能条目"
+Q1_TERM_OLD_LABEL = "Q1: 候选稳健通路"
 
 # ── Load data ──────────────────────────────────────────────────────────
 pathway_df = pd.read_csv(PATHWAY_CSV)
+pathway_df["robustness_quadrant"] = pathway_df["robustness_quadrant"].replace({Q1_TERM_OLD_LABEL: Q1_TERM_LABEL})
 audit_data = json.load(open(AUDIT_JSON, 'r', encoding='utf-8'))
 
 all_pathways = pathway_df.copy()
 
-# Q1靶点富集到的系统通路 (KEGG + GO_BP = 40条)
+# Q1靶点富集到的系统功能条目 (KEGG + GO_BP)
 enriched_pathways = []
 for source in ("KEGG", "GO_BP"):
     if source in audit_data['pathway_details']:
@@ -45,9 +48,9 @@ non_enriched_df = all_pathways[all_pathways['enriched'] == False]
 print("=" * 70)
 print("富集质量综合评估")
 print("=" * 70)
-print(f"\n全通路池: {len(all_pathways)} 条")
-print(f"Q1靶点富集通路: {len(enriched_df)} 条")
-print(f"未被富集通路: {len(non_enriched_df)} 条")
+print(f"\n全功能条目池: {len(all_pathways)} 条")
+print(f"Q1靶点富集功能条目: {len(enriched_df)} 条")
+print(f"未被富集功能条目: {len(non_enriched_df)} 条")
 
 # ── 核心质量指标对比 ───────────────────────────────────────────────────
 metrics = ['frequency', 'avg_logp', 'avg_rank', 'rank_std']
@@ -55,8 +58,8 @@ metrics = ['frequency', 'avg_logp', 'avg_rank', 'rank_std']
 print(f"\n{'='*70}")
 print("核心质量指标对比 (平均值 ± 标准差)")
 print(f"{'='*70}")
-all_label = f"全通路池 ({len(all_pathways)}条)"
-enriched_label = f"富集通路 ({len(enriched_df)}条)"
+all_label = f"全功能条目池 ({len(all_pathways)}条)"
+enriched_label = f"富集功能条目 ({len(enriched_df)}条)"
 print(f"{'指标':<20} {all_label:<22} {enriched_label:<22} {'差异':<10}")
 print("-" * 70)
 
@@ -94,7 +97,7 @@ print("\n注: *** p<0.001, ** p<0.01, * p<0.05, ns 不显著")
 print(f"\n{'='*70}")
 print("中位数对比")
 print(f"{'='*70}")
-print(f"{'指标':<20} {'全通路池':<15} {'富集通路':<15} {'差异':<10}")
+print(f"{'指标':<20} {'全功能条目池':<15} {'富集功能条目':<15} {'差异':<10}")
 print("-" * 55)
 
 for metric in metrics:
@@ -135,10 +138,10 @@ print(f"  按 freq×logP 加权 Q1 率:   {combined_weighted_q1_rate:.1f}%")
 
 # ── 分层质量分析 ───────────────────────────────────────────────────────
 print(f"\n{'='*70}")
-print("富集通路的分层质量")
+print("富集功能条目的分层质量")
 print(f"{'='*70}")
 
-for quadrant in ['Q1: 候选稳健通路', 'Q2: 低频高显著', 'Q3: 稳健但效应弱', 'Q4: 可忽略']:
+for quadrant in [Q1_TERM_LABEL, 'Q2: 低频高显著', 'Q3: 稳健但效应弱', 'Q4: 可忽略']:
     subset = enriched_df[enriched_df['robustness_quadrant'] == quadrant]
     if len(subset) == 0:
         continue
@@ -157,17 +160,17 @@ freq_diff = comparison_results['frequency']['diff_pct']
 logp_diff = comparison_results['avg_logp']['diff_pct']
 rank_diff = comparison_results['avg_rank']['diff_pct']
 
-print(f"\n  Q1 靶点富集通路的平均频率比全池高 {freq_diff:+.1f}%")
-print(f"  Q1 靶点富集通路的平均 avg_logP 比全池高 {logp_diff:+.1f}%")
-print(f"  Q1 靶点富集通路的平均排名比全池低 {rank_diff:+.1f}% (排名越低越好)")
+print(f"\n  Q1 靶点富集功能条目的平均频率比全池高 {freq_diff:+.1f}%")
+print(f"  Q1 靶点富集功能条目的平均 avg_logP 比全池高 {logp_diff:+.1f}%")
+print(f"  Q1 靶点富集功能条目的平均排名比全池低 {rank_diff:+.1f}% (排名越低越好)")
 
 if freq_diff > 50 and logp_diff > 20:
-    print(f"\n  [结论] Q1 靶点富集到的通路在参数空间中具有显著更高的稳健性和")
-    print(f"         显著性，说明靶点-通路的映射是高质量、有方向性的。")
-    print(f"         即使 Q1 计数率为 {simple_q1_rate:.0f}%，富集通路的整体质量")
-    print(f"         显著优于背景通路池。")
+    print(f"\n  [结论] Q1 靶点富集到的功能条目在参数空间中具有显著更高的稳健性和")
+    print(f"         显著性，说明靶点-功能条目的映射是高质量、有方向性的。")
+    print(f"         即使 Q1 计数率为 {simple_q1_rate:.0f}%，富集功能条目的整体质量")
+    print(f"         显著优于背景功能条目池。")
 else:
-    print(f"\n  [结论] Q1 靶点富集通路与全池质量差异有限，需进一步分析。")
+    print(f"\n  [结论] Q1 靶点富集功能条目与全池质量差异有限，需进一步分析。")
 
 # ── Save ───────────────────────────────────────────────────────────────
 output = {

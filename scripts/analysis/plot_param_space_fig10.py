@@ -1,7 +1,7 @@
 """
 Fig.10: Parameter space bubble matrix.
 
-STRING (x) × TopK (y) with bubble size = significant pathways,
+STRING (x) × TopK (y) with bubble size = significant GO BP/KEGG functional terms,
 color = Prob threshold. Shows stability regions in parameter space.
 """
 
@@ -108,7 +108,7 @@ legend = ax.legend(loc="upper right", fontsize=8, framealpha=0.9,
                    edgecolor="#cccccc", title="Prob 阈值", title_fontsize=8)
 
 # Title
-ax.set_title("参数空间稳定性矩阵（气泡大小 = 显著通路数）", fontsize=12, pad=10)
+ax.set_title("参数空间稳定性矩阵（气泡大小 = 显著功能条目数）", fontsize=12, pad=10)
 
 # Stats annotation
 stats = []

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Fig.9: Pathway robustness quadrant plot.
+Fig.9: GO BP/KEGG functional-term robustness quadrant plot.
 
 X-axis: occurrence frequency across parameter combinations.
 Y-axis: average enrichment strength, -log10(adjusted p-value).
-Color/marker: pathway robustness quadrant.
+Color/marker: functional-term robustness quadrant.
 
 Usage:
     cd code && python scripts/analysis/plot_pathway_quadrant.py
@@ -34,6 +34,8 @@ FIGURES_DIR = OUTPUTS_DIR / "figures"
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 
 INPUT_CSV = OUTPUTS_DIR / "pathway_robustness.csv"
+Q1_LABEL = "Q1: 候选稳健功能条目"
+Q1_OLD_LABEL = "Q1: 候选稳健通路"
 
 dpi = 300
 plt.rcParams.update(
@@ -53,8 +55,8 @@ plt.rcParams.update(
 )
 
 QUADRANT_STYLE = {
-    "Q1: 候选稳健通路": {
-        "label": "Q1: 候选稳健通路",
+    Q1_LABEL: {
+        "label": Q1_LABEL,
         "color": "#3778B8",
         "marker": "o",
         "size": 58,
@@ -124,9 +126,10 @@ def save_fig(fig: plt.Figure, name: str) -> None:
 
 
 def main() -> None:
-    print("Loading pathway robustness data...")
+    print("Loading functional-term robustness data...")
     df = pd.read_csv(INPUT_CSV)
-    print(f"  {len(df)} pathways")
+    df["robustness_quadrant"] = df["robustness_quadrant"].replace({Q1_OLD_LABEL: Q1_LABEL})
+    print(f"  {len(df)} GO BP/KEGG functional terms")
 
     freq_med = float(df["frequency"].median())
     logp_med = float(df["avg_logp"].median())
@@ -147,7 +150,7 @@ def main() -> None:
     # Draw full rectangular quadrant backgrounds so the shaded areas fill
     # the whole axis range, including the small negative margins.
     backgrounds = [
-        (freq_med, logp_med, x_max - freq_med, y_max - logp_med, "Q1: 候选稳健通路"),
+        (freq_med, logp_med, x_max - freq_med, y_max - logp_med, Q1_LABEL),
         (x_min, logp_med, freq_med - x_min, y_max - logp_med, "Q2: 低频高显著"),
         (freq_med, y_min, x_max - freq_med, logp_med - y_min, "Q3: 稳健但效应弱"),
         (x_min, y_min, freq_med - x_min, logp_med - y_min, "Q4: 可忽略"),
@@ -160,7 +163,7 @@ def main() -> None:
                 height,
                 facecolor=QUADRANT_STYLE[quadrant]["bg"],
                 edgecolor="none",
-                alpha=0.58 if quadrant == "Q1: 候选稳健通路" else 0.44,
+                alpha=0.58 if quadrant == Q1_LABEL else 0.44,
                 zorder=0,
             )
         )
@@ -170,7 +173,7 @@ def main() -> None:
         "Q4: 可忽略",
         "Q3: 稳健但效应弱",
         "Q2: 低频高显著",
-        "Q1: 候选稳健通路",
+        Q1_LABEL,
     ]
     for quadrant in plot_order:
         sub = df[df["robustness_quadrant"] == quadrant]
@@ -219,7 +222,7 @@ def main() -> None:
         fontsize=16,
         ha="center",
         va="center",
-        color=QUADRANT_STYLE["Q1: 候选稳健通路"]["color"],
+        color=QUADRANT_STYLE[Q1_LABEL]["color"],
         alpha=0.14,
         zorder=1,
     )
@@ -260,9 +263,9 @@ def main() -> None:
         zorder=1,
     )
 
-    # Compact annotation: top Q1 pathways by candidate rank.
+    # Compact annotation: top Q1 functional terms by candidate rank.
     q1_top = (
-        df[df["robustness_quadrant"] == "Q1: 候选稳健通路"]
+        df[df["robustness_quadrant"] == Q1_LABEL]
         .sort_values("candidate_rank")
         .head(8)
     )
@@ -276,7 +279,7 @@ def main() -> None:
         ax.text(
             0.985,
             0.965,
-            "Q1代表通路:\n" + "\n".join(top_lines),
+            "Q1代表功能条目:\n" + "\n".join(top_lines),
             transform=ax.transAxes,
             ha="right",
             va="top",
@@ -291,7 +294,7 @@ def main() -> None:
             zorder=10,
         )
 
-    ax.set_title("通路稳健性：二维象限分类（平均 -log10 adjusted p-value）", fontproperties=font_cn_bold, pad=12)
+    ax.set_title("GO BP/KEGG 功能富集条目稳健性：二维象限分类", fontproperties=font_cn_bold, pad=12)
     ax.set_xlabel("跨参数组合出现频率", fontproperties=font_cn, labelpad=8)
     ax.set_ylabel("平均显著性强度 [-log10(adjusted p-value)]", fontproperties=font_cn, labelpad=8)
     ax.set_xlim(x_min, x_max)

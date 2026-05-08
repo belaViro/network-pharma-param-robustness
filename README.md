@@ -54,13 +54,19 @@ pip install -r requirements.txt
 
 # Option B: editable install (recommended)
 pip install -e .
+
+# Optional: fresh PubChem/SwissTargetPrediction acquisition
+pip install -e ".[acquisition]"
 ```
 
 Requires Python ≥ 3.10.
 
-### 3. Run the main analyses
+### 3. Run the main analyses manually
 
 ```bash
+# Traditional fixed-threshold baseline
+python scripts/run_traditional_pipeline.py
+
 # Parameter grid sensitivity (112 combinations)
 python scripts/analysis/run_sensitivity_analysis.py
 
@@ -72,15 +78,40 @@ python scripts/analysis/robustness_validation_bundle.py
 
 # Manuscript figure regeneration
 python scripts/analysis/generate_paper_figures.py
+
+# Supplementary table export
+python scripts/analysis/export_supplementary_tables.py
 ```
 
 ### 4. One-click reproduction
 
 ```bash
+# Full manuscript workflow from packaged inputs (default)
+python reproduce.py
+
+# Same workflow through the Bash wrapper
 bash reproduce.sh
+
+# Windows PowerShell wrapper
+.\reproduce.ps1
+
+# Fast parameter-robustness workflow only
+python reproduce.py --core
 ```
 
-This executes the core parameter-robustness reproduction path: parameter grid → robust-vs-parametric comparison → GO BP/KEGG term quadrant augmentation → figure regeneration. The compound LOO and external-audit scripts above can be run separately when the full manuscript result set is needed.
+By default, the reproduction entry point runs the manuscript-facing workflow from packaged repository inputs: traditional fixed-threshold baseline → 112-combo parameter grid → robust-vs-parametric comparison → GO BP/KEGG functional-term quadrant augmentation → compound LOO perturbation → external evidence and degree-matched validation bundle → final manuscript figures → supplementary tables.
+
+Useful modes:
+
+| Command | Use |
+|---------|-----|
+| `python reproduce.py` | Full manuscript workflow from included inputs and caches |
+| `python reproduce.py --core` | Fast parameter-robustness workflow only |
+| `python reproduce.py --skip-install` | Reuse the current environment without reinstalling the package |
+| `python reproduce.py --pubmed-mode query` | Refresh PubMed co-occurrence counts through NCBI E-utilities |
+| `python reproduce.py --full --include-acquisition` | Also rerun PubChem/SwissTargetPrediction acquisition |
+
+PubMed validation uses cached counts by default and does not query the network. Fresh PubMed or acquisition runs require network access and may take substantially longer.
 
 ---
 
@@ -96,9 +127,11 @@ This executes the core parameter-robustness reproduction path: parameter grid �
 │   │   ├── augment_pathway_robustness.py         # GO BP/KEGG robustness quadrant enhancement
 │   │   ├── robustness_validation_bundle.py        # Top30 ablation and external evidence audit
 │   │   ├── generate_paper_figures.py             # Manuscript figure generation
-│   │   ├── validate_with_pubmed.py               # PubMed co-occurrence audit
+│   │   ├── export_supplementary_tables.py        # Supplementary workbook export
+│   │   ├── validate_with_pubmed.py               # Standalone PubMed diagnostic
 │   │   └── ...                                   # Additional diagnostic scripts
-│   ├── run_full_pipeline.py                      # End-to-end pipeline
+│   ├── run_pipeline.py                           # Optional PubChem/SwissTarget acquisition
+│   ├── run_full_pipeline.py                      # Legacy staged acquisition + baseline pipeline
 │   └── run_traditional_pipeline.py               # Baseline comparison
 │
 ├── src/
@@ -113,7 +146,7 @@ This executes the core parameter-robustness reproduction path: parameter grid �
 │   │   └── plotting.py                           # Enrichment visualization
 │   ├── visualization/                            # Plotting utilities
 │   ├── data/                                     # Reference data
-│   │   ├── go-basic.obo                          # Gene Ontology ontology
+│   │   ├── oxidative_stress_go_terms.txt         # Curated GO oxidative-stress terms
 │   │   └── kegg_pathway_classes.json             # KEGG pathway taxonomy
 │   └── outputs/                                  # All analysis outputs
 │       ├── paper_figures/                        # Manuscript-ready figures
@@ -125,12 +158,13 @@ This executes the core parameter-robustness reproduction path: parameter grid �
 │       ├── shared/                               # Cross-stage shared data
 │       └── traditional/                          # Baseline method outputs
 │
-├── tests/                                        # Unit & integration tests
 ├── docs/                                         # Project documentation
 ├── 分子对接/                                      # Docking panel composition assets
 ├── requirements.txt
 ├── pyproject.toml
-└── reproduce.sh                                  # One-click reproduction
+├── reproduce.py                                  # Cross-platform reproduction orchestrator
+├── reproduce.ps1                                 # Windows PowerShell wrapper
+└── reproduce.sh                                  # Bash wrapper
 ```
 
 ---
@@ -157,11 +191,14 @@ This executes the core parameter-robustness reproduction path: parameter grid �
 
 ### External Evidence and Manuscript Figures
 
+Compatibility note: historical filenames and some CSV columns use `pathway_*` for continuity. In this repository, those fields refer to mixed **KEGG pathways plus GO BP biological-process terms**; GO BP terms are not pathways.
+
 | File | Description |
 |------|-------------|
 | `src/outputs/sensitivity/robustness_validation/` | Top30 ablation, PubMed co-occurrence audit, and degree-matched permutation outputs |
 | `src/outputs/paper_figures/` | Manuscript-ready figures including workflow, parameter heatmap, compound LOO heatmap, PubMed threshold audit, and docking panels |
 | `src/outputs/paper_figures/figure-catalog.md` | Figure purpose, source data, and interpretation notes |
+| `src/outputs/reproduction_manifest.json` | Runtime manifest generated by `reproduce.py` and ignored by Git |
 
 ### Checkpoints
 
@@ -259,7 +296,7 @@ See `requirements.txt` or `pyproject.toml` for full details.
 All source code, raw predictions, intermediate checkpoints, and final results are included in this repository.
 
 - **Repository**: https://github.com/belaViro/network-pharma-param-robustness
-- **Complete reproducibility package** (~33 MB compressed): Available via GitHub Release [v1.0.0](https://github.com/belaViro/network-pharma-param-robustness/releases)
+- **Reproducibility package**: the repository clone includes packaged inputs, cached intermediate files, checkpoints, and manuscript-facing outputs required by `reproduce.py`.
 
 External databases used:
 - SwissTargetPrediction (http://www.swisstargetprediction.ch/)

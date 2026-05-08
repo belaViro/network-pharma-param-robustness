@@ -25,6 +25,7 @@ src/outputs/sensitivity/enrichment_cache/
 run_*.log
 run_*.err.log
 src/outputs/reports/
+src/outputs/reproduction_manifest.json
 src/outputs/traditional/evaluation/*.md
 src/outputs/traditional/evaluation/*.log
 

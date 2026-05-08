@@ -1,0 +1,676 @@
+{
+  "method": "二维象限分类（频率 × 显著性强度）",
+  "compatibility_note": "pathway_* 历史文件名指 KEGG pathway + GO BP biological process term；GO BP 不是通路。",
+  "thresholds": {
+    "frequency_median": 0.0804,
+    "avg_logp_median": 7.3744
+  },
+  "total_pathways": 214,
+  "quadrant_summary": {
+    "Q1: 候选稳健功能条目": {
+      "count": 71,
+      "percentage": 33.18,
+      "avg_frequency": 0.3712,
+      "avg_logp": 10.8375
+    },
+    "Q2: 低频高显著": {
+      "count": 36,
+      "percentage": 16.82,
+      "avg_frequency": 0.031,
+      "avg_logp": 10.8027
+    },
+    "Q3: 稳健但效应弱": {
+      "count": 43,
+      "percentage": 20.09,
+      "avg_frequency": 0.1493,
+      "avg_logp": 4.4036
+    },
+    "Q4: 可忽略": {
+      "count": 64,
+      "percentage": 29.91,
+      "avg_frequency": 0.0363,
+      "avg_logp": 3.6321
+    }
+  },
+  "q1_candidate_robust_pathways": [
+    {
+      "pathway": "Nitrogen metabolism",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "frequency": 0.2054,
+      "avg_rank": 1.0,
+      "avg_logp": 17.6125,
+      "avg_ef": 426.345
+    },
+    {
+      "pathway": "bicarbonate transport (GO:0015701)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.2054,
+      "avg_rank": 2.04,
+      "avg_logp": 13.9456,
+      "avg_ef": 207.0818
+    },
+    {
+      "pathway": "organic anion transport (GO:0015711)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.2054,
+      "avg_rank": 3.48,
+      "avg_logp": 11.0165,
+      "avg_ef": 75.1136
+    },
+    {
+      "pathway": "Pathways in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 1.0,
+      "avg_rank": 3.58,
+      "avg_logp": 16.3734,
+      "avg_ef": 23.5469
+    },
+    {
+      "pathway": "Proteoglycans in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.875,
+      "avg_rank": 5.44,
+      "avg_logp": 16.3016,
+      "avg_ef": 51.7839
+    },
+    {
+      "pathway": "Lipid and atherosclerosis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.7857,
+      "avg_rank": 7.9,
+      "avg_logp": 13.3528,
+      "avg_ef": 44.944
+    },
+    {
+      "pathway": "Hepatitis B",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.8036,
+      "avg_rank": 8.28,
+      "avg_logp": 13.497,
+      "avg_ef": 54.3105
+    },
+    {
+      "pathway": "MAPK signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.3482,
+      "avg_rank": 8.67,
+      "avg_logp": 16.5297,
+      "avg_ef": 27.9627
+    },
+    {
+      "pathway": "PI3K-Akt signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.4107,
+      "avg_rank": 9.7,
+      "avg_logp": 16.2038,
+      "avg_ef": 25.1235
+    },
+    {
+      "pathway": "Progesterone-mediated oocyte maturation",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "frequency": 0.1339,
+      "avg_rank": 10.53,
+      "avg_logp": 15.6333,
+      "avg_ef": 66.2833
+    },
+    {
+      "pathway": "AGE-RAGE signaling pathway in diabetic complications",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.9464,
+      "avg_rank": 10.58,
+      "avg_logp": 10.7282,
+      "avg_ef": 66.7345
+    },
+    {
+      "pathway": "Kaposi sarcoma-associated herpesvirus infection",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.6964,
+      "avg_rank": 11.65,
+      "avg_logp": 12.7099,
+      "avg_ef": 44.6749
+    },
+    {
+      "pathway": "Colorectal cancer",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.0893,
+      "avg_rank": 12.0,
+      "avg_logp": 10.2123,
+      "avg_ef": 114.4186
+    },
+    {
+      "pathway": "Rap1 signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.2589,
+      "avg_rank": 12.0,
+      "avg_logp": 15.2692,
+      "avg_ef": 31.6645
+    },
+    {
+      "pathway": "Human cytomegalovirus infection",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "frequency": 0.4018,
+      "avg_rank": 12.93,
+      "avg_logp": 9.9374,
+      "avg_ef": 44.2395
+    },
+    {
+      "pathway": "Chemical carcinogenesis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.7411,
+      "avg_rank": 12.94,
+      "avg_logp": 11.6669,
+      "avg_ef": 38.526
+    },
+    {
+      "pathway": "transmembrane receptor protein tyrosine kinase signaling pathway (GO:0007169)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.8036,
+      "avg_rank": 13.0,
+      "avg_logp": 11.5382,
+      "avg_ef": 25.0985
+    },
+    {
+      "pathway": "Ras signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.2768,
+      "avg_rank": 13.03,
+      "avg_logp": 15.3045,
+      "avg_ef": 30.2806
+    },
+    {
+      "pathway": "ErbB signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "frequency": 0.0804,
+      "avg_rank": 15.22,
+      "avg_logp": 9.5028,
+      "avg_ef": 104.5098
+    },
+    {
+      "pathway": "Prostate cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.5268,
+      "avg_rank": 15.31,
+      "avg_logp": 11.4117,
+      "avg_ef": 67.4736
+    },
+    {
+      "pathway": "Central carbon metabolism in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.1875,
+      "avg_rank": 15.57,
+      "avg_logp": 14.2861,
+      "avg_ef": 74.9342
+    },
+    {
+      "pathway": "Fluid shear stress and atherosclerosis",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.7054,
+      "avg_rank": 15.62,
+      "avg_logp": 10.0192,
+      "avg_ef": 51.0773
+    },
+    {
+      "pathway": "Estrogen signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.5804,
+      "avg_rank": 15.88,
+      "avg_logp": 8.5362,
+      "avg_ef": 57.2757
+    },
+    {
+      "pathway": "cellular response to cytokine stimulus (GO:0071345)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.7946,
+      "avg_rank": 15.97,
+      "avg_logp": 10.3445,
+      "avg_ef": 21.9314
+    },
+    {
+      "pathway": "MicroRNAs in cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.6964,
+      "avg_rank": 16.05,
+      "avg_logp": 9.7631,
+      "avg_ef": 24.6928
+    },
+    {
+      "pathway": "Human immunodeficiency virus 1 infection",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "frequency": 0.2321,
+      "avg_rank": 16.23,
+      "avg_logp": 12.528,
+      "avg_ef": 37.861
+    },
+    {
+      "pathway": "Prolactin signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.4464,
+      "avg_rank": 16.96,
+      "avg_logp": 11.9396,
+      "avg_ef": 93.3629
+    },
+    {
+      "pathway": "Focal adhesion",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.2946,
+      "avg_rank": 17.27,
+      "avg_logp": 12.3102,
+      "avg_ef": 38.8077
+    },
+    {
+      "pathway": "Toxoplasmosis",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "frequency": 0.4107,
+      "avg_rank": 17.41,
+      "avg_logp": 9.2251,
+      "avg_ef": 68.2405
+    },
+    {
+      "pathway": "cytokine-mediated signaling pathway (GO:0019221)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.7857,
+      "avg_rank": 17.66,
+      "avg_logp": 9.691,
+      "avg_ef": 17.9974
+    },
+    {
+      "pathway": "Pancreatic cancer",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.4107,
+      "avg_rank": 17.72,
+      "avg_logp": 12.1409,
+      "avg_ef": 80.3542
+    },
+    {
+      "pathway": "Relaxin signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.3036,
+      "avg_rank": 18.97,
+      "avg_logp": 11.2701,
+      "avg_ef": 52.9093
+    },
+    {
+      "pathway": "IL-17 signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.3214,
+      "avg_rank": 19.0,
+      "avg_logp": 7.6668,
+      "avg_ef": 73.1999
+    },
+    {
+      "pathway": "C-type lectin receptor signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.1607,
+      "avg_rank": 19.94,
+      "avg_logp": 11.4807,
+      "avg_ef": 62.0548
+    },
+    {
+      "pathway": "HIF-1 signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.3839,
+      "avg_rank": 20.0,
+      "avg_logp": 8.3049,
+      "avg_ef": 60.9708
+    },
+    {
+      "pathway": "TNF signaling pathway",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.375,
+      "avg_rank": 20.07,
+      "avg_logp": 9.636,
+      "avg_ef": 58.6005
+    },
+    {
+      "pathway": "PD-L1 expression and PD-1 checkpoint pathway in cancer",
+      "source": "KEGG",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.1339,
+      "avg_rank": 20.13,
+      "avg_logp": 10.2387,
+      "avg_ef": 74.7316
+    },
+    {
+      "pathway": "Gastric cancer",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.0893,
+      "avg_rank": 20.6,
+      "avg_logp": 13.4559,
+      "avg_ef": 35.9553
+    },
+    {
+      "pathway": "Th17 cell differentiation",
+      "source": "KEGG",
+      "pathway_category": "cross_talk",
+      "frequency": 0.1161,
+      "avg_rank": 21.0,
+      "avg_logp": 10.7664,
+      "avg_ef": 57.9679
+    },
+    {
+      "pathway": "Epstein-Barr virus infection",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "frequency": 0.3393,
+      "avg_rank": 21.05,
+      "avg_logp": 11.113,
+      "avg_ef": 34.7809
+    },
+    {
+      "pathway": "Shigellosis",
+      "source": "KEGG",
+      "pathway_category": "other",
+      "frequency": 0.1786,
+      "avg_rank": 21.4,
+      "avg_logp": 8.9155,
+      "avg_ef": 38.8194
+    },
+    {
+      "pathway": "protein phosphorylation (GO:0006468)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.3839,
+      "avg_rank": 22.88,
+      "avg_logp": 12.0615,
+      "avg_ef": 16.8334
+    },
+    {
+      "pathway": "MAPK cascade (GO:0000165)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.4464,
+      "avg_rank": 23.56,
+      "avg_logp": 11.4605,
+      "avg_ef": 24.6135
+    },
+    {
+      "pathway": "positive regulation of phosphorylation (GO:0042327)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.5625,
+      "avg_rank": 24.63,
+      "avg_logp": 10.2155,
+      "avg_ef": 30.0102
+    },
+    {
+      "pathway": "negative regulation of apoptotic process (GO:0043066)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.6875,
+      "avg_rank": 25.01,
+      "avg_logp": 9.7668,
+      "avg_ef": 20.1313
+    },
+    {
+      "pathway": "positive regulation of intracellular signal transduction (GO:1902533)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.6429,
+      "avg_rank": 25.44,
+      "avg_logp": 9.4087,
+      "avg_ef": 17.7352
+    },
+    {
+      "pathway": "positive regulation of protein kinase B signaling (GO:0051897)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.6607,
+      "avg_rank": 26.7,
+      "avg_logp": 9.1395,
+      "avg_ef": 44.0662
+    },
+    {
+      "pathway": "regulation of protein kinase B signaling (GO:0051896)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.5893,
+      "avg_rank": 26.76,
+      "avg_logp": 9.5488,
+      "avg_ef": 35.3671
+    },
+    {
+      "pathway": "regulation of apoptotic process (GO:0042981)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.4375,
+      "avg_rank": 29.2,
+      "avg_logp": 7.4451,
+      "avg_ef": 14.609
+    },
+    {
+      "pathway": "positive regulation of protein modification process (GO:0031401)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.1696,
+      "avg_rank": 29.74,
+      "avg_logp": 7.4076,
+      "avg_ef": 36.301
+    },
+    {
+      "pathway": "positive regulation of protein phosphorylation (GO:0001934)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.3304,
+      "avg_rank": 29.86,
+      "avg_logp": 7.714,
+      "avg_ef": 23.8696
+    },
+    {
+      "pathway": "regulation of phosphatidylinositol 3-kinase signaling (GO:0014066)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.6071,
+      "avg_rank": 29.88,
+      "avg_logp": 9.2134,
+      "avg_ef": 56.3409
+    },
+    {
+      "pathway": "ERBB signaling pathway (GO:0038127)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.3214,
+      "avg_rank": 30.22,
+      "avg_logp": 7.8128,
+      "avg_ef": 92.319
+    },
+    {
+      "pathway": "peptidyl-tyrosine modification (GO:0018212)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.1161,
+      "avg_rank": 30.77,
+      "avg_logp": 11.4897,
+      "avg_ef": 66.456
+    },
+    {
+      "pathway": "negative regulation of programmed cell death (GO:0043069)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.3839,
+      "avg_rank": 31.19,
+      "avg_logp": 7.9276,
+      "avg_ef": 21.9352
+    },
+    {
+      "pathway": "regulation of gene expression (GO:0010468)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.0893,
+      "avg_rank": 31.7,
+      "avg_logp": 8.7541,
+      "avg_ef": 9.6895
+    },
+    {
+      "pathway": "regulation of cell population proliferation (GO:0042127)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.0982,
+      "avg_rank": 32.18,
+      "avg_logp": 11.125,
+      "avg_ef": 9.8386
+    },
+    {
+      "pathway": "positive regulation of MAPK cascade (GO:0043410)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.2321,
+      "avg_rank": 32.62,
+      "avg_logp": 9.802,
+      "avg_ef": 21.1799
+    },
+    {
+      "pathway": "peptidyl-tyrosine phosphorylation (GO:0018108)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.0804,
+      "avg_rank": 32.67,
+      "avg_logp": 11.4029,
+      "avg_ef": 54.7987
+    },
+    {
+      "pathway": "positive regulation of gene expression (GO:0010628)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.2768,
+      "avg_rank": 32.71,
+      "avg_logp": 8.3545,
+      "avg_ef": 17.1954
+    },
+    {
+      "pathway": "phosphorylation (GO:0016310)",
+      "source": "GO_BP",
+      "pathway_category": "signaling_backbone",
+      "frequency": 0.1964,
+      "avg_rank": 33.64,
+      "avg_logp": 9.0823,
+      "avg_ef": 17.1144
+    },
+    {
+      "pathway": "positive regulation of protein serine/threonine kinase activity (GO:0071902)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.1518,
+      "avg_rank": 34.29,
+      "avg_logp": 9.2636,
+      "avg_ef": 47.7044
+    },
+    {
+      "pathway": "positive regulation of macromolecule metabolic process (GO:0010604)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.1339,
+      "avg_rank": 34.4,
+      "avg_logp": 7.6703,
+      "avg_ef": 19.9661
+    },
+    {
+      "pathway": "response to reactive oxygen species (GO:0000302)",
+      "source": "GO_BP",
+      "pathway_category": "direct_ox",
+      "frequency": 0.1607,
+      "avg_rank": 35.17,
+      "avg_logp": 8.0833,
+      "avg_ef": 79.2718
+    },
+    {
+      "pathway": "positive regulation of blood vessel endothelial cell migration (GO:0043536)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.1161,
+      "avg_rank": 35.46,
+      "avg_logp": 7.7224,
+      "avg_ef": 95.2724
+    },
+    {
+      "pathway": "positive regulation of epithelial cell migration (GO:0010634)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.1339,
+      "avg_rank": 35.47,
+      "avg_logp": 7.6253,
+      "avg_ef": 57.1868
+    },
+    {
+      "pathway": "positive regulation of phosphatidylinositol 3-kinase signaling (GO:0014068)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.2054,
+      "avg_rank": 36.0,
+      "avg_logp": 9.5369,
+      "avg_ef": 55.4847
+    },
+    {
+      "pathway": "positive regulation of kinase activity (GO:0033674)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.1429,
+      "avg_rank": 36.19,
+      "avg_logp": 10.6766,
+      "avg_ef": 39.0369
+    },
+    {
+      "pathway": "regulation of blood vessel endothelial cell migration (GO:0043535)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.0982,
+      "avg_rank": 36.36,
+      "avg_logp": 7.522,
+      "avg_ef": 86.405
+    },
+    {
+      "pathway": "regulation of ERK1 and ERK2 cascade (GO:0070372)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.0804,
+      "avg_rank": 36.56,
+      "avg_logp": 8.6332,
+      "avg_ef": 24.6919
+    },
+    {
+      "pathway": "regulation of kinase activity (GO:0043549)",
+      "source": "GO_BP",
+      "pathway_category": "other",
+      "frequency": 0.0804,
+      "avg_rank": 38.44,
+      "avg_logp": 11.2197,
+      "avg_ef": 42.6478
+    }
+  ]
+}
