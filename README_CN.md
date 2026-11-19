@@ -5,7 +5,7 @@
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-> **网络药理学靶点优先级识别的双扰动框架：** 参数扰动用于改良固定阈值筛选流程，成分留一扰动用于解析多成分体系中的机制依赖性，并以草莓叶抗氧化活性成分为应用案例。
+> **网络药理学靶点优先级识别的双扰动框架：** 参数扰动用于改良固定阈值筛选流程，成分留一扰动用于解析多成分体系中的机制依赖性，并以草莓叶抗氧化活性成分为应用案例。（DOI: 10.7501/j.issn.0253-2670.2026.22.017）
 
 ## 概述
 
